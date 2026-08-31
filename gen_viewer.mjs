@@ -311,7 +311,12 @@ function chipRow(el, items, key) {
     const lead = i === 0;
     return \`<span class="chip \${lead ? 'lead' : ''}\${on ? ' on' : ''}" data-v="\${v}" \${lead ? 'title="点击重置该组筛选"' : ''} \${color ? \`style="color:\${on ? color : ''}"\` : ''}>\${color ? \`<span class="dot" style="background:\${color}"></span>\` : ''}\${label}</span>\`;
   }).join('');
-  box.querySelectorAll('.chip').forEach((c) => c.onclick = () => { state[key] = +c.dataset.v; renderToolbar(); render(); });
+  box.querySelectorAll('.chip').forEach((c) => c.onclick = () => {
+    const v = +c.dataset.v;
+    // 再次点击已激活的筛选项 = 重置该组为「全部」
+    state[key] = (state[key] === v && v !== 0) ? 0 : v;
+    renderToolbar(); render();
+  });
 }
 function renderToolbar() {
   chipRow('attrChips', [[0, '属性'], ...Object.entries(ATTR).map(([k, v]) => [+k, v, ATTR_COLOR[k]])], 'attr');
