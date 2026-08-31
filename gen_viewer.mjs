@@ -30,7 +30,7 @@ for (const r of wikiRows) r.wimg = imgSet.has(`w${r.no}_icon.png`) ? `img/w${r.n
 
 // ---- 字段映射（已通过攻略 Wiki 交叉验证）----
 const ATTR = { 1: '炎', 2: '水', 3: '雷', 4: '光', 5: '闇' };
-const ATTR_COLOR = { 1: '#ff6b4a', 2: '#4a9eff', 3: '#b98cff', 4: '#ffd94a', 5: '#8b5cf6' };
+const ATTR_COLOR = { 1: '#ff6b4a', 2: '#4a9eff', 3: '#3fd97f', 4: '#ffd94a', 5: '#8b5cf6' };
 const ROLE = { 1: 'ATK', 2: 'SPD', 3: 'DEF', 4: 'SUP', 5: 'HEAL' };
 const CAMP = { 1: '人間', 2: '神族', 3: '魔族' };
 // 部分所属 ID 未能 100% 确认，标注 ? 方便后续修正
