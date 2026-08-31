@@ -45,6 +45,17 @@
     background: var(--panel); color: var(--dim); font-size: 13px; cursor: pointer; user-select: none;
   }
   .chip.on { color: #fff; border-color: currentColor; font-weight: 700; }
+  /* 组标签: 金色标题 + 竖线分隔; 亮=该组为「全部」, 暗=已有具体筛选, 点击重置该组 */
+  .chip.lead {
+    border: none; background: none; padding: 6px 2px; color: var(--dim);
+    font-weight: 700; letter-spacing: 1px;
+  }
+  .chip.lead::after {
+    content: ''; display: inline-block; width: 1px; height: 12px;
+    background: var(--line); margin-left: 8px; vertical-align: -1px;
+  }
+  .chip.lead.on { color: var(--gold); text-shadow: 0 0 10px rgba(255,215,106,.35); }
+  .chip.lead:hover { color: var(--gold); }
   .chip .dot { display: inline-block; width: 9px; height: 9px; border-radius: 50%; margin-right: 5px; vertical-align: 1px; }
   .count { color: var(--dim); font-size: 13px; margin-left: auto; }
   main { padding: 20px 32px 60px; }
@@ -186,9 +197,11 @@ document.getElementById('stats').innerHTML = [
 
 function chipRow(el, items, key) {
   const box = document.getElementById(el);
-  box.innerHTML = items.map(([v, label, color]) =>
-    `<span class="chip ${state[key] === v ? 'on' : ''}" data-v="${v}" ${color ? `style="color:${state[key] === v ? color : ''}"` : ''}>${color ? `<span class="dot" style="background:${color}"></span>` : ''}${label}</span>`
-  ).join('');
+  box.innerHTML = items.map(([v, label, color], i) => {
+    const on = state[key] === v;
+    const lead = i === 0;
+    return `<span class="chip ${lead ? 'lead' : ''}${on ? ' on' : ''}" data-v="${v}" ${lead ? 'title="点击重置该组筛选"' : ''} ${color ? `style="color:${on ? color : ''}"` : ''}>${color ? `<span class="dot" style="background:${color}"></span>` : ''}${label}</span>`;
+  }).join('');
   box.querySelectorAll('.chip').forEach((c) => c.onclick = () => { state[key] = +c.dataset.v; renderToolbar(); render(); });
 }
 function renderToolbar() {
