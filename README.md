@@ -1,6 +1,8 @@
 # TSKUnitViewer — Twinkle Star Knights X 交互式角色图鉴
 
-基于 Frida dump 的游戏数据 `unit_list.json`，生成单文件交互式角色图鉴 `unit_viewer.html`，并从攻略 Wiki 抓取角色图片。
+基于 Frida dump 的游戏数据 `unit_list.json`，生成单文件交互式角色图鉴 `index.html`，并从攻略 Wiki 抓取角色图片。
+
+**在线版：https://xxfttkx.github.io/TSKUnitViewer/**（GitHub Pages 部署，数据与图片随仓库更新）
 
 ## 目录结构
 
@@ -10,7 +12,7 @@ unit_list/
 ├── gen_viewer.mjs      # 生成图鉴页脚本
 ├── fetch_images.mjs    # Wiki 图片爬虫脚本（同时产出全图鉴数据 wiki_data.json）
 ├── wiki_data.json      # 全图鉴数据（fetch_images.mjs 产物，281 行，含 owned/ownedUnit 标记）
-├── unit_viewer.html    # 生成产物：交互式图鉴（数据内嵌，双击即可打开）
+├── index.html          # 生成产物：交互式图鉴（数据内嵌，双击即可打开；亦是 GitHub Pages 首页）
 ├── img/                # 爬取的图片（fetch_images.mjs 产物）
 │   ├── {unit_id}.png       # 立绘大图（来自角色详情页）
 │   ├── {unit_id}_icon.png  # Wiki 50x50 头像（立绘缺失时的兜底）
@@ -21,7 +23,7 @@ unit_list/
 ## 使用方法
 
 ```powershell
-# 1. 生成图鉴（读取 unit_list.json + img/，输出 unit_viewer.html）
+# 1. 生成图鉴（读取 unit_list.json + img/，输出 index.html）
 node gen_viewer.mjs
 
 # 2. 爬取 Wiki 角色图片（可选，~205 张立绘 + 头像，约 3 分钟）

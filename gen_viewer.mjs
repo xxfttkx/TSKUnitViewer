@@ -1,4 +1,4 @@
-// 读取 unit_list.json，生成单文件交互式角色图鉴 unit_viewer.html
+// 读取 unit_list.json，生成单文件交互式角色图鉴 index.html
 // 若存在 img/ 目录（fetch_images.mjs 产物），自动在卡片/详情中使用本地图片
 // 若存在 wiki_data.json（fetch_images.mjs 产物），合并 Wiki 面板数值并提供全图鉴收集视图
 // 用法: node gen_viewer.mjs
@@ -513,7 +513,7 @@ render();
 </body>
 </html>`;
 
-const out = join(__dirname, 'unit_viewer.html');
+const out = join(__dirname, 'index.html');
 writeFileSync(out, html, 'utf8');
 console.log(`OK -> ${out} (${(html.length / 1024).toFixed(1)} KB)`);
 console.log(`卡牌 ${stats.total} 张 / 角色 ${stats.chars} 名 / 总战力 ${stats.totalPower.toLocaleString()} / ★5 ${stats.r5} / 满级 ${stats.maxLv} / 好感满 ${stats.maxLove}`);

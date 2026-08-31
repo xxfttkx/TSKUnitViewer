@@ -1,4 +1,4 @@
-// 爬取 twinklestarknights.wikiru.jp「キャラクター一覧」的角色图片与全图鉴数据，供 unit_viewer.html 使用
+// 爬取 twinklestarknights.wikiru.jp「キャラクター一覧」的角色图片与全图鉴数据，供 index.html 使用
 // 匹配规则: unit_list.json 的 unit_id 后 6 位 == Wiki 表格行编号 (如 1001001 -> 001001)
 // 用法:
 //   node fetch_images.mjs              下载头像 + 立绘大图(逐卡访问详情页, 较慢) + 全图鉴数据 wiki_data.json
@@ -174,4 +174,4 @@ if (!iconOnly) {
   console.log(`\n  illustrations: ok/skip=${ok}, fail=${fail}`);
 }
 
-console.log('done -> run `node gen_viewer.mjs` to rebuild unit_viewer.html');
+console.log('done -> run `node gen_viewer.mjs` to rebuild index.html');
