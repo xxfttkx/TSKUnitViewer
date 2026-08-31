@@ -13,7 +13,7 @@ const raw = JSON.parse(readFileSync(join(__dirname, 'unit_list.json'), 'utf8'));
 let wikiRows = [];
 try { wikiRows = JSON.parse(readFileSync(join(__dirname, 'wiki_data.json'), 'utf8')).rows; } catch { /* wiki_data.json 不存在 */ }
 const WIKI_ATTR_ID = { '炎': 1, '水': 2, '雷': 3, '光': 4, '闇': 5 };
-const WIKI_ROLE_ID = { ATK: 1, SPD: 2, DEF: 3, SUP: 4, 'ヒール': 5 };
+const WIKI_ROLE_ID = { ATK: 1, SPD: 2, DEF: 3, SUP: 4, HEAL: 5, 'ヒール': 5 }; // HEAL=Wiki 现行记法, ヒール=旧记法兜底
 const WIKI_CAMP_ID = { '人間': 1, '神族': 2, '魔族': 3 };
 
 // 扫描本地图片: img/{unit_id}.png 为立绘, img/{unit_id}_icon.png 为 Wiki 头像, img/w{no}_icon.png 为未持有卡头像
@@ -101,7 +101,10 @@ const stats = {
   dexTotal: wikiRows.length,
 };
 
-const payload = JSON.stringify({ units, stats, wikiRows, ATTR, ATTR_COLOR, ROLE, CAMP, AFFIL, WIKI_ATTR_ID, WIKI_ROLE_ID, WIKI_CAMP_ID })
+// Wiki 行类型统一归一为数字 ID (前端筛选/显示共用, 与持有卡的 u.role 同一套枚举)
+for (const r of wikiRows) r.typeId = WIKI_ROLE_ID[r.type] ?? 0;
+
+const payload = JSON.stringify({ units, stats, wikiRows, ATTR, ATTR_COLOR, ROLE, CAMP, AFFIL, WIKI_ATTR_ID, WIKI_CAMP_ID })
   .replace(/</g, '\\u003c');
 
 const html = `<!DOCTYPE html>
@@ -272,7 +275,7 @@ const html = `<!DOCTYPE html>
 <script>
 const DATA = ${payload};
 const WIKI_BASE = 'https://twinklestarknights.wikiru.jp/?';
-const { units, stats, wikiRows, ATTR, ATTR_COLOR, ROLE, CAMP, AFFIL, WIKI_ATTR_ID, WIKI_ROLE_ID, WIKI_CAMP_ID } = DATA;
+const { units, stats, wikiRows, ATTR, ATTR_COLOR, ROLE, CAMP, AFFIL, WIKI_ATTR_ID, WIKI_CAMP_ID } = DATA;
 const state = { q: '', attr: 0, role: 0, rar: 0, camp: 0, own: 0, sort: 'power', desc: false, view: 'card' };
 
 const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -409,7 +412,7 @@ function renderDex() {
   const arr = wikiRows.map((r, idx) => ({ r, idx })).filter(({ r }) =>
     (!q || (r.title + r.yomi + r.no).toLowerCase().includes(q)) &&
     (!state.attr || WIKI_ATTR_ID[r.attr] === state.attr) &&
-    (!state.role || WIKI_ROLE_ID[r.type] === state.role) &&
+    (!state.role || r.typeId === state.role) &&
     (!state.camp || WIKI_CAMP_ID[r.camp] === state.camp) &&
     (!state.rar || r.rarity === state.rar) &&
     (!state.own || (state.own === 1 ? r.owned : !r.owned)));
@@ -446,7 +449,7 @@ function renderDex() {
       <div class="cardbody">
         <div class="uname">\${esc(r.title || r.no)}</div>
         <div class="cname">\${esc(r.yomi || '')}</div>
-        <div class="meta"><span class="role-chip">\${r.type || '?'}</span><span>\${r.camp || '?'}</span><span>\${esc(r.affil || '')}</span>\${r.releaseDate ? \`<span>\${r.releaseDate}</span>\` : ''}</div>
+        <div class="meta"><span class="role-chip">\${ROLE[r.typeId] || r.type || '?'}</span><span>\${r.camp || '?'}</span><span>\${esc(r.affil || '')}</span>\${r.releaseDate ? \`<span>\${r.releaseDate}</span>\` : ''}</div>
       </div>
     </div>\`;
   }).join('') + '</div>';
