@@ -2,7 +2,7 @@
 
 基于 Frida dump 的游戏数据 `unit_list.json`，生成单文件交互式角色图鉴 `index.html`，并从攻略 Wiki 抓取角色图片。
 
-**在线版：https://xxfttkx.github.io/TSKUnitViewer/**（GitHub Pages 部署，数据与图片随仓库更新）
+**在线版**：<https://xxfttkx.github.io/TSKUnitViewer/>（GitHub Pages 部署，数据与图片随仓库更新）
 
 ## 目录结构
 
