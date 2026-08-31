@@ -50,7 +50,9 @@ const units = raw.map((u) => ({
   attr: u.attr_type,
   role: u.role,
   camp: u.camp,
+  camps: u.camp_list,       // 完整陣営集合 (可能多个, camp 为主值)
   affil: u.affiliation,
+  affils: u.affiliation_list, // 完整所属集合 (可能多个, affiliation 为主值)
   lv: u.lv,
   max_lv: u.max_lv,
   love: u.love_lv,
@@ -296,6 +298,9 @@ const rareStr = (u) => (u.wRar && u.wRar < u.rarity ? \`★\${u.wRar}→\${u.rar
 // 头像(50x50)用 picon 居中展示, 立绘大图用 pimg 裁剪铺满 (按文件名后缀区分)
 const imgTag = (src) => (!src ? '' : \`<img class="\${src.endsWith('_icon.png') ? 'picon' : 'pimg'}" src="\${src}" loading="lazy" onerror="this.remove()">\`);
 const affilName = (a) => AFFIL[a] ?? ('所属' + a);
+// 双重陣営/所属卡: 显示完整集合 (如 人間·神族 / 新星学園·ネビュラ?)
+const campStr = (u) => (u.camps || [u.camp]).map((id) => CAMP[id]).join('·');
+const affilStr = (u) => (u.affils || [u.affil]).map(affilName).join('·');
 const unitByRow = new Map(); // rowIdx -> 持有 unit
 for (const u of units) if (u.rowIdx != null) unitByRow.set(u.rowIdx, u);
 
@@ -333,7 +338,7 @@ function filtered() {
     (!state.attr || u.attr === state.attr) &&
     (!state.role || u.role === state.role) &&
     (!state.rar || u.rarity === state.rar) &&
-    (!state.camp || u.camp === state.camp));
+    (!state.camp || u.camps.includes(state.camp)));
   const cmp = {
     power: (a, b) => b.power - a.power,
     lv: (a, b) => b.lv - a.lv || b.power - a.power,
@@ -366,7 +371,7 @@ function cardHTML(u) {
       <div class="uname">\${esc(u.uname)}</div>
       <div class="cname">\${esc(u.cname)}</div>
       <div class="nums"><span>Lv \${u.lv}<span style="color:var(--dim)">/\${u.max_lv}</span></span><span class="heart">♥ \${u.love}</span><span><b>\${u.power.toLocaleString()}</b></span></div>
-      <div class="meta"><span class="role-chip" style="color:\${{1:'#ff8a7a',2:'#7ae0ff',3:'#8fa0ff',4:'#c39bff',5:'#ff9ec4'}[u.role]}">\${ROLE[u.role]}</span><span>\${CAMP[u.camp]}</span><span>\${esc(affilName(u.affil))}</span></div>
+      <div class="meta"><span class="role-chip" style="color:\${{1:'#ff8a7a',2:'#7ae0ff',3:'#8fa0ff',4:'#c39bff',5:'#ff9ec4'}[u.role]}">\${ROLE[u.role]}</span><span>\${esc(campStr(u))}</span><span>\${esc(affilStr(u))}</span></div>
     </div>
   </div>\`;
 }
@@ -387,7 +392,7 @@ function render() {
       <td style="color:var(--gold)">\${rareStr(u)}</td>
       <td style="color:\${ATTR_COLOR[u.attr]}">\${ATTR[u.attr]}</td>
       <td>\${esc(u.cname)}</td><td>\${esc(u.uname)}</td>
-      <td class="role-chip">\${ROLE[u.role]}</td><td>\${CAMP[u.camp]}</td><td>\${esc(affilName(u.affil))}</td>
+      <td class="role-chip">\${ROLE[u.role]}</td><td>\${esc(campStr(u))}</td><td>\${esc(affilStr(u))}</td>
       <td>\${u.lv}/\${u.max_lv}\${u.lv >= u.max_lv ? ' <span style="color:var(--gold)">MAX</span>' : ''}</td>
       <td style="color:var(--pink)">\${u.love}</td>
       <td><b>\${u.power.toLocaleString()}</b></td>
@@ -496,8 +501,8 @@ function showModal(id) {
       \${row('限界突破', u.limit + ' 次')}
       \${row('稀有度', rareStr(u) + (u.max_rarity ? ' <span class="k">/ 上限' + stars(u.max_rarity) + '</span>' : ''))}
       \${row('好感度', '<span style="color:var(--pink)">♥ ' + u.love + ' / ' + (u.max_love || '?') + (loveMax ? ' MAX' : '') + '</span>')}
-      \${row('种族', CAMP[u.camp])}
-      \${row('所属', esc(affilName(u.affil)))}
+      \${row('种族', esc(campStr(u)))}
+      \${row('所属', esc(affilStr(u)))}
       \${row('卡牌编号', u.unit_id + ' (illust ' + u.illust + ')')}
     </div>
     <div class="section"><h3>档案</h3>
