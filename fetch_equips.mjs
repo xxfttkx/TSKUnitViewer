@@ -120,7 +120,7 @@ for (const [name, d] of byName) {
   const file = join(EQ_DIR, `${d.equip_id}.png`);
   if (existsSync(file)) { skip4++; continue; }
   const hex = Buffer.from(`equip_${name}_NF.png`, 'utf8').toString('hex').toUpperCase();
-  const url = `${BASE}attach2/696D67_${hex}`;
+  const url = `${BASE}attach2/696D67_${hex}.png`; // 编码约定: hex('img')_hex('equip_<名>_NF.png') + 明文 '.png' 后缀
   let done = false;
   for (let i = 0; i < 3 && !done; i++) {
     try {
