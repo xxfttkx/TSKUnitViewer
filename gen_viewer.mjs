@@ -121,6 +121,13 @@ for (const u of units) {
     if (!w) continue;
     e.wAbility = w.ability; e.wObtain = w.obtain; e.wNo = w.no || ''; e.charCard = w.charCard || '';
   }
+  // 装备加成合计 (t0=HP t1=ATK t3=クリ%×100), 附到白值面板
+  const b = { hp: 0, atk: 0, crit: 0 };
+  for (const e of u.equips) for (const p of e.params) {
+    if (p.t === 0) b.hp += p.v; else if (p.t === 1) b.atk += p.v; else if (p.t === 3) b.crit += p.v;
+  }
+  b.crit = Math.round(b.crit) / 100;
+  if (b.hp || b.atk || b.crit) u.eqBonus = b;
 }
 
 const stats = {
@@ -566,9 +573,9 @@ function showModal(id) {
   const row = (k, v) => \`<div><span class="k">\${k}</span> \${v ?? '<span class="k">-</span>'}</div>\`;
   // 白值面板 (当前练度白值 + 好感加成明细, Wiki 只有 Lv1 值)
   const statHtml = u.st ? \`<div class="section"><h3>白值（当前练度）</h3><div class="statgrid">
-      <div class="stat"><span class="sv">\${u.st.hp.toLocaleString()}</span><span class="sk">HP\${u.loveB && u.loveB.hp ? \`<i>+\${u.loveB.hp} 好感</i>\` : ''}</span></div>
-      <div class="stat"><span class="sv">\${u.st.atk.toLocaleString()}</span><span class="sk">ATK\${u.loveB && u.loveB.atk ? \`<i>+\${u.loveB.atk} 好感</i>\` : ''}</span></div>
-      <div class="stat"><span class="sv">\${u.st.crit}</span><span class="sk">CRIT\${u.loveB && u.loveB.crit ? \`<i>+\${u.loveB.crit}</i>\` : ''}</span></div>
+      <div class="stat"><span class="sv">\${u.st.hp.toLocaleString()}</span><span class="sk">HP\${u.eqBonus && u.eqBonus.hp ? \`<i>+\${u.eqBonus.hp} 装备</i>\` : ''}\${u.loveB && u.loveB.hp ? \`<i>+\${u.loveB.hp} 好感</i>\` : ''}</span></div>
+      <div class="stat"><span class="sv">\${u.st.atk.toLocaleString()}</span><span class="sk">ATK\${u.eqBonus && u.eqBonus.atk ? \`<i>+\${u.eqBonus.atk} 装备</i>\` : ''}\${u.loveB && u.loveB.atk ? \`<i>+\${u.loveB.atk} 好感</i>\` : ''}</span></div>
+      <div class="stat"><span class="sv">\${u.st.crit}</span><span class="sk">CRIT\${u.eqBonus && u.eqBonus.crit ? \`<i>+\${u.eqBonus.crit}% 装备</i>\` : ''}\${u.loveB && u.loveB.crit ? \`<i>+\${u.loveB.crit}</i>\` : ''}</span></div>
       <div class="stat"><span class="sv">\${u.st.initEx}<span class="k"> / \${u.st.maxEx}</span></span><span class="sk">开局 EX</span></div>
       <div class="stat"><span class="sv">\${u.st.exRate}</span><span class="sk">EX 上升</span></div>
       <div class="stat"><span class="sv">\${u.st.wtMin}~\${u.st.wtMax}</span><span class="sk">行动CT</span></div>
