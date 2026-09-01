@@ -117,7 +117,12 @@ for (const u of units) {
 }
 
 // 合并装备 Wiki 数据 (名称精确匹配): アビリティ满强文本 / 入手方法 / 专武对应卡名
-const eqWikiByName = new Map(equipWikiRows.filter((r) => r.owned).map((r) => [r.name, r]));
+// 装备 Wiki 行按名称索引: 注册 name 与 nameAlt 两个 key (游戏内装飾品名含角色括号, Wiki 表名省略)
+const eqWikiByName = new Map();
+for (const r of equipWikiRows.filter((r) => r.owned)) {
+  eqWikiByName.set(r.name, r);
+  if (r.nameAlt) eqWikiByName.set(r.nameAlt, r);
+}
 for (const u of units) {
   for (const e of u.equips) {
     const w = eqWikiByName.get(e.name);

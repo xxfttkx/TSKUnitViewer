@@ -80,6 +80,15 @@ for (const w of wikiEquips) {
   if (d) { w.equip_id = d.equip_id; w.owned = true; w.instances = d.instances; matched++; } else { w.owned = false; unmatchedWiki++; }
 }
 for (const [name, d] of byName) if (!wikiEquips.some((w) => w.name === name)) unmatchedDump.push(name);
+// 2.5 装飾品名修正: 游戏内名称含角色括号 (如「アルモタヘル(ちぃ)の被り物」), Wiki 表名省略括号段 (「アルモタヘルの被り物」) → 去括号名二次匹配
+const stripParen = (s) => s.replace(/[(（][^)）]*[)）]/g, '');
+for (const [name, d] of byName) {
+  if (wikiEquips.some((w) => w.name === name)) continue;
+  const alt = stripParen(name);
+  if (alt === name) continue;
+  const w = wikiEquips.find((x) => x.name === alt && !x.owned);
+  if (w) { w.equip_id = d.equip_id; w.owned = true; w.instances = d.instances; w.nameAlt = name; matched++; unmatchedDump = unmatchedDump.filter((n) => n !== name); unmatchedWiki--; }
+}
 console.log(`  wiki rows=${wikiEquips.length}, matched=${matched}, dump 未匹配=${unmatchedDump.length}, wiki 未持有=${unmatchedWiki}`);
 if (unmatchedDump.length) console.log('  dump 里有但 Wiki 没有:', unmatchedDump.slice(0, 20).join(' / '));
 
