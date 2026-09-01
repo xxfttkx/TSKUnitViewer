@@ -137,7 +137,7 @@ const stats = {
 // Wiki 行类型统一归一为数字 ID (前端筛选/显示共用, 与持有卡的 u.role 同一套枚举)
 for (const r of wikiRows) r.typeId = WIKI_ROLE_ID[r.type] ?? 0;
 
-const payload = JSON.stringify({ units, stats, wikiRows, ATTR, ATTR_COLOR, ROLE, CAMP, AFFIL, WIKI_ATTR_ID, WIKI_CAMP_ID })
+const payload = JSON.stringify({ units, stats, wikiRows, ATTR, ATTR_COLOR, ROLE, CAMP, AFFIL, WIKI_ATTR_ID, WIKI_CAMP_ID, EQ_PART, EQ_PARAM })
   .replace(/</g, '\\u003c');
 
 const html = `<!DOCTYPE html>
@@ -364,7 +364,7 @@ const html = `<!DOCTYPE html>
 <script>
 const DATA = ${payload};
 const WIKI_BASE = 'https://twinklestarknights.wikiru.jp/?';
-const { units, stats, wikiRows, ATTR, ATTR_COLOR, ROLE, CAMP, AFFIL, WIKI_ATTR_ID, WIKI_CAMP_ID } = DATA;
+const { units, stats, wikiRows, ATTR, ATTR_COLOR, ROLE, CAMP, AFFIL, WIKI_ATTR_ID, WIKI_CAMP_ID, EQ_PART, EQ_PARAM } = DATA;
 const state = { q: '', attr: 0, role: 0, rar: 0, camp: 0, own: 0, sort: 'power', desc: false, view: 'card' };
 
 const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
