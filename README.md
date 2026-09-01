@@ -8,27 +8,33 @@
 
 ```
 unit_list/
-├── unit_list.json      # 游戏数据（Frida / il2cpp-bridge dump 自客户端内存）
+├── unit_list.json      # 游戏数据（Frida / il2cpp-bridge dump 自客户端内存，含角色+装备）
 ├── gen_viewer.mjs      # 生成图鉴页脚本
-├── fetch_images.mjs    # Wiki 图片爬虫脚本（同时产出全图鉴数据 wiki_data.json）
+├── fetch_images.mjs    # Wiki 角色图片爬虫脚本（同时产出全图鉴数据 wiki_data.json）
+├── fetch_equips.mjs    # Wiki 装备爬虫脚本（武器/防具/装飾品一覧 → equip_wiki.json + 装备图标）
 ├── wiki_data.json      # 全图鉴数据（fetch_images.mjs 产物，281 行，含 owned/ownedUnit 标记）
+├── equip_wiki.json     # 装备图鉴数据（fetch_equips.mjs 产物，458 行，按名称匹配 dump 装备）
 ├── index.html          # 生成产物：交互式图鉴（数据内嵌，双击即可打开；亦是 GitHub Pages 首页）
 ├── img/                # 爬取的图片（fetch_images.mjs 产物）
 │   ├── {unit_id}.png       # 立绘大图（来自角色详情页）
 │   ├── {unit_id}_icon.png  # Wiki 50x50 头像（立绘缺失时的兜底）
-│   └── w{no}_icon.png      # 未持有角色的头像（全图鉴视图用）
+│   ├── w{no}_icon.png      # 未持有角色的头像（全图鉴视图用）
+│   └── equip/{equip_id}.png # 装备图标（fetch_equips.mjs 产物，dump 中持有的装备）
 └── README.md
 ```
 
 ## 使用方法
 
 ```powershell
-# 1. 生成图鉴（读取 unit_list.json + img/，输出 index.html）
+# 1. 生成图鉴（读取 unit_list.json + img/ + equip_wiki.json，输出 index.html）
 node gen_viewer.mjs
 
 # 2. 爬取 Wiki 角色图片（可选，~205 张立绘 + 头像，约 3 分钟）
 node fetch_images.mjs
 node fetch_images.mjs --icon-only   # 仅下载 50x50 头像，秒下
+
+# 3. 爬取 Wiki 装备数据 + 图标（可选，武器/防具/装飾品一覧，约 10 秒）
+node fetch_equips.mjs
 ```
 
 - `fetch_images.mjs` 支持断点续传（已存在的文件自动跳过），可重复执行补漏。
@@ -42,6 +48,7 @@ node fetch_images.mjs --icon-only   # 仅下载 50x50 头像，秒下
 - **稀有度显示**：升星（限界突破）过的卡显示为 `★初始→当前`（如 `★1→5`），未升星只显示当前★；详情弹窗含「稀有度 / 上限★5」
 - **图片展示**：卡牌视图/表格/按角色/全图鉴均显示 Wiki 50x50 头像；详情弹窗为「模糊立绘底 + 右侧展示面板」——立绘等比完整显示不裁剪（兼容各种尺寸/横竖图），同图放大模糊铺满弹窗作氛围底
 - **角标**：`Lv MAX`（金色）、`♥MAX`（粉色）、上限解放次数、绊卡
+- **详情弹窗分区**：左栏=基本信息 / **装备**（3 部位：武器·防具·装飾品，图标+★+Lv/突破+附魔槽+当前参数+アビリティ当前&满强文本+入手方法，专武有「専武」标）/ 技能 / 简介；右栏=立绘 / 白值（当前练度）/ 档案
 - **顶部统计**：持有卡牌、登场角色、总战力、**图鉴收集 210/281**、★5、满级、好感满
 - **点击卡片**：详情弹窗（战力、队伍HP、好感度、生日、CV、简介等档案；全图鉴中仅已持有卡可点），弹窗标题下有「Wiki ↗」直达该角色的 Wiki 详情页；全图鉴每张卡右下角也有「↗ Wiki」角标（含未持有卡）
 
@@ -57,6 +64,9 @@ node fetch_images.mjs --icon-only   # 仅下载 50x50 头像，秒下
 | `affiliation` | 0=無所属 1=流星学園 2=新星学園 3=守護天使 4=ネビュラ 5=流星附属 7=コラプサー 8=極星学園（全部经 Wiki 角色详情页「所属」栏核验；6 未在 dump 中出现）。`affiliation` 为主所属 |
 
 其他字段说明：
+
+- `equip_data[].parameter_list[].parameter_type`：0=HP 1=ATK 2=EX上昇 3=クリ(值×100=%) 4=EX 5=行動CT（经 Wiki 装备一覧对照确认）；dump 值为**当前练度值**，Wiki 一覧数值为满强化(Lv50)值
+- `equip_data[].equip_part`：1=武器 2=防具 3=装飾品；`exclusive_unit_id` 非 0 为专武；`enchant_frame_list` 的附魔详情在 dump 中为类型名占位（未解析），仅有槽位/解锁状态
 
 - `camp_list` / `affiliation_list` 是每张卡的**完整陣営/所属集合**（`camp`/`affiliation` 为主值）；存在双重所属的卡（如主 4 副 2），图鉴以 `·` 分隔显示完整集合，种族筛选也按集合匹配（任一命中即显示）
 - `rarity` 是**当前稀有度**（升星〔限界突破〕后会增长），不是初始稀有度；初始稀有度以 Wiki 行的 ★ 为准（合并后存于 `wRar`），`max_rarity` 为稀有度上限（当前所有卡均为 5）

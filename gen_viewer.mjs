@@ -12,6 +12,11 @@ const raw = JSON.parse(readFileSync(join(__dirname, 'unit_list.json'), 'utf8'));
 // Wiki 全图鉴数据: owned=已持有；wiki 中文属性/类型 → json 数字 ID 映射
 let wikiRows = [];
 try { wikiRows = JSON.parse(readFileSync(join(__dirname, 'wiki_data.json'), 'utf8')).rows; } catch { /* wiki_data.json 不存在 */ }
+// 装备图鉴数据 (fetch_equips.mjs 产物, 按名称精确匹配 dump equip_name)
+let equipWikiRows = [];
+try { equipWikiRows = JSON.parse(readFileSync(join(__dirname, 'equip_wiki.json'), 'utf8')).rows; } catch { /* equip_wiki.json 不存在 */ }
+const EQ_PART = { 1: '武器', 2: '防具', 3: '装飾品' };
+const EQ_PARAM = { 0: 'HP', 1: 'ATK', 2: 'EX上昇', 3: 'クリ', 4: 'EX', 5: '行動CT' };
 const WIKI_ATTR_ID = { '炎': 1, '水': 2, '雷': 3, '光': 4, '闇': 5 };
 const WIKI_ROLE_ID = { ATK: 1, SPD: 2, DEF: 3, SUP: 4, HEAL: 5, 'ヒール': 5 }; // HEAL=Wiki 现行记法, ヒール=旧记法兜底
 const WIKI_CAMP_ID = { '人間': 1, '神族': 2, '魔族': 3 };
@@ -19,6 +24,8 @@ const WIKI_CAMP_ID = { '人間': 1, '神族': 2, '魔族': 3 };
 // 扫描本地图片: img/{unit_id}.png 为立绘, img/{unit_id}_icon.png 为 Wiki 头像, img/w{no}_icon.png 为未持有卡头像
 let imgSet = new Set();
 try { imgSet = new Set(readdirSync(join(__dirname, 'img'))); } catch { /* img 目录不存在 */ }
+let eqImgSet = new Set();
+try { eqImgSet = new Set(readdirSync(join(__dirname, 'img', 'equip'))); } catch { /* img/equip 目录不存在 */ }
 const pickArt = (id) => {
   if (imgSet.has(`${id}.png`)) return `img/${id}.png`;
   if (imgSet.has(`${id}.jpg`)) return `img/${id}.jpg`;
@@ -79,6 +86,15 @@ const units = raw.map((u) => ({
   skills: (u.skill_data || []).map((s) => ({ type: s.skill_data_type, name: s.skill_name, detail: s.skill_detail, lv: s.lv, max_lv: s.max_lv, cost: s.cost_ex_gauge, unlock: s.is_unlock, cond: s.unlock_condition })),
   uniques: (u.unique_skill_data || []).map((s) => ({ name: s.skill_name, detail: s.detail, unlock: s.is_unlock, cond: s.unlock_condition })),
   st: (u.status_data && u.status_data.base_data) ? { hp: +u.status_data.base_data.hp, atk: u.status_data.base_data.attack, crit: u.status_data.base_data.critical, initEx: u.status_data.base_data.init_ex_gauge, maxEx: u.status_data.base_data.max_ex_gauge, exRate: u.status_data.base_data.ex_gauge_rate, wtMin: u.status_data.base_data.min_wt, wtMax: u.status_data.base_data.max_wt } : null,
+  equips: (u.equip_data || []).map((e) => ({
+    part: e.equip_part, name: e.equip_name, rarity: e.rarity, lv: e.lv, max_lv: e.max_lv,
+    lb: e.limit_break_count, max_lb: e.max_limit_break_count, exclusive: e.exclusive_unit_id || 0,
+    params: (e.parameter_list || []).map((p) => ({ t: p.parameter_type, v: p.parameter_value })),
+    skill: e.skill_data ? e.skill_data.skill_detail : '', skill_lv: e.skill_data ? e.skill_data.lv : null,
+    enchTotal: (e.enchant_frame_list || []).length,
+    enchOpen: (e.enchant_frame_list || []).filter((x) => x.is_enchant_release).length,
+    icon: eqImgSet.has(`${e.equip_id}.png`) ? `img/equip/${e.equip_id}.png` : null,
+  })),
   loveB: (u.status_data && u.status_data.add_love_lv) ? { hp: +u.status_data.add_love_lv.hp, atk: u.status_data.add_love_lv.attack, crit: u.status_data.add_love_lv.critical } : null,
 })).sort((a, b) => b.power - a.power || a.char_id - b.char_id);
 
@@ -95,6 +111,16 @@ for (const u of units) {
     whp: w.hp, watk: w.atk, wex: w.ex, wexUp: w.exUp, wctMin: w.ctMin, wctMax: w.ctMax,
     wcrit: w.crit, watkType: w.atkType, wdate: w.releaseDate, wobtain: w.obtain, whref: w.href, rowIdx: w.rowIdx,
   });
+}
+
+// 合并装备 Wiki 数据 (名称精确匹配): アビリティ满强文本 / 入手方法 / 专武对应卡名
+const eqWikiByName = new Map(equipWikiRows.filter((r) => r.owned).map((r) => [r.name, r]));
+for (const u of units) {
+  for (const e of u.equips) {
+    const w = eqWikiByName.get(e.name);
+    if (!w) continue;
+    e.wAbility = w.ability; e.wObtain = w.obtain; e.wNo = w.no || ''; e.charCard = w.charCard || '';
+  }
 }
 
 const stats = {
@@ -253,6 +279,20 @@ const html = `<!DOCTYPE html>
   .mfig .stat { flex-direction: row; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 2px 8px; padding: 7px 10px; }
   .mfig .stat .sv { font-size: 16px; }
   .mfig .grid2 { grid-template-columns: 1fr; font-size: 12.5px; gap: 5px; }
+  /* 装备区 */
+  .eq { display: flex; gap: 10px; padding: 8px 10px; border: 1px solid var(--line); border-radius: 10px; background: rgba(255,255,255,.02); }
+  .eq .eico { width: 38px; height: 38px; flex: none; border-radius: 8px; background: #0d1126; border: 1px solid var(--line); display: flex; align-items: center; justify-content: center; font-weight: 700; color: var(--dim); overflow: hidden; }
+  .eq .eico img { width: 100%; height: 100%; object-fit: cover; }
+  .eq .eqi { flex: 1; min-width: 0; }
+  .eq .eqn { font-weight: 700; font-size: 13.5px; }
+  .eq .epart { font-size: 10.5px; color: var(--dim); border: 1px solid var(--line); border-radius: 5px; padding: 1px 6px; margin-right: 6px; vertical-align: 1px; }
+  .eq .starr { color: #ffd94a; letter-spacing: -1px; }
+  .eq .extag { font-size: 10.5px; color: #ff9db8; border: 1px solid #ff9db855; border-radius: 5px; padding: 0 5px; margin-left: 6px; }
+  .eq .eqm { font-size: 12px; color: var(--dim); margin: 3px 0 4px; }
+  .eq .eqp { display: flex; flex-wrap: wrap; gap: 4px; }
+  .eq .eqp span { font-size: 11.5px; padding: 2px 7px; border-radius: 6px; background: rgba(255,255,255,.06); border: 1px solid var(--line); }
+  .eq .eqs { font-size: 12px; color: var(--dim); margin-top: 4px; line-height: 1.55; }
+  .eq .eqs b { color: var(--fg); font-size: 11px; border-radius: 4px; padding: 0 4px; margin-right: 4px; background: rgba(255,255,255,.08); }
   .figpanel img { max-width: 92%; max-height: 92%; object-fit: contain; filter: drop-shadow(0 8px 18px rgba(0,0,0,.55)); }
   .figpanel .ficon { width: 100%; height: 100%; object-fit: cover; }
   .modal .close { position: absolute; top: 12px; right: 16px; font-size: 22px; color: var(--dim); cursor: pointer; background: none; border: none; z-index: 2; }
@@ -533,6 +573,20 @@ function showModal(id) {
       <div class="stat"><span class="sv">\${u.st.exRate}</span><span class="sk">EX 上升</span></div>
       <div class="stat"><span class="sv">\${u.st.wtMin}~\${u.st.wtMax}</span><span class="sk">行动CT</span></div>
     </div></div>\` : '';
+  // 装备区: 每卡 3 部位 (武器/防具/装飾品), dump 当前练度 + Wiki 满强アビリティ
+  const paramStr = (p) => EQ_PARAM[p.t] === undefined ? p.t + ':' + p.v : \`\${EQ_PARAM[p.t]}\${p.t === 3 ? (p.v / 100).toFixed(2) + '%' : '+' + p.v.toLocaleString()}\`;
+  const eqHtml = (u.equips || []).length ? \`<div class="section"><h3>装备</h3><div style="display:flex;flex-direction:column;gap:8px">
+    \${u.equips.map((e) => \`<div class="eq">
+      <div class="eico">\${e.icon ? \`<img src="\${e.icon}" loading="lazy" onerror="this.style.visibility='hidden'">\` : \`<span>\${(e.name || '?')[0]}</span>\`}</div>
+      <div class="eqi">
+        <div class="eqn"><span class="epart">\${EQ_PART[e.part] || e.part}</span><span class="starr">\${'★'.repeat(e.rarity || 1)}</span> \${esc(e.name)}\${e.exclusive ? '<span class="extag">専武</span>' : ''}</div>
+        <div class="eqm">Lv \${e.lv}/\${e.max_lv}\${e.max_lb ? \` · 突破 \${e.lb}/\${e.max_lb}\` : ''}\${e.enchTotal ? \` · 附魔 \${e.enchOpen}/\${e.enchTotal}\` : ''}\${e.wObtain ? \` · \${esc(e.wObtain)}\` : ''}</div>
+        <div class="eqp">\${(e.params || []).map((p) => \`<span>\${paramStr(p)}</span>\`).join('')}</div>
+        \${e.skill ? \`<div class="eqs"><b>アビリティ</b> \${esc(e.skill)}\${e.skill_lv ? \` <span class="k">Lv\${e.skill_lv}</span>\` : ''}</div>\` : ''}
+        \${e.wAbility && e.wAbility !== e.skill ? \`<div class="eqs"><b>满强</b> \${esc(e.wAbility)}</div>\` : ''}
+      </div>
+    </div>\`).join('')}
+  </div></div>\` : '';
   // 技能区: EX1/EX2/ユニゾン/シスター技 + 升星解锁的固有被动 (含效果文本/EX消耗/等级/解锁条件)
   const skillTag = (s) => s.type === 2 ? '<span class="stag st-u">ユニゾン</span>' : s.type === 3 ? '<span class="stag st-s">シスター</span>' : \`<span class="stag st-ex">EX\${s._exn}</span>\`;
   const skillBlock = (s, tagHtml) => \`<div class="skill\${s.unlock ? '' : ' slock'}">
@@ -561,6 +615,7 @@ function showModal(id) {
       \${row('所属', esc(affilStr(u)))}
       \${row('卡牌编号', u.unit_id + ' (illust ' + u.illust + ')')}
     </div>
+    \${eqHtml}
     \${skillsHtml}
       \${u.profile ? \`<div class="section"><h3>简介</h3><div class="profile">\${esc(u.profile)}</div></div>\` : ''}
     </div>
