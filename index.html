@@ -121,6 +121,13 @@
     object-fit: cover; filter: blur(28px) brightness(.5) saturate(1.2); transform: scale(1.12); }
   .martbg::after { content: ''; position: absolute; inset: 0; background: rgba(10, 12, 26, .35); }
   .mmain { flex: 1; min-width: 0; position: relative; z-index: 1; overflow-y: auto; padding-right: 4px; }
+  /* 弹窗滚动条: 细条/透明轨道/悬停点亮 */
+  .mmain, .mfig { scrollbar-width: thin; scrollbar-color: rgba(255,255,255,.14) transparent; }
+  .mmain::-webkit-scrollbar, .mfig::-webkit-scrollbar { width: 6px; }
+  .mmain::-webkit-scrollbar-track, .mfig::-webkit-scrollbar-track { background: transparent; }
+  .mmain::-webkit-scrollbar-thumb, .mfig::-webkit-scrollbar-thumb { background: rgba(255,255,255,.14); border-radius: 3px; }
+  .mmain:hover::-webkit-scrollbar-thumb, .mfig:hover::-webkit-scrollbar-thumb { background: rgba(255,255,255,.22); }
+  .mmain::-webkit-scrollbar-thumb:hover, .mfig::-webkit-scrollbar-thumb:hover { background: rgba(255,217,106,.5); }
   .mfig { flex: none; width: 252px; position: relative; z-index: 1; display: flex; flex-direction: column; gap: 10px; max-height: 100%; overflow-y: auto; padding-right: 2px; }
   .figpanel { height: clamp(200px, 32vh, 330px); flex: none; border-radius: 14px; border: 1px solid var(--line);
     display: flex; align-items: center; justify-content: center; overflow: hidden; }
