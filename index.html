@@ -445,10 +445,11 @@ function showModal(id) {
       <div class="stat"><span class="sv">${u.st.exRate + (u.eqBonus ? u.eqBonus.exUp : 0)}</span><span class="sk">EX 上升${u.eqBonus && u.eqBonus.exUp ? `<i>合计(基础 ${u.st.exRate} + 装备 ${u.eqBonus.exUp})</i>` : ''}</span></div>
       <div class="stat"><span class="sv">${u.st.wtMin}~${u.st.wtMax}</span><span class="sk">行动CT</span></div>
     </div></div>` : '';
-  // 装备区: 每卡 3 部位 (武器/防具/装飾品), dump 当前练度 + Wiki 满强アビリティ
+  // 装备参数: 当前练度参数 chips + Wiki 满强アビリティ
   const paramStr = (p) => EQ_PARAM[p.t] === undefined ? p.t + ':' + p.v : `${EQ_PARAM[p.t]}${p.t === 3 ? (p.v / 100).toFixed(2) + '%' : '+' + p.v.toLocaleString()}`;
+  // 装备区: 每卡 3 部位 (dump 里 equip_data 顺序随机, 渲染前按 武器→防具→装飾品 固定排序)
   const eqHtml = (u.equips || []).length ? `<div class="section"><h3>装备</h3><div style="display:flex;flex-direction:column;gap:8px">
-    ${u.equips.map((e) => `<div class="eq">
+    ${[...u.equips].sort((a, b) => a.part - b.part).map((e) => `<div class="eq">
       <div class="eico">${e.icon ? `<img src="${e.icon}" loading="lazy" onerror="this.style.visibility='hidden'">` : `<span>${(e.name || '?')[0]}</span>`}</div>
       <div class="eqi">
         <div class="eqn"><span class="epart">${EQ_PART[e.part] || e.part}</span><span class="starr">${'★'.repeat(e.rarity || 1)}</span> ${esc(e.name)}${e.exclusive ? '<span class="extag">専武</span>' : ''}</div>
