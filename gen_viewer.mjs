@@ -46,6 +46,10 @@ const SP_TYPE_ID = { '魔法': 1, '斬撃': 2, '打撃': 3 }; // Wiki 一覧「�
 const AFFIL = { 0: '無所属', 1: '流星学園', 2: '新星学園', 3: '守護天使', 4: 'ネビュラ', 5: '流星附属', 7: 'コラプサー', 8: '極星学園' };
 
 const cleanStyle = (s) => String(s ?? '').replace(/<style[^>]*>|<\/style>/g, '');
+// full_name 的「東雲<style=p24>しののめ</style>」片段 → HTML <ruby> 注音 (style 标签内容即假名读法)
+const rubyName = (s) => String(s ?? '')
+  .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+  .replace(/&lt;style=p\d+&gt;([\s\S]*?)&lt;\/style&gt;/g, '<rt>$1</rt>');
 
 const units = raw.map((u) => ({
   id: u.u_unit_id,
@@ -54,6 +58,7 @@ const units = raw.map((u) => ({
   cname: u.character_name,
   uname: u.unit_name,
   fname: cleanStyle(u.full_name),
+  fnameRuby: rubyName(u.full_name),
   rarity: u.rarity,
   max_rarity: u.max_rarity,
   attr: u.attr_type,
@@ -324,6 +329,7 @@ const html = `<!DOCTYPE html>
   .modal .close { position: absolute; top: 12px; right: 16px; font-size: 22px; color: var(--dim); cursor: pointer; background: none; border: none; z-index: 2; }
   .modal h2 { font-size: 20px; }
   .mmain .sub2 { color: var(--dim); font-size: 13px; margin: 2px 0 14px; }
+  .mmain ruby rt { color: var(--dim); font-size: 10px; } /* 姓名注音 (ルビ): 汉字上假名下 */
   .wlink { color: #7ab7ff; text-decoration: none; font-weight: 600; }
   .wlink:hover { text-decoration: underline; }
   .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 18px; font-size: 13.5px; }
@@ -644,7 +650,7 @@ function showModal(id) {
     <div class="martbg">\${u.art ? \`<img src="\${u.art}" onerror="this.parentElement.remove()">\` : ''}</div>
     <button class="close" onclick="document.getElementById('overlay').classList.remove('show')">✕</button>
     <div class="mmain">
-      <div><h2>\${esc(u.uname)}</h2><div class="sub2">\${esc(u.fname)} · <span style="color:var(--gold)">\${rareStr(u)}</span> · <span style="color:\${c};font-weight:700">\${ATTR[u.attr]}</span> · \${ROLE[u.role]}\${u.spType && SP_TYPE[u.spType] ? \` · \${SP_TYPE[u.spType]}\` : ''}\${u.whref ? \` · <a class="wlink" href="\${WIKI_BASE}\${u.whref.replace(/&/g, '&amp;')}" target="_blank" rel="noopener">Wiki ↗</a>\` : ''}</div></div>
+      <div><h2>\${esc(u.uname)}</h2><div class="sub2"><ruby>\${u.fnameRuby}</ruby> · <span style="color:var(--gold)">\${rareStr(u)}</span> · <span style="color:\${c};font-weight:700">\${ATTR[u.attr]}</span> · \${ROLE[u.role]}\${u.spType && SP_TYPE[u.spType] ? \` · \${SP_TYPE[u.spType]}\` : ''}\${u.whref ? \` · <a class="wlink" href="\${WIKI_BASE}\${u.whref.replace(/&/g, '&amp;')}" target="_blank" rel="noopener">Wiki ↗</a>\` : ''}</div></div>
       <div class="grid2" style="margin-top:14px">
       \${row('战力', '<b style="color:var(--gold)">' + u.power.toLocaleString() + '</b>')}
       \${row('队伍HP', u.team_hp.toLocaleString())}
@@ -668,7 +674,7 @@ function showModal(id) {
       \${statHtml}
       <div class="section"><h3>档案</h3>
         <div class="grid2">
-          \${row('全名', esc(u.fname))}\${row('生日', esc(u.birthday))}
+          \${row('全名', '<ruby>' + u.fnameRuby + '</ruby>')}\${row('生日', esc(u.birthday))}
           \${row('守护星', esc(u.star))}\${row('学年', u.year ? u.year + ' 年级' : '')}
           \${row('CV', esc(u.cv))}\${row('社团', esc(u.club || '-'))}
           \${row('委员/职务', esc(u.committee || '-'))}\${row('爱好', esc(u.hobby || '-'))}
