@@ -41,6 +41,7 @@ const ATTR_COLOR = { 1: '#ff6b4a', 2: '#4a9eff', 3: '#3fd97f', 4: '#ffd94a', 5: 
 const ROLE = { 1: 'ATK', 2: 'SPD', 3: 'DEF', 4: 'SUP', 5: 'HEAL' };
 const CAMP = { 1: '人間', 2: '神族', 3: '魔族' };
 const SP_TYPE = { 1: '魔法', 2: '斬撃', 3: '打撃' }; // sp_equip_types[0] = 攻撃タイプ (可装备武器类型)
+const SP_TYPE_ID = { '魔法': 1, '斬撃': 2, '打撃': 3 }; // Wiki 一覧「攻撃タイプ」列文本 → ID
 // 所属名称已全部经 Wiki 角色详情页「所属」栏核验 (3=守護天使, 7=コラプサー, 8=極星学園 等)
 const AFFIL = { 0: '無所属', 1: '流星学園', 2: '新星学園', 3: '守護天使', 4: 'ネビュラ', 5: '流星附属', 7: 'コラプサー', 8: '極星学園' };
 
@@ -150,8 +151,11 @@ const stats = {
   dexTotal: wikiRows.length,
 };
 
-// Wiki 行类型统一归一为数字 ID (前端筛选/显示共用, 与持有卡的 u.role 同一套枚举)
-for (const r of wikiRows) r.typeId = WIKI_ROLE_ID[r.type] ?? 0;
+// Wiki 行类型/攻撃タイプ统一归一为数字 ID (前端筛选/显示共用, 与持有卡的 u.role/u.spType 同一套枚举)
+for (const r of wikiRows) {
+  r.typeId = WIKI_ROLE_ID[r.type] ?? 0;
+  r.spId = SP_TYPE_ID[r.atkType] ?? 0;
+}
 
 const payload = JSON.stringify({ units, stats, wikiRows, ATTR, ATTR_COLOR, ROLE, CAMP, AFFIL, WIKI_ATTR_ID, WIKI_CAMP_ID, EQ_PART, EQ_PARAM, SP_TYPE })
   .replace(/</g, '\\u003c');
@@ -263,6 +267,7 @@ const html = `<!DOCTYPE html>
   tr:hover td { background: rgba(255,255,255,.04); }
   .tdwrap { overflow-x: auto; background: var(--panel); border: 1px solid var(--line); border-radius: 12px; }
   .role-chip { font-weight: 700; font-size: 12px; }
+  .rowbreak { flex-basis: 100%; height: 0; }
   .empty { color: var(--dim); text-align: center; padding: 60px 0; }
   /* modal */
   .overlay { position: fixed; inset: 0; background: rgba(0,0,0,.65); display: none; align-items: center; justify-content: center; z-index: 50; padding: 24px; }
@@ -355,7 +360,16 @@ const html = `<!DOCTYPE html>
   <div class="chips" id="roleChips"></div>
   <div class="chips" id="rarChips"></div>
   <div class="chips" id="campChips"></div>
+  <div class="chips" id="spChips"></div>
   <div class="chips" id="ownChips" style="display:none"></div>
+  <select id="viewSel">
+    <option value="card">视图：卡牌</option>
+    <option value="table">视图：表格</option>
+    <option value="char">视图：按角色</option>
+    <option value="dex">视图：全图鉴</option>
+  </select>
+  <span class="count" id="count"></span>
+  <div class="rowbreak"></div>
   <select id="sortSel">
     <option value="power">排序：战力</option>
     <option value="atk">排序：ATK（含装备）</option>
@@ -368,13 +382,6 @@ const html = `<!DOCTYPE html>
     <option value="date">排序：实装日期</option>
   </select>
   <button id="dirBtn" class="chip" style="font-family:inherit" title="切换排序方向">↓ 降序</button>
-  <select id="viewSel">
-    <option value="card">视图：卡牌</option>
-    <option value="table">视图：表格</option>
-    <option value="char">视图：按角色</option>
-    <option value="dex">视图：全图鉴</option>
-  </select>
-  <span class="count" id="count"></span>
 </div>
 <main id="main"></main>
 
@@ -384,7 +391,7 @@ const html = `<!DOCTYPE html>
 const DATA = ${payload};
 const WIKI_BASE = 'https://twinklestarknights.wikiru.jp/?';
 const { units, stats, wikiRows, ATTR, ATTR_COLOR, ROLE, CAMP, AFFIL, WIKI_ATTR_ID, WIKI_CAMP_ID, EQ_PART, EQ_PARAM, SP_TYPE } = DATA;
-const state = { q: '', attr: 0, role: 0, rar: 0, camp: 0, own: 0, sort: 'power', desc: false, view: 'card' };
+const state = { q: '', attr: 0, role: 0, rar: 0, camp: 0, sp: 0, own: 0, sort: 'power', desc: false, view: 'card' };
 
 const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const stars = (n) => '★'.repeat(n);
@@ -425,6 +432,7 @@ function renderToolbar() {
   chipRow('roleChips', [[0, '类型'], ...Object.entries(ROLE).map(([k, v]) => [+k, v])], 'role');
   chipRow('rarChips', [[0, '稀有度'], [5, '★5'], [4, '★4'], [3, '★3'], [2, '★2']], 'rar');
   chipRow('campChips', [[0, '种族'], ...Object.entries(CAMP).map(([k, v]) => [+k, v])], 'camp');
+  chipRow('spChips', [[0, '攻撃'], ...Object.entries(SP_TYPE).map(([k, v]) => [+k, v])], 'sp');
   chipRow('ownChips', [[0, '持有'], [1, '已持有'], [2, '未持有']], 'own');
 }
 
@@ -434,6 +442,7 @@ function filtered() {
     (!q || (u.cname + u.uname + u.fname + u.cv).toLowerCase().includes(q)) &&
     (!state.attr || u.attr === state.attr) &&
     (!state.role || u.role === state.role) &&
+    (!state.sp || u.spType === state.sp) &&
     (!state.rar || u.rarity === state.rar) &&
     (!state.camp || u.camps.includes(state.camp)));
   const cmp = {
@@ -471,7 +480,7 @@ function cardHTML(u) {
       <div class="uname">\${esc(u.uname)}</div>
       <div class="cname">\${esc(u.cname)}</div>
       <div class="nums"><span>Lv \${u.lv}<span style="color:var(--dim)">/\${u.max_lv}</span></span><span class="heart">♥ \${u.love}</span><span><b>\${u.power.toLocaleString()}</b></span></div>
-      <div class="meta"><span class="role-chip" style="color:\${{1:'#ff8a7a',2:'#7ae0ff',3:'#8fa0ff',4:'#c39bff',5:'#ff9ec4'}[u.role]}">\${ROLE[u.role]}</span><span>\${esc(campStr(u))}</span><span>\${esc(affilStr(u))}</span></div>
+      <div class="meta"><span class="role-chip" style="color:\${{1:'#ff8a7a',2:'#7ae0ff',3:'#8fa0ff',4:'#c39bff',5:'#ff9ec4'}[u.role]}">\${ROLE[u.role]}</span>\${SP_TYPE[u.spType] ? \`<span>\${SP_TYPE[u.spType]}</span>\` : ''}<span>\${esc(campStr(u))}</span><span>\${esc(affilStr(u))}</span></div>
     </div>
   </div>\`;
 }
@@ -492,14 +501,14 @@ function render() {
       <td style="color:var(--gold)">\${rareStr(u)}</td>
       <td style="color:\${ATTR_COLOR[u.attr]}">\${ATTR[u.attr]}</td>
       <td>\${esc(u.cname)}</td><td>\${esc(u.uname)}</td>
-      <td class="role-chip">\${ROLE[u.role]}</td><td>\${esc(campStr(u))}</td><td>\${esc(affilStr(u))}</td>
+      <td class="role-chip">\${ROLE[u.role]}</td><td>\${SP_TYPE[u.spType] || ''}</td><td>\${esc(campStr(u))}</td><td>\${esc(affilStr(u))}</td>
       <td>\${u.lv}/\${u.max_lv}\${u.lv >= u.max_lv ? ' <span style="color:var(--gold)">MAX</span>' : ''}</td>
       <td style="color:var(--pink)">\${u.love}</td>
       <td><b>\${u.power.toLocaleString()}</b></td>
       <td>\${u.limit || '-'}</td><td>\${esc(u.birthday)}</td><td>\${esc(u.cv)}</td>
     </tr>\`).join('');
     main.innerHTML = \`<div class="tdwrap"><table><thead><tr>
-      <th></th><th>★</th><th>属性</th><th>角色</th><th>卡名</th><th>类型</th><th>种族</th><th>所属</th><th>Lv</th><th>♥</th><th>战力</th><th>解放</th><th>生日</th><th>CV</th>
+      <th></th><th>★</th><th>属性</th><th>角色</th><th>卡名</th><th>类型</th><th>攻撃</th><th>种族</th><th>所属</th><th>Lv</th><th>♥</th><th>战力</th><th>解放</th><th>生日</th><th>CV</th>
     </tr></thead><tbody>\${rows}</tbody></table></div>\`;
   } else if (state.view === 'char') {
     const byChar = new Map();
@@ -536,6 +545,7 @@ function renderDex() {
     (!q || (r.title + r.yomi + r.no).toLowerCase().includes(q)) &&
     (!state.attr || WIKI_ATTR_ID[r.attr] === state.attr) &&
     (!state.role || r.typeId === state.role) &&
+    (!state.sp || r.spId === state.sp) &&
     (!state.camp || WIKI_CAMP_ID[r.camp] === state.camp) &&
     (!state.rar || r.rarity === state.rar) &&
     (!state.own || (state.own === 1 ? r.owned : !r.owned)));
@@ -572,7 +582,7 @@ function renderDex() {
       <div class="cardbody">
         <div class="uname">\${esc(r.title || r.no)}</div>
         <div class="cname">\${esc(r.yomi || '')}</div>
-        <div class="meta"><span class="role-chip">\${ROLE[r.typeId] || r.type || '?'}</span><span>\${r.camp || '?'}</span><span>\${esc(r.affil || '')}</span>\${r.releaseDate ? \`<span>\${r.releaseDate}</span>\` : ''}</div>
+        <div class="meta"><span class="role-chip">\${ROLE[r.typeId] || r.type || '?'}</span>\${SP_TYPE[r.spId] ? \`<span>\${SP_TYPE[r.spId]}</span>\` : ''}<span>\${r.camp || '?'}</span><span>\${esc(r.affil || '')}</span>\${r.releaseDate ? \`<span>\${r.releaseDate}</span>\` : ''}</div>
       </div>
     </div>\`;
   }).join('') + '</div>';
