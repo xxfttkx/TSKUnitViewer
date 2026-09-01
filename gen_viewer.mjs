@@ -40,6 +40,7 @@ const ATTR = { 1: '炎', 2: '水', 3: '雷', 4: '光', 5: '闇' };
 const ATTR_COLOR = { 1: '#ff6b4a', 2: '#4a9eff', 3: '#3fd97f', 4: '#ffd94a', 5: '#8b5cf6' };
 const ROLE = { 1: 'ATK', 2: 'SPD', 3: 'DEF', 4: 'SUP', 5: 'HEAL' };
 const CAMP = { 1: '人間', 2: '神族', 3: '魔族' };
+const SP_TYPE = { 1: '魔法', 2: '斬撃', 3: '打撃' }; // sp_equip_types[0] = 攻撃タイプ (可装备武器类型)
 // 所属名称已全部经 Wiki 角色详情页「所属」栏核验 (3=守護天使, 7=コラプサー, 8=極星学園 等)
 const AFFIL = { 0: '無所属', 1: '流星学園', 2: '新星学園', 3: '守護天使', 4: 'ネビュラ', 5: '流星附属', 7: 'コラプサー', 8: '極星学園' };
 
@@ -56,6 +57,7 @@ const units = raw.map((u) => ({
   max_rarity: u.max_rarity,
   attr: u.attr_type,
   role: u.role,
+  spType: (u.sp_equip_types || [])[0] || 0,
   camp: u.camp,
   camps: u.camp_list,       // 完整陣営集合 (可能多个, camp 为主值)
   affil: u.affiliation,
@@ -151,7 +153,7 @@ const stats = {
 // Wiki 行类型统一归一为数字 ID (前端筛选/显示共用, 与持有卡的 u.role 同一套枚举)
 for (const r of wikiRows) r.typeId = WIKI_ROLE_ID[r.type] ?? 0;
 
-const payload = JSON.stringify({ units, stats, wikiRows, ATTR, ATTR_COLOR, ROLE, CAMP, AFFIL, WIKI_ATTR_ID, WIKI_CAMP_ID, EQ_PART, EQ_PARAM })
+const payload = JSON.stringify({ units, stats, wikiRows, ATTR, ATTR_COLOR, ROLE, CAMP, AFFIL, WIKI_ATTR_ID, WIKI_CAMP_ID, EQ_PART, EQ_PARAM, SP_TYPE })
   .replace(/</g, '\\u003c');
 
 const html = `<!DOCTYPE html>
@@ -381,7 +383,7 @@ const html = `<!DOCTYPE html>
 <script>
 const DATA = ${payload};
 const WIKI_BASE = 'https://twinklestarknights.wikiru.jp/?';
-const { units, stats, wikiRows, ATTR, ATTR_COLOR, ROLE, CAMP, AFFIL, WIKI_ATTR_ID, WIKI_CAMP_ID, EQ_PART, EQ_PARAM } = DATA;
+const { units, stats, wikiRows, ATTR, ATTR_COLOR, ROLE, CAMP, AFFIL, WIKI_ATTR_ID, WIKI_CAMP_ID, EQ_PART, EQ_PARAM, SP_TYPE } = DATA;
 const state = { q: '', attr: 0, role: 0, rar: 0, camp: 0, own: 0, sort: 'power', desc: false, view: 'card' };
 
 const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -625,7 +627,7 @@ function showModal(id) {
     <div class="martbg">\${u.art ? \`<img src="\${u.art}" onerror="this.parentElement.remove()">\` : ''}</div>
     <button class="close" onclick="document.getElementById('overlay').classList.remove('show')">✕</button>
     <div class="mmain">
-      <div><h2>\${esc(u.uname)}</h2><div class="sub2">\${esc(u.fname)} · <span style="color:var(--gold)">\${rareStr(u)}</span> · <span style="color:\${c};font-weight:700">\${ATTR[u.attr]}</span> · \${ROLE[u.role]}\${u.whref ? \` · <a class="wlink" href="\${WIKI_BASE}\${u.whref.replace(/&/g, '&amp;')}" target="_blank" rel="noopener">Wiki ↗</a>\` : ''}</div></div>
+      <div><h2>\${esc(u.uname)}</h2><div class="sub2">\${esc(u.fname)} · <span style="color:var(--gold)">\${rareStr(u)}</span> · <span style="color:\${c};font-weight:700">\${ATTR[u.attr]}</span> · \${ROLE[u.role]}\${u.spType && SP_TYPE[u.spType] ? \` · \${SP_TYPE[u.spType]}\` : ''}\${u.whref ? \` · <a class="wlink" href="\${WIKI_BASE}\${u.whref.replace(/&/g, '&amp;')}" target="_blank" rel="noopener">Wiki ↗</a>\` : ''}</div></div>
       <div class="grid2" style="margin-top:14px">
       \${row('战力', '<b style="color:var(--gold)">' + u.power.toLocaleString() + '</b>')}
       \${row('队伍HP', u.team_hp.toLocaleString())}
