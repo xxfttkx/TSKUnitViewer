@@ -78,7 +78,7 @@ const units = raw.map((u) => ({
   // 新版 dump 已解析的实体 (旧版为类型名占位符): 技能 / 升星解锁被动 / 当前练度白值 / 好感加成
   skills: (u.skill_data || []).map((s) => ({ type: s.skill_data_type, name: s.skill_name, detail: s.skill_detail, lv: s.lv, max_lv: s.max_lv, cost: s.cost_ex_gauge, unlock: s.is_unlock, cond: s.unlock_condition })),
   uniques: (u.unique_skill_data || []).map((s) => ({ name: s.skill_name, detail: s.detail, unlock: s.is_unlock, cond: s.unlock_condition })),
-  st: (u.status_data && u.status_data.base_data) ? { hp: +u.status_data.base_data.hp, atk: u.status_data.base_data.attack, crit: u.status_data.base_data.critical, initEx: u.status_data.base_data.init_ex_gauge, maxEx: u.status_data.base_data.max_ex_gauge, wtMin: u.status_data.base_data.min_wt, wtMax: u.status_data.base_data.max_wt } : null,
+  st: (u.status_data && u.status_data.base_data) ? { hp: +u.status_data.base_data.hp, atk: u.status_data.base_data.attack, crit: u.status_data.base_data.critical, initEx: u.status_data.base_data.init_ex_gauge, maxEx: u.status_data.base_data.max_ex_gauge, exRate: u.status_data.base_data.ex_gauge_rate, wtMin: u.status_data.base_data.min_wt, wtMax: u.status_data.base_data.max_wt } : null,
   loveB: (u.status_data && u.status_data.add_love_lv) ? { hp: +u.status_data.add_love_lv.hp, atk: u.status_data.add_love_lv.attack, crit: u.status_data.add_love_lv.critical } : null,
 })).sort((a, b) => b.power - a.power || a.char_id - b.char_id);
 
@@ -530,7 +530,8 @@ function showModal(id) {
       <div class="stat"><span class="sv">\${u.st.atk.toLocaleString()}</span><span class="sk">ATK\${u.loveB && u.loveB.atk ? \`<i>+\${u.loveB.atk} 好感</i>\` : ''}</span></div>
       <div class="stat"><span class="sv">\${u.st.crit}</span><span class="sk">CRIT\${u.loveB && u.loveB.crit ? \`<i>+\${u.loveB.crit}</i>\` : ''}</span></div>
       <div class="stat"><span class="sv">\${u.st.initEx}<span class="k"> / \${u.st.maxEx}</span></span><span class="sk">开局 EX</span></div>
-      <div class="stat"><span class="sv">\${u.st.wtMin}~\${u.st.wtMax}</span><span class="sk">行动权重</span></div>
+      <div class="stat"><span class="sv">\${u.st.exRate}</span><span class="sk">EX 上升</span></div>
+      <div class="stat"><span class="sv">\${u.st.wtMin}~\${u.st.wtMax}</span><span class="sk">行动CT</span></div>
     </div></div>\` : '';
   // 技能区: EX1/EX2/ユニゾン/シスター技 + 升星解锁的固有被动 (含效果文本/EX消耗/等级/解锁条件)
   const skillTag = (s) => s.type === 2 ? '<span class="stag st-u">ユニゾン</span>' : s.type === 3 ? '<span class="stag st-s">シスター</span>' : \`<span class="stag st-ex">EX\${s._exn}</span>\`;
