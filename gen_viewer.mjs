@@ -133,6 +133,7 @@ for (const u of units) {
     const lb = u.loveB || {};
     u.hpTotal = u.st.hp + b.hp + (lb.hp || 0);
     u.atkTotal = u.st.atk + b.atk + (lb.atk || 0);
+    u.exUpTotal = (u.st.exRate || 0) + b.exUp; // EX上升合计 (基础+装备)
   }
 }
 
@@ -356,6 +357,8 @@ const html = `<!DOCTYPE html>
   <select id="sortSel">
     <option value="power">排序：战力</option>
     <option value="atk">排序：ATK（含装备）</option>
+    <option value="exup">排序：EX 上升（含装备）</option>
+    <option value="exupbase">排序：基础 EX 上升</option>
     <option value="lv">排序：等级</option>
     <option value="love">排序：好感度</option>
     <option value="rarity">排序：稀有度</option>
@@ -434,6 +437,8 @@ function filtered() {
   const cmp = {
     power: (a, b) => b.power - a.power,
     atk: (a, b) => (b.atkTotal || 0) - (a.atkTotal || 0) || b.power - a.power,
+    exup: (a, b) => (b.exUpTotal || 0) - (a.exUpTotal || 0) || b.power - a.power,
+    exupbase: (a, b) => ((b.st && b.st.exRate) || 0) - ((a.st && a.st.exRate) || 0) || b.power - a.power,
     lv: (a, b) => b.lv - a.lv || b.power - a.power,
     love: (a, b) => b.love - a.love || b.power - a.power,
     rarity: (a, b) => b.rarity - a.rarity || b.power - a.power,
