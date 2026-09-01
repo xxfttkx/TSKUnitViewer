@@ -2,6 +2,8 @@
 //   equip_wiki.json : Wiki 装备图鉴数据 (按名称匹配 dump 的 equip_id, 供 gen_viewer.mjs 使用)
 //   img/equip/{equip_id}.png : 装备图标 (仅 dump 中持有的 139 种, 已存在自动跳过)
 // 匹配规则: Wiki「アイテム名」== dump「equip_name」精确匹配
+// 未收录装备 (活动时装/纪念道具等) 按 attach2 hex 命名规律补图:
+//   attach2/696D67_<hex('equip_<装备名>_NF.png')>  (696D67="img", NF 为全站统一尾缀)
 // 用法: node fetch_equips.mjs
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
 import { join, dirname } from 'node:path';
@@ -28,7 +30,7 @@ const num = (s) => { const n = parseFloat(String(s).replace(/,/g, '')); return N
 //   武器   : 画像|アイテム|★|低確率|攻撃タイプ|有効属性|ATK|EX|EX上昇|クリ|アビリティ|入手方法
 //   防具   : 画像|アイテム|★|低確率|有効属性|HP|EX|EX上昇|クリ|アビリティ|入手方法
 //   装飾品 : No.|画像|アイテム/キャラ|タイプ|HP|ATK|EX|EX上昇|行動CT|クリ(%)|アビリティ
-console.log('[1/3] fetching equip list pages...');
+console.log('[1/4] fetching equip list pages...');
 const wikiEquips = [];
 for (const pg of PAGES) {
   const html = await (await fetch(BASE + pg.url, { headers: UA })).text();
@@ -63,7 +65,7 @@ for (const pg of PAGES) {
 }
 
 // ---- 2. 与 dump 装备名称匹配 ----
-console.log('[2/3] matching with unit_list.json equip_data...');
+console.log('[2/4] matching with unit_list.json equip_data...');
 const raw = JSON.parse(readFileSync(join(__dirname, 'unit_list.json'), 'utf8'));
 const byName = new Map(); // equip_name -> { equip_id, instances:[...] }
 for (const u of raw) {
@@ -90,7 +92,7 @@ for (const w of wikiEquips.filter((x) => x.owned).slice(0, 12)) {
 
 // ---- 3. 输出 equip_wiki.json + 下载图标 ----
 writeFileSync(join(__dirname, 'equip_wiki.json'), JSON.stringify({ rows: wikiEquips }, null, 1), 'utf8');
-console.log(`\n[3/3] equip_wiki.json written (${wikiEquips.length} rows, owned ${matched})`);
+console.log(`\n[3/4] equip_wiki.json written (${wikiEquips.length} rows, owned ${matched})`);
 const EQ_DIR = join(__dirname, 'img', 'equip');
 mkdirSync(EQ_DIR, { recursive: true });
 let ok = 0, skip = 0, fail = 0;
@@ -109,3 +111,27 @@ for (const w of wikiEquips.filter((x) => x.owned && x.icon)) {
   await sleep(150);
 }
 console.log(`icons: ok=${ok} skip=${skip} fail=${fail}`);
+
+// ---- 4. Wiki 一覧未收录装备: 按 attach2 hex 命名规律构造 URL 补图 ----
+// 已收录装备的图标文件名均为 img_equip_<装备名>_NF.png, 未收录的活动装备同样遵循该约定
+console.log('\n[4/4] fetching icons for equipments missing from wiki list pages...');
+let ok4 = 0, skip4 = 0, fail4 = 0;
+for (const [name, d] of byName) {
+  const file = join(EQ_DIR, `${d.equip_id}.png`);
+  if (existsSync(file)) { skip4++; continue; }
+  const hex = Buffer.from(`equip_${name}_NF.png`, 'utf8').toString('hex').toUpperCase();
+  const url = `${BASE}attach2/696D67_${hex}`;
+  let done = false;
+  for (let i = 0; i < 3 && !done; i++) {
+    try {
+      const res = await fetch(url, { headers: UA });
+      if (res.ok && (res.headers.get('content-type') || '').includes('image')) {
+        writeFileSync(file, Buffer.from(await res.arrayBuffer())); done = true;
+      }
+    } catch { /* retry */ }
+    if (!done) await sleep(500);
+  }
+  if (done) ok4++; else { fail4++; console.log(`  MISS: ${d.equip_id} ${name}`); }
+  await sleep(150);
+}
+console.log(`extra icons: ok=${ok4} skip=${skip4} fail=${fail4}`);
