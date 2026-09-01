@@ -92,6 +92,9 @@ for (const [name, d] of byName) {
 console.log(`  wiki rows=${wikiEquips.length}, matched=${matched}, dump 未匹配=${unmatchedDump.length}, wiki 未持有=${unmatchedWiki}`);
 if (unmatchedDump.length) console.log('  dump 里有但 Wiki 没有:', unmatchedDump.slice(0, 20).join(' / '));
 
+// 入手方法列清洗: 武器/防具表的该列多为空, 仅含 PukiWiki「編集」链接, 剥离后只剩「編集/?」文本 → 置空
+for (const w of wikiEquips) if (/^編集\??$/.test(w.obtain || '')) w.obtain = '';
+
 // ---- 参数映射对照报告 (前 12 件已持有装备: dump 参数 vs Wiki 数值列) ----
 console.log('\n== parameter_type 对照报告 (dump [t:v] vs Wiki HP/ATK/EX/EXup/CT/crit) ==');
 for (const w of wikiEquips.filter((x) => x.owned).slice(0, 12)) {
