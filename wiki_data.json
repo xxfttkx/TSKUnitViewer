@@ -3449,7 +3449,8 @@
    "crit": 3,
    "releaseDate": "2025/07/19",
    "obtain": "ガチャ(恒常)",
-   "owned": false
+   "ownedUnit": 1055002,
+   "owned": true
   },
   {
    "no": "066002",
@@ -6359,8 +6360,9 @@
    "ctMax": 12,
    "crit": 3,
    "releaseDate": "2026/08/31",
-   "obtain": "イベント報酬?",
-   "owned": false
+   "obtain": "イベント報酬",
+   "ownedUnit": 1098002,
+   "owned": true
   },
   {
    "no": "006001",
