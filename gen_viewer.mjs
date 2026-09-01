@@ -92,7 +92,13 @@ const units = raw.map((u) => ({
   cv: u.cv,
   profile: u.profile,
   // 新版 dump 已解析的实体 (旧版为类型名占位符): 技能 / 升星解锁被动 / 当前练度白值 / 好感加成
-  skills: (u.skill_data || []).map((s) => ({ type: s.skill_data_type, name: s.skill_name, detail: s.skill_detail, lv: s.lv, max_lv: s.max_lv, cost: s.cost_ex_gauge, unlock: s.is_unlock, cond: s.unlock_condition })),
+  // skills[].ss* = specific_skill_* (EX2+ 强化版技能, dump 里挂原 EX 槽; 无强化槽为 access violation 占位, 置空)
+  skills: (u.skill_data || []).map((s) => ({
+    type: s.skill_data_type, name: s.skill_name, detail: s.skill_detail, lv: s.lv, max_lv: s.max_lv, cost: s.cost_ex_gauge, unlock: s.is_unlock, cond: s.unlock_condition,
+    ssName: /^<error>/.test(String(s.specific_skill_name || '')) ? '' : (s.specific_skill_name || ''),
+    ssDetail: /^<error>/.test(String(s.specific_skill_name || '')) ? '' : (s.specific_skill_detail || ''),
+    ssCost: s.specific_skill_cost_ex_gauge || 0,
+  })),
   uniques: (u.unique_skill_data || []).map((s) => ({ name: s.skill_name, detail: s.detail, unlock: s.is_unlock, cond: s.unlock_condition })),
   st: (u.status_data && u.status_data.base_data) ? { hp: +u.status_data.base_data.hp, atk: u.status_data.base_data.attack, crit: u.status_data.base_data.critical, initEx: u.status_data.base_data.init_ex_gauge, maxEx: u.status_data.base_data.max_ex_gauge, exRate: u.status_data.base_data.ex_gauge_rate, wtMin: u.status_data.base_data.min_wt, wtMax: u.status_data.base_data.max_wt } : null,
   equips: (u.equip_data || []).map((e) => ({
@@ -344,6 +350,7 @@ const html = `<!DOCTYPE html>
   .stat .sk i { font-style: normal; color: var(--pink); margin-left: 4px; }
   .stag { display: inline-block; font-size: 10px; font-weight: 800; padding: 1px 7px; border-radius: 99px; margin-right: 4px; vertical-align: 1px; }
   .st-ex { background: rgba(255,217,74,.15); color: var(--gold); }
+  .st-ex2 { background: rgba(255,157,74,.18); color: #ffb066; border: 1px solid #ffb06644; } /* EX2+ 强化技 */
   .st-u { background: rgba(74,158,255,.18); color: #7ac0ff; }
   .st-s { background: rgba(255,138,196,.15); color: var(--pink); }
   .st-p { background: rgba(139,92,246,.22); color: #c3a6ff; }
@@ -634,11 +641,12 @@ function showModal(id) {
       </div>
     </div>\`).join('')}
   </div></div>\` : '';
-  // 技能区: EX1/EX2/ユニゾン/シスター技 + 升星解锁的固有被动 (含效果文本/EX消耗/等级/解锁条件)
+  // 技能区: EX1/EX2/ユニゾン/シスター技 + EX2+ (specific_skill, 挂原 EX 槽下方) + 升星解锁的固有被动
   const skillTag = (s) => s.type === 2 ? '<span class="stag st-u">ユニゾン</span>' : s.type === 3 ? '<span class="stag st-s">シスター</span>' : \`<span class="stag st-ex">EX\${s._exn}</span>\`;
   const skillBlock = (s, tagHtml) => \`<div class="skill\${s.unlock ? '' : ' slock'}">
       <div class="sname">\${tagHtml} <b>\${esc(s.name || '固有被动')}</b>\${s.cost > 0 ? \`<span class="smeta">EX 消耗 \${s.cost}</span>\` : ''}\${s.max_lv ? \`<span class="smeta">Lv \${s.lv}/\${s.max_lv}</span>\` : ''}\${s.unlock ? '' : '<span class="slocktag">未解锁</span>'}</div>
       \${s.detail ? \`<div class="sdetail">\${esc(s.detail)}</div>\` : ''}
+      \${s.ssName ? \`<div class="sname" style="margin-top:7px"><span class="stag st-ex2">EX\${s._exn || 1}+</span> <b>\${esc(s.ssName)}</b>\${s.ssCost > 0 ? \`<span class="smeta">EX 消耗 \${s.ssCost}</span>\` : ''}</div><div class="sdetail">\${esc(s.ssDetail)}</div>\` : ''}
       \${s.cond && !s.unlock ? \`<div class="scond">解锁条件：\${esc(s.cond)}</div>\` : ''}
     </div>\`;
   let exN = 0;
