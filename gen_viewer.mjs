@@ -227,7 +227,7 @@ const html = `<!DOCTYPE html>
   .overlay.show { display: flex; }
   .modal {
     background: linear-gradient(160deg, var(--panel), var(--panel2));
-    border: 1px solid var(--line); border-radius: 16px; max-width: 680px; width: 100%;
+    border: 1px solid var(--line); border-radius: 16px; max-width: 860px; width: 100%;
     max-height: 85vh; padding: 26px 28px; position: relative;
     display: flex; gap: 18px; overflow: hidden;
   }
@@ -237,9 +237,15 @@ const html = `<!DOCTYPE html>
     object-fit: cover; filter: blur(28px) brightness(.5) saturate(1.2); transform: scale(1.12); }
   .martbg::after { content: ''; position: absolute; inset: 0; background: rgba(10, 12, 26, .35); }
   .mmain { flex: 1; min-width: 0; position: relative; z-index: 1; overflow-y: auto; padding-right: 4px; }
-  .mfig { flex: none; width: 216px; position: relative; z-index: 1; }
-  .figpanel { height: clamp(280px, 58vh, 500px); border-radius: 14px; border: 1px solid var(--line);
+  .mfig { flex: none; width: 252px; position: relative; z-index: 1; display: flex; flex-direction: column; gap: 10px; max-height: 100%; overflow-y: auto; padding-right: 2px; }
+  .figpanel { height: clamp(200px, 32vh, 330px); flex: none; border-radius: 14px; border: 1px solid var(--line);
     display: flex; align-items: center; justify-content: center; overflow: hidden; }
+  /* 右栏内的白值/档案紧凑单列版 */
+  .mfig .section { margin-top: 2px; }
+  .mfig .statgrid { grid-template-columns: 1fr; gap: 6px; }
+  .mfig .stat { flex-direction: row; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 2px 8px; padding: 7px 10px; }
+  .mfig .stat .sv { font-size: 16px; }
+  .mfig .grid2 { grid-template-columns: 1fr; font-size: 12.5px; gap: 5px; }
   .figpanel img { max-width: 92%; max-height: 92%; object-fit: contain; filter: drop-shadow(0 8px 18px rgba(0,0,0,.55)); }
   .figpanel .ficon { width: 100%; height: 100%; object-fit: cover; }
   .modal .close { position: absolute; top: 12px; right: 16px; font-size: 22px; color: var(--dim); cursor: pointer; background: none; border: none; z-index: 2; }
@@ -547,21 +553,21 @@ function showModal(id) {
       \${row('所属', esc(affilStr(u)))}
       \${row('卡牌编号', u.unit_id + ' (illust ' + u.illust + ')')}
     </div>
-    \${statHtml}
-    <div class="section"><h3>档案</h3>
-      <div class="grid2">
-        \${row('全名', esc(u.fname))}\${row('生日', esc(u.birthday))}
-        \${row('守护星', esc(u.star))}\${row('学年', u.year ? u.year + ' 年级' : '')}
-        \${row('CV', esc(u.cv))}\${row('社团', esc(u.club || '-'))}
-        \${row('委员/职务', esc(u.committee || '-'))}\${row('爱好', esc(u.hobby || '-'))}
-      </div>
-    </div>
     \${skillsHtml}
       \${u.profile ? \`<div class="section"><h3>简介</h3><div class="profile">\${esc(u.profile)}</div></div>\` : ''}
     </div>
     <div class="mfig">
       <div class="figpanel" style="background:linear-gradient(150deg,\${c}40,\${c}12 60%,transparent),linear-gradient(160deg,#1b2145,#141830)">
         \${u.art ? \`<img src="\${u.art}" onerror="this.remove()">\` : (u.icon ? \`<img class="ficon" src="\${u.icon}" onerror="this.remove()">\` : \`<span style="font-size:72px;font-weight:800">\${esc(u.cname[0])}</span>\`)}
+      </div>
+      \${statHtml}
+      <div class="section"><h3>档案</h3>
+        <div class="grid2">
+          \${row('全名', esc(u.fname))}\${row('生日', esc(u.birthday))}
+          \${row('守护星', esc(u.star))}\${row('学年', u.year ? u.year + ' 年级' : '')}
+          \${row('CV', esc(u.cv))}\${row('社团', esc(u.club || '-'))}
+          \${row('委员/职务', esc(u.committee || '-'))}\${row('爱好', esc(u.hobby || '-'))}
+        </div>
       </div>
     </div>
   \`;
