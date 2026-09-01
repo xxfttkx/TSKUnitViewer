@@ -91,7 +91,7 @@ const units = raw.map((u) => ({
   st: (u.status_data && u.status_data.base_data) ? { hp: +u.status_data.base_data.hp, atk: u.status_data.base_data.attack, crit: u.status_data.base_data.critical, initEx: u.status_data.base_data.init_ex_gauge, maxEx: u.status_data.base_data.max_ex_gauge, exRate: u.status_data.base_data.ex_gauge_rate, wtMin: u.status_data.base_data.min_wt, wtMax: u.status_data.base_data.max_wt } : null,
   equips: (u.equip_data || []).map((e) => ({
     part: e.equip_part, name: e.equip_name, rarity: e.rarity, lv: e.lv, max_lv: e.max_lv,
-    lb: e.limit_break_count, max_lb: e.max_limit_break_count, exclusive: e.exclusive_unit_id || 0,
+    lb: e.limit_break_count, max_lb: e.max_limit_break_count,
     params: (e.parameter_list || []).map((p) => ({ t: p.parameter_type, v: p.parameter_value })),
     skill: e.skill_data ? e.skill_data.skill_detail : '', skill_lv: e.skill_data ? e.skill_data.lv : null,
     enchTotal: (e.enchant_frame_list || []).length,
@@ -313,7 +313,6 @@ const html = `<!DOCTYPE html>
   .eq .eqn { font-weight: 700; font-size: 13.5px; }
   .eq .epart { font-size: 10.5px; color: var(--dim); border: 1px solid var(--line); border-radius: 5px; padding: 1px 6px; margin-right: 6px; vertical-align: 1px; }
   .eq .starr { color: #ffd94a; letter-spacing: -1px; }
-  .eq .extag { font-size: 10.5px; color: #ff9db8; border: 1px solid #ff9db855; border-radius: 5px; padding: 0 5px; margin-left: 6px; }
   .eq .eqm { font-size: 12px; color: var(--dim); margin: 3px 0 4px; }
   .eq .eqp { display: flex; flex-wrap: wrap; gap: 4px; }
   .eq .eqp span { font-size: 11.5px; padding: 2px 7px; border-radius: 6px; background: rgba(255,255,255,.06); border: 1px solid var(--line); }
@@ -619,7 +618,7 @@ function showModal(id) {
     \${[...u.equips].sort((a, b) => a.part - b.part).map((e) => \`<div class="eq">
       <div class="eico">\${e.icon ? \`<img src="\${e.icon}" loading="lazy" onerror="this.style.visibility='hidden'">\` : \`<span>\${(e.name || '?')[0]}</span>\`}</div>
       <div class="eqi">
-        <div class="eqn"><span class="epart">\${EQ_PART[e.part] || e.part}</span><span class="starr">\${'★'.repeat(e.rarity || 1)}</span> \${esc(e.name)}\${e.exclusive ? '<span class="extag">専武</span>' : ''}</div>
+        <div class="eqn"><span class="epart">\${EQ_PART[e.part] || e.part}</span><span class="starr">\${'★'.repeat(e.rarity || 1)}</span> \${esc(e.name)}</div>
         <div class="eqm">Lv \${e.lv}/\${e.max_lv}\${e.max_lb ? \` · 突破 \${e.lb}/\${e.max_lb}\` : ''}\${e.enchTotal ? \` · 附魔 \${e.enchOpen}/\${e.enchTotal}\` : ''}\${e.wObtain ? \` · \${esc(e.wObtain)}\` : ''}</div>
         <div class="eqp">\${(e.params || []).map((p) => \`<span>\${paramStr(p)}</span>\`).join('')}</div>
         \${e.skill ? \`<div class="eqs"><b>アビリティ</b> \${esc(e.skill)}\${e.skill_lv ? \` <span class="k">Lv\${e.skill_lv}</span>\` : ''}</div>\` : ''}
