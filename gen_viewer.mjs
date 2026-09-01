@@ -75,7 +75,7 @@ const units = raw.map((u) => ({
   hobby: u.hobby,
   cv: u.cv,
   profile: u.profile,
-  // 新版 dump 已解析的实体 (旧版为类型名占位符): 技能 / 限界突破被动 / 当前练度白值 / 好感加成
+  // 新版 dump 已解析的实体 (旧版为类型名占位符): 技能 / 升星解锁被动 / 当前练度白值 / 好感加成
   skills: (u.skill_data || []).map((s) => ({ type: s.skill_data_type, name: s.skill_name, detail: s.skill_detail, lv: s.lv, max_lv: s.max_lv, cost: s.cost_ex_gauge, unlock: s.is_unlock, cond: s.unlock_condition })),
   uniques: (u.unique_skill_data || []).map((s) => ({ name: s.skill_name, detail: s.detail, unlock: s.is_unlock, cond: s.unlock_condition })),
   st: (u.status_data && u.status_data.base_data) ? { hp: +u.status_data.base_data.hp, atk: u.status_data.base_data.attack, crit: u.status_data.base_data.critical, initEx: u.status_data.base_data.init_ex_gauge, maxEx: u.status_data.base_data.max_ex_gauge, wtMin: u.status_data.base_data.min_wt, wtMax: u.status_data.base_data.max_wt } : null,
@@ -91,7 +91,7 @@ for (const u of units) {
   const w = wikiByUnit.get(String(u.unit_id));
   if (!w) continue;
   Object.assign(u, {
-    wRar: w.rarity, // Wiki ★ = 初始稀有度 (json rarity 是觉醒后的当前稀有度)
+    wRar: w.rarity, // Wiki ★ = 初始稀有度 (json rarity 是升星〔限界突破〕后的当前稀有度)
     whp: w.hp, watk: w.atk, wex: w.ex, wexUp: w.exUp, wctMin: w.ctMin, wctMax: w.ctMax,
     wcrit: w.crit, watkType: w.atkType, wdate: w.releaseDate, wobtain: w.obtain, whref: w.href, rowIdx: w.rowIdx,
   });
@@ -316,7 +316,7 @@ const state = { q: '', attr: 0, role: 0, rar: 0, camp: 0, own: 0, sort: 'power',
 
 const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const stars = (n) => '★'.repeat(n);
-// 稀有度显示: 觉醒过的卡显示 初始→当前 (json rarity=当前, Wiki ★=初始)
+// 稀有度显示: 升星(限界突破)过的卡显示 初始→当前 (json rarity=当前, Wiki ★=初始)
 const rareStr = (u) => (u.wRar && u.wRar < u.rarity ? \`★\${u.wRar}→\${u.rarity}\` : stars(u.rarity));
 // 头像(50x50)用 picon 居中展示, 立绘大图用 pimg 裁剪铺满 (按文件名后缀区分)
 const imgTag = (src) => (!src ? '' : \`<img class="\${src.endsWith('_icon.png') ? 'picon' : 'pimg'}" src="\${src}" loading="lazy" onerror="this.remove()">\`);
@@ -385,7 +385,7 @@ function cardHTML(u) {
       <div class="attrbadge" style="color:\${c}">\${ATTR[u.attr]}</div>
       \${esc(u.cname[0])}
       <div class="badges">
-        \${lvMax ? '<span class="tag max">Lv MAX</span>' : (u.limit > 0 ? \`<span class="tag">突破\${u.limit}</span>\` : '')}
+        \${lvMax ? '<span class="tag max">Lv MAX</span>' : (u.limit > 0 ? \`<span class="tag">解放\${u.limit}</span>\` : '')}
         \${loveMax ? '<span class="tag lovemax">♥MAX</span>' : ''}
         \${u.bond ? '<span class="tag">绊</span>' : ''}
       </div>
@@ -422,7 +422,7 @@ function render() {
       <td>\${u.limit || '-'}</td><td>\${esc(u.birthday)}</td><td>\${esc(u.cv)}</td>
     </tr>\`).join('');
     main.innerHTML = \`<div class="tdwrap"><table><thead><tr>
-      <th></th><th>★</th><th>属性</th><th>角色</th><th>卡名</th><th>类型</th><th>种族</th><th>所属</th><th>Lv</th><th>♥</th><th>战力</th><th>突破</th><th>生日</th><th>CV</th>
+      <th></th><th>★</th><th>属性</th><th>角色</th><th>卡名</th><th>类型</th><th>种族</th><th>所属</th><th>Lv</th><th>♥</th><th>战力</th><th>解放</th><th>生日</th><th>CV</th>
     </tr></thead><tbody>\${rows}</tbody></table></div>\`;
   } else if (state.view === 'char') {
     const byChar = new Map();
@@ -519,7 +519,7 @@ function showModal(id) {
       <div class="stat"><span class="sv">\${u.st.initEx}<span class="k"> / \${u.st.maxEx}</span></span><span class="sk">开局 EX</span></div>
       <div class="stat"><span class="sv">\${u.st.wtMin}~\${u.st.wtMax}</span><span class="sk">行动权重</span></div>
     </div></div>\` : '';
-  // 技能区: EX1/EX2/ユニゾン/シスター技 + 限界突破固有被动 (含效果文本/EX消耗/等级/解锁条件)
+  // 技能区: EX1/EX2/ユニゾン/シスター技 + 升星解锁的固有被动 (含效果文本/EX消耗/等级/解锁条件)
   const skillTag = (s) => s.type === 2 ? '<span class="stag st-u">ユニゾン</span>' : s.type === 3 ? '<span class="stag st-s">シスター</span>' : \`<span class="stag st-ex">EX\${s._exn}</span>\`;
   const skillBlock = (s, tagHtml) => \`<div class="skill\${s.unlock ? '' : ' slock'}">
       <div class="sname">\${tagHtml} <b>\${esc(s.name || '固有被动')}</b>\${s.cost > 0 ? \`<span class="smeta">EX 消耗 \${s.cost}</span>\` : ''}\${s.max_lv ? \`<span class="smeta">Lv \${s.lv}/\${s.max_lv}</span>\` : ''}\${s.unlock ? '' : '<span class="slocktag">未解锁</span>'}</div>
@@ -540,7 +540,7 @@ function showModal(id) {
       \${row('战力', '<b style="color:var(--gold)">' + u.power.toLocaleString() + '</b>')}
       \${row('队伍HP', u.team_hp.toLocaleString())}
       \${row('等级', u.lv + ' / ' + u.max_lv + (u.lv >= u.max_lv ? ' <span style="color:var(--gold)">MAX</span>' : ''))}
-      \${row('限界突破', u.limit + ' 次')}
+      \${row('上限解放', u.limit + ' 次')}
       \${row('稀有度', rareStr(u) + (u.max_rarity ? ' <span class="k">/ 上限' + stars(u.max_rarity) + '</span>' : ''))}
       \${row('好感度', '<span style="color:var(--pink)">♥ ' + u.love + ' / ' + (u.max_love || '?') + (loveMax ? ' MAX' : '') + '</span>')}
       \${row('种族', esc(campStr(u)))}
