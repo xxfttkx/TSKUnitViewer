@@ -70,6 +70,7 @@ const units = raw.map((u) => ({
   power: u.power,
   team_hp: u.team_hp,
   limit: u.lv_limit_count,
+  core: u.core_lv, maxCore: u.max_core_lv, // コア (核心) 等级, 与练度相关
   bond: u.is_bond_unit,
   event: u.is_event_unit,
   awake: u.is_awake_unit,
@@ -476,6 +477,7 @@ function cardHTML(u) {
       \${esc(u.cname[0])}
       <div class="badges">
         \${lvMax ? '<span class="tag max">Lv MAX</span>' : (u.limit > 0 ? \`<span class="tag">解放\${u.limit}</span>\` : '')}
+        \${u.core > 0 ? \`<span class="tag">コア\${u.core}</span>\` : ''}
         \${loveMax ? '<span class="tag lovemax">♥MAX</span>' : ''}
         \${u.bond ? '<span class="tag">绊</span>' : ''}
       </div>
@@ -648,6 +650,7 @@ function showModal(id) {
       \${row('队伍HP', u.team_hp.toLocaleString())}
       \${row('等级', u.lv + ' / ' + u.max_lv + (u.lv >= u.max_lv ? ' <span style="color:var(--gold)">MAX</span>' : ''))}
       \${row('上限解放', u.limit + ' 次')}
+      \${u.maxCore ? row('コア', u.core + '/' + u.maxCore) : ''}
       \${row('稀有度', rareStr(u) + (u.max_rarity ? ' <span class="k">/ 上限' + stars(u.max_rarity) + '</span>' : ''))}
       \${row('好感度', '<span style="color:var(--pink)">♥ ' + u.love + ' / ' + (u.max_love || '?') + (loveMax ? ' MAX' : '') + '</span>')}
       \${row('种族', esc(campStr(u)))}
