@@ -431,9 +431,8 @@ function showModal(id) {
       <div class="stat"><span class="sv">${(u.hpTotal || u.st.hp).toLocaleString()}</span><span class="sk">HP${(u.eqBonus && u.eqBonus.hp) || (u.loveB && u.loveB.hp) ? `<i>合计(基础 ${u.st.hp.toLocaleString()}${u.eqBonus && u.eqBonus.hp ? ` + 装备 ${u.eqBonus.hp}` : ''}${u.loveB && u.loveB.hp ? ` + 好感 ${u.loveB.hp}` : ''})</i>` : ''}</span></div>
       <div class="stat"><span class="sv">${(u.atkTotal || u.st.atk).toLocaleString()}</span><span class="sk">ATK${(u.eqBonus && u.eqBonus.atk) || (u.loveB && u.loveB.atk) ? `<i>合计(基础 ${u.st.atk.toLocaleString()}${u.eqBonus && u.eqBonus.atk ? ` + 装备 ${u.eqBonus.atk}` : ''}${u.loveB && u.loveB.atk ? ` + 好感 ${u.loveB.atk}` : ''})</i>` : ''}</span></div>
       <div class="stat"><span class="sv">${pct((u.st.crit || 0) + (u.eqBonus ? u.eqBonus.crit * 100 : 0) + ((u.loveB && u.loveB.crit) || 0))}%</span><span class="sk">CRIT${(u.eqBonus && u.eqBonus.crit) || (u.loveB && u.loveB.crit) ? `<i>合计(基础 ${pct(u.st.crit)}%${u.eqBonus && u.eqBonus.crit ? ` + 装备 ${pct(u.eqBonus.crit * 100)}%` : ''}${u.loveB && u.loveB.crit ? ` + 好感 ${pct(u.loveB.crit)}%` : ''})</i>` : ''}</span></div>
-      <div class="stat"><span class="sv">${u.st.initEx}<span class="k"> / ${u.st.maxEx}</span></span><span class="sk">开局 EX</span></div>
+      <div class="stat"><span class="sv">${u.st.initEx + (u.eqBonus ? u.eqBonus.ex : 0)}</span><span class="sk">EX${u.eqBonus && u.eqBonus.ex ? `<i>合计(基础 ${u.st.initEx} + 装备 ${u.eqBonus.ex})</i>` : ''}</span></div>
       <div class="stat"><span class="sv">${u.st.exRate + (u.eqBonus ? u.eqBonus.exUp : 0)}</span><span class="sk">EX 上升${u.eqBonus && u.eqBonus.exUp ? `<i>合计(基础 ${u.st.exRate} + 装备 ${u.eqBonus.exUp})</i>` : ''}</span></div>
-      ${u.eqBonus && u.eqBonus.ex ? `<div class="stat"><span class="sv">+${u.eqBonus.ex}</span><span class="sk">EX 蓄积(装备)</span></div>` : ''}
       <div class="stat"><span class="sv">${u.st.wtMin}~${u.st.wtMax}</span><span class="sk">行动CT</span></div>
     </div></div>` : '';
   // 装备区: 每卡 3 部位 (武器/防具/装飾品), dump 当前练度 + Wiki 满强アビリティ
