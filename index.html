@@ -441,7 +441,7 @@ function showModal(id) {
         <div class="eqm">Lv ${e.lv}/${e.max_lv}${e.max_lb ? ` · 突破 ${e.lb}/${e.max_lb}` : ''}${e.enchTotal ? ` · 附魔 ${e.enchOpen}/${e.enchTotal}` : ''}${e.wObtain ? ` · ${esc(e.wObtain)}` : ''}</div>
         <div class="eqp">${(e.params || []).map((p) => `<span>${paramStr(p)}</span>`).join('')}</div>
         ${e.skill ? `<div class="eqs"><b>アビリティ</b> ${esc(e.skill)}${e.skill_lv ? ` <span class="k">Lv${e.skill_lv}</span>` : ''}</div>` : ''}
-        ${e.wAbility && e.wAbility !== e.skill ? `<div class="eqs"><b>满强</b> ${esc(e.wAbility)}</div>` : ''}
+        ${e.wAbility && e.wAbility !== e.skill ? `<div class="eqs"><b>初期(最大)</b> ${esc(e.wAbility)}</div>` : ''}
       </div>
     </div>`).join('')}
   </div></div>` : '';
