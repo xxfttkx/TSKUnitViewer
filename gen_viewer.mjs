@@ -121,13 +121,14 @@ for (const u of units) {
     if (!w) continue;
     e.wAbility = w.ability; e.wObtain = w.obtain; e.wNo = w.no || ''; e.charCard = w.charCard || '';
   }
-  // 装备加成合计 (t0=HP t1=ATK t3=クリ%×100), 附到白值面板; 并算 HP/ATK 总值 (基础+装备+好感) 供显示与排序
-  const b = { hp: 0, atk: 0, crit: 0 };
+  // 装备加成合计 (t0=HP t1=ATK t2=EX上昇 t3=クリ%×100 t4=EX蓄积), 附到白值面板; 并算 HP/ATK 总值 (基础+装备+好感) 供显示与排序
+  const b = { hp: 0, atk: 0, crit: 0, exUp: 0, ex: 0 };
   for (const e of u.equips) for (const p of e.params) {
     if (p.t === 0) b.hp += p.v; else if (p.t === 1) b.atk += p.v; else if (p.t === 3) b.crit += p.v;
+    else if (p.t === 2) b.exUp += p.v; else if (p.t === 4) b.ex += p.v;
   }
   b.crit = Math.round(b.crit) / 100;
-  if (b.hp || b.atk || b.crit) u.eqBonus = b;
+  if (b.hp || b.atk || b.crit || b.exUp || b.ex) u.eqBonus = b;
   if (u.st) {
     const lb = u.loveB || {};
     u.hpTotal = u.st.hp + b.hp + (lb.hp || 0);
@@ -382,6 +383,8 @@ const state = { q: '', attr: 0, role: 0, rar: 0, camp: 0, own: 0, sort: 'power',
 
 const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const stars = (n) => '★'.repeat(n);
+// 千分比原始值 → 百分比文本 (300 -> '3', 1195 -> '11.95')
+const pct = (v) => { const x = (v || 0) / 100; return Number.isInteger(x) ? String(x) : String(+x.toFixed(2)); };
 // 稀有度显示: 升星(限界突破)过的卡显示 初始→当前 (json rarity=当前, Wiki ★=初始)
 const rareStr = (u) => (u.wRar && u.wRar < u.rarity ? \`★\${u.wRar}→\${u.rarity}\` : stars(u.rarity));
 // 头像(50x50)用 picon 居中展示, 立绘大图用 pimg 裁剪铺满 (按文件名后缀区分)
@@ -582,9 +585,10 @@ function showModal(id) {
   const statHtml = u.st ? \`<div class="section"><h3>白值（当前练度）</h3><div class="statgrid">
       <div class="stat"><span class="sv">\${(u.hpTotal || u.st.hp).toLocaleString()}</span><span class="sk">HP\${(u.eqBonus && u.eqBonus.hp) || (u.loveB && u.loveB.hp) ? \`<i>合计(基础 \${u.st.hp.toLocaleString()}\${u.eqBonus && u.eqBonus.hp ? \` + 装备 \${u.eqBonus.hp}\` : ''}\${u.loveB && u.loveB.hp ? \` + 好感 \${u.loveB.hp}\` : ''})</i>\` : ''}</span></div>
       <div class="stat"><span class="sv">\${(u.atkTotal || u.st.atk).toLocaleString()}</span><span class="sk">ATK\${(u.eqBonus && u.eqBonus.atk) || (u.loveB && u.loveB.atk) ? \`<i>合计(基础 \${u.st.atk.toLocaleString()}\${u.eqBonus && u.eqBonus.atk ? \` + 装备 \${u.eqBonus.atk}\` : ''}\${u.loveB && u.loveB.atk ? \` + 好感 \${u.loveB.atk}\` : ''})</i>\` : ''}</span></div>
-      <div class="stat"><span class="sv">\${u.st.crit}</span><span class="sk">CRIT\${u.eqBonus && u.eqBonus.crit ? \`<i>+\${u.eqBonus.crit}% 装备</i>\` : ''}\${u.loveB && u.loveB.crit ? \`<i>+\${u.loveB.crit}</i>\` : ''}</span></div>
+      <div class="stat"><span class="sv">\${pct((u.st.crit || 0) + (u.eqBonus ? u.eqBonus.crit * 100 : 0) + ((u.loveB && u.loveB.crit) || 0))}%</span><span class="sk">CRIT\${(u.eqBonus && u.eqBonus.crit) || (u.loveB && u.loveB.crit) ? \`<i>合计(基础 \${pct(u.st.crit)}%\${u.eqBonus && u.eqBonus.crit ? \` + 装备 \${pct(u.eqBonus.crit * 100)}%\` : ''}\${u.loveB && u.loveB.crit ? \` + 好感 \${pct(u.loveB.crit)}%\` : ''})</i>\` : ''}</span></div>
       <div class="stat"><span class="sv">\${u.st.initEx}<span class="k"> / \${u.st.maxEx}</span></span><span class="sk">开局 EX</span></div>
-      <div class="stat"><span class="sv">\${u.st.exRate}</span><span class="sk">EX 上升</span></div>
+      <div class="stat"><span class="sv">\${u.st.exRate + (u.eqBonus ? u.eqBonus.exUp : 0)}</span><span class="sk">EX 上升\${u.eqBonus && u.eqBonus.exUp ? \`<i>合计(基础 \${u.st.exRate} + 装备 \${u.eqBonus.exUp})</i>\` : ''}</span></div>
+      \${u.eqBonus && u.eqBonus.ex ? \`<div class="stat"><span class="sv">+\${u.eqBonus.ex}</span><span class="sk">EX 蓄积(装备)</span></div>\` : ''}
       <div class="stat"><span class="sv">\${u.st.wtMin}~\${u.st.wtMax}</span><span class="sk">行动CT</span></div>
     </div></div>\` : '';
   // 装备区: 每卡 3 部位 (武器/防具/装飾品), dump 当前练度 + Wiki 满强アビリティ
