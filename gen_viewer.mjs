@@ -75,6 +75,11 @@ const units = raw.map((u) => ({
   hobby: u.hobby,
   cv: u.cv,
   profile: u.profile,
+  // 新版 dump 已解析的实体 (旧版为类型名占位符): 技能 / 限界突破被动 / 当前练度白值 / 好感加成
+  skills: (u.skill_data || []).map((s) => ({ type: s.skill_data_type, name: s.skill_name, detail: s.skill_detail, lv: s.lv, max_lv: s.max_lv, cost: s.cost_ex_gauge, unlock: s.is_unlock, cond: s.unlock_condition })),
+  uniques: (u.unique_skill_data || []).map((s) => ({ name: s.skill_name, detail: s.detail, unlock: s.is_unlock, cond: s.unlock_condition })),
+  st: (u.status_data && u.status_data.base_data) ? { hp: +u.status_data.base_data.hp, atk: u.status_data.base_data.attack, crit: u.status_data.base_data.critical, initEx: u.status_data.base_data.init_ex_gauge, maxEx: u.status_data.base_data.max_ex_gauge, wtMin: u.status_data.base_data.min_wt, wtMax: u.status_data.base_data.max_wt } : null,
+  loveB: (u.status_data && u.status_data.add_love_lv) ? { hp: +u.status_data.add_love_lv.hp, atk: u.status_data.add_love_lv.attack, crit: u.status_data.add_love_lv.critical } : null,
 })).sort((a, b) => b.power - a.power || a.char_id - b.char_id);
 
 // 合并 Wiki 数据到持有卡 (fetch_images.mjs 已按 编号→标题 匹配, ownedUnit=持有 unit_id)
@@ -247,6 +252,24 @@ const html = `<!DOCTYPE html>
   .section { margin-top: 16px; }
   .section h3 { font-size: 13px; color: var(--gold); margin-bottom: 6px; letter-spacing: 1px; }
   .profile { white-space: pre-line; font-size: 13.5px; line-height: 1.75; color: #cfd5f7; background: rgba(0,0,0,.25); border-radius: 10px; padding: 12px 14px; }
+  .statgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 8px; margin-top: 8px; }
+  .stat { background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.07); border-radius: 10px; padding: 10px 12px; display: flex; flex-direction: column; gap: 2px; }
+  .stat .sv { font-size: 19px; font-weight: 800; color: #fff; }
+  .stat .sk { font-size: 11px; color: var(--dim); }
+  .stat .sk i { font-style: normal; color: var(--pink); margin-left: 4px; }
+  .stag { display: inline-block; font-size: 10px; font-weight: 800; padding: 1px 7px; border-radius: 99px; margin-right: 4px; vertical-align: 1px; }
+  .st-ex { background: rgba(255,217,74,.15); color: var(--gold); }
+  .st-u { background: rgba(74,158,255,.18); color: #7ac0ff; }
+  .st-s { background: rgba(255,138,196,.15); color: var(--pink); }
+  .st-p { background: rgba(139,92,246,.22); color: #c3a6ff; }
+  .skill { padding: 8px 0; border-bottom: 1px dashed rgba(255,255,255,.08); }
+  .skill:last-child { border-bottom: 0; }
+  .sname b { font-size: 13.5px; }
+  .smeta { font-size: 11px; color: var(--dim); margin-left: 8px; }
+  .sdetail { font-size: 12.5px; color: #c9d0f0; line-height: 1.6; margin-top: 3px; }
+  .slock { opacity: .55; }
+  .slocktag { font-size: 10px; color: #aab; border: 1px solid #556; border-radius: 99px; padding: 0 6px; margin-left: 6px; }
+  .scond { font-size: 11.5px; color: #9aa3c7; margin-top: 2px; }
   .progressbar { height: 6px; border-radius: 3px; background: rgba(255,255,255,.1); margin-top: 4px; overflow: hidden; }
   .progressbar i { display: block; height: 100%; border-radius: 3px; background: linear-gradient(90deg, var(--gold), #ffe9a8); }
 </style>
@@ -488,6 +511,25 @@ function showModal(id) {
   const c = ATTR_COLOR[u.attr];
   const loveMax = u.max_love > 0 && u.love >= u.max_love;
   const row = (k, v) => \`<div><span class="k">\${k}</span> \${v ?? '<span class="k">-</span>'}</div>\`;
+  // 白值面板 (当前练度白值 + 好感加成明细, Wiki 只有 Lv1 值)
+  const statHtml = u.st ? \`<div class="section"><h3>白值（当前练度）</h3><div class="statgrid">
+      <div class="stat"><span class="sv">\${u.st.hp.toLocaleString()}</span><span class="sk">HP\${u.loveB && u.loveB.hp ? \`<i>+\${u.loveB.hp} 好感</i>\` : ''}</span></div>
+      <div class="stat"><span class="sv">\${u.st.atk.toLocaleString()}</span><span class="sk">ATK\${u.loveB && u.loveB.atk ? \`<i>+\${u.loveB.atk} 好感</i>\` : ''}</span></div>
+      <div class="stat"><span class="sv">\${u.st.crit}</span><span class="sk">CRIT\${u.loveB && u.loveB.crit ? \`<i>+\${u.loveB.crit}</i>\` : ''}</span></div>
+      <div class="stat"><span class="sv">\${u.st.initEx}<span class="k"> / \${u.st.maxEx}</span></span><span class="sk">开局 EX</span></div>
+      <div class="stat"><span class="sv">\${u.st.wtMin}~\${u.st.wtMax}</span><span class="sk">行动权重</span></div>
+    </div></div>\` : '';
+  // 技能区: EX1/EX2/ユニゾン/シスター技 + 限界突破固有被动 (含效果文本/EX消耗/等级/解锁条件)
+  const skillTag = (s) => s.type === 2 ? '<span class="stag st-u">ユニゾン</span>' : s.type === 3 ? '<span class="stag st-s">シスター</span>' : \`<span class="stag st-ex">EX\${s._exn}</span>\`;
+  const skillBlock = (s, tagHtml) => \`<div class="skill\${s.unlock ? '' : ' slock'}">
+      <div class="sname">\${tagHtml} <b>\${esc(s.name || '固有被动')}</b>\${s.cost > 0 ? \`<span class="smeta">EX 消耗 \${s.cost}</span>\` : ''}\${s.max_lv ? \`<span class="smeta">Lv \${s.lv}/\${s.max_lv}</span>\` : ''}\${s.unlock ? '' : '<span class="slocktag">未解锁</span>'}</div>
+      \${s.detail ? \`<div class="sdetail">\${esc(s.detail)}</div>\` : ''}
+      \${s.cond && !s.unlock ? \`<div class="scond">解锁条件：\${esc(s.cond)}</div>\` : ''}
+    </div>\`;
+  let exN = 0;
+  const skillsHtml = (u.skills || []).length ? \`<div class="section"><h3>技能</h3>\` +
+    u.skills.map((s) => { if (s.type === 1) s._exn = ++exN; return skillBlock(s, skillTag(s)); }).join('') +
+    (u.uniques || []).map((s) => skillBlock(s, '<span class="stag st-p">被动</span>')).join('') + \`</div>\` : '';
   // 弹窗结构: 同图模糊底 + 左侧信息(滚动) + 右侧立绘展示面板(等比完整显示)
   document.getElementById('modal').innerHTML = \`
     <div class="martbg">\${u.art ? \`<img src="\${u.art}" onerror="this.parentElement.remove()">\` : ''}</div>
@@ -505,6 +547,7 @@ function showModal(id) {
       \${row('所属', esc(affilStr(u)))}
       \${row('卡牌编号', u.unit_id + ' (illust ' + u.illust + ')')}
     </div>
+    \${statHtml}
     <div class="section"><h3>档案</h3>
       <div class="grid2">
         \${row('全名', esc(u.fname))}\${row('生日', esc(u.birthday))}
@@ -513,6 +556,7 @@ function showModal(id) {
         \${row('委员/职务', esc(u.committee || '-'))}\${row('爱好', esc(u.hobby || '-'))}
       </div>
     </div>
+    \${skillsHtml}
       \${u.profile ? \`<div class="section"><h3>简介</h3><div class="profile">\${esc(u.profile)}</div></div>\` : ''}
     </div>
     <div class="mfig">
