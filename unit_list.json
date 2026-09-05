@@ -9987,7 +9987,7 @@
     "total_love_exp": 1517,
     "current_love_exp": 387,
     "max_love_exp": 600,
-    "power": 35537,
+    "power": 35899,
     "team_hp": 14251,
     "is_bond_unit": 0,
     "is_event_unit": 0,
@@ -31913,21 +31913,21 @@
     "affiliation_list": [
       1
     ],
-    "lv_limit_count": 0,
-    "lv": 1,
-    "max_lv": 60,
+    "lv_limit_count": 4,
+    "lv": 100,
+    "max_lv": 100,
     "core_lv": 0,
     "max_core_lv": 3,
-    "total_exp": 0,
+    "total_exp": 680999,
     "current_exp": 0,
-    "max_exp": 20,
-    "love_lv": 0,
+    "max_exp": 99999999,
+    "love_lv": 12,
     "max_love_lv": 30,
-    "total_love_exp": 0,
-    "current_love_exp": 0,
-    "max_love_exp": 10,
-    "power": 5035,
-    "team_hp": 806,
+    "total_love_exp": 1500,
+    "current_love_exp": 370,
+    "max_love_exp": 600,
+    "power": 26737,
+    "team_hp": 6356,
     "is_bond_unit": 0,
     "is_event_unit": 0,
     "bond_lv": 0,
@@ -31949,25 +31949,25 @@
       "class_name": "TKS.Network.Domain.UnitStatusEntity",
       "base_data": {
         "class_name": "TKS.Network.Domain.StatusEntity",
-        "hp": "806",
-        "init_ex_gauge": 30,
+        "hp": "5371",
+        "init_ex_gauge": 55,
         "max_ex_gauge": 300,
         "min_wt": 14,
         "max_wt": 18,
-        "attack": 137,
+        "attack": 899,
         "critical": 300,
         "ex_gauge_rate": 120,
         "weight": 30
       },
       "add_love_lv": {
         "class_name": "TKS.Network.Domain.StatusEntity",
-        "hp": "0",
+        "hp": "194",
         "init_ex_gauge": 0,
         "max_ex_gauge": 0,
         "min_wt": 0,
         "max_wt": 0,
-        "attack": 0,
-        "critical": 0,
+        "attack": 34,
+        "critical": 40,
         "ex_gauge_rate": 0,
         "weight": 0
       }
@@ -31986,9 +31986,9 @@
         "skill_data_type": 1,
         "skill_id": 10420021,
         "skill_name": "ブレッシング・ライト",
-        "skill_detail": "前から2番目にいる味方のEX消費量を神族の味方の数×5％減少（EXスキル1回発動まで）/ATKを50％アップ（40CT）/ノーツを3前方に移動",
+        "skill_detail": "前から2番目にいる味方のEX消費量を神族の味方の数×10％減少（EXスキル1回発動まで）/ATKを100％アップ（40CT）/ノーツを6前方に移動",
         "icon_id": 330,
-        "lv": 1,
+        "lv": 10,
         "max_lv": 10,
         "cost_ex_gauge": 100,
         "is_unlock": 1,
@@ -32072,7 +32072,228 @@
         "unlock_condition": "限界突破★4にすると解放"
       }
     ],
-    "equip_data": [],
+    "equip_data": [
+      {
+        "class_name": "TKS.Network.Domain.EquipListEntity",
+        "u_equip_id": 24905935,
+        "equip_id": 2200008,
+        "equip_name": "魔女の帽子",
+        "equip_part": 2,
+        "equip_type": 0,
+        "exclusive_unit_id": 0,
+        "exclusive_unit_name": "",
+        "illust_id": "equip_2200008",
+        "rarity": 2,
+        "limit_break_count": 4,
+        "max_limit_break_count": 4,
+        "equip_awake_flag": 0,
+        "is_equip_awake": 0,
+        "can_equip_awake": 0,
+        "resonance_count": 0,
+        "max_resonance_count": 0,
+        "lv": 50,
+        "max_lv": 50,
+        "total_exp": 118473,
+        "current_exp": 0,
+        "max_exp": 99999999,
+        "lock_flg": 0,
+        "equipped_unit": {
+          "class_name": "TKS.Network.Domain.EquippedUnitEntity",
+          "character_name": "フェニエル",
+          "unit_name": "マッチ売りの天使",
+          "unit_id": 1042002
+        },
+        "parameter_list": [
+          {
+            "class_name": "TKS.Network.Domain.EquipParameterListEntity",
+            "parameter_type": 0,
+            "parameter_value": 1324
+          },
+          {
+            "class_name": "TKS.Network.Domain.EquipParameterListEntity",
+            "parameter_type": 2,
+            "parameter_value": 21
+          }
+        ],
+        "skill_data": {
+          "class_name": "TKS.Network.Domain.EquipSkillDataEntity",
+          "skill_id": 2200008,
+          "lv": 5,
+          "skill_detail": "火傷耐性を1段階アップ"
+        },
+        "enchant_frame_list": [],
+        "lottery_skill_enchant_list": [],
+        "sell_data": {
+          "class_name": "TKS.Network.Domain.EquipSellData",
+          "get_currency": 20000,
+          "get_coin": 500
+        },
+        "notice_flg": 0
+      },
+      {
+        "class_name": "TKS.Network.Domain.EquipListEntity",
+        "u_equip_id": 26242611,
+        "equip_id": 1200011,
+        "equip_name": "マジックカード",
+        "equip_part": 1,
+        "equip_type": 1,
+        "exclusive_unit_id": 0,
+        "exclusive_unit_name": "",
+        "illust_id": "equip_1200011",
+        "rarity": 2,
+        "limit_break_count": 2,
+        "max_limit_break_count": 4,
+        "equip_awake_flag": 0,
+        "is_equip_awake": 0,
+        "can_equip_awake": 0,
+        "resonance_count": 0,
+        "max_resonance_count": 0,
+        "lv": 30,
+        "max_lv": 30,
+        "total_exp": 19176,
+        "current_exp": 0,
+        "max_exp": 2567,
+        "lock_flg": 0,
+        "equipped_unit": {
+          "class_name": "TKS.Network.Domain.EquippedUnitEntity",
+          "character_name": "フェニエル",
+          "unit_name": "マッチ売りの天使",
+          "unit_id": 1042002
+        },
+        "parameter_list": [
+          {
+            "class_name": "TKS.Network.Domain.EquipParameterListEntity",
+            "parameter_type": 1,
+            "parameter_value": 174
+          },
+          {
+            "class_name": "TKS.Network.Domain.EquipParameterListEntity",
+            "parameter_type": 2,
+            "parameter_value": 18
+          }
+        ],
+        "skill_data": {
+          "class_name": "TKS.Network.Domain.EquipSkillDataEntity",
+          "skill_id": 1200001,
+          "lv": 3,
+          "skill_detail": "ATK4.5％アップ"
+        },
+        "enchant_frame_list": [],
+        "lottery_skill_enchant_list": [],
+        "sell_data": {
+          "class_name": "TKS.Network.Domain.EquipSellData",
+          "get_currency": 12000,
+          "get_coin": 300
+        },
+        "notice_flg": 1
+      },
+      {
+        "class_name": "TKS.Network.Domain.EquipListEntity",
+        "u_equip_id": 34902577,
+        "equip_id": 3300148,
+        "equip_name": "フェニエルの耳当て",
+        "equip_part": 3,
+        "equip_type": 0,
+        "exclusive_unit_id": 1042002,
+        "exclusive_unit_name": "[マッチ売りの天使]フェニエル",
+        "illust_id": "equip_3300148",
+        "rarity": 3,
+        "limit_break_count": 4,
+        "max_limit_break_count": 4,
+        "equip_awake_flag": 0,
+        "is_equip_awake": 1,
+        "can_equip_awake": 0,
+        "resonance_count": 1,
+        "max_resonance_count": 1,
+        "lv": 60,
+        "max_lv": 60,
+        "total_exp": 308057,
+        "current_exp": 0,
+        "max_exp": 99999999,
+        "lock_flg": 1,
+        "equipped_unit": {
+          "class_name": "TKS.Network.Domain.EquippedUnitEntity",
+          "character_name": "フェニエル",
+          "unit_name": "マッチ売りの天使",
+          "unit_id": 1042002
+        },
+        "parameter_list": [
+          {
+            "class_name": "TKS.Network.Domain.EquipParameterListEntity",
+            "parameter_type": 2,
+            "parameter_value": 58
+          }
+        ],
+        "skill_data": {
+          "class_name": "TKS.Network.Domain.EquipSkillDataEntity",
+          "skill_id": 10420021,
+          "lv": 5,
+          "skill_detail": "EX1「ブレッシング・ライト」のATKの上昇値が50％アップ/\nEX2「ハッピー・ホーリートーチ」のダメージ100％アップ"
+        },
+        "enchant_frame_list": [
+          {
+            "class_name": "TKS.Network.Domain.EquipEnchantFrameEntity",
+            "frame_no": 1,
+            "is_rare": 0,
+            "release_resonance_count": 0,
+            "is_enchant_release": 1,
+            "enchant_data": "TKS.Network.Domain.EquipEnchantSkillEntity"
+          },
+          {
+            "class_name": "TKS.Network.Domain.EquipEnchantFrameEntity",
+            "frame_no": 2,
+            "is_rare": 0,
+            "release_resonance_count": 0,
+            "is_enchant_release": 1,
+            "enchant_data": "TKS.Network.Domain.EquipEnchantSkillEntity"
+          },
+          {
+            "class_name": "TKS.Network.Domain.EquipEnchantFrameEntity",
+            "frame_no": 3,
+            "is_rare": 0,
+            "release_resonance_count": 0,
+            "is_enchant_release": 1,
+            "enchant_data": "TKS.Network.Domain.EquipEnchantSkillEntity"
+          },
+          {
+            "class_name": "TKS.Network.Domain.EquipEnchantFrameEntity",
+            "frame_no": 4,
+            "is_rare": 1,
+            "release_resonance_count": 1,
+            "is_enchant_release": 1,
+            "enchant_data": "TKS.Network.Domain.EquipEnchantSkillEntity"
+          }
+        ],
+        "lottery_skill_enchant_list": [
+          {
+            "class_name": "TKS.Network.Domain.EquipEnchantFrameSkillEffectEntity",
+            "frame_no": 1,
+            "skill_enchant_list": "TKS.Network.Domain.EquipEnchantSkillEffectEntity"
+          },
+          {
+            "class_name": "TKS.Network.Domain.EquipEnchantFrameSkillEffectEntity",
+            "frame_no": 2,
+            "skill_enchant_list": "TKS.Network.Domain.EquipEnchantSkillEffectEntity"
+          },
+          {
+            "class_name": "TKS.Network.Domain.EquipEnchantFrameSkillEffectEntity",
+            "frame_no": 3,
+            "skill_enchant_list": "TKS.Network.Domain.EquipEnchantSkillEffectEntity"
+          },
+          {
+            "class_name": "TKS.Network.Domain.EquipEnchantFrameSkillEffectEntity",
+            "frame_no": 4,
+            "skill_enchant_list": "TKS.Network.Domain.EquipEnchantSkillEffectEntity"
+          }
+        ],
+        "sell_data": {
+          "class_name": "TKS.Network.Domain.EquipSellData",
+          "get_currency": 280000,
+          "get_coin": 7000
+        },
+        "notice_flg": 0
+      }
+    ],
     "resist_data": {
       "class_name": "TKS.Network.Domain.UnitResistData",
       "poison": 3,
@@ -32090,7 +32311,7 @@
     "tab_batch_data": {
       "class_name": "TKS.Network.Domain.TabCharaDetailBatchDataEntity",
       "ex_skill_stren_batch": 1,
-      "lv_limit_batch": 1,
+      "lv_limit_batch": 0,
       "limit_break_batch": 0,
       "bond_lv_batch": 0
     },
@@ -32103,7 +32324,7 @@
     "strengthen_flag_list": {
       "class_name": "TKS.Network.Domain.StrengthenFlagEntity",
       "ex_skill_stren_flag": 1,
-      "lv_limit_flag": 1,
+      "lv_limit_flag": 0,
       "limit_break_flag": 0,
       "core_lv_flag": 0
     },
@@ -32111,12 +32332,12 @@
       "class_name": "TKS.Network.Domain.UnitBaseStatusDataEntity",
       "base_data": {
         "class_name": "TKS.Network.Domain.UnitBaseStatusEntity",
-        "hp": 806,
+        "hp": 4838,
         "init_ex_gauge": 30,
         "max_ex_gauge": 300,
         "min_wt": 14,
         "max_wt": 18,
-        "attack": 137,
+        "attack": 827,
         "critical": 300,
         "ex_gauge_rate": 120
       },
@@ -36480,8 +36701,8 @@
     "total_love_exp": 750,
     "current_love_exp": 20,
     "max_love_exp": 400,
-    "power": 25350,
-    "team_hp": 6619,
+    "power": 23198,
+    "team_hp": 5295,
     "is_bond_unit": 0,
     "is_event_unit": 0,
     "bond_lv": 0,
@@ -36635,63 +36856,6 @@
       }
     ],
     "equip_data": [
-      {
-        "class_name": "TKS.Network.Domain.EquipListEntity",
-        "u_equip_id": 24905935,
-        "equip_id": 2200008,
-        "equip_name": "魔女の帽子",
-        "equip_part": 2,
-        "equip_type": 0,
-        "exclusive_unit_id": 0,
-        "exclusive_unit_name": "",
-        "illust_id": "equip_2200008",
-        "rarity": 2,
-        "limit_break_count": 4,
-        "max_limit_break_count": 4,
-        "equip_awake_flag": 0,
-        "is_equip_awake": 0,
-        "can_equip_awake": 0,
-        "resonance_count": 0,
-        "max_resonance_count": 0,
-        "lv": 50,
-        "max_lv": 50,
-        "total_exp": 118473,
-        "current_exp": 0,
-        "max_exp": 99999999,
-        "lock_flg": 0,
-        "equipped_unit": {
-          "class_name": "TKS.Network.Domain.EquippedUnitEntity",
-          "character_name": "マハムート《超竜》",
-          "unit_name": "畏怖たる寵妃",
-          "unit_id": 1048003
-        },
-        "parameter_list": [
-          {
-            "class_name": "TKS.Network.Domain.EquipParameterListEntity",
-            "parameter_type": 0,
-            "parameter_value": 1324
-          },
-          {
-            "class_name": "TKS.Network.Domain.EquipParameterListEntity",
-            "parameter_type": 2,
-            "parameter_value": 21
-          }
-        ],
-        "skill_data": {
-          "class_name": "TKS.Network.Domain.EquipSkillDataEntity",
-          "skill_id": 2200008,
-          "lv": 5,
-          "skill_detail": "火傷耐性を1段階アップ"
-        },
-        "enchant_frame_list": [],
-        "lottery_skill_enchant_list": [],
-        "sell_data": {
-          "class_name": "TKS.Network.Domain.EquipSellData",
-          "get_currency": 20000,
-          "get_coin": 500
-        },
-        "notice_flg": 0
-      },
       {
         "class_name": "TKS.Network.Domain.EquipListEntity",
         "u_equip_id": 25914828,
@@ -68455,21 +68619,21 @@
     "affiliation_list": [
       1
     ],
-    "lv_limit_count": 0,
-    "lv": 10,
-    "max_lv": 60,
+    "lv_limit_count": 4,
+    "lv": 100,
+    "max_lv": 100,
     "core_lv": 2,
     "max_core_lv": 3,
-    "total_exp": 570,
-    "current_exp": 77,
-    "max_exp": 134,
+    "total_exp": 680999,
+    "current_exp": 0,
+    "max_exp": 99999999,
     "love_lv": 11,
     "max_love_lv": 30,
     "total_love_exp": 785,
     "current_love_exp": 55,
     "max_love_exp": 400,
-    "power": 7597,
-    "team_hp": 458,
+    "power": 64129,
+    "team_hp": 2787,
     "is_bond_unit": 0,
     "is_event_unit": 0,
     "bond_lv": 0,
@@ -68491,24 +68655,24 @@
       "class_name": "TKS.Network.Domain.UnitStatusEntity",
       "base_data": {
         "class_name": "TKS.Network.Domain.StatusEntity",
-        "hp": "440",
+        "hp": "2596",
         "init_ex_gauge": 40,
         "max_ex_gauge": 300,
         "min_wt": 12,
         "max_wt": 12,
-        "attack": 326,
+        "attack": 2047,
         "critical": 300,
         "ex_gauge_rate": 51,
         "weight": 30
       },
       "add_love_lv": {
         "class_name": "TKS.Network.Domain.StatusEntity",
-        "hp": "18",
+        "hp": "98",
         "init_ex_gauge": 0,
         "max_ex_gauge": 0,
         "min_wt": 0,
         "max_wt": 0,
-        "attack": 14,
+        "attack": 73,
         "critical": 30,
         "ex_gauge_rate": 0,
         "weight": 0
@@ -68528,9 +68692,9 @@
         "skill_data_type": 1,
         "skill_id": 11360011,
         "skill_name": "メルティハートレイン",
-        "skill_detail": "敵単体に50％×2回のダメージ/自身の左2レーンにいる味方のノーツを2～3前方に移動/自身の左2レーンにいる味方2体のタイプが同じ時、自身の通常攻撃・EXスキルによるラッシュ増加数が倍になる（5CT） ※この効果は重複しない/自身の左2レーンにいる味方2体のタイプが異なる時、自身のEX上昇を20アップ（25CT）",
+        "skill_detail": "敵単体に100％×5回のダメージ/自身の左2レーンにいる味方のノーツを5～5前方に移動/自身の左2レーンにいる味方2体のタイプが同じ時、自身の通常攻撃・EXスキルによるラッシュ増加数が倍になる（5CT） ※この効果は重複しない/自身の左2レーンにいる味方2体のタイプが異なる時、自身のEX上昇を40アップ（25CT）",
         "icon_id": 101,
-        "lv": 1,
+        "lv": 10,
         "max_lv": 10,
         "cost_ex_gauge": 90,
         "is_unlock": 1,
@@ -68614,7 +68778,228 @@
         "unlock_condition": ""
       }
     ],
-    "equip_data": [],
+    "equip_data": [
+      {
+        "class_name": "TKS.Network.Domain.EquipListEntity",
+        "u_equip_id": 26591070,
+        "equip_id": 2300005,
+        "equip_name": "ムーンライトエナン",
+        "equip_part": 2,
+        "equip_type": 0,
+        "exclusive_unit_id": 0,
+        "exclusive_unit_name": "",
+        "illust_id": "equip_2300005",
+        "rarity": 3,
+        "limit_break_count": 0,
+        "max_limit_break_count": 4,
+        "equip_awake_flag": 0,
+        "is_equip_awake": 0,
+        "can_equip_awake": 0,
+        "resonance_count": 0,
+        "max_resonance_count": 0,
+        "lv": 1,
+        "max_lv": 10,
+        "total_exp": 0,
+        "current_exp": 0,
+        "max_exp": 36,
+        "lock_flg": 0,
+        "equipped_unit": {
+          "class_name": "TKS.Network.Domain.EquippedUnitEntity",
+          "character_name": "ウルスラ",
+          "unit_name": "愛の伝道者",
+          "unit_id": 1136001
+        },
+        "parameter_list": [
+          {
+            "class_name": "TKS.Network.Domain.EquipParameterListEntity",
+            "parameter_type": 0,
+            "parameter_value": 259
+          },
+          {
+            "class_name": "TKS.Network.Domain.EquipParameterListEntity",
+            "parameter_type": 2,
+            "parameter_value": 6
+          }
+        ],
+        "skill_data": {
+          "class_name": "TKS.Network.Domain.EquipSkillDataEntity",
+          "skill_id": 2300005,
+          "lv": 1,
+          "skill_detail": "凍傷耐性を1段階アップ/雷属性の被ダメージを3.2％軽減/重さ12.8％アップ"
+        },
+        "enchant_frame_list": [],
+        "lottery_skill_enchant_list": [],
+        "sell_data": {
+          "class_name": "TKS.Network.Domain.EquipSellData",
+          "get_currency": 40000,
+          "get_coin": 1000
+        },
+        "notice_flg": 1
+      },
+      {
+        "class_name": "TKS.Network.Domain.EquipListEntity",
+        "u_equip_id": 28312167,
+        "equip_id": 3300240,
+        "equip_name": "ウルスラの髪飾り",
+        "equip_part": 3,
+        "equip_type": 0,
+        "exclusive_unit_id": 1136001,
+        "exclusive_unit_name": "[愛の伝道者]ウルスラ",
+        "illust_id": "equip_3300240",
+        "rarity": 3,
+        "limit_break_count": 4,
+        "max_limit_break_count": 4,
+        "equip_awake_flag": 0,
+        "is_equip_awake": 1,
+        "can_equip_awake": 0,
+        "resonance_count": 1,
+        "max_resonance_count": 1,
+        "lv": 60,
+        "max_lv": 60,
+        "total_exp": 308057,
+        "current_exp": 0,
+        "max_exp": 99999999,
+        "lock_flg": 1,
+        "equipped_unit": {
+          "class_name": "TKS.Network.Domain.EquippedUnitEntity",
+          "character_name": "ウルスラ",
+          "unit_name": "愛の伝道者",
+          "unit_id": 1136001
+        },
+        "parameter_list": [
+          {
+            "class_name": "TKS.Network.Domain.EquipParameterListEntity",
+            "parameter_type": 1,
+            "parameter_value": 846
+          }
+        ],
+        "skill_data": {
+          "class_name": "TKS.Network.Domain.EquipSkillDataEntity",
+          "skill_id": 11360011,
+          "lv": 5,
+          "skill_detail": "EX1「メルティハートレイン」のダメージ50％アップ/\nEX2「トゥルーラブジャッジメント」のダメージ800％（ラッシュ100以上の時、1000％）アップ"
+        },
+        "enchant_frame_list": [
+          {
+            "class_name": "TKS.Network.Domain.EquipEnchantFrameEntity",
+            "frame_no": 1,
+            "is_rare": 0,
+            "release_resonance_count": 0,
+            "is_enchant_release": 1,
+            "enchant_data": "TKS.Network.Domain.EquipEnchantSkillEntity"
+          },
+          {
+            "class_name": "TKS.Network.Domain.EquipEnchantFrameEntity",
+            "frame_no": 2,
+            "is_rare": 0,
+            "release_resonance_count": 0,
+            "is_enchant_release": 1,
+            "enchant_data": "TKS.Network.Domain.EquipEnchantSkillEntity"
+          },
+          {
+            "class_name": "TKS.Network.Domain.EquipEnchantFrameEntity",
+            "frame_no": 3,
+            "is_rare": 0,
+            "release_resonance_count": 0,
+            "is_enchant_release": 1,
+            "enchant_data": "TKS.Network.Domain.EquipEnchantSkillEntity"
+          },
+          {
+            "class_name": "TKS.Network.Domain.EquipEnchantFrameEntity",
+            "frame_no": 4,
+            "is_rare": 1,
+            "release_resonance_count": 1,
+            "is_enchant_release": 1,
+            "enchant_data": "TKS.Network.Domain.EquipEnchantSkillEntity"
+          }
+        ],
+        "lottery_skill_enchant_list": [
+          {
+            "class_name": "TKS.Network.Domain.EquipEnchantFrameSkillEffectEntity",
+            "frame_no": 1,
+            "skill_enchant_list": "TKS.Network.Domain.EquipEnchantSkillEffectEntity"
+          },
+          {
+            "class_name": "TKS.Network.Domain.EquipEnchantFrameSkillEffectEntity",
+            "frame_no": 2,
+            "skill_enchant_list": "TKS.Network.Domain.EquipEnchantSkillEffectEntity"
+          },
+          {
+            "class_name": "TKS.Network.Domain.EquipEnchantFrameSkillEffectEntity",
+            "frame_no": 3,
+            "skill_enchant_list": "TKS.Network.Domain.EquipEnchantSkillEffectEntity"
+          },
+          {
+            "class_name": "TKS.Network.Domain.EquipEnchantFrameSkillEffectEntity",
+            "frame_no": 4,
+            "skill_enchant_list": "TKS.Network.Domain.EquipEnchantSkillEffectEntity"
+          }
+        ],
+        "sell_data": {
+          "class_name": "TKS.Network.Domain.EquipSellData",
+          "get_currency": 280000,
+          "get_coin": 7000
+        },
+        "notice_flg": 0
+      },
+      {
+        "class_name": "TKS.Network.Domain.EquipListEntity",
+        "u_equip_id": 32902019,
+        "equip_id": 1300064,
+        "equip_name": "アストラル・ガントレット",
+        "equip_part": 1,
+        "equip_type": 3,
+        "exclusive_unit_id": 0,
+        "exclusive_unit_name": "",
+        "illust_id": "equip_1300064",
+        "rarity": 3,
+        "limit_break_count": 4,
+        "max_limit_break_count": 4,
+        "equip_awake_flag": 0,
+        "is_equip_awake": 0,
+        "can_equip_awake": 0,
+        "resonance_count": 0,
+        "max_resonance_count": 0,
+        "lv": 50,
+        "max_lv": 50,
+        "total_exp": 177710,
+        "current_exp": 0,
+        "max_exp": 10492,
+        "lock_flg": 0,
+        "equipped_unit": {
+          "class_name": "TKS.Network.Domain.EquippedUnitEntity",
+          "character_name": "ウルスラ",
+          "unit_name": "愛の伝道者",
+          "unit_id": 1136001
+        },
+        "parameter_list": [
+          {
+            "class_name": "TKS.Network.Domain.EquipParameterListEntity",
+            "parameter_type": 1,
+            "parameter_value": 648
+          },
+          {
+            "class_name": "TKS.Network.Domain.EquipParameterListEntity",
+            "parameter_type": 2,
+            "parameter_value": 30
+          }
+        ],
+        "skill_data": {
+          "class_name": "TKS.Network.Domain.EquipSkillDataEntity",
+          "skill_id": 1300064,
+          "lv": 5,
+          "skill_detail": "神族のクリティカル16％加算"
+        },
+        "enchant_frame_list": [],
+        "lottery_skill_enchant_list": [],
+        "sell_data": {
+          "class_name": "TKS.Network.Domain.EquipSellData",
+          "get_currency": 200000,
+          "get_coin": 5000
+        },
+        "notice_flg": 0
+      }
+    ],
     "resist_data": {
       "class_name": "TKS.Network.Domain.UnitResistData",
       "poison": 3,
@@ -68632,7 +69017,7 @@
     "tab_batch_data": {
       "class_name": "TKS.Network.Domain.TabCharaDetailBatchDataEntity",
       "ex_skill_stren_batch": 1,
-      "lv_limit_batch": 1,
+      "lv_limit_batch": 0,
       "limit_break_batch": 0,
       "bond_lv_batch": 0
     },
@@ -68645,7 +69030,7 @@
     "strengthen_flag_list": {
       "class_name": "TKS.Network.Domain.StrengthenFlagEntity",
       "ex_skill_stren_flag": 1,
-      "lv_limit_flag": 1,
+      "lv_limit_flag": 0,
       "limit_break_flag": 0,
       "core_lv_flag": 0
     },
@@ -68653,12 +69038,12 @@
       "class_name": "TKS.Network.Domain.UnitBaseStatusDataEntity",
       "base_data": {
         "class_name": "TKS.Network.Domain.UnitBaseStatusEntity",
-        "hp": 440,
+        "hp": 2430,
         "init_ex_gauge": 40,
         "max_ex_gauge": 300,
         "min_wt": 12,
         "max_wt": 12,
-        "attack": 326,
+        "attack": 1805,
         "critical": 300,
         "ex_gauge_rate": 36
       },

@@ -1,0 +1,63 @@
+name: Regenerate Viewer
+
+# 当 unit_list.json 更新时自动重生成图鉴页面 (index.html)
+# 同时刷新 wiki_data.json / equip_wiki.json 的持有标记与新卡/新装备图标
+# 立绘大图(立绘)抓取较慢且依赖逐页访问 Wiki, 默认不自动执行; 需要时用 workflow_dispatch 勾选 full_fetch
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'unit_list.json'
+  workflow_dispatch:
+    inputs:
+      full_fetch:
+        description: '同时抓取立绘大图 (约 3 分钟, 默认仅抓头像)'
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+jobs:
+  regenerate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      # 1. 刷新 Wiki 全图鉴数据 + 头像 (含新卡 owned 标记与 w{no}_icon)
+      #    continue-on-error: Wiki 偶发抖动不阻塞页面重生成 (会沿用仓库内已有 wiki_data.json)
+      - name: Fetch wiki data + icons
+        run: node fetch_images.mjs --icon-only
+        continue-on-error: true
+
+      # 2. 刷新装备 Wiki 数据 + 装备图标
+      - name: Fetch equip wiki data + icons
+        run: node fetch_equips.mjs
+        continue-on-error: true
+
+      # 2'. (可选) 抓取立绘大图
+      - name: Fetch full illustrations
+        if: inputs.full_fetch == true
+        run: node fetch_images.mjs
+        continue-on-error: true
+
+      # 3. 重生成 index.html
+      - name: Regenerate index.html
+        run: node gen_viewer.mjs
+
+      # 4. 提交并推送变更 (GITHUB_TOKEN 提交不会再次触发本工作流, 无无限循环风险)
+      - name: Commit & push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --staged --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "chore: regenerate viewer [skip ci]"
+            git push
+          fi
