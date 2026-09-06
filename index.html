@@ -121,7 +121,7 @@
   .martbg img { position: absolute; inset: -40px; width: calc(100% + 80px); height: calc(100% + 80px);
     object-fit: cover; filter: blur(28px) brightness(.5) saturate(1.2); transform: scale(1.12); }
   .martbg::after { content: ''; position: absolute; inset: 0; background: rgba(10, 12, 26, .35); }
-  .mmain { flex: 1; min-width: 0; position: relative; z-index: 1; overflow-y: auto; padding-right: 4px; }
+  .mmain { flex: 1; min-width: 0; position: relative; z-index: 1; overflow-y: auto; padding-right: 4px; overscroll-behavior: contain; }
   /* 弹窗滚动条: 细条/透明轨道/悬停点亮 */
   .mmain, .mfig { scrollbar-width: thin; scrollbar-color: rgba(255,255,255,.14) transparent; }
   .mmain::-webkit-scrollbar, .mfig::-webkit-scrollbar { width: 6px; }
@@ -129,7 +129,7 @@
   .mmain::-webkit-scrollbar-thumb, .mfig::-webkit-scrollbar-thumb { background: rgba(255,255,255,.14); border-radius: 3px; }
   .mmain:hover::-webkit-scrollbar-thumb, .mfig:hover::-webkit-scrollbar-thumb { background: rgba(255,255,255,.22); }
   .mmain::-webkit-scrollbar-thumb:hover, .mfig::-webkit-scrollbar-thumb:hover { background: rgba(255,217,106,.5); }
-  .mfig { flex: none; width: 252px; position: relative; z-index: 1; display: flex; flex-direction: column; gap: 10px; max-height: 100%; overflow-y: auto; padding-right: 2px; }
+  .mfig { flex: none; width: 252px; position: relative; z-index: 1; display: flex; flex-direction: column; gap: 10px; max-height: 100%; overflow-y: auto; padding-right: 2px; overscroll-behavior: contain; }
   .figpanel { height: clamp(200px, 32vh, 330px); flex: none; border-radius: 14px; border: 1px solid var(--line);
     display: flex; align-items: center; justify-content: center; overflow: hidden; }
   /* 右栏内的白值/档案紧凑单列版 */
@@ -513,7 +513,7 @@ function showSister(rowIdx) {
   const sisArt = r.wart || r.wimg; // Wiki シスター专属立绘 (Q 版 SD), 无立绘时退回图标
   document.getElementById('modal').innerHTML = `
     <div class="martbg">${sisArt ? `<img src="${sisArt}" onerror="this.parentElement.remove()">` : ''}</div>
-    <button class="close" onclick="document.getElementById('overlay').classList.remove('show')">✕</button>
+    <button class="close" onclick="closeOverlay()">✕</button>
     <div class="mmain">
       <div><h2>${esc(r.name)}${s ? '' : ' <span class="slocktag" style="margin-left:8px">未持有</span>'}</h2><div class="sub2"><span style="color:var(--gold)">シスター</span> · <span style="color:${c};font-weight:700">${ATTR[r.attr] || '?'}</span> · ${ROLE[r.typeId] || '?'}${s && s.camp ? ' · ' + CAMP[s.camp] : ''}${r.date ? ' · 実装 ' + esc(r.date) : ''}${wikiUrl ? ` · <a class="wlink" href="${wikiUrl}" target="_blank" rel="noopener">Wiki ↗</a>` : ''}</div></div>
       <div class="grid2" style="margin-top:14px">
@@ -530,7 +530,7 @@ function showSister(rowIdx) {
       </div>
     </div>
   `;
-  document.getElementById('overlay').classList.add('show');
+  openOverlay();
 }
 
 function showModal(id) {
@@ -578,7 +578,7 @@ function showModal(id) {
   // 弹窗结构: 同图模糊底 + 左侧信息(滚动) + 右侧立绘展示面板(等比完整显示)
   document.getElementById('modal').innerHTML = `
     <div class="martbg">${u.art ? `<img src="${u.art}" onerror="this.parentElement.remove()">` : ''}</div>
-    <button class="close" onclick="document.getElementById('overlay').classList.remove('show')">✕</button>
+    <button class="close" onclick="closeOverlay()">✕</button>
     <div class="mmain">
       <div><h2>${esc(u.uname)}</h2><div class="sub2"><ruby>${u.fnameRuby}</ruby> · <span style="color:var(--gold)">${rareStr(u)}</span> · <span style="color:${c};font-weight:700">${ATTR[u.attr]}</span> · ${ROLE[u.role]}${u.spType && SP_TYPE[u.spType] ? ` · ${SP_TYPE[u.spType]}` : ''}${u.whref ? ` · <a class="wlink" href="${WIKI_BASE}${u.whref.replace(/&/g, '&amp;')}" target="_blank" rel="noopener">Wiki ↗</a>` : ''}</div></div>
       <div class="grid2" style="margin-top:14px">
@@ -612,10 +612,43 @@ function showModal(id) {
       </div>
     </div>
   `;
-  document.getElementById('overlay').classList.add('show');
+  openOverlay();
 }
-document.getElementById('overlay').onclick = (e) => { if (e.target.id === 'overlay') e.target.classList.remove('show'); };
-document.addEventListener('keydown', (e) => { if (e.key === 'Escape') document.getElementById('overlay').classList.remove('show'); });
+document.getElementById('overlay').onclick = (e) => { if (e.target.id === 'overlay') closeOverlay(); };
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeOverlay(); });
+
+// 弹窗开关: 联动 history (手机端系统返回手势/返回键优先关弹窗, 不退出页面) + 锁定背景滚动 (iOS 用 position:fixed 方案)
+let lockedScrollY = 0;
+function openOverlay() {
+  const ov = document.getElementById('overlay');
+  if (ov.classList.contains('show')) return;
+  history.pushState({ modal: 1 }, '');
+  ov.classList.add('show');
+  lockedScrollY = window.scrollY;
+  document.body.style.position = 'fixed';
+  document.body.style.top = `-${lockedScrollY}px`;
+  document.body.style.width = '100%';
+}
+function unlockBg() {
+  if (document.body.style.position !== 'fixed') return;
+  document.body.style.position = '';
+  document.body.style.top = '';
+  document.body.style.width = '';
+  window.scrollTo(0, lockedScrollY);
+}
+function closeOverlay() {
+  const ov = document.getElementById('overlay');
+  const wasOpen = ov.classList.contains('show');
+  ov.classList.remove('show');
+  unlockBg();
+  // ✕/遮罩/Esc 关闭时清理 pushState 的历史项 (会触发 popstate, 那时弹窗已关, 监听器空转)
+  if (wasOpen && history.state && history.state.modal) history.back();
+}
+// 系统返回手势/返回键: 弹窗开着则拦截为关弹窗
+window.addEventListener('popstate', () => {
+  const ov = document.getElementById('overlay');
+  if (ov.classList.contains('show')) { ov.classList.remove('show'); unlockBg(); }
+});
 
 let deb;
 document.getElementById('q').oninput = (e) => { clearTimeout(deb); deb = setTimeout(() => { state.q = e.target.value.trim(); render(); }, 120); };
