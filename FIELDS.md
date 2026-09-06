@@ -105,7 +105,26 @@ Frida / il2cpp-bridge 从游戏客户端内存 dump 的 `TSK.Network.Domain.Unit
 | `effect_rate` | 全部 0 |
 | `unit_view_type` | 全部 2（视图/模型类型，无区分度） |
 
+## シスター sister_unit_list.json（12 名持有）
+
+「シスター」是随队支援系统角色，与上阵卡互相独立。`sister_unit_id` 与对应角色基础卡的 `unit_id` 一致（如 1001001=フィオナ），立绘/头像直接复用 `img/{sister_unit_id}*.png`。
+
+| 字段 | 说明 |
+|---|---|
+| `sister_unit_id` / `u_sister_unit_id` | シスター ID / dump 实例 ID |
+| `character_name` / `character_name_kana` | 名称（含【魔王】【新春】等变体；与 Wiki「シスター」页名称**精确对应**，71 名全量匹配成功） |
+| `attr_type` / `role` / `camp` | 属性/类型/种族，与 unit 同一套枚举 |
+| `limit_break_count` | シスター限界突破次数（0/1） |
+| `support_skill_data` | **支援スキル**：`skill_name`/`skill_detail`/`lv`/`max_lv`(10)，`next_lv_list` 为后续各级预览（含 `<color=#16C97B>` 差分高亮 rich text） |
+| `active_skill_data` | **アクティブスキル**：结构同上，另含 `skill_type`；发动条件/对象 dump 中无，由 Wiki 表补充 |
+| `extra_support_skill_data` | **解放スキル**：`release_skill_data.skill_name/detail`（满级文本）；`is_release`=1 已解放 / 0 未解放；`extra_support_skill_flg`=1 表示该シスター持有解放技 |
+| `is_rental` / `is_used` / `is_prohibited` / `notice_flg` | 租借/使用中/禁止/通知旗标（图鉴未使用） |
+| `effect_rate` / `limit_date_text` | 读取失败占位（`<error>: access violation`） |
+| `attack_type` | 全部 0（シスター不直接攻击） |
+
+Wiki 侧数据（`fetch_sisters.mjs` → `sister_wiki.json`，71 名）：チームスキル（满级合计文本）、アクティブスキル発動条件/対象/効果（满级）、ゲージ速度、入手方法、実装日；未持有图标存 `img/sw{idx}_icon.png`。
+
 ## 页面已使用 / 未使用速查
 
-- **已使用**：标识名称、稀有度属性类型陣営所属、`sp_equip_types`(攻撃タイプ待接入)、养成数值、status_data 白值、equip_data、skill_data、unique_skill_data、resist_data（待接入）、档案
+- **已使用**：标识名称、稀有度属性类型陣営所属、`sp_equip_types`(攻撃タイプ待接入)、养成数值、status_data 白值、equip_data、skill_data、unique_skill_data、resist_data（待接入）、档案；シスター三技能/解放状态 + Wiki 合并字段
 - **未使用**：经验类、core_lv、租借标记、`skill_category_id_list`、`tab_batch_data`、`exclusive_exchange_shop_data`、`strengthen_flag_list`、`specific_gauge_data`

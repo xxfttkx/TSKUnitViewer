@@ -39,6 +39,11 @@ jobs:
         run: node fetch_equips.mjs
         continue-on-error: true
 
+      # 2''. 刷新シスター Wiki 数据 + 未持有图标
+      - name: Fetch sister wiki data + icons
+        run: node fetch_sisters.mjs
+        continue-on-error: true
+
       # 2'. (可选) 抓取立绘大图
       - name: Fetch full illustrations
         if: inputs.full_fetch == true

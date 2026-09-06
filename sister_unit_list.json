@@ -1,0 +1,1538 @@
+[
+  {
+    "class_name": "TKS.Network.Domain.SisterEntity",
+    "is_rental": 0,
+    "u_sister_unit_id": 46468,
+    "sister_unit_id": 1001001,
+    "character_id": 1,
+    "character_name": "フィオナ",
+    "character_name_kana": "フィオナ",
+    "sister_name": "シスター",
+    "unit_illust_id": 1001001,
+    "attr_type": 5,
+    "role": 1,
+    "camp": 1,
+    "notice_flg": 1,
+    "support_skill_detail_display": "<error>: Error: access violation accessing 0x10",
+    "effect_rate": 0,
+    "limit_date_text": "<error>: Error: access violation accessing 0x10",
+    "is_used": 0,
+    "is_prohibited": 0,
+    "attack_type": 0,
+    "limit_break_count": 0,
+    "support_skill_data": {
+      "class_name": "TKS.Network.Domain.SisterSupportSkillData",
+      "support_skill_id": 1001001,
+      "lv": 7,
+      "max_lv": 10,
+      "skill_name": "輝王の加護",
+      "skill_detail": "味方全体の基礎ATK14％アップ\n闇属性の味方のATK83％アップ",
+      "icon_id": 0,
+      "next_lv_list": [
+        {
+          "class_name": "TKS.Network.Domain.SisterSupportSkillNextLevelData",
+          "lv": 8,
+          "skill_name": "輝王の加護",
+          "skill_detail": "味方全体の基礎ATK<color=#16C97B>16</color>％アップ\n闇属性の味方のATK<color=#16C97B>88</color>％アップ",
+          "icon_id": 0,
+          "is_strengthen": 1,
+          "cost_item_list": [
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData"
+          ]
+        },
+        {
+          "class_name": "TKS.Network.Domain.SisterSupportSkillNextLevelData",
+          "lv": 9,
+          "skill_name": "輝王の加護",
+          "skill_detail": "味方全体の基礎ATK<color=#16C97B>18</color>％アップ\n闇属性の味方のATK<color=#16C97B>94</color>％アップ",
+          "icon_id": 0,
+          "is_strengthen": 0,
+          "cost_item_list": [
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData"
+          ]
+        },
+        {
+          "class_name": "TKS.Network.Domain.SisterSupportSkillNextLevelData",
+          "lv": 10,
+          "skill_name": "輝王の加護",
+          "skill_detail": "味方全体の基礎ATK<color=#16C97B>20</color>％アップ\n闇属性の味方のATK<color=#16C97B>100</color>％アップ",
+          "icon_id": 0,
+          "is_strengthen": 0,
+          "cost_item_list": [
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData"
+          ]
+        }
+      ]
+    },
+    "active_skill_data": {
+      "class_name": "TKS.Network.Domain.SisterActiveSkillData",
+      "active_skill_id": 21001001,
+      "lv": 4,
+      "max_lv": 10,
+      "skill_type": 2,
+      "skill_name": "サンアンドムーン",
+      "skill_detail": "いずれかの味方がランブル勝利後に発動\nランブル参加者のATK133％アップ（4CT）/行動CT13％短縮（4CT）",
+      "icon_id": 0,
+      "next_lv_list": [
+        {
+          "class_name": "TKS.Network.Domain.SisterActiveSkillNextLevelData",
+          "lv": 5,
+          "skill_type": 2,
+          "skill_name": "サンアンドムーン",
+          "skill_detail": "いずれかの味方がランブル勝利後に発動\nランブル参加者のATK<color=#16C97B>144</color>％アップ（4CT）/行動CT13％短縮（4CT）",
+          "icon_id": 0,
+          "is_strengthen": 1,
+          "cost_item_list": [
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData"
+          ]
+        },
+        {
+          "class_name": "TKS.Network.Domain.SisterActiveSkillNextLevelData",
+          "lv": 6,
+          "skill_type": 2,
+          "skill_name": "サンアンドムーン",
+          "skill_detail": "いずれかの味方がランブル勝利後に発動\nランブル参加者のATK<color=#16C97B>155</color>％アップ（4CT）/行動CT13％短縮（4CT）",
+          "icon_id": 0,
+          "is_strengthen": 1,
+          "cost_item_list": [
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData"
+          ]
+        },
+        {
+          "class_name": "TKS.Network.Domain.SisterActiveSkillNextLevelData",
+          "lv": 7,
+          "skill_type": 2,
+          "skill_name": "サンアンドムーン",
+          "skill_detail": "いずれかの味方がランブル勝利後に発動\nランブル参加者のATK<color=#16C97B>166</color>％アップ（4CT）/行動CT<color=#16C97B>16</color>％短縮（4CT）",
+          "icon_id": 0,
+          "is_strengthen": 1,
+          "cost_item_list": [
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData"
+          ]
+        },
+        {
+          "class_name": "TKS.Network.Domain.SisterActiveSkillNextLevelData",
+          "lv": 8,
+          "skill_type": 2,
+          "skill_name": "サンアンドムーン",
+          "skill_detail": "いずれかの味方がランブル勝利後に発動\nランブル参加者のATK<color=#16C97B>177</color>％アップ（4CT）/行動CT16％短縮（4CT）",
+          "icon_id": 0,
+          "is_strengthen": 1,
+          "cost_item_list": [
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData"
+          ]
+        },
+        {
+          "class_name": "TKS.Network.Domain.SisterActiveSkillNextLevelData",
+          "lv": 9,
+          "skill_type": 2,
+          "skill_name": "サンアンドムーン",
+          "skill_detail": "いずれかの味方がランブル勝利後に発動\nランブル参加者のATK<color=#16C97B>188</color>％アップ（4CT）/行動CT16％短縮（4CT）",
+          "icon_id": 0,
+          "is_strengthen": 1,
+          "cost_item_list": [
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData"
+          ]
+        },
+        {
+          "class_name": "TKS.Network.Domain.SisterActiveSkillNextLevelData",
+          "lv": 10,
+          "skill_type": 2,
+          "skill_name": "サンアンドムーン",
+          "skill_detail": "いずれかの味方がランブル勝利後に発動\nランブル参加者のATK<color=#16C97B>200</color>％アップ（4CT）/行動CT<color=#16C97B>20</color>％短縮（4CT）",
+          "icon_id": 0,
+          "is_strengthen": 1,
+          "cost_item_list": [
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData"
+          ]
+        }
+      ]
+    },
+    "extra_support_skill_data": {
+      "class_name": "TKS.Network.Domain.SisterExtraSupportSkillData",
+      "extra_support_skill_id": 11001001,
+      "extra_support_skill_flg": 0,
+      "is_release": 0,
+      "release_skill_data": {
+        "class_name": "TKS.Network.Domain.ReleaseSkillData",
+        "skill_name": "輝王の加護",
+        "skill_detail": "味方全体の基礎ATK<color=#16C97B>20</color>％アップ\n闇属性の味方のATK<color=#16C97B>100</color>％アップ\n<color=#16C97B>闇属性の味方の有利属性ダメージ倍率50％加算</color>",
+        "icon_id": 0,
+        "cost_item_list": [
+          "TKS.Network.Domain.SisterCostItemData",
+          "TKS.Network.Domain.SisterCostItemData",
+          "TKS.Network.Domain.SisterCostItemData",
+          "TKS.Network.Domain.SisterCostItemData",
+          "TKS.Network.Domain.SisterCostItemData",
+          "TKS.Network.Domain.SisterCostItemData",
+          "TKS.Network.Domain.SisterCostItemData",
+          "TKS.Network.Domain.SisterCostItemData",
+          "TKS.Network.Domain.SisterCostItemData"
+        ]
+      }
+    },
+    "limit_break_data": {
+      "class_name": "TKS.Network.Domain.SisterLimitBreakData",
+      "limit_break_flg": 0,
+      "is_release": 0,
+      "next_limit_break_list": []
+    }
+  },
+  {
+    "class_name": "TKS.Network.Domain.SisterEntity",
+    "is_rental": 0,
+    "u_sister_unit_id": 194909,
+    "sister_unit_id": 1001005,
+    "character_id": 1,
+    "character_name": "フィオナ【魔王】",
+    "character_name_kana": "フィオナ",
+    "sister_name": "シスター",
+    "unit_illust_id": 1001005,
+    "attr_type": 5,
+    "role": 1,
+    "camp": 3,
+    "notice_flg": 0,
+    "support_skill_detail_display": "<error>: Error: access violation accessing 0x10",
+    "effect_rate": 0,
+    "limit_date_text": "<error>: Error: access violation accessing 0x10",
+    "is_used": 0,
+    "is_prohibited": 0,
+    "attack_type": 0,
+    "limit_break_count": 1,
+    "support_skill_data": {
+      "class_name": "TKS.Network.Domain.SisterSupportSkillData",
+      "support_skill_id": 1001005,
+      "lv": 10,
+      "max_lv": 10,
+      "skill_name": "ディナミスフィールド",
+      "skill_detail": "味方全体の基礎ATK20％アップ/人間または魔族の味方の基礎ATK5％アップ\n人間の味方のATK100％アップ/さらに魔族の味方のATK100％アップ/人間の味方のクリティカル15％加算/さらに魔族の味方のクリティカル15％加算\n人間の味方の有利属性ダメージ倍率20％加算/さらに魔族の味方の有利属性ダメージ倍率20％加算\n自身の初期シスターゲージ+20%",
+      "icon_id": 0,
+      "next_lv_list": []
+    },
+    "active_skill_data": {
+      "class_name": "TKS.Network.Domain.SisterActiveSkillData",
+      "active_skill_id": 21001005,
+      "lv": 10,
+      "max_lv": 10,
+      "skill_type": 2,
+      "skill_name": "リンクドミネイション",
+      "skill_detail": "いずれかの味方がユニゾン状態でACTバー到達時（ユニゾンコマンドは除く）に発動\nユニゾン参加者のATK200％アップ（15CT）/ユニゾンアタックのダメージ倍率を100％アップ（1CT）/行動CT10％短縮（1CT）",
+      "icon_id": 0,
+      "next_lv_list": []
+    },
+    "extra_support_skill_data": {
+      "class_name": "TKS.Network.Domain.SisterExtraSupportSkillData",
+      "extra_support_skill_id": 11001005,
+      "extra_support_skill_flg": 1,
+      "is_release": 0,
+      "release_skill_data": {
+        "class_name": "TKS.Network.Domain.ReleaseSkillData",
+        "skill_name": "ディナミスフィールド",
+        "skill_detail": "味方全体の基礎ATK20％アップ<color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color>\n人間の味方のATK100％アップ/さらに魔族の味方のATK100％アップ/人間の味方のクリティカル15％加算/さらに魔族の味方のクリティカル15％加算\n<color=#16C97B>人間の味方の有利属性ダメージ倍率20％加算/さらに魔族の味方の有利属性ダメージ倍率20％加算</color>\n自身の初期シスターゲージ+20%",
+        "icon_id": 0,
+        "cost_item_list": []
+      }
+    },
+    "limit_break_data": {
+      "class_name": "TKS.Network.Domain.SisterLimitBreakData",
+      "limit_break_flg": 1,
+      "is_release": 0,
+      "next_limit_break_list": []
+    }
+  },
+  {
+    "class_name": "TKS.Network.Domain.SisterEntity",
+    "is_rental": 0,
+    "u_sister_unit_id": 224298,
+    "sister_unit_id": 1003003,
+    "character_id": 3,
+    "character_name": "ヴィーナス【新春】",
+    "character_name_kana": "ウィーナス",
+    "sister_name": "シスター",
+    "unit_illust_id": 1003003,
+    "attr_type": 3,
+    "role": 1,
+    "camp": 1,
+    "notice_flg": 0,
+    "support_skill_detail_display": "<error>: Error: access violation accessing 0x10",
+    "effect_rate": 0,
+    "limit_date_text": "<error>: Error: access violation accessing 0x10",
+    "is_used": 0,
+    "is_prohibited": 0,
+    "attack_type": 0,
+    "limit_break_count": 1,
+    "support_skill_data": {
+      "class_name": "TKS.Network.Domain.SisterSupportSkillData",
+      "support_skill_id": 1003003,
+      "lv": 10,
+      "max_lv": 10,
+      "skill_name": "アメイズ・ラック",
+      "skill_detail": "味方全体の基礎ATK20％アップ/人間の味方の基礎ATK5％アップ\n人間の味方のATK100％アップ/クリティカル20％加算\n人間かつアタックタイプの味方の初回行動CT-2\n自身の初期シスターゲージ+20%",
+      "icon_id": 0,
+      "next_lv_list": []
+    },
+    "active_skill_data": {
+      "class_name": "TKS.Network.Domain.SisterActiveSkillData",
+      "active_skill_id": 21003003,
+      "lv": 10,
+      "max_lv": 10,
+      "skill_type": 2,
+      "skill_name": "サンライズ・アブソーバー",
+      "skill_detail": "いずれかの味方がEXスキル1、または、EXスキル1+使用時に発動\n敵のEXゲージを100減少させ、人間の味方のATKを減少させたEXゲージ量×2％アップ（10CT）/人間の味方のクリティカル30％加算（10CT）",
+      "icon_id": 0,
+      "next_lv_list": []
+    },
+    "extra_support_skill_data": {
+      "class_name": "TKS.Network.Domain.SisterExtraSupportSkillData",
+      "extra_support_skill_id": 11003003,
+      "extra_support_skill_flg": 1,
+      "is_release": 0,
+      "release_skill_data": {
+        "class_name": "TKS.Network.Domain.ReleaseSkillData",
+        "skill_name": "アメイズ・ラック",
+        "skill_detail": "味方全体の基礎ATK20％アップ<color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color>\n人間の味方のATK100％アップ/クリティカル20％加算\n<color=#16C97B>人間かつアタックタイプの味方の初回行動CT-2</color>\n自身の初期シスターゲージ+20%",
+        "icon_id": 0,
+        "cost_item_list": []
+      }
+    },
+    "limit_break_data": {
+      "class_name": "TKS.Network.Domain.SisterLimitBreakData",
+      "limit_break_flg": 1,
+      "is_release": 0,
+      "next_limit_break_list": []
+    }
+  },
+  {
+    "class_name": "TKS.Network.Domain.SisterEntity",
+    "is_rental": 0,
+    "u_sister_unit_id": 168126,
+    "sister_unit_id": 1004003,
+    "character_id": 4,
+    "character_name": "アポロ",
+    "character_name_kana": "アホロ",
+    "sister_name": "シスター",
+    "unit_illust_id": 1004003,
+    "attr_type": 5,
+    "role": 1,
+    "camp": 1,
+    "notice_flg": 0,
+    "support_skill_detail_display": "<error>: Error: access violation accessing 0x10",
+    "effect_rate": 0,
+    "limit_date_text": "<error>: Error: access violation accessing 0x10",
+    "is_used": 0,
+    "is_prohibited": 0,
+    "attack_type": 0,
+    "limit_break_count": 1,
+    "support_skill_data": {
+      "class_name": "TKS.Network.Domain.SisterSupportSkillData",
+      "support_skill_id": 1004003,
+      "lv": 10,
+      "max_lv": 10,
+      "skill_name": "シャドウムーン",
+      "skill_detail": "味方全体の基礎ATK20％アップ/味方全体の基礎ATKをチーム内の異なるメイン属性の数×1％アップ\n味方全体のATKをチーム内の異なる属性の数×20％アップ/クリティカルをチーム内の異なる属性の数×4％加算\n味方全体の有利属性ダメージ倍率10％加算\n自身の初期シスターゲージ+20%",
+      "icon_id": 0,
+      "next_lv_list": []
+    },
+    "active_skill_data": {
+      "class_name": "TKS.Network.Domain.SisterActiveSkillData",
+      "active_skill_id": 21004003,
+      "lv": 10,
+      "max_lv": 10,
+      "skill_type": 2,
+      "skill_name": "ライズエクシード",
+      "skill_detail": "いずれかの味方がEXスキル2、または、EXスキル2+使用時に発動\n敵のEXゲージを25％減少させ、味方全体のATKを減少させたEXゲージ量×3％アップ（10CT）",
+      "icon_id": 0,
+      "next_lv_list": []
+    },
+    "extra_support_skill_data": {
+      "class_name": "TKS.Network.Domain.SisterExtraSupportSkillData",
+      "extra_support_skill_id": 11004003,
+      "extra_support_skill_flg": 1,
+      "is_release": 0,
+      "release_skill_data": {
+        "class_name": "TKS.Network.Domain.ReleaseSkillData",
+        "skill_name": "シャドウムーン",
+        "skill_detail": "味方全体の基礎ATK20％アップ<color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color>\n味方全体のATKをチーム内の異なる属性の数×20％アップ/クリティカルをチーム内の異なる属性の数×4％加算\n<color=#16C97B>味方全体の有利属性ダメージ倍率10％加算</color>\n自身の初期シスターゲージ+20%",
+        "icon_id": 0,
+        "cost_item_list": []
+      }
+    },
+    "limit_break_data": {
+      "class_name": "TKS.Network.Domain.SisterLimitBreakData",
+      "limit_break_flg": 1,
+      "is_release": 0,
+      "next_limit_break_list": []
+    }
+  },
+  {
+    "class_name": "TKS.Network.Domain.SisterEntity",
+    "is_rental": 0,
+    "u_sister_unit_id": 306384,
+    "sister_unit_id": 1008001,
+    "character_id": 8,
+    "character_name": "アナ",
+    "character_name_kana": "アナ",
+    "sister_name": "シスター",
+    "unit_illust_id": 1008001,
+    "attr_type": 1,
+    "role": 1,
+    "camp": 2,
+    "notice_flg": 1,
+    "support_skill_detail_display": "<error>: Error: access violation accessing 0x10",
+    "effect_rate": 0,
+    "limit_date_text": "<error>: Error: access violation accessing 0x10",
+    "is_used": 0,
+    "is_prohibited": 0,
+    "attack_type": 0,
+    "limit_break_count": 0,
+    "support_skill_data": {
+      "class_name": "TKS.Network.Domain.SisterSupportSkillData",
+      "support_skill_id": 1008001,
+      "lv": 10,
+      "max_lv": 10,
+      "skill_name": "マルスの導き",
+      "skill_detail": "味方全体の基礎ATK20％アップ\n炎属性の味方のATK100％アップ\n炎属性の味方の有利属性ダメージ倍率50％加算",
+      "icon_id": 0,
+      "next_lv_list": []
+    },
+    "active_skill_data": {
+      "class_name": "TKS.Network.Domain.SisterActiveSkillData",
+      "active_skill_id": 21008001,
+      "lv": 10,
+      "max_lv": 10,
+      "skill_type": 2,
+      "skill_name": "スカーレットシャワー",
+      "skill_detail": "いずれかの敵に火傷を付与した時に発動\n味方全体のATKを火傷付与中の敵の数×50％アップ（20CT）",
+      "icon_id": 0,
+      "next_lv_list": []
+    },
+    "extra_support_skill_data": {
+      "class_name": "TKS.Network.Domain.SisterExtraSupportSkillData",
+      "extra_support_skill_id": 11008001,
+      "extra_support_skill_flg": 1,
+      "is_release": 0,
+      "release_skill_data": {
+        "class_name": "TKS.Network.Domain.ReleaseSkillData",
+        "skill_name": "マルスの導き",
+        "skill_detail": "味方全体の基礎ATK20％アップ\n炎属性の味方のATK100％アップ\n<color=#16C97B>炎属性の味方の有利属性ダメージ倍率50％加算</color>",
+        "icon_id": 0,
+        "cost_item_list": []
+      }
+    },
+    "limit_break_data": {
+      "class_name": "TKS.Network.Domain.SisterLimitBreakData",
+      "limit_break_flg": 0,
+      "is_release": 1,
+      "next_limit_break_list": [
+        {
+          "class_name": "TKS.Network.Domain.SisterNextLimitBreakData",
+          "limit_break_count": 1,
+          "support_skill_detail": "味方全体の基礎ATK20％アップ<color=#16C97B>/</color><color=#16C97B>炎</color><color=#16C97B>属</color><color=#16C97B>性</color><color=#16C97B>の</color><color=#16C97B>味</color><color=#16C97B>方</color><color=#16C97B>の</color><color=#16C97B>基</color><color=#16C97B>礎</color><color=#16C97B>A</color><color=#16C97B>T</color><color=#16C97B>K</color><color=#16C97B>5</color><color=#16C97B>％</color><color=#16C97B>ア</color><color=#16C97B>ッ</color><color=#16C97B>プ</color>\n炎属性の味方のATK100％アップ\n炎属性の味方の有利属性ダメージ倍率50％加算\n<color=#16C97B>自身の初期シスターゲージ+20%</color>",
+          "cost_item_list": [
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class_name": "TKS.Network.Domain.SisterEntity",
+    "is_rental": 0,
+    "u_sister_unit_id": 48002,
+    "sister_unit_id": 1012001,
+    "character_id": 12,
+    "character_name": "キリカ",
+    "character_name_kana": "キリカ",
+    "sister_name": "シスター",
+    "unit_illust_id": 1012001,
+    "attr_type": 3,
+    "role": 2,
+    "camp": 1,
+    "notice_flg": 1,
+    "support_skill_detail_display": "<error>: Error: access violation accessing 0x10",
+    "effect_rate": 0,
+    "limit_date_text": "<error>: Error: access violation accessing 0x10",
+    "is_used": 0,
+    "is_prohibited": 0,
+    "attack_type": 0,
+    "limit_break_count": 0,
+    "support_skill_data": {
+      "class_name": "TKS.Network.Domain.SisterSupportSkillData",
+      "support_skill_id": 1012001,
+      "lv": 10,
+      "max_lv": 10,
+      "skill_name": "メイドの流儀",
+      "skill_detail": "味方全体の基礎ATK20％アップ\n人間の味方のATK100％アップ",
+      "icon_id": 0,
+      "next_lv_list": []
+    },
+    "active_skill_data": {
+      "class_name": "TKS.Network.Domain.SisterActiveSkillData",
+      "active_skill_id": 21012001,
+      "lv": 10,
+      "max_lv": 10,
+      "skill_type": 3,
+      "skill_name": "上月神闘流――奉仕",
+      "skill_detail": "いずれかの敵がスタンした時に発動\n人間の味方のATK100％アップ（15CT）/敵全体の被ダメージを3％増加（15CT）",
+      "icon_id": 0,
+      "next_lv_list": []
+    },
+    "extra_support_skill_data": {
+      "class_name": "TKS.Network.Domain.SisterExtraSupportSkillData",
+      "extra_support_skill_id": 11012001,
+      "extra_support_skill_flg": 0,
+      "is_release": 1,
+      "release_skill_data": {
+        "class_name": "TKS.Network.Domain.ReleaseSkillData",
+        "skill_name": "メイドの流儀",
+        "skill_detail": "味方全体の基礎ATK20％アップ\n人間の味方のATK100％アップ\n<color=#16C97B>WAVE開始時の敵のスタンゲージ3減少</color>",
+        "icon_id": 0,
+        "cost_item_list": [
+          "TKS.Network.Domain.SisterCostItemData",
+          "TKS.Network.Domain.SisterCostItemData",
+          "TKS.Network.Domain.SisterCostItemData",
+          "TKS.Network.Domain.SisterCostItemData",
+          "TKS.Network.Domain.SisterCostItemData",
+          "TKS.Network.Domain.SisterCostItemData",
+          "TKS.Network.Domain.SisterCostItemData",
+          "TKS.Network.Domain.SisterCostItemData",
+          "TKS.Network.Domain.SisterCostItemData"
+        ]
+      }
+    },
+    "limit_break_data": {
+      "class_name": "TKS.Network.Domain.SisterLimitBreakData",
+      "limit_break_flg": 0,
+      "is_release": 0,
+      "next_limit_break_list": []
+    }
+  },
+  {
+    "class_name": "TKS.Network.Domain.SisterEntity",
+    "is_rental": 0,
+    "u_sister_unit_id": 56507,
+    "sister_unit_id": 1030001,
+    "character_id": 30,
+    "character_name": "ナミエル",
+    "character_name_kana": "ナミエル",
+    "sister_name": "シスター",
+    "unit_illust_id": 1030001,
+    "attr_type": 2,
+    "role": 2,
+    "camp": 2,
+    "notice_flg": 1,
+    "support_skill_detail_display": "<error>: Error: access violation accessing 0x10",
+    "effect_rate": 0,
+    "limit_date_text": "<error>: Error: access violation accessing 0x10",
+    "is_used": 0,
+    "is_prohibited": 0,
+    "attack_type": 0,
+    "limit_break_count": 0,
+    "support_skill_data": {
+      "class_name": "TKS.Network.Domain.SisterSupportSkillData",
+      "support_skill_id": 1030001,
+      "lv": 10,
+      "max_lv": 10,
+      "skill_name": "ダストラスト",
+      "skill_detail": "味方全体の基礎ATK20％アップ\n水属性の味方のATK100％アップ",
+      "icon_id": 0,
+      "next_lv_list": []
+    },
+    "active_skill_data": {
+      "class_name": "TKS.Network.Domain.SisterActiveSkillData",
+      "active_skill_id": 21030001,
+      "lv": 7,
+      "max_lv": 10,
+      "skill_type": 3,
+      "skill_name": "コレクトラッシュ",
+      "skill_detail": "いずれかの敵がACTバーに到達した時に発動\n1番前方の味方のATK83％アップ（1CT）/ノーツを0位置に移動させ、強制的にランブルを発生させる",
+      "icon_id": 0,
+      "next_lv_list": [
+        {
+          "class_name": "TKS.Network.Domain.SisterActiveSkillNextLevelData",
+          "lv": 8,
+          "skill_type": 3,
+          "skill_name": "コレクトラッシュ",
+          "skill_detail": "いずれかの敵がACTバーに到達した時に発動\n1番前方の味方のATK<color=#16C97B>88</color>％アップ（1CT）/ノーツを0位置に移動させ、強制的にランブルを発生させる",
+          "icon_id": 0,
+          "is_strengthen": 1,
+          "cost_item_list": [
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData"
+          ]
+        },
+        {
+          "class_name": "TKS.Network.Domain.SisterActiveSkillNextLevelData",
+          "lv": 9,
+          "skill_type": 3,
+          "skill_name": "コレクトラッシュ",
+          "skill_detail": "いずれかの敵がACTバーに到達した時に発動\n1番前方の味方のATK<color=#16C97B>94</color>％アップ（1CT）/ノーツを0位置に移動させ、強制的にランブルを発生させる",
+          "icon_id": 0,
+          "is_strengthen": 1,
+          "cost_item_list": [
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData"
+          ]
+        },
+        {
+          "class_name": "TKS.Network.Domain.SisterActiveSkillNextLevelData",
+          "lv": 10,
+          "skill_type": 3,
+          "skill_name": "コレクトラッシュ",
+          "skill_detail": "いずれかの敵がACTバーに到達した時に発動\n1番前方の味方のATK<color=#16C97B>100</color>％アップ（1CT）/ノーツを0位置に移動させ、強制的にランブルを発生させる",
+          "icon_id": 0,
+          "is_strengthen": 1,
+          "cost_item_list": [
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData"
+          ]
+        }
+      ]
+    },
+    "extra_support_skill_data": {
+      "class_name": "TKS.Network.Domain.SisterExtraSupportSkillData",
+      "extra_support_skill_id": 11030001,
+      "extra_support_skill_flg": 0,
+      "is_release": 1,
+      "release_skill_data": {
+        "class_name": "TKS.Network.Domain.ReleaseSkillData",
+        "skill_name": "ダストラスト",
+        "skill_detail": "味方全体の基礎ATK20％アップ\n水属性の味方のATK100％アップ\n<color=#16C97B>ランブル勝利時の敵のスタン時間3CT増加</color>",
+        "icon_id": 0,
+        "cost_item_list": [
+          "TKS.Network.Domain.SisterCostItemData",
+          "TKS.Network.Domain.SisterCostItemData",
+          "TKS.Network.Domain.SisterCostItemData",
+          "TKS.Network.Domain.SisterCostItemData",
+          "TKS.Network.Domain.SisterCostItemData",
+          "TKS.Network.Domain.SisterCostItemData",
+          "TKS.Network.Domain.SisterCostItemData",
+          "TKS.Network.Domain.SisterCostItemData",
+          "TKS.Network.Domain.SisterCostItemData"
+        ]
+      }
+    },
+    "limit_break_data": {
+      "class_name": "TKS.Network.Domain.SisterLimitBreakData",
+      "limit_break_flg": 0,
+      "is_release": 0,
+      "next_limit_break_list": []
+    }
+  },
+  {
+    "class_name": "TKS.Network.Domain.SisterEntity",
+    "is_rental": 0,
+    "u_sister_unit_id": 134390,
+    "sister_unit_id": 1043001,
+    "character_id": 43,
+    "character_name": "サチ",
+    "character_name_kana": "サチ",
+    "sister_name": "シスター",
+    "unit_illust_id": 1043001,
+    "attr_type": 2,
+    "role": 4,
+    "camp": 3,
+    "notice_flg": 0,
+    "support_skill_detail_display": "<error>: Error: access violation accessing 0x10",
+    "effect_rate": 0,
+    "limit_date_text": "<error>: Error: access violation accessing 0x10",
+    "is_used": 0,
+    "is_prohibited": 0,
+    "attack_type": 0,
+    "limit_break_count": 1,
+    "support_skill_data": {
+      "class_name": "TKS.Network.Domain.SisterSupportSkillData",
+      "support_skill_id": 1043001,
+      "lv": 10,
+      "max_lv": 10,
+      "skill_name": "フォーチュンドロップ",
+      "skill_detail": "味方全体の基礎ATK20％アップ/水属性の味方の基礎ATK5％アップ\n水属性の味方のATK100％アップ/クリティカル20％加算\nステージクリア時のテルス獲得量30％アップ（初回クリア報酬、装備自動売却時のテルスは除く）\n自身の初期シスターゲージ+20%",
+      "icon_id": 0,
+      "next_lv_list": []
+    },
+    "active_skill_data": {
+      "class_name": "TKS.Network.Domain.SisterActiveSkillData",
+      "active_skill_id": 21043001,
+      "lv": 10,
+      "max_lv": 10,
+      "skill_type": 5,
+      "skill_name": "ラッキーストリーム",
+      "skill_detail": "いずれかの味方の攻撃でクリティカルが発生する直前に発動\n味方全体のATK250％アップ（15CT）",
+      "icon_id": 0,
+      "next_lv_list": []
+    },
+    "extra_support_skill_data": {
+      "class_name": "TKS.Network.Domain.SisterExtraSupportSkillData",
+      "extra_support_skill_id": 11043001,
+      "extra_support_skill_flg": 1,
+      "is_release": 0,
+      "release_skill_data": {
+        "class_name": "TKS.Network.Domain.ReleaseSkillData",
+        "skill_name": "フォーチュンドロップ",
+        "skill_detail": "味方全体の基礎ATK20％アップ<color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color>\n水属性の味方のATK100％アップ/クリティカル20％加算\n<color=#16C97B>ステージクリア時のテルス獲得量30％アップ（初回クリア報酬、装備自動売却時のテルスは除く）</color>\n自身の初期シスターゲージ+20%",
+        "icon_id": 0,
+        "cost_item_list": []
+      }
+    },
+    "limit_break_data": {
+      "class_name": "TKS.Network.Domain.SisterLimitBreakData",
+      "limit_break_flg": 1,
+      "is_release": 0,
+      "next_limit_break_list": []
+    }
+  },
+  {
+    "class_name": "TKS.Network.Domain.SisterEntity",
+    "is_rental": 0,
+    "u_sister_unit_id": 306828,
+    "sister_unit_id": 1047001,
+    "character_id": 47,
+    "character_name": "メルエル",
+    "character_name_kana": "メルエル",
+    "sister_name": "シスター",
+    "unit_illust_id": 1047001,
+    "attr_type": 4,
+    "role": 1,
+    "camp": 2,
+    "notice_flg": 1,
+    "support_skill_detail_display": "<error>: Error: access violation accessing 0x10",
+    "effect_rate": 0,
+    "limit_date_text": "<error>: Error: access violation accessing 0x10",
+    "is_used": 0,
+    "is_prohibited": 0,
+    "attack_type": 0,
+    "limit_break_count": 0,
+    "support_skill_data": {
+      "class_name": "TKS.Network.Domain.SisterSupportSkillData",
+      "support_skill_id": 1047001,
+      "lv": 1,
+      "max_lv": 10,
+      "skill_name": "ディヴォーテッド・エレジー",
+      "skill_detail": "味方全体の基礎ATK2％アップ\n光属性の味方のATK50％アップ",
+      "icon_id": 0,
+      "next_lv_list": [
+        {
+          "class_name": "TKS.Network.Domain.SisterSupportSkillNextLevelData",
+          "lv": 2,
+          "skill_name": "ディヴォーテッド・エレジー",
+          "skill_detail": "味方全体の基礎ATK<color=#16C97B>4</color>％アップ\n光属性の味方のATK<color=#16C97B>55</color>％アップ",
+          "icon_id": 0,
+          "is_strengthen": 1,
+          "cost_item_list": [
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData"
+          ]
+        },
+        {
+          "class_name": "TKS.Network.Domain.SisterSupportSkillNextLevelData",
+          "lv": 3,
+          "skill_name": "ディヴォーテッド・エレジー",
+          "skill_detail": "味方全体の基礎ATK<color=#16C97B>6</color>％アップ\n光属性の味方のATK<color=#16C97B>61</color>％アップ",
+          "icon_id": 0,
+          "is_strengthen": 1,
+          "cost_item_list": [
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData"
+          ]
+        },
+        {
+          "class_name": "TKS.Network.Domain.SisterSupportSkillNextLevelData",
+          "lv": 4,
+          "skill_name": "ディヴォーテッド・エレジー",
+          "skill_detail": "味方全体の基礎ATK<color=#16C97B>8</color>％アップ\n光属性の味方のATK<color=#16C97B>66</color>％アップ",
+          "icon_id": 0,
+          "is_strengthen": 1,
+          "cost_item_list": [
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData"
+          ]
+        },
+        {
+          "class_name": "TKS.Network.Domain.SisterSupportSkillNextLevelData",
+          "lv": 5,
+          "skill_name": "ディヴォーテッド・エレジー",
+          "skill_detail": "味方全体の基礎ATK<color=#16C97B>10</color>％アップ\n光属性の味方のATK<color=#16C97B>72</color>％アップ",
+          "icon_id": 0,
+          "is_strengthen": 1,
+          "cost_item_list": [
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData"
+          ]
+        },
+        {
+          "class_name": "TKS.Network.Domain.SisterSupportSkillNextLevelData",
+          "lv": 6,
+          "skill_name": "ディヴォーテッド・エレジー",
+          "skill_detail": "味方全体の基礎ATK<color=#16C97B>12</color>％アップ\n光属性の味方のATK<color=#16C97B>77</color>％アップ",
+          "icon_id": 0,
+          "is_strengthen": 1,
+          "cost_item_list": [
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData"
+          ]
+        },
+        {
+          "class_name": "TKS.Network.Domain.SisterSupportSkillNextLevelData",
+          "lv": 7,
+          "skill_name": "ディヴォーテッド・エレジー",
+          "skill_detail": "味方全体の基礎ATK<color=#16C97B>14</color>％アップ\n光属性の味方のATK<color=#16C97B>83</color>％アップ",
+          "icon_id": 0,
+          "is_strengthen": 1,
+          "cost_item_list": [
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData"
+          ]
+        },
+        {
+          "class_name": "TKS.Network.Domain.SisterSupportSkillNextLevelData",
+          "lv": 8,
+          "skill_name": "ディヴォーテッド・エレジー",
+          "skill_detail": "味方全体の基礎ATK<color=#16C97B>16</color>％アップ\n光属性の味方のATK<color=#16C97B>88</color>％アップ",
+          "icon_id": 0,
+          "is_strengthen": 1,
+          "cost_item_list": [
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData"
+          ]
+        },
+        {
+          "class_name": "TKS.Network.Domain.SisterSupportSkillNextLevelData",
+          "lv": 9,
+          "skill_name": "ディヴォーテッド・エレジー",
+          "skill_detail": "味方全体の基礎ATK<color=#16C97B>18</color>％アップ\n光属性の味方のATK<color=#16C97B>94</color>％アップ",
+          "icon_id": 0,
+          "is_strengthen": 1,
+          "cost_item_list": [
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData"
+          ]
+        },
+        {
+          "class_name": "TKS.Network.Domain.SisterSupportSkillNextLevelData",
+          "lv": 10,
+          "skill_name": "ディヴォーテッド・エレジー",
+          "skill_detail": "味方全体の基礎ATK<color=#16C97B>20</color>％アップ\n光属性の味方のATK<color=#16C97B>100</color>％アップ",
+          "icon_id": 0,
+          "is_strengthen": 1,
+          "cost_item_list": [
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData"
+          ]
+        }
+      ]
+    },
+    "active_skill_data": {
+      "class_name": "TKS.Network.Domain.SisterActiveSkillData",
+      "active_skill_id": 21047001,
+      "lv": 1,
+      "max_lv": 10,
+      "skill_type": 2,
+      "skill_name": "ディヴォーテッド・ロンド",
+      "skill_detail": "いずれかの敵がスタンした時に発動\n光属性の味方のATK50％アップ（15CT）/クリティカルを25％加算（15CT）",
+      "icon_id": 0,
+      "next_lv_list": [
+        {
+          "class_name": "TKS.Network.Domain.SisterActiveSkillNextLevelData",
+          "lv": 2,
+          "skill_type": 2,
+          "skill_name": "ディヴォーテッド・ロンド",
+          "skill_detail": "いずれかの敵がスタンした時に発動\n光属性の味方のATK<color=#16C97B>55</color>％アップ（15CT）/クリティカルを25％加算（15CT）",
+          "icon_id": 0,
+          "is_strengthen": 1,
+          "cost_item_list": [
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData"
+          ]
+        },
+        {
+          "class_name": "TKS.Network.Domain.SisterActiveSkillNextLevelData",
+          "lv": 3,
+          "skill_type": 2,
+          "skill_name": "ディヴォーテッド・ロンド",
+          "skill_detail": "いずれかの敵がスタンした時に発動\n光属性の味方のATK<color=#16C97B>61</color>％アップ（15CT）/クリティカルを25％加算（15CT）",
+          "icon_id": 0,
+          "is_strengthen": 1,
+          "cost_item_list": [
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData"
+          ]
+        },
+        {
+          "class_name": "TKS.Network.Domain.SisterActiveSkillNextLevelData",
+          "lv": 4,
+          "skill_type": 2,
+          "skill_name": "ディヴォーテッド・ロンド",
+          "skill_detail": "いずれかの敵がスタンした時に発動\n光属性の味方のATK<color=#16C97B>66</color>％アップ（15CT）/クリティカルを<color=#16C97B>33</color>％加算（15CT）",
+          "icon_id": 0,
+          "is_strengthen": 1,
+          "cost_item_list": [
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData"
+          ]
+        },
+        {
+          "class_name": "TKS.Network.Domain.SisterActiveSkillNextLevelData",
+          "lv": 5,
+          "skill_type": 2,
+          "skill_name": "ディヴォーテッド・ロンド",
+          "skill_detail": "いずれかの敵がスタンした時に発動\n光属性の味方のATK<color=#16C97B>72</color>％アップ（15CT）/クリティカルを33％加算（15CT）",
+          "icon_id": 0,
+          "is_strengthen": 1,
+          "cost_item_list": [
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData"
+          ]
+        },
+        {
+          "class_name": "TKS.Network.Domain.SisterActiveSkillNextLevelData",
+          "lv": 6,
+          "skill_type": 2,
+          "skill_name": "ディヴォーテッド・ロンド",
+          "skill_detail": "いずれかの敵がスタンした時に発動\n光属性の味方のATK<color=#16C97B>77</color>％アップ（15CT）/クリティカルを33％加算（15CT）",
+          "icon_id": 0,
+          "is_strengthen": 1,
+          "cost_item_list": [
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData"
+          ]
+        },
+        {
+          "class_name": "TKS.Network.Domain.SisterActiveSkillNextLevelData",
+          "lv": 7,
+          "skill_type": 2,
+          "skill_name": "ディヴォーテッド・ロンド",
+          "skill_detail": "いずれかの敵がスタンした時に発動\n光属性の味方のATK<color=#16C97B>83</color>％アップ（15CT）/クリティカルを<color=#16C97B>41</color>％加算（15CT）",
+          "icon_id": 0,
+          "is_strengthen": 1,
+          "cost_item_list": [
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData"
+          ]
+        },
+        {
+          "class_name": "TKS.Network.Domain.SisterActiveSkillNextLevelData",
+          "lv": 8,
+          "skill_type": 2,
+          "skill_name": "ディヴォーテッド・ロンド",
+          "skill_detail": "いずれかの敵がスタンした時に発動\n光属性の味方のATK<color=#16C97B>88</color>％アップ（15CT）/クリティカルを41％加算（15CT）",
+          "icon_id": 0,
+          "is_strengthen": 1,
+          "cost_item_list": [
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData"
+          ]
+        },
+        {
+          "class_name": "TKS.Network.Domain.SisterActiveSkillNextLevelData",
+          "lv": 9,
+          "skill_type": 2,
+          "skill_name": "ディヴォーテッド・ロンド",
+          "skill_detail": "いずれかの敵がスタンした時に発動\n光属性の味方のATK<color=#16C97B>94</color>％アップ（15CT）/クリティカルを41％加算（15CT）",
+          "icon_id": 0,
+          "is_strengthen": 1,
+          "cost_item_list": [
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData"
+          ]
+        },
+        {
+          "class_name": "TKS.Network.Domain.SisterActiveSkillNextLevelData",
+          "lv": 10,
+          "skill_type": 2,
+          "skill_name": "ディヴォーテッド・ロンド",
+          "skill_detail": "いずれかの敵がスタンした時に発動\n光属性の味方のATK<color=#16C97B>100</color>％アップ（15CT）/クリティカルを<color=#16C97B>50</color>％加算（15CT）",
+          "icon_id": 0,
+          "is_strengthen": 1,
+          "cost_item_list": [
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData"
+          ]
+        }
+      ]
+    },
+    "extra_support_skill_data": {
+      "class_name": "TKS.Network.Domain.SisterExtraSupportSkillData",
+      "extra_support_skill_id": 11047001,
+      "extra_support_skill_flg": 0,
+      "is_release": 1,
+      "release_skill_data": {
+        "class_name": "TKS.Network.Domain.ReleaseSkillData",
+        "skill_name": "ディヴォーテッド・エレジー",
+        "skill_detail": "味方全体の基礎ATK<color=#16C97B>20</color>％アップ\n光属性の味方のATK<color=#16C97B>100</color>％アップ\n<color=#16C97B>光属性の味方の有利属性ダメージ倍率50％加算</color>",
+        "icon_id": 0,
+        "cost_item_list": [
+          "TKS.Network.Domain.SisterCostItemData",
+          "TKS.Network.Domain.SisterCostItemData",
+          "TKS.Network.Domain.SisterCostItemData",
+          "TKS.Network.Domain.SisterCostItemData",
+          "TKS.Network.Domain.SisterCostItemData",
+          "TKS.Network.Domain.SisterCostItemData",
+          "TKS.Network.Domain.SisterCostItemData",
+          "TKS.Network.Domain.SisterCostItemData",
+          "TKS.Network.Domain.SisterCostItemData"
+        ]
+      }
+    },
+    "limit_break_data": {
+      "class_name": "TKS.Network.Domain.SisterLimitBreakData",
+      "limit_break_flg": 0,
+      "is_release": 0,
+      "next_limit_break_list": []
+    }
+  },
+  {
+    "class_name": "TKS.Network.Domain.SisterEntity",
+    "is_rental": 0,
+    "u_sister_unit_id": 289877,
+    "sister_unit_id": 1077002,
+    "character_id": 77,
+    "character_name": "蘭美【Xmas】",
+    "character_name_kana": "ラヒ",
+    "sister_name": "シスター",
+    "unit_illust_id": 1077002,
+    "attr_type": 3,
+    "role": 1,
+    "camp": 3,
+    "notice_flg": 0,
+    "support_skill_detail_display": "<error>: Error: access violation accessing 0x10",
+    "effect_rate": 0,
+    "limit_date_text": "<error>: Error: access violation accessing 0x10",
+    "is_used": 0,
+    "is_prohibited": 0,
+    "attack_type": 0,
+    "limit_break_count": 1,
+    "support_skill_data": {
+      "class_name": "TKS.Network.Domain.SisterSupportSkillData",
+      "support_skill_id": 1077002,
+      "lv": 10,
+      "max_lv": 10,
+      "skill_name": "セイントブライト",
+      "skill_detail": "味方全体の基礎ATK20％アップ/魔族の味方の基礎ATK5％アップ\n魔族の味方のATK100％アップ/クリティカル20％加算\n魔族の味方の有利属性ダメージ倍率をラッシュ数×0.3％加算（最大30％）\n自身の初期シスターゲージ+20%",
+      "icon_id": 0,
+      "next_lv_list": []
+    },
+    "active_skill_data": {
+      "class_name": "TKS.Network.Domain.SisterActiveSkillData",
+      "active_skill_id": 21077002,
+      "lv": 10,
+      "max_lv": 10,
+      "skill_type": 2,
+      "skill_name": "メリーアンサンブル",
+      "skill_detail": "いずれかの味方がユニゾン状態でACTバー到達時（ユニゾンコマンドは除く）に発動\nユニゾンした人数によって以下の効果を適用する\n・2体以上：ユニゾン参加者のクリティカル20％加算（10CT）\n・3体以上：ユニゾン参加者のATK100％アップ（10CT）\n・4体以上：さらにユニゾン参加者のATK150％アップ（10CT）",
+      "icon_id": 0,
+      "next_lv_list": []
+    },
+    "extra_support_skill_data": {
+      "class_name": "TKS.Network.Domain.SisterExtraSupportSkillData",
+      "extra_support_skill_id": 11077002,
+      "extra_support_skill_flg": 1,
+      "is_release": 0,
+      "release_skill_data": {
+        "class_name": "TKS.Network.Domain.ReleaseSkillData",
+        "skill_name": "セイントブライト",
+        "skill_detail": "味方全体の基礎ATK20％アップ<color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color>\n魔族の味方のATK100％アップ/クリティカル20％加算\n<color=#16C97B>魔族の味方の有利属性ダメージ倍率をラッシュ数×0.3％加算（最大30％）</color>\n自身の初期シスターゲージ+20%",
+        "icon_id": 0,
+        "cost_item_list": []
+      }
+    },
+    "limit_break_data": {
+      "class_name": "TKS.Network.Domain.SisterLimitBreakData",
+      "limit_break_flg": 1,
+      "is_release": 0,
+      "next_limit_break_list": []
+    }
+  },
+  {
+    "class_name": "TKS.Network.Domain.SisterEntity",
+    "is_rental": 0,
+    "u_sister_unit_id": 122765,
+    "sister_unit_id": 1091001,
+    "character_id": 91,
+    "character_name": "梨緒",
+    "character_name_kana": "リオ",
+    "sister_name": "シスター",
+    "unit_illust_id": 1091001,
+    "attr_type": 3,
+    "role": 2,
+    "camp": 1,
+    "notice_flg": 1,
+    "support_skill_detail_display": "<error>: Error: access violation accessing 0x10",
+    "effect_rate": 0,
+    "limit_date_text": "<error>: Error: access violation accessing 0x10",
+    "is_used": 0,
+    "is_prohibited": 0,
+    "attack_type": 0,
+    "limit_break_count": 0,
+    "support_skill_data": {
+      "class_name": "TKS.Network.Domain.SisterSupportSkillData",
+      "support_skill_id": 1091001,
+      "lv": 10,
+      "max_lv": 10,
+      "skill_name": "エレクラッシュ",
+      "skill_detail": "味方全体の基礎ATK20％アップ\n雷属性の味方のATK100％アップ\nラッシュのダメージ補正倍率5％アップ",
+      "icon_id": 0,
+      "next_lv_list": []
+    },
+    "active_skill_data": {
+      "class_name": "TKS.Network.Domain.SisterActiveSkillData",
+      "active_skill_id": 21091001,
+      "lv": 10,
+      "max_lv": 10,
+      "skill_type": 3,
+      "skill_name": "アンペアース",
+      "skill_detail": "味方のラッシュ数が30の倍数到達時に発動\n味方全体のATK100％アップ（15CT）",
+      "icon_id": 0,
+      "next_lv_list": []
+    },
+    "extra_support_skill_data": {
+      "class_name": "TKS.Network.Domain.SisterExtraSupportSkillData",
+      "extra_support_skill_id": 11091001,
+      "extra_support_skill_flg": 1,
+      "is_release": 0,
+      "release_skill_data": {
+        "class_name": "TKS.Network.Domain.ReleaseSkillData",
+        "skill_name": "エレクラッシュ",
+        "skill_detail": "味方全体の基礎ATK20％アップ\n雷属性の味方のATK100％アップ\n<color=#16C97B>ラッシュのダメージ補正倍率5％アップ</color>",
+        "icon_id": 0,
+        "cost_item_list": []
+      }
+    },
+    "limit_break_data": {
+      "class_name": "TKS.Network.Domain.SisterLimitBreakData",
+      "limit_break_flg": 0,
+      "is_release": 1,
+      "next_limit_break_list": [
+        {
+          "class_name": "TKS.Network.Domain.SisterNextLimitBreakData",
+          "limit_break_count": 1,
+          "support_skill_detail": "味方全体の基礎ATK20％アップ<color=#16C97B>/</color><color=#16C97B>雷</color><color=#16C97B>属</color><color=#16C97B>性</color><color=#16C97B>の</color><color=#16C97B>味</color><color=#16C97B>方</color><color=#16C97B>の</color><color=#16C97B>基</color><color=#16C97B>礎</color><color=#16C97B>A</color><color=#16C97B>T</color><color=#16C97B>K</color><color=#16C97B>5</color><color=#16C97B>％</color><color=#16C97B>ア</color><color=#16C97B>ッ</color><color=#16C97B>プ</color>\n雷属性の味方のATK100％アップ\nラッシュのダメージ補正倍率5％アップ\n<color=#16C97B>自身の初期シスターゲージ+20%</color>",
+          "cost_item_list": [
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class_name": "TKS.Network.Domain.SisterEntity",
+    "is_rental": 0,
+    "u_sister_unit_id": 208734,
+    "sister_unit_id": 1158001,
+    "character_id": 158,
+    "character_name": "陽彩",
+    "character_name_kana": "アキサ",
+    "sister_name": "シスター",
+    "unit_illust_id": 1158001,
+    "attr_type": 5,
+    "role": 2,
+    "camp": 1,
+    "notice_flg": 1,
+    "support_skill_detail_display": "<error>: Error: access violation accessing 0x10",
+    "effect_rate": 0,
+    "limit_date_text": "<error>: Error: access violation accessing 0x10",
+    "is_used": 0,
+    "is_prohibited": 0,
+    "attack_type": 0,
+    "limit_break_count": 0,
+    "support_skill_data": {
+      "class_name": "TKS.Network.Domain.SisterSupportSkillData",
+      "support_skill_id": 1158001,
+      "lv": 1,
+      "max_lv": 10,
+      "skill_name": "レゾナンスゾーン",
+      "skill_detail": "味方全体の基礎ATK2％アップ\n人間または魔族の味方のATK50％アップ ※2つの条件を満たした場合でも効果は重複しない",
+      "icon_id": 0,
+      "next_lv_list": [
+        {
+          "class_name": "TKS.Network.Domain.SisterSupportSkillNextLevelData",
+          "lv": 2,
+          "skill_name": "レゾナンスゾーン",
+          "skill_detail": "味方全体の基礎ATK<color=#16C97B>4</color>％アップ\n人間または魔族の味方のATK<color=#16C97B>55</color>％アップ ※2つの条件を満たした場合でも効果は重複しない",
+          "icon_id": 0,
+          "is_strengthen": 1,
+          "cost_item_list": [
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData"
+          ]
+        },
+        {
+          "class_name": "TKS.Network.Domain.SisterSupportSkillNextLevelData",
+          "lv": 3,
+          "skill_name": "レゾナンスゾーン",
+          "skill_detail": "味方全体の基礎ATK<color=#16C97B>6</color>％アップ\n人間または魔族の味方のATK<color=#16C97B>61</color>％アップ ※2つの条件を満たした場合でも効果は重複しない",
+          "icon_id": 0,
+          "is_strengthen": 1,
+          "cost_item_list": [
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData"
+          ]
+        },
+        {
+          "class_name": "TKS.Network.Domain.SisterSupportSkillNextLevelData",
+          "lv": 4,
+          "skill_name": "レゾナンスゾーン",
+          "skill_detail": "味方全体の基礎ATK<color=#16C97B>8</color>％アップ\n人間または魔族の味方のATK<color=#16C97B>66</color>％アップ ※2つの条件を満たした場合でも効果は重複しない",
+          "icon_id": 0,
+          "is_strengthen": 1,
+          "cost_item_list": [
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData"
+          ]
+        },
+        {
+          "class_name": "TKS.Network.Domain.SisterSupportSkillNextLevelData",
+          "lv": 5,
+          "skill_name": "レゾナンスゾーン",
+          "skill_detail": "味方全体の基礎ATK<color=#16C97B>10</color>％アップ\n人間または魔族の味方のATK<color=#16C97B>72</color>％アップ ※2つの条件を満たした場合でも効果は重複しない",
+          "icon_id": 0,
+          "is_strengthen": 1,
+          "cost_item_list": [
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData"
+          ]
+        },
+        {
+          "class_name": "TKS.Network.Domain.SisterSupportSkillNextLevelData",
+          "lv": 6,
+          "skill_name": "レゾナンスゾーン",
+          "skill_detail": "味方全体の基礎ATK<color=#16C97B>12</color>％アップ\n人間または魔族の味方のATK<color=#16C97B>77</color>％アップ ※2つの条件を満たした場合でも効果は重複しない",
+          "icon_id": 0,
+          "is_strengthen": 0,
+          "cost_item_list": [
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData"
+          ]
+        },
+        {
+          "class_name": "TKS.Network.Domain.SisterSupportSkillNextLevelData",
+          "lv": 7,
+          "skill_name": "レゾナンスゾーン",
+          "skill_detail": "味方全体の基礎ATK<color=#16C97B>14</color>％アップ\n人間または魔族の味方のATK<color=#16C97B>83</color>％アップ ※2つの条件を満たした場合でも効果は重複しない",
+          "icon_id": 0,
+          "is_strengthen": 0,
+          "cost_item_list": [
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData"
+          ]
+        },
+        {
+          "class_name": "TKS.Network.Domain.SisterSupportSkillNextLevelData",
+          "lv": 8,
+          "skill_name": "レゾナンスゾーン",
+          "skill_detail": "味方全体の基礎ATK<color=#16C97B>16</color>％アップ\n人間または魔族の味方のATK<color=#16C97B>88</color>％アップ ※2つの条件を満たした場合でも効果は重複しない",
+          "icon_id": 0,
+          "is_strengthen": 0,
+          "cost_item_list": [
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData"
+          ]
+        },
+        {
+          "class_name": "TKS.Network.Domain.SisterSupportSkillNextLevelData",
+          "lv": 9,
+          "skill_name": "レゾナンスゾーン",
+          "skill_detail": "味方全体の基礎ATK<color=#16C97B>18</color>％アップ\n人間または魔族の味方のATK<color=#16C97B>94</color>％アップ ※2つの条件を満たした場合でも効果は重複しない",
+          "icon_id": 0,
+          "is_strengthen": 0,
+          "cost_item_list": [
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData"
+          ]
+        },
+        {
+          "class_name": "TKS.Network.Domain.SisterSupportSkillNextLevelData",
+          "lv": 10,
+          "skill_name": "レゾナンスゾーン",
+          "skill_detail": "味方全体の基礎ATK<color=#16C97B>20</color>％アップ\n人間または魔族の味方のATK<color=#16C97B>100</color>％アップ ※2つの条件を満たした場合でも効果は重複しない",
+          "icon_id": 0,
+          "is_strengthen": 0,
+          "cost_item_list": [
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData"
+          ]
+        }
+      ]
+    },
+    "active_skill_data": {
+      "class_name": "TKS.Network.Domain.SisterActiveSkillData",
+      "active_skill_id": 21158001,
+      "lv": 1,
+      "max_lv": 10,
+      "skill_type": 3,
+      "skill_name": "シャドウジャム",
+      "skill_detail": "いずれかの味方がノックバック、または強制移動のEXスキル使用時に発動\n味方全体のノーツを最も移動した敵と同じ距離前方に移動（最大3）/異なるタイプの味方を4体以上編成している時、人間または魔族のATK50％アップ（10CT） ※2つの条件を満たした場合でも効果は重複しない",
+      "icon_id": 0,
+      "next_lv_list": [
+        {
+          "class_name": "TKS.Network.Domain.SisterActiveSkillNextLevelData",
+          "lv": 2,
+          "skill_type": 3,
+          "skill_name": "シャドウジャム",
+          "skill_detail": "いずれかの味方がノックバック、または強制移動のEXスキル使用時に発動\n味方全体のノーツを最も移動した敵と同じ距離前方に移動（最大3）/異なるタイプの味方を4体以上編成している時、人間または魔族のATK<color=#16C97B>55</color>％アップ（10CT） ※2つの条件を満たした場合でも効果は重複しない",
+          "icon_id": 0,
+          "is_strengthen": 1,
+          "cost_item_list": [
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData"
+          ]
+        },
+        {
+          "class_name": "TKS.Network.Domain.SisterActiveSkillNextLevelData",
+          "lv": 3,
+          "skill_type": 3,
+          "skill_name": "シャドウジャム",
+          "skill_detail": "いずれかの味方がノックバック、または強制移動のEXスキル使用時に発動\n味方全体のノーツを最も移動した敵と同じ距離前方に移動（最大3）/異なるタイプの味方を4体以上編成している時、人間または魔族のATK<color=#16C97B>61</color>％アップ（10CT） ※2つの条件を満たした場合でも効果は重複しない",
+          "icon_id": 0,
+          "is_strengthen": 1,
+          "cost_item_list": [
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData"
+          ]
+        },
+        {
+          "class_name": "TKS.Network.Domain.SisterActiveSkillNextLevelData",
+          "lv": 4,
+          "skill_type": 3,
+          "skill_name": "シャドウジャム",
+          "skill_detail": "いずれかの味方がノックバック、または強制移動のEXスキル使用時に発動\n味方全体のノーツを最も移動した敵と同じ距離前方に移動（最大3）/異なるタイプの味方を4体以上編成している時、人間または魔族のATK<color=#16C97B>66</color>％アップ（10CT） ※2つの条件を満たした場合でも効果は重複しない",
+          "icon_id": 0,
+          "is_strengthen": 1,
+          "cost_item_list": [
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData"
+          ]
+        },
+        {
+          "class_name": "TKS.Network.Domain.SisterActiveSkillNextLevelData",
+          "lv": 5,
+          "skill_type": 3,
+          "skill_name": "シャドウジャム",
+          "skill_detail": "いずれかの味方がノックバック、または強制移動のEXスキル使用時に発動\n味方全体のノーツを最も移動した敵と同じ距離前方に移動（最大3）/異なるタイプの味方を4体以上編成している時、人間または魔族のATK<color=#16C97B>72</color>％アップ（10CT） ※2つの条件を満たした場合でも効果は重複しない",
+          "icon_id": 0,
+          "is_strengthen": 1,
+          "cost_item_list": [
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData"
+          ]
+        },
+        {
+          "class_name": "TKS.Network.Domain.SisterActiveSkillNextLevelData",
+          "lv": 6,
+          "skill_type": 3,
+          "skill_name": "シャドウジャム",
+          "skill_detail": "いずれかの味方がノックバック、または強制移動のEXスキル使用時に発動\n味方全体のノーツを最も移動した敵と同じ距離前方に移動（最大3）/異なるタイプの味方を4体以上編成している時、人間または魔族のATK<color=#16C97B>77</color>％アップ（10CT） ※2つの条件を満たした場合でも効果は重複しない",
+          "icon_id": 0,
+          "is_strengthen": 1,
+          "cost_item_list": [
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData"
+          ]
+        },
+        {
+          "class_name": "TKS.Network.Domain.SisterActiveSkillNextLevelData",
+          "lv": 7,
+          "skill_type": 3,
+          "skill_name": "シャドウジャム",
+          "skill_detail": "いずれかの味方がノックバック、または強制移動のEXスキル使用時に発動\n味方全体のノーツを最も移動した敵と同じ距離前方に移動（最大3）/異なるタイプの味方を4体以上編成している時、人間または魔族のATK<color=#16C97B>83</color>％アップ（10CT） ※2つの条件を満たした場合でも効果は重複しない",
+          "icon_id": 0,
+          "is_strengthen": 1,
+          "cost_item_list": [
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData"
+          ]
+        },
+        {
+          "class_name": "TKS.Network.Domain.SisterActiveSkillNextLevelData",
+          "lv": 8,
+          "skill_type": 3,
+          "skill_name": "シャドウジャム",
+          "skill_detail": "いずれかの味方がノックバック、または強制移動のEXスキル使用時に発動\n味方全体のノーツを最も移動した敵と同じ距離前方に移動（最大3）/異なるタイプの味方を4体以上編成している時、人間または魔族のATK<color=#16C97B>88</color>％アップ（10CT） ※2つの条件を満たした場合でも効果は重複しない",
+          "icon_id": 0,
+          "is_strengthen": 1,
+          "cost_item_list": [
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData"
+          ]
+        },
+        {
+          "class_name": "TKS.Network.Domain.SisterActiveSkillNextLevelData",
+          "lv": 9,
+          "skill_type": 3,
+          "skill_name": "シャドウジャム",
+          "skill_detail": "いずれかの味方がノックバック、または強制移動のEXスキル使用時に発動\n味方全体のノーツを最も移動した敵と同じ距離前方に移動（最大3）/異なるタイプの味方を4体以上編成している時、人間または魔族のATK<color=#16C97B>94</color>％アップ（10CT） ※2つの条件を満たした場合でも効果は重複しない",
+          "icon_id": 0,
+          "is_strengthen": 1,
+          "cost_item_list": [
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData"
+          ]
+        },
+        {
+          "class_name": "TKS.Network.Domain.SisterActiveSkillNextLevelData",
+          "lv": 10,
+          "skill_type": 3,
+          "skill_name": "シャドウジャム",
+          "skill_detail": "いずれかの味方がノックバック、または強制移動のEXスキル使用時に発動\n味方全体のノーツを最も移動した敵と同じ距離前方に移動（最大3）/異なるタイプの味方を4体以上編成している時、人間または魔族のATK<color=#16C97B>100</color>％アップ（10CT） ※2つの条件を満たした場合でも効果は重複しない",
+          "icon_id": 0,
+          "is_strengthen": 1,
+          "cost_item_list": [
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData",
+            "TKS.Network.Domain.SisterCostItemData"
+          ]
+        }
+      ]
+    },
+    "extra_support_skill_data": {
+      "class_name": "TKS.Network.Domain.SisterExtraSupportSkillData",
+      "extra_support_skill_id": 11158001,
+      "extra_support_skill_flg": 0,
+      "is_release": 0,
+      "release_skill_data": {
+        "class_name": "TKS.Network.Domain.ReleaseSkillData",
+        "skill_name": "レゾナンスゾーン",
+        "skill_detail": "味方全体の基礎ATK<color=#16C97B>20</color>％アップ\n人間または魔族の味方のATK<color=#16C97B>100</color>％アップ ※2つの条件を満たした場合でも効果は重複しない\n<color=#16C97B>スピードタイプの味方のチャージ時の戻り量を85％短縮（チャージコマンド1回まで）</color>",
+        "icon_id": 0,
+        "cost_item_list": [
+          "TKS.Network.Domain.SisterCostItemData",
+          "TKS.Network.Domain.SisterCostItemData",
+          "TKS.Network.Domain.SisterCostItemData",
+          "TKS.Network.Domain.SisterCostItemData",
+          "TKS.Network.Domain.SisterCostItemData",
+          "TKS.Network.Domain.SisterCostItemData",
+          "TKS.Network.Domain.SisterCostItemData",
+          "TKS.Network.Domain.SisterCostItemData",
+          "TKS.Network.Domain.SisterCostItemData"
+        ]
+      }
+    },
+    "limit_break_data": {
+      "class_name": "TKS.Network.Domain.SisterLimitBreakData",
+      "limit_break_flg": 0,
+      "is_release": 0,
+      "next_limit_break_list": []
+    }
+  }
+]
