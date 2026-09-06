@@ -208,13 +208,14 @@ const sisterRows = sisterWiki.map((r, idx) => {
   return {
     idx, name: r.name, attr: WIKI_ATTR_ID[r.attr] || 0, typeId: WIKI_ROLE_ID[r.type] || 0,
     team: r.team, cond: r.cond, target: r.target, effect: r.effect, gauge: r.gauge, obtain: r.obtain, date: r.date,
+    href: r.href || null, // Wiki 页面路径 (URL 编码, 拼在 https://twinklestarknights.wikiru.jp/? 后)
     wimg: r.wimg || null, wart: r.wart || null, owned: !!o, sid: o ? o.sid : null,
   };
 });
 // Wiki 未收录的持有 sister 兜底追加 (仅 dump 数据, 无 Wiki 专属图)
 for (const s of sisters) {
   if (sisterRows.some((r) => r.sid === s.sid)) continue;
-  sisterRows.push({ idx: sisterRows.length, name: s.cname, attr: s.attr, typeId: s.role, team: '', cond: '', target: '', effect: '', gauge: '', obtain: '', date: '', wimg: null, wart: null, owned: true, sid: s.sid });
+  sisterRows.push({ idx: sisterRows.length, name: s.cname, attr: s.attr, typeId: s.role, team: '', cond: '', target: '', effect: '', gauge: '', obtain: '', date: '', href: null, wimg: null, wart: null, owned: true, sid: s.sid });
 }
 stats.sisterOwned = sisters.length;
 stats.sisterTotal = sisterRows.length;
@@ -670,7 +671,7 @@ function renderDex() {
   });
 }
 
-// シスター视图: Wiki 全 71 名 (未持有置灰), 持有名可点开详情
+// シスター视图: Wiki 全 71 名 (未持有置灰), 全部可点开详情 (未持有显示 Wiki 满级参考)
 function renderSister() {
   const main = document.getElementById('main');
   const q = state.q.toLowerCase();
@@ -688,7 +689,7 @@ function renderSister() {
     const s = r.sid != null ? sisterById.get(r.sid) : null;
     const c = ATTR_COLOR[r.attr] || '#8890b8';
     const imgSrc = r.wimg; // 一律 Wiki シスター专属图标 (Q 版), 不复用 unit 图
-    return \`<div class="card \${r.owned ? '' : 'notown'}" data-sid="\${r.sid ?? ''}">
+    return \`<div class="card \${r.owned ? '' : 'notown'}" data-idx="\${r.idx}"\${r.owned ? '' : ' style="cursor:pointer"'}>
       <div class="portrait" style="background:linear-gradient(150deg,\${c}55,\${c}18 60%,transparent),linear-gradient(160deg,#1b2145,#141830)">
         \${imgTag(imgSrc)}
         <div class="attrbadge" style="color:\${c}">\${ATTR[r.attr] || '?'}</div>
@@ -704,17 +705,18 @@ function renderSister() {
     </div>\`;
   }).join('') + '</div>';
   main.querySelectorAll('.card').forEach((el) => {
-    if (el.dataset.sid) el.onclick = () => showSister(+el.dataset.sid);
+    el.onclick = () => showSister(+el.dataset.idx);
   });
 }
 
-// シスター详情弹窗: 支援/アクティブ/解放スキル (dump 当前练度) + Wiki 发动条件/对象/ゲージ速度 + 满级チームスキル参考
-function showSister(sid) {
-  const s = sisterById.get(sid);
-  if (!s) return;
-  const c = ATTR_COLOR[s.attr];
+// シスター详情弹窗 (持有+未持有): 持有=dump 当前练度技能 + Wiki 参考; 未持有=Wiki 满级效果参考; 标题区均带 Wiki 页面链接
+function showSister(rowIdx) {
+  const r = sisterRows[rowIdx];
+  if (!r) return;
+  const s = r.sid != null ? sisterById.get(r.sid) : null;
+  const c = ATTR_COLOR[r.attr] || '#8890b8';
   const row = (k, v) => \`<div><span class="k">\${k}</span> \${v ?? '<span class="k">-</span>'}</div>\`;
-  const w = s.wiki || {};
+  const wikiUrl = r.href ? \`\${WIKI_BASE}\${r.href.replace(/&/g, '&amp;')}\` : null;
   const nextStr = (n) => (n ? \`<div class="sdetail" style="color:#9aa3c7">→ Lv\${n.lv}: \${colorize(n.detail)}</div>\` : '');
   const sisSkill = (tag, name, lv, max, detail, next, extraHtml = '', lock = false) => \`<div class="skill\${lock ? ' slock' : ''}">
       <div class="sname">\${tag} <b>\${esc(name)}</b>\${lv ? \`<span class="smeta">Lv \${lv}/\${max}</span>\` : ''}\${lock ? '<span class="slocktag">未解放</span>' : ''}</div>
@@ -722,29 +724,34 @@ function showSister(sid) {
       \${nextStr(next)}
       \${extraHtml}
     </div>\`;
-  const skillsHtml = \`<div class="section"><h3>技能</h3>
+  const condHtml = r.cond ? \`<div class="scond">発動条件：\${esc(r.cond)}\${r.target ? \` ／ 対象：\${esc(r.target)}\` : ''}</div>\` : '';
+  const teamHtml = r.team ? sisSkill('<span class="stag st-s">参考</span>', 'チームスキル（满级）', null, null, r.team, null) : '';
+  const skillsHtml = s ? \`<div class="section"><h3>技能</h3>
     \${s.support ? sisSkill('<span class="stag st-ex">支援</span>', s.support.name, s.support.lv, s.support.max, s.support.detail, s.support.next) : ''}
-    \${s.active ? sisSkill('<span class="stag st-u">アクティブ</span>', s.active.name, s.active.lv, s.active.max, s.active.detail, s.active.next, w.cond ? \`<div class="scond">発動条件：\${esc(w.cond)}\${w.target ? \` ／ 対象：\${esc(w.target)}\` : ''}</div>\` : '') : ''}
+    \${s.active ? sisSkill('<span class="stag st-u">アクティブ</span>', s.active.name, s.active.lv, s.active.max, s.active.detail, s.active.next, condHtml) : ''}
     \${s.extra && s.extra.name ? sisSkill('<span class="stag st-p">解放</span>', s.extra.name, null, null, s.extra.detail, null, '', !s.extra.released) : ''}
-    \${w.team ? sisSkill('<span class="stag st-s">参考</span>', 'チームスキル（满级）', null, null, w.team, null) : ''}
+    \${teamHtml}
+  </div>\` : \`<div class="section"><h3>技能 <span class="k">（未持有 · Wiki 满级参考）</span></h3>
+    \${r.effect ? sisSkill('<span class="stag st-u">アクティブ</span>', 'アクティブスキル', null, null, r.effect, null, condHtml) : ''}
+    \${teamHtml}
   </div>\`;
-  const sisArt = w.wart || w.wimg; // Wiki シスター专属立绘 (Q 版 SD), 无立绘时退回图标
+  const sisArt = r.wart || r.wimg; // Wiki シスター专属立绘 (Q 版 SD), 无立绘时退回图标
   document.getElementById('modal').innerHTML = \`
     <div class="martbg">\${sisArt ? \`<img src="\${sisArt}" onerror="this.parentElement.remove()">\` : ''}</div>
     <button class="close" onclick="document.getElementById('overlay').classList.remove('show')">✕</button>
     <div class="mmain">
-      <div><h2>\${esc(s.cname)}</h2><div class="sub2"><span style="color:var(--gold)">シスター</span> · <span style="color:\${c};font-weight:700">\${ATTR[s.attr]}</span> · \${ROLE[s.role] || ''}\${s.camp ? ' · ' + CAMP[s.camp] : ''}\${w.date ? ' · 実装 ' + esc(w.date) : ''}</div></div>
+      <div><h2>\${esc(r.name)}\${s ? '' : ' <span class="slocktag" style="margin-left:8px">未持有</span>'}</h2><div class="sub2"><span style="color:var(--gold)">シスター</span> · <span style="color:\${c};font-weight:700">\${ATTR[r.attr] || '?'}</span> · \${ROLE[r.typeId] || '?'}\${s && s.camp ? ' · ' + CAMP[s.camp] : ''}\${r.date ? ' · 実装 ' + esc(r.date) : ''}\${wikiUrl ? \` · <a class="wlink" href="\${wikiUrl}" target="_blank" rel="noopener">Wiki ↗</a>\` : ''}</div></div>
       <div class="grid2" style="margin-top:14px">
-        \${row('限界突破', s.lb + ' 次')}
-        \${w.gauge ? row('ゲージ速度', esc(w.gauge)) : ''}
-        \${w.obtain ? row('入手方法', esc(w.obtain)) : ''}
-        \${row('シスター番号', s.sid)}
+        \${s ? row('限界突破', s.lb + ' 次') : row('Wiki 図鑑番号', 'No.' + (r.idx + 1))}
+        \${r.gauge ? row('ゲージ速度', esc(r.gauge)) : ''}
+        \${r.obtain ? row('入手方法', esc(r.obtain)) : ''}
+        \${s ? row('シスター番号', s.sid) : ''}
       </div>
       \${skillsHtml}
     </div>
     <div class="mfig">
       <div class="figpanel" style="background:linear-gradient(150deg,\${c}40,\${c}12 60%,transparent),linear-gradient(160deg,#1b2145,#141830)">
-        \${w.wart ? \`<img src="\${w.wart}" onerror="this.remove()">\` : (w.wimg ? \`<img class="ficon" src="\${w.wimg}" onerror="this.remove()">\` : \`<span style="font-size:72px;font-weight:800">\${esc(s.cname[0])}</span>\`)}
+        \${sisArt ? \`<img src="\${sisArt}" onerror="this.remove()">\` : \`<span style="font-size:72px;font-weight:800">\${esc(r.name[0])}</span>\`}
       </div>
     </div>
   \`;
