@@ -181,6 +181,7 @@ let sisterWiki = [];
 try { sisterWiki = JSON.parse(readFileSync(join(__dirname, 'sister_wiki.json'), 'utf8')).rows; } catch { /* 未抓取 */ }
 // next_lv_list[0] = 下一级预览 (含 <color=#16C97B> 差分高亮 rich text, 前端 colorize 还原)
 const nextLv = (d) => (d && Array.isArray(d.next_lv_list) && d.next_lv_list[0]) ? { lv: d.next_lv_list[0].lv, detail: d.next_lv_list[0].skill_detail || '' } : null;
+// 注意: シスター是独立单位类型, 图片一律用 Wiki 专属图 (sw{idx}_icon/sw{idx}), 不复用 unit 立绘 (sister_unit_id 与基础卡 unit_id 重号)
 const sisters = sisterRaw.map((s) => ({
   id: s.u_sister_unit_id,
   sid: s.sister_unit_id,
@@ -190,8 +191,6 @@ const sisters = sisterRaw.map((s) => ({
   role: s.role,
   camp: s.camp,
   lb: s.limit_break_count,
-  icon: imgSet.has(`${s.sister_unit_id}_icon.png`) ? `img/${s.sister_unit_id}_icon.png` : null,
-  art: pickArt(s.sister_unit_id),
   support: s.support_skill_data ? { name: s.support_skill_data.skill_name, detail: s.support_skill_data.skill_detail, lv: s.support_skill_data.lv, max: s.support_skill_data.max_lv, next: nextLv(s.support_skill_data) } : null,
   active: s.active_skill_data ? { name: s.active_skill_data.skill_name, detail: s.active_skill_data.skill_detail, lv: s.active_skill_data.lv, max: s.active_skill_data.max_lv, next: nextLv(s.active_skill_data) } : null,
   extra: s.extra_support_skill_data && s.extra_support_skill_data.release_skill_data ? {
@@ -205,17 +204,17 @@ const sisters = sisterRaw.map((s) => ({
 const sisterByName = new Map(sisters.map((s) => [s.cname, s]));
 const sisterRows = sisterWiki.map((r, idx) => {
   const o = sisterByName.get(r.name) || null;
-  if (o) o.wiki = { cond: r.cond, target: r.target, gauge: r.gauge, obtain: r.obtain, date: r.date, team: r.team };
+  if (o) o.wiki = { cond: r.cond, target: r.target, gauge: r.gauge, obtain: r.obtain, date: r.date, team: r.team, wimg: r.wimg || null, wart: r.wart || null };
   return {
     idx, name: r.name, attr: WIKI_ATTR_ID[r.attr] || 0, typeId: WIKI_ROLE_ID[r.type] || 0,
     team: r.team, cond: r.cond, target: r.target, effect: r.effect, gauge: r.gauge, obtain: r.obtain, date: r.date,
-    wimg: r.wimg || null, owned: !!o, sid: o ? o.sid : null,
+    wimg: r.wimg || null, wart: r.wart || null, owned: !!o, sid: o ? o.sid : null,
   };
 });
-// Wiki 未收录的持有 sister 兜底追加 (仅 dump 数据)
+// Wiki 未收录的持有 sister 兜底追加 (仅 dump 数据, 无 Wiki 专属图)
 for (const s of sisters) {
   if (sisterRows.some((r) => r.sid === s.sid)) continue;
-  sisterRows.push({ idx: sisterRows.length, name: s.cname, attr: s.attr, typeId: s.role, team: '', cond: '', target: '', effect: '', gauge: '', obtain: '', date: '', wimg: null, owned: true, sid: s.sid });
+  sisterRows.push({ idx: sisterRows.length, name: s.cname, attr: s.attr, typeId: s.role, team: '', cond: '', target: '', effect: '', gauge: '', obtain: '', date: '', wimg: null, wart: null, owned: true, sid: s.sid });
 }
 stats.sisterOwned = sisters.length;
 stats.sisterTotal = sisterRows.length;
@@ -455,10 +454,17 @@ const html = `<!DOCTYPE html>
 <script>
 const DATA = ${payload};
 const WIKI_BASE = 'https://twinklestarknights.wikiru.jp/?';
-const { units, stats, wikiRows, ATTR, ATTR_COLOR, ROLE, CAMP, AFFIL, WIKI_ATTR_ID, WIKI_CAMP_ID, EQ_PART, EQ_PARAM, SP_TYPE } = DATA;
+const { units, stats, wikiRows, sisters, sisterRows, ATTR, ATTR_COLOR, ROLE, CAMP, AFFIL, WIKI_ATTR_ID, WIKI_CAMP_ID, EQ_PART, EQ_PARAM, SP_TYPE } = DATA;
+const sisterById = new Map(sisters.map((s) => [s.sid, s]));
 const state = { q: '', attr: 0, role: 0, rar: 0, camp: 0, sp: 0, own: 0, sort: 'power', desc: false, view: 'card' };
 
 const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+// dump rich text 还原: 先转义, 再把 color 标签 (esc 后为 &lt;color=...&gt;) 还原为彩色 span, 换行转 br
+// 注意: 本函数位于 HTML 模板字符串内, 正则里的反斜杠在 .mjs 源码中必须双写
+const colorize = (s) => esc(s)
+  .replace(/&lt;color=(#[0-9A-Fa-f]{6})&gt;/g, '<span style="color:$1">')
+  .replace(/&lt;\\/color&gt;/g, '</span>')
+  .replace(/\\n/g, '<br>');
 const stars = (n) => '★'.repeat(n);
 // 千分比原始值 → 百分比文本 (300 -> '3', 1195 -> '11.95')
 const pct = (v) => { const x = (v || 0) / 100; return Number.isInteger(x) ? String(x) : String(+x.toFixed(2)); };
@@ -681,7 +687,7 @@ function renderSister() {
   main.innerHTML = '<div class="grid">' + arr.map((r) => {
     const s = r.sid != null ? sisterById.get(r.sid) : null;
     const c = ATTR_COLOR[r.attr] || '#8890b8';
-    const imgSrc = s ? (s.icon || s.art) : r.wimg;
+    const imgSrc = r.wimg; // 一律 Wiki シスター专属图标 (Q 版), 不复用 unit 图
     return \`<div class="card \${r.owned ? '' : 'notown'}" data-sid="\${r.sid ?? ''}">
       <div class="portrait" style="background:linear-gradient(150deg,\${c}55,\${c}18 60%,transparent),linear-gradient(160deg,#1b2145,#141830)">
         \${imgTag(imgSrc)}
@@ -712,7 +718,7 @@ function showSister(sid) {
   const nextStr = (n) => (n ? \`<div class="sdetail" style="color:#9aa3c7">→ Lv\${n.lv}: \${colorize(n.detail)}</div>\` : '');
   const sisSkill = (tag, name, lv, max, detail, next, extraHtml = '', lock = false) => \`<div class="skill\${lock ? ' slock' : ''}">
       <div class="sname">\${tag} <b>\${esc(name)}</b>\${lv ? \`<span class="smeta">Lv \${lv}/\${max}</span>\` : ''}\${lock ? '<span class="slocktag">未解放</span>' : ''}</div>
-      \${detail ? \`<div class="sdetail">\${esc(detail)}</div>\` : ''}
+      \${detail ? \`<div class="sdetail">\${colorize(detail)}</div>\` : ''}
       \${nextStr(next)}
       \${extraHtml}
     </div>\`;
@@ -722,8 +728,9 @@ function showSister(sid) {
     \${s.extra && s.extra.name ? sisSkill('<span class="stag st-p">解放</span>', s.extra.name, null, null, s.extra.detail, null, '', !s.extra.released) : ''}
     \${w.team ? sisSkill('<span class="stag st-s">参考</span>', 'チームスキル（满级）', null, null, w.team, null) : ''}
   </div>\`;
+  const sisArt = w.wart || w.wimg; // Wiki シスター专属立绘 (Q 版 SD), 无立绘时退回图标
   document.getElementById('modal').innerHTML = \`
-    <div class="martbg">\${s.art ? \`<img src="\${s.art}" onerror="this.parentElement.remove()">\` : ''}</div>
+    <div class="martbg">\${sisArt ? \`<img src="\${sisArt}" onerror="this.parentElement.remove()">\` : ''}</div>
     <button class="close" onclick="document.getElementById('overlay').classList.remove('show')">✕</button>
     <div class="mmain">
       <div><h2>\${esc(s.cname)}</h2><div class="sub2"><span style="color:var(--gold)">シスター</span> · <span style="color:\${c};font-weight:700">\${ATTR[s.attr]}</span> · \${ROLE[s.role] || ''}\${s.camp ? ' · ' + CAMP[s.camp] : ''}\${w.date ? ' · 実装 ' + esc(w.date) : ''}</div></div>
@@ -737,7 +744,7 @@ function showSister(sid) {
     </div>
     <div class="mfig">
       <div class="figpanel" style="background:linear-gradient(150deg,\${c}40,\${c}12 60%,transparent),linear-gradient(160deg,#1b2145,#141830)">
-        \${s.art ? \`<img src="\${s.art}" onerror="this.remove()">\` : (s.icon ? \`<img class="ficon" src="\${s.icon}" onerror="this.remove()">\` : \`<span style="font-size:72px;font-weight:800">\${esc(s.cname[0])}</span>\`)}
+        \${w.wart ? \`<img src="\${w.wart}" onerror="this.remove()">\` : (w.wimg ? \`<img class="ficon" src="\${w.wimg}" onerror="this.remove()">\` : \`<span style="font-size:72px;font-weight:800">\${esc(s.cname[0])}</span>\`)}
       </div>
     </div>
   \`;

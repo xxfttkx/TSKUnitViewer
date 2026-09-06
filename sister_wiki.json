@@ -5,6 +5,7 @@
    "idx": 0,
    "name": "フィオナ",
    "icon": "attach2/696D67_E382B7E382B9E382BFE383BC5FE38395E382A3E382AAE3838A5F69636F6E5F4E462E706E67.png",
+   "href": "%E3%82%B7%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%95%E3%82%A3%E3%82%AA%E3%83%8A",
    "attr": "闇",
    "type": "ATK",
    "team": "味方全体の基礎ATK20%アップ/闇属性の味方の基礎ATK5%アップ闇属性のATK100%アップ闇属性の有利属性ダメージ倍率50%アップ自身の初期シスターゲージ+20%",
@@ -16,12 +17,14 @@
    "date": "2024/04/30",
    "owned": true,
    "ownedSister": 1001001,
-   "wimg": null
+   "wimg": "img/sw0_icon.png",
+   "wart": "img/sw0.png"
   },
   {
    "idx": 1,
    "name": "ナミエル",
    "icon": "attach2/696D67_E382B7E382B9E382BFE383BC5FE3838AE3839FE382A8E383AB5F69636F6E5F4E462E706E67.png",
+   "href": "%E3%82%B7%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%8A%E3%83%9F%E3%82%A8%E3%83%AB",
    "attr": "水",
    "type": "SPD",
    "team": "味方全体の基礎ATK20%アップ/水属性の味方の基礎ATK5%アップ水属性のATK100%アップランブル勝利時の敵スタン時間3CT増加自身の初期シスターゲージ+20%",
@@ -33,12 +36,14 @@
    "date": "2024/04/30",
    "owned": true,
    "ownedSister": 1030001,
-   "wimg": null
+   "wimg": "img/sw1_icon.png",
+   "wart": "img/sw1.png"
   },
   {
    "idx": 2,
    "name": "マグダレナ",
    "icon": "attach2/696D67_E382B7E382B9E382BFE383BC5FE3839EE382B0E38380E383ACE3838A5F69636F6E5F4E462E706E67.png",
+   "href": "%E3%82%B7%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%9E%E3%82%B0%E3%83%80%E3%83%AC%E3%83%8A",
    "attr": "光",
    "type": "HEAL",
    "team": "味方全体の基礎ATK20%アップ/光属性の味方の基礎ATK5%アップ光属性のATK100%アップ光属性の味方のスタン時間を50%短縮 ※強制スタンは除く自身の初期シスターゲージ+20%",
@@ -50,12 +55,14 @@
    "date": "2024/04/30",
    "owned": false,
    "ownedSister": null,
-   "wimg": "img/sw2_icon.png"
+   "wimg": "img/sw2_icon.png",
+   "wart": "img/sw2.png"
   },
   {
    "idx": 3,
    "name": "マハムート",
    "icon": "attach2/696D67_E382B7E382B9E382BFE383BC5FE3839EE3838FE383A0E383BCE383885F69636F6E5F4E462E706E67.png",
+   "href": "%E3%82%B7%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%9E%E3%83%8F%E3%83%A0%E3%83%BC%E3%83%88",
    "attr": "炎",
    "type": "SUP",
    "team": "味方全体の基礎ATK20%アップ/炎属性の味方の基礎ATK5%アップ炎属性のATK100%アップ炎属性の状態異常付与確率50%加算自身の初期シスターゲージ+20%",
@@ -67,12 +74,14 @@
    "date": "2024/04/30",
    "owned": false,
    "ownedSister": null,
-   "wimg": "img/sw3_icon.png"
+   "wimg": "img/sw3_icon.png",
+   "wart": "img/sw3.png"
   },
   {
    "idx": 4,
    "name": "ラティエ",
    "icon": "attach2/696D67_E382B7E382B9E382BFE383BC5FE383A9E38386E382A3E382A85F69636F6E5F4E462E706E67.png",
+   "href": "%E3%82%B7%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%A9%E3%83%86%E3%82%A3%E3%82%A8",
    "attr": "雷",
    "type": "DEF",
    "team": "味方全体の基礎ATK20%アップ/雷属性の味方の基礎ATK5%アップ雷属性のATK100%アップ雷属性の通常攻撃のKB量2増加自身の初期シスターゲージ+20%",
@@ -84,12 +93,14 @@
    "date": "2024/04/30",
    "owned": false,
    "ownedSister": null,
-   "wimg": "img/sw4_icon.png"
+   "wimg": "img/sw4_icon.png",
+   "wart": "img/sw4.png"
   },
   {
    "idx": 5,
    "name": "ヴィーナス",
    "icon": "attach2/696D67_E382B7E382B9E382BFE383BC5FE383B4E382A3E383BCE3838AE382B95F69636F6E5F4E462E706E67.png",
+   "href": "%E3%82%B7%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%B4%E3%82%A3%E3%83%BC%E3%83%8A%E3%82%B9",
    "attr": "光",
    "type": "ATK",
    "team": "味方全体の基礎ATK20%アップ/人間の味方の基礎ATK5%アップ人間の味方のATK100%アップ/クリティカル20%加算人間の味方のクリティカル時のダメージ倍率50%加算自身の初期シスターゲージ+20%",
@@ -101,12 +112,14 @@
    "date": "2024/04/30",
    "owned": false,
    "ownedSister": null,
-   "wimg": "img/sw5_icon.png"
+   "wimg": "img/sw5_icon.png",
+   "wart": "img/sw5.png"
   },
   {
    "idx": 6,
    "name": "キリカ",
    "icon": "attach2/696D67_E382B7E382B9E382BFE383BC5FE382ADE383AAE382AB5F69636F6E5F4E462E706E67.png",
+   "href": "%E3%82%B7%E3%82%B9%E3%82%BF%E3%83%BC%E3%82%AD%E3%83%AA%E3%82%AB",
    "attr": "雷",
    "type": "SPD",
    "team": "味方全体の基礎ATK20%アップ/人間の味方の基礎ATK5%アップ人間の味方のATK100%アップWAVE開始時の敵のスタンゲージ3減少自身の初期シスターゲージ+20%",
@@ -118,12 +131,14 @@
    "date": "2024/05/31",
    "owned": true,
    "ownedSister": 1012001,
-   "wimg": null
+   "wimg": "img/sw6_icon.png",
+   "wart": "img/sw6.png"
   },
   {
    "idx": 7,
    "name": "梨緒",
    "icon": "attach2/696D67_E382B7E382B9E382BFE383BC5FE6A2A8E7B7925F69636F6E5F4E462E706E67.png",
+   "href": "%E3%82%B7%E3%82%B9%E3%82%BF%E3%83%BC%E6%A2%A8%E7%B7%92",
    "attr": "雷",
    "type": "SPD",
    "team": "味方全体の基礎ATK20%アップ/雷属性の味方の基礎ATK5%アップ雷属性の味方のATK100%アップラッシュのダメージ補正倍率5%アップ自身の初期シスターゲージ+20%",
@@ -135,12 +150,14 @@
    "date": "2024/07/07",
    "owned": true,
    "ownedSister": 1091001,
-   "wimg": null
+   "wimg": "img/sw7_icon.png",
+   "wart": "img/sw7.png"
   },
   {
    "idx": 8,
    "name": "アポロ",
    "icon": "attach2/696D67_E382B7E382B9E382BFE383BC5FE382A2E3839DE383AD5F69636F6E5F4E462E706E67.png",
+   "href": "%E3%82%B7%E3%82%B9%E3%82%BF%E3%83%BC%E3%82%A2%E3%83%9D%E3%83%AD",
    "attr": "闇",
    "type": "ATK",
    "team": "味方全体の基礎ATK20%アップ/味方全体の基礎ATKをチーム内の異なるメイン属性の数×1%アップ味方全体のATKをチーム内の異なる属性×20%アップクリティカルをチーム内の異なる属性の数×4%加算*2味方全体の有利属性ダメージ倍率10%加算自身の初期シスターゲージ+20%",
@@ -152,12 +169,14 @@
    "date": "2024/07/23",
    "owned": true,
    "ownedSister": 1004003,
-   "wimg": null
+   "wimg": "img/sw8_icon.png",
+   "wart": "img/sw8.png"
   },
   {
    "idx": 9,
    "name": "ヨミ",
    "icon": "attach2/696D67_E382B7E382B9E382BFE383BC5FE383A8E3839F5F69636F6E5F4E462E706E67.png",
+   "href": "%E3%82%B7%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%A8%E3%83%9F",
    "attr": "闇",
    "type": "SUP",
    "team": "味方全体の基礎ATK20%アップ/闇属性の味方の基礎ATK5%アップ闇属性の味方のATK100%アップ闇属性の状態異常付与確率50%アップ自身の初期シスターゲージ+20%",
@@ -169,12 +188,14 @@
    "date": "2024/07/31",
    "owned": false,
    "ownedSister": null,
-   "wimg": "img/sw9_icon.png"
+   "wimg": "img/sw9_icon.png",
+   "wart": "img/sw9.png"
   },
   {
    "idx": 10,
    "name": "アルモタヘル",
    "icon": "attach2/696D67_E382B7E382B9E382BFE383BC5FE382A2E383ABE383A2E382BFE38398E383AB5F69636F6E5F4E462E706E67.png",
+   "href": "%E3%82%B7%E3%82%B9%E3%82%BF%E3%83%BC%E3%82%A2%E3%83%AB%E3%83%A2%E3%82%BF%E3%83%98%E3%83%AB",
    "attr": "炎",
    "type": "SPD",
    "team": "味方全体の基礎ATK20%アップ/炎属性の味方の基礎ATK5%アップ炎属性の味方のATK100%アップラッシュのダメージ補正倍率5%アップ自身の初期シスターゲージ+20%",
@@ -186,12 +207,14 @@
    "date": "2024/08/30",
    "owned": false,
    "ownedSister": null,
-   "wimg": "img/sw10_icon.png"
+   "wimg": "img/sw10_icon.png",
+   "wart": "img/sw10.png"
   },
   {
    "idx": 11,
    "name": "サチ",
    "icon": "attach2/696D67_E382B7E382B9E382BFE383BC5FE382B5E383815F69636F6E5F4E462E706E67.png",
+   "href": "%E3%82%B7%E3%82%B9%E3%82%BF%E3%83%BC%E3%82%B5%E3%83%81",
    "attr": "水",
    "type": "SUP",
    "team": "味方全体の基礎ATK20%アップ/水属性の味方の基礎ATK5%アップ水属性の味方のATK100%アップ/クリティカル20%加算ステージクリア時のテルス獲得量30%アップ(初回クリア報酬、装備自動売却時のテルスは除く)自身の初期シスターゲージ+20%",
@@ -203,12 +226,14 @@
    "date": "2024/09/01",
    "owned": true,
    "ownedSister": 1043001,
-   "wimg": null
+   "wimg": "img/sw11_icon.png",
+   "wart": "img/sw11.png"
   },
   {
    "idx": 12,
    "name": "メルエル",
    "icon": "attach2/696D67_E382B7E382B9E382BFE383BC5FE383A1E383ABE382A8E383AB5F69636F6E5F4E462E706E67.png",
+   "href": "%E3%82%B7%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%A1%E3%83%AB%E3%82%A8%E3%83%AB",
    "attr": "光",
    "type": "ATK",
    "team": "味方全体の基礎ATK20%アップ/光属性の味方の基礎ATK5%アップ光属性の味方のATK100%アップ光属性の有利属性ダメージ倍率を50%加算自身の初期シスターゲージ+20%",
@@ -220,12 +245,14 @@
    "date": "2024/09/30",
    "owned": true,
    "ownedSister": 1047001,
-   "wimg": null
+   "wimg": "img/sw12_icon.png",
+   "wart": "img/sw12.png"
   },
   {
    "idx": 13,
    "name": "ネーゼマイン【HW】",
    "icon": "attach2/696D67_E382B7E382B9E382BFE383BC5FE3838DE383BCE382BCE3839EE382A4E383B3E380904857E380915F69636F6E5F4E462E706E67.png",
+   "href": "%E3%82%B7%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%8D%E3%83%BC%E3%82%BC%E3%83%9E%E3%82%A4%E3%83%B3%E3%80%90HW%E3%80%91",
    "attr": "雷",
    "type": "SUP",
    "team": "味方全体の基礎ATK20%アップ/雷属性の味方の基礎ATK5%アップ雷属性の味方のATK100%アップ/クリティカル20%加算味方のクリティカル時のダメージ倍率20%加算自身の初期シスターゲージ+20%",
@@ -237,12 +264,14 @@
    "date": "2024/10/11",
    "owned": false,
    "ownedSister": null,
-   "wimg": "img/sw13_icon.png"
+   "wimg": "img/sw13_icon.png",
+   "wart": "img/sw13.png"
   },
   {
    "idx": 14,
    "name": "トワ先生",
    "icon": "attach2/696D67_E382B7E382B9E382BFE383BC5FE38388E383AFE58588E7949F5F69636F6E5F4E462E706E67.png",
+   "href": "%E3%82%B7%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%88%E3%83%AF%E5%85%88%E7%94%9F",
    "attr": "水",
    "type": "HEAL",
    "team": "味方全体の基礎ATK20%アップ/水属性の味方の基礎ATK5%アップ水属性の味方のATK100%アップ水属性の有利属性ダメージ倍率を50%加算自身の初期シスターゲージ+20%",
@@ -254,12 +283,14 @@
    "date": "2024/10/31",
    "owned": false,
    "ownedSister": null,
-   "wimg": "img/sw14_icon.png"
+   "wimg": "img/sw14_icon.png",
+   "wart": "img/sw14.png"
   },
   {
    "idx": 15,
    "name": "トリシャ",
    "icon": "attach2/696D67_E382B7E382B9E382BFE383BC5FE38388E383AAE382B7E383A35F69636F6E5F4E462E706E67.png",
+   "href": "%E3%82%B7%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%88%E3%83%AA%E3%82%B7%E3%83%A3",
    "attr": "闇",
    "type": "SUP",
    "team": "味方全体の基礎ATK20%アップ/魔族の味方の基礎ATK5%アップ魔族の味方のATK100%アップ魔族のクリティカル時のダメージ倍率25%アップ自身の初期シスターゲージ+20%",
@@ -271,12 +302,14 @@
    "date": "2024/11/29",
    "owned": false,
    "ownedSister": null,
-   "wimg": "img/sw15_icon.png"
+   "wimg": "img/sw15_icon.png",
+   "wart": "img/sw15.png"
   },
   {
    "idx": 16,
    "name": "イレーナ【Xmas】",
    "icon": "attach2/696D67_E382B7E382B9E382BFE383BC5FE382A4E383ACE383BCE3838AE38090586D6173E380915F69636F6E5F4E462E706E67.png",
+   "href": "%E3%82%B7%E3%82%B9%E3%82%BF%E3%83%BC%E3%82%A4%E3%83%AC%E3%83%BC%E3%83%8A%E3%80%90Xmas%E3%80%91",
    "attr": "水",
    "type": "SUP",
    "team": "味方全体の基礎ATK20%アップ/水属性の味方の基礎ATK5%アップ水属性の味方のATK100%アップ/クリティカル20%加算水属性かつサポートタイプの初回行動CT-2自身の初期シスターゲージ+20%",
@@ -288,12 +321,14 @@
    "date": "2024/12/01",
    "owned": false,
    "ownedSister": null,
-   "wimg": "img/sw16_icon.png"
+   "wimg": "img/sw16_icon.png",
+   "wart": "img/sw16.png"
   },
   {
    "idx": 17,
    "name": "ウズメイア",
    "icon": "attach2/696D67_E382B7E382B9E382BFE383BC5FE382A6E382BAE383A1E382A4E382A25F69636F6E5F4E462E706E67.png",
+   "href": "%E3%82%B7%E3%82%B9%E3%82%BF%E3%83%BC%E3%82%A6%E3%82%BA%E3%83%A1%E3%82%A4%E3%82%A2",
    "attr": "雷",
    "type": "SUP",
    "team": "味方全体の基礎ATK20%アップ/神族の味方の基礎ATK5%アップ神族の味方のATK100%アップ神族のクリティカル時のダメージ倍率25%加算自身の初期シスターゲージ+20%",
@@ -305,12 +340,14 @@
    "date": "2024/12/27",
    "owned": false,
    "ownedSister": null,
-   "wimg": "img/sw17_icon.png"
+   "wimg": "img/sw17_icon.png",
+   "wart": "img/sw17.png"
   },
   {
    "idx": 18,
    "name": "フィオナ【新春】",
    "icon": "attach2/696D67_E382B7E382B9E382BFE383BC5FE38395E382A3E382AAE3838AE38090E696B0E698A5E380915F69636F6E5F4E462E706E67.png",
+   "href": "%E3%82%B7%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%95%E3%82%A3%E3%82%AA%E3%83%8A%E3%80%90%E6%96%B0%E6%98%A5%E3%80%91",
    "attr": "光",
    "type": "SPD",
    "team": "味方全体の基礎ATK20%アップ/光属性の味方の基礎ATK5%アップ光属性の味方のATK100%アップ/クリティカル20%加算光属性の通常攻撃のノックバック量2増加/「固有ゲージ」を1増加する自身の初期シスターゲージ+20%",
@@ -322,12 +359,14 @@
    "date": "2025/01/01",
    "owned": false,
    "ownedSister": null,
-   "wimg": "img/sw18_icon.png"
+   "wimg": "img/sw18_icon.png",
+   "wart": "img/sw18.png"
   },
   {
    "idx": 19,
    "name": "ヴィーナス【新春】",
    "icon": "attach2/696D67_E382B7E382B9E382BFE383BC5FE383B4E382A3E383BCE3838AE382B9E38090E696B0E698A5E380915F69636F6E5F4E462E706E67.png",
+   "href": "%E3%82%B7%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%B4%E3%82%A3%E3%83%BC%E3%83%8A%E3%82%B9%E3%80%90%E6%96%B0%E6%98%A5%E3%80%91",
    "attr": "雷",
    "type": "ATK",
    "team": "味方全体の基礎ATK20%アップ/人間の味方の基礎ATK5%アップ人間の味方のATK100%アップ/クリティカル20%加算人間かつアタックタイプの初回行動CT-2自身の初期シスターゲージ+20%",
@@ -339,12 +378,14 @@
    "date": "2025/01/01",
    "owned": true,
    "ownedSister": 1003003,
-   "wimg": null
+   "wimg": "img/sw19_icon.png",
+   "wart": "img/sw19.png"
   },
   {
    "idx": 20,
    "name": "聖沙",
    "icon": "attach2/696D67_E382B7E382B9E382BFE383BC5FE88196E6B2995F69636F6E5F4E462E706E67.png",
+   "href": "%E3%82%B7%E3%82%B9%E3%82%BF%E3%83%BC%E8%81%96%E6%B2%99",
    "attr": "雷",
    "type": "SPD",
    "team": "味方全体の基礎ATK20%アップ/流星学園の味方の基礎ATK5%アップ流星学園の味方のATK100%アップ/クリティカル20%加算味方全体の有利属性ダメージ倍率10%加算自身の初期シスターゲージ+20%",
@@ -356,12 +397,14 @@
    "date": "2025/01/13",
    "owned": false,
    "ownedSister": null,
-   "wimg": "img/sw20_icon.png"
+   "wimg": "img/sw20_icon.png",
+   "wart": "img/sw20.png"
   },
   {
    "idx": 21,
    "name": "リア",
    "icon": "attach2/696D67_E382B7E382B9E382BFE383BC5FE383AAE382A25F69636F6E5F4E462E706E67.png",
+   "href": "%E3%82%B7%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%AA%E3%82%A2",
    "attr": "光",
    "type": "SUP",
    "team": "味方全体の基礎ATK20%アップ/味方全体の味方の基礎ATKをチーム内の異なるメイン属性の数×1%アップ味方全体のATKをチーム内の異なる属性の数×20%アップクリティカルをチーム内の異なる属性の数×4%加算味方全体の有利属性ダメージ倍率10%加算自身の初期シスターゲージ+20%",
@@ -373,12 +416,14 @@
    "date": "2025/01/13",
    "owned": false,
    "ownedSister": null,
-   "wimg": "img/sw21_icon.png"
+   "wimg": "img/sw21_icon.png",
+   "wart": "img/sw21.png"
   },
   {
    "idx": 22,
    "name": "せつな【チョコ】",
    "icon": "attach2/696D67_E382B7E382B9E382BFE383BC5FE3819BE381A4E381AAE38090E38381E383A7E382B3E380915F69636F6E5F4E462E706E67.png",
+   "href": "%E3%82%B7%E3%82%B9%E3%82%BF%E3%83%BC%E3%81%9B%E3%81%A4%E3%81%AA%E3%80%90%E3%83%81%E3%83%A7%E3%82%B3%E3%80%91",
    "attr": "光",
    "type": "HEAL",
    "team": "味方全体の基礎ATK20%アップ/魔族の味方の基礎ATK5%アップ魔族の味方のATK100%アップ/クリティカル20%加算魔族の味方の有利属性ダメージ倍率25%加算自身の初期シスターゲージ+20%",
@@ -390,12 +435,14 @@
    "date": "2025/02/14",
    "owned": false,
    "ownedSister": null,
-   "wimg": "img/sw22_icon.png"
+   "wimg": "img/sw22_icon.png",
+   "wart": "img/sw22.png"
   },
   {
    "idx": 23,
    "name": "アルテ",
    "icon": "attach2/696D67_E382B7E382B9E382BFE383BC5FE382A2E383ABE383865F69636F6E5F4E462E706E67.png",
+   "href": "%E3%82%B7%E3%82%B9%E3%82%BF%E3%83%BC%E3%82%A2%E3%83%AB%E3%83%86",
    "attr": "光",
    "type": "ATK",
    "team": "味方全体の基礎ATK20%アップ/人間または光属性の味方の基礎ATK5%アップ人間の味方のATK75%アップ/さらに光属性の味方のATK75%アップ人間の味方のクリティカル15%加算/さらに光属性の味方のクリティカル15%加算人間または光属性の有利属性ダメージ倍率20%加算※2つの条件を満たした場合でも効果は重複しない自身の初期シスターゲージ+20%",
@@ -407,12 +454,14 @@
    "date": "2025/02/17",
    "owned": false,
    "ownedSister": null,
-   "wimg": "img/sw23_icon.png"
+   "wimg": "img/sw23_icon.png",
+   "wart": "img/sw23.png"
   },
   {
    "idx": 24,
    "name": "プトラ",
    "icon": "attach2/696D67_E382B7E382B9E382BFE383BC5FE38397E38388E383A95F69636F6E5F4E462E706E67.png",
+   "href": "%E3%82%B7%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%97%E3%83%88%E3%83%A9",
    "attr": "水",
    "type": "ATK",
    "team": "味方全体の基礎ATK20%アップ/人間または水属性の味方の基礎ATK5%アップ人間の味方のATK75%アップ/さらに水属性の味方のATK75%アップ人間の味方のクリティカル15%加算/さらに水属性の味方のクリティカル15%加算人間または水属性の有利属性ダメージ倍率20%加算※2つの条件を満たした場合でも効果は重複しない自身の初期シスターゲージ+20%",
@@ -424,12 +473,14 @@
    "date": "2025/02/22",
    "owned": false,
    "ownedSister": null,
-   "wimg": "img/sw24_icon.png"
+   "wimg": "img/sw24_icon.png",
+   "wart": "img/sw24.png"
   },
   {
    "idx": 25,
    "name": "アナ",
    "icon": "attach2/696D67_E382B7E382B9E382BFE383BC5FE382A2E3838A5F69636F6E5F4E462E706E67.png",
+   "href": "%E3%82%B7%E3%82%B9%E3%82%BF%E3%83%BC%E3%82%A2%E3%83%8A",
    "attr": "炎",
    "type": "ATK",
    "team": "味方全体の基礎ATK20%アップ/炎属性の味方の基礎ATK5%アップ炎属性の味方のATK100%アップ炎属性の有利属性ダメージ倍率50%加算自身の初期シスターゲージ+20%",
@@ -441,12 +492,14 @@
    "date": "2025/02/28",
    "owned": true,
    "ownedSister": 1008001,
-   "wimg": null
+   "wimg": "img/sw25_icon.png",
+   "wart": "img/sw25.png"
   },
   {
    "idx": 26,
    "name": "クラウディア【黄昏】",
    "icon": "attach2/696D67_E382B7E382B9E382BFE383BC5FE382AFE383A9E382A6E38387E382A3E382A2E38090E9BB84E6988FE380915F69636F6E5F4E462E706E67.png",
+   "href": "%E3%82%B7%E3%82%B9%E3%82%BF%E3%83%BC%E3%82%AF%E3%83%A9%E3%82%A6%E3%83%87%E3%82%A3%E3%82%A2%E3%80%90%E9%BB%84%E6%98%8F%E3%80%91",
    "attr": "光",
    "type": "ATK",
    "team": "味方全体の基礎ATK20%アップ/魔族の味方の基礎ATK5%アップ魔族の味方のATK100%アップ/クリティカル20%加算魔族かつアタックタイプの初回行動CT-2自身の初期シスターゲージ+20%",
@@ -458,12 +511,14 @@
    "date": "2025/04/01",
    "owned": false,
    "ownedSister": null,
-   "wimg": "img/sw26_icon.png"
+   "wimg": "img/sw26_icon.png",
+   "wart": "img/sw26.png"
   },
   {
    "idx": 27,
    "name": "ヒルディオーネ【バニー】",
    "icon": "attach2/696D67_E382B7E382B9E382BFE383BC5FE38392E383ABE38387E382A3E382AAE383BCE3838DE38090E38390E3838BE383BCE380915F69636F6E5F4E462E706E67.png",
+   "href": "%E3%82%B7%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%92%E3%83%AB%E3%83%87%E3%82%A3%E3%82%AA%E3%83%BC%E3%83%8D%E3%80%90%E3%83%90%E3%83%8B%E3%83%BC%E3%80%91",
    "attr": "水",
    "type": "DEF",
    "team": "味方全体の基礎ATK20%アップ/神族の味方の基礎ATK5%アップ神族の味方のATK100%アップ/クリティカル20%加算神族の味方の有利属性ダメージ倍率25%加算自身の初期シスターゲージ+20%",
@@ -475,12 +530,14 @@
    "date": "2025/04/12",
    "owned": false,
    "ownedSister": null,
-   "wimg": "img/sw27_icon.png"
+   "wimg": "img/sw27_icon.png",
+   "wart": "img/sw27.png"
   },
   {
    "idx": 28,
    "name": "レイラ",
    "icon": "attach2/696D67_E382B7E382B9E382BFE383BC5FE383ACE382A4E383A95F69636F6E5F4E462E706E67.png",
+   "href": "%E3%82%B7%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%AC%E3%82%A4%E3%83%A9",
    "attr": "闇",
    "type": "ATK",
    "team": "味方全体の基礎ATK20%アップ/闇属性またはコラプサーの味方の基礎ATK5%アップ味方全体のATKをチーム内の闇属性またはコラプサーの数×20％アップ/クリティカルをチーム内の闇属性またはコラプサーの数×4％加算コラプサーのクリティカル時のダメージ倍率30％加算自身の初期シスターゲージ+20%",
@@ -492,12 +549,14 @@
    "date": "2025/04/30",
    "owned": false,
    "ownedSister": null,
-   "wimg": "img/sw28_icon.png"
+   "wimg": "img/sw28_icon.png",
+   "wart": "img/sw28.png"
   },
   {
    "idx": 29,
    "name": "リップル",
    "icon": "attach2/696D67_E382B7E382B9E382BFE383BC5FE383AAE38383E38397E383AB5F69636F6E5F4E462E706E67.png",
+   "href": "%E3%82%B7%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%AA%E3%83%83%E3%83%97%E3%83%AB",
    "attr": "水",
    "type": "DEF",
    "team": "味方全体の基礎ATK20%アップ/水属性の味方の基礎ATK5%アップ水属性の味方のATK100％アップディフェンスタイプの初回行動CT-5自身の初期シスターゲージ+20%",
@@ -509,12 +568,14 @@
    "date": "2025/04/30",
    "owned": false,
    "ownedSister": null,
-   "wimg": "img/sw29_icon.png"
+   "wimg": "img/sw29_icon.png",
+   "wart": "img/sw29.png"
   },
   {
    "idx": 30,
    "name": "パテル",
    "icon": "attach2/696D67_E382B7E382B9E382BFE383BC5FE38391E38386E383AB5F69636F6E5F4E462E706E67.png",
+   "href": "%E3%82%B7%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%91%E3%83%86%E3%83%AB",
    "attr": "闇",
    "type": "SPD",
    "team": "味方全体の基礎ATK20%アップ/闇属性の味方の基礎ATK5%アップ闇属性の味方のATK100%アップ/クリティカル20%加算闇属性かつスピードタイプのEX上昇を20アップ自身の初期シスターゲージ+20%",
@@ -526,12 +587,14 @@
    "date": "2025/05/17",
    "owned": false,
    "ownedSister": null,
-   "wimg": "img/sw30_icon.png"
+   "wimg": "img/sw30_icon.png",
+   "wart": "img/sw30.png"
   },
   {
    "idx": 31,
    "name": "マトイ",
    "icon": "attach2/696D67_E382B7E382B9E382BFE383BC5FE3839EE38388E382A45F69636F6E5F4E462E706E67.png",
+   "href": "%E3%82%B7%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%9E%E3%83%88%E3%82%A4",
    "attr": "雷",
    "type": "DEF",
    "team": "味方全体の基礎ATK20%アップ/新星学園の味方の基礎ATK5%アップ新星学園の味方のATK100%アップ新星学園の味方のクリティカル時のダメージ倍率25%加算自身の初期シスターゲージ+20%",
@@ -543,12 +606,14 @@
    "date": "2025/05/30",
    "owned": false,
    "ownedSister": null,
-   "wimg": "img/sw31_icon.png"
+   "wimg": "img/sw31_icon.png",
+   "wart": "img/sw31.png"
   },
   {
    "idx": 32,
    "name": "ナナカ",
    "icon": "attach2/696D67_E382B7E382B9E382BFE383BC5FE3838AE3838AE382AB5F69636F6E5F4E462E706E67.png",
+   "href": "%E3%82%B7%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%8A%E3%83%8A%E3%82%AB",
    "attr": "炎",
    "type": "ATK",
    "team": "味方全体の基礎ATK20%アップ/人間または魔族の味方の基礎ATK5%アップ味方全体のATKをチーム内の人間と魔族の数×20%アップ/クリティカルをチーム内の人間と魔族の数×3%加算※2つの条件を満たした場合、効果は重複する人間または魔族のクリティカル時のダメージ倍率20%加算 ※2つの条件を満たした場合でも効果は重複しない自身の初期シスターゲージ+20%",
@@ -560,12 +625,14 @@
    "date": "2025/06/27",
    "owned": false,
    "ownedSister": null,
-   "wimg": "img/sw32_icon.png"
+   "wimg": "img/sw32_icon.png",
+   "wart": "img/sw32.png"
   },
   {
    "idx": 33,
    "name": "ロロット",
    "icon": "attach2/696D67_E382B7E382B9E382BFE383BC5FE383ADE383ADE38383E383885F69636F6E5F4E462E706E67.png",
+   "href": "%E3%82%B7%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%AD%E3%83%AD%E3%83%83%E3%83%88",
    "attr": "水",
    "type": "HEAL",
    "team": "味方全体の基礎ATK20%アップ/神族の味方の基礎ATK5%アップ神族の味方のATK100%アップ/クリティカル20%加算神族かつヒールタイプの行動CT-1自身の初期シスターゲージ+20%",
@@ -577,12 +644,14 @@
    "date": "2025/06/30",
    "owned": false,
    "ownedSister": null,
-   "wimg": "img/sw33_icon.png"
+   "wimg": "img/sw33_icon.png",
+   "wart": "img/sw33.png"
   },
   {
    "idx": 34,
    "name": "ヴィーナス【神光】",
    "icon": "attach2/696D67_E382B7E382B9E382BFE383BC5FE383B4E382A3E383BCE3838AE382B9E38090E7A59EE58589E380915F69636F6E5F4E462E706E67.png",
+   "href": "%E3%82%B7%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%B4%E3%82%A3%E3%83%BC%E3%83%8A%E3%82%B9%E3%80%90%E7%A5%9E%E5%85%89%E3%80%91",
    "attr": "光",
    "type": "ATK",
    "team": "味方全体の基礎ATK20%アップ/人間または神族の味方の基礎ATK5%アップ人間の味方のATK100%アップ/さらに神族の味方のATK100%アップ/人間の味方のクリティカル15%加算/さらに神族の味方のクリティカル15%加算人間の味方の有利属性ダメージ倍率20%加算/さらに神族の味方の有利属性ダメージ20%加算自身の初期シスターゲージ+20%",
@@ -594,12 +663,14 @@
    "date": "2025/07/07",
    "owned": false,
    "ownedSister": null,
-   "wimg": "img/sw34_icon.png"
+   "wimg": "img/sw34_icon.png",
+   "wart": "img/sw34.png"
   },
   {
    "idx": 35,
    "name": "フィオナ【魔王】",
    "icon": "attach2/696D67_E382B7E382B9E382BFE383BC5FE38395E382A3E382AAE3838AE38090E9AD94E78E8BE380915F69636F6E5F4E462E706E67.png",
+   "href": "%E3%82%B7%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%95%E3%82%A3%E3%82%AA%E3%83%8A%E3%80%90%E9%AD%94%E7%8E%8B%E3%80%91",
    "attr": "闇",
    "type": "ATK",
    "team": "味方全体の基礎ATK20%アップ/人間または魔族の味方の基礎ATK5%アップ人間の味方のATK100%アップ/さらに魔族の味方のATK100%アップ/人間の味方のクリティカル15%加算/さらに魔族の味方のクリティカル15%加算人間の味方の有利属性ダメージ倍率20%加算/さらに魔族の味方の有利属性ダメージ20%加算自身の初期シスターゲージ+20%",
@@ -611,12 +682,14 @@
    "date": "2025/07/07",
    "owned": true,
    "ownedSister": 1001005,
-   "wimg": null
+   "wimg": "img/sw35_icon.png",
+   "wart": "img/sw35.png"
   },
   {
    "idx": 36,
    "name": "ヘレナ",
    "icon": "attach2/696D67_E382B7E382B9E382BFE383BC5FE38398E383ACE3838A5F69636F6E5F4E462E706E67.png",
+   "href": "%E3%82%B7%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%98%E3%83%AC%E3%83%8A",
    "attr": "闇",
    "type": "ATK",
    "team": "味方全体の基礎ATK20%アップ/人間の味方の基礎ATK5%アップ人間の味方のATKをチーム内の異なる属性の数×25%アップ人間のクリティカル時のダメージ倍率25%加算自身の初期シスターゲージ+20%",
@@ -628,12 +701,14 @@
    "date": "2025/07/31",
    "owned": false,
    "ownedSister": null,
-   "wimg": "img/sw36_icon.png"
+   "wimg": "img/sw36_icon.png",
+   "wart": "img/sw36.png"
   },
   {
    "idx": 37,
    "name": "アナ【煌炎】",
    "icon": "attach2/696D67_E382B7E382B9E382BFE383BC5FE382A2E3838AE38090E7858CE7828EE380915F69636F6E5F4E46322E706E67.png",
+   "href": "%E3%82%B7%E3%82%B9%E3%82%BF%E3%83%BC%E3%82%A2%E3%83%8A%E3%80%90%E7%85%8C%E7%82%8E%E3%80%91",
    "attr": "炎",
    "type": "ATK",
    "team": "味方全体の基礎ATK20%アップ/炎属性の味方の基礎ATK5%アップ炎属性の味方のATK100%アップ/クリティカル20%加算炎属性の味方のクリティカル時のダメージ倍率25%加算自身の初期シスターゲージ+20%",
@@ -645,12 +720,14 @@
    "date": "2025/09/01",
    "owned": false,
    "ownedSister": null,
-   "wimg": "img/sw37_icon.png"
+   "wimg": "img/sw37_icon.png",
+   "wart": "img/sw37.png"
   },
   {
    "idx": 38,
    "name": "シャルレーヌ",
    "icon": "attach2/696D67_E382B7E382B9E382BFE383BC5FE382B7E383A3E383ABE383ACE383BCE3838C5F69636F6E5F4E46322E706E67.png",
+   "href": "%E3%82%B7%E3%82%B9%E3%82%BF%E3%83%BC%E3%82%B7%E3%83%A3%E3%83%AB%E3%83%AC%E3%83%BC%E3%83%8C",
    "attr": "光",
    "type": "SUP",
    "team": "味方全体の基礎ATK20%アップ/光属性の味方の基礎ATK5%アップ光属性の味方のATK100%アップ/光属性の状態異常付与確率50%加算自身の初期シスターゲージ+20%",
@@ -662,12 +739,14 @@
    "date": "2025/09/30",
    "owned": false,
    "ownedSister": null,
-   "wimg": "img/sw38_icon.png"
+   "wimg": "img/sw38_icon.png",
+   "wart": "img/sw38.png"
   },
   {
    "idx": 39,
    "name": "ソフィア【HW】",
    "icon": "attach2/696D67_E382B7E382B9E382BFE383BC5FE382BDE38395E382A3E382A2E380904857E380915F69636F6E5F4E462E706E67.png",
+   "href": "%E3%82%B7%E3%82%B9%E3%82%BF%E3%83%BC%E3%82%BD%E3%83%95%E3%82%A3%E3%82%A2%E3%80%90HW%E3%80%91",
    "attr": "闇",
    "type": "SUP",
    "team": "味方全体の基礎ATK20%アップ/闇属性の味方の基礎ATK5%アップ闇属性のATK100%アップ/クリティカル20%加算闇属性かつサポートタイプの初回行動CT-2/パトロール・合同演習のステージクリア時、以下のアイテム1種がランダムでドロップ・極旨クッキー×1～2・キャンディ×2～3自身の初期シスターゲージ+20%",
@@ -679,12 +758,14 @@
    "date": "2025/10/15",
    "owned": false,
    "ownedSister": null,
-   "wimg": "img/sw39_icon.png"
+   "wimg": "img/sw39_icon.png",
+   "wart": "img/sw39.png"
   },
   {
    "idx": 40,
    "name": "ルネア",
    "icon": "attach2/696D67_E382B7E382B9E382BFE383BC5FE383ABE3838DE382A25F69636F6E5F4E462E706E67.png",
+   "href": "%E3%82%B7%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%AB%E3%83%8D%E3%82%A2",
    "attr": "光",
    "type": "ATK",
    "team": "味方全体の基礎ATK20%アップ/神族または光属性の味方の基礎ATK5%アップ神族の味方のATK75%アップ/さらに光属性の味方のATK75%アップ神族の味方のクリティカル15%加算/さらに光属性の味方のクリティカル15%加算神族または光属性の味方の有利属性ダメージ倍率20%加算※２つの条件を満たした場合でも効果は重複しない。自身の初期シスターゲージ+20%",
@@ -696,12 +777,14 @@
    "date": "2025/11/25",
    "owned": false,
    "ownedSister": null,
-   "wimg": "img/sw40_icon.png"
+   "wimg": "img/sw40_icon.png",
+   "wart": "img/sw40.png"
   },
   {
    "idx": 41,
    "name": "アム",
    "icon": "attach2/696D67_E382B7E382B9E382BFE383BC5FE382A2E383A05F69636F6E5F4E46322E706E67.png",
+   "href": "%E3%82%B7%E3%82%B9%E3%82%BF%E3%83%BC%E3%82%A2%E3%83%A0",
    "attr": "光",
    "type": "DEF",
    "team": "味方全体の基礎ATK20%アップ/人間の味方の基礎ATK5%アップ人間の味方のATK100%アップ味方のラッシュ50以下の時、味方が敵の攻撃を受けた場合でもラッシュが途切れない自身の初期シスターゲージ+20%",
@@ -713,12 +796,14 @@
    "date": "2025/11/30",
    "owned": false,
    "ownedSister": null,
-   "wimg": "img/sw41_icon.png"
+   "wimg": "img/sw41_icon.png",
+   "wart": "img/sw41.png"
   },
   {
    "idx": 42,
    "name": "蘭美【Xmas】",
    "icon": "attach2/696D67_E382B7E382B9E382BFE383BC5FE898ADE7BE8EE38090586D6173E380915F69636F6E5F4E46322E706E67.png",
+   "href": "%E3%82%B7%E3%82%B9%E3%82%BF%E3%83%BC%E8%98%AD%E7%BE%8E%E3%80%90Xmas%E3%80%91",
    "attr": "雷",
    "type": "ATK",
    "team": "味方全体の基礎ATK20%アップ/魔族の味方の基礎ATK5%アップ魔族の味方のATK100%アップ/クリティカル20%加算魔族の味方の有利属性ダメージ倍率をラッシュ数×0.3%加算(最大30%)自身の初期シスターゲージ+20%",
@@ -730,12 +815,14 @@
    "date": "2025/12/01",
    "owned": true,
    "ownedSister": 1077002,
-   "wimg": null
+   "wimg": "img/sw42_icon.png",
+   "wart": "img/sw42.png"
   },
   {
    "idx": 43,
    "name": "クラウディア【Xmas】",
    "icon": "attach2/696D67_E382B7E382B9E382BFE383BC5FE382AFE383A9E382A6E38387E382A3E382A2E38090586D6173E380915F69636F6E5F4E462E706E67.png",
+   "href": "%E3%82%B7%E3%82%B9%E3%82%BF%E3%83%BC%E3%82%AF%E3%83%A9%E3%82%A6%E3%83%87%E3%82%A3%E3%82%A2%E3%80%90Xmas%E3%80%91",
    "attr": "光",
    "type": "ATK",
    "team": "味方全体の基礎ATK20%アップ/魔族または攻撃タイプ魔法の味方の基礎ATK5%アップ魔族の味方のATK75%アップ/さらに攻撃タイプ魔法の味方のATK75%アップ/魔族の味方のクリティカル15%加算/さらに攻撃タイプ魔法の味方のクリティカル15%加算攻撃タイプ魔法の味方のクリティカル時のダメージ倍率25%加算自身の初期シスターゲージ+20%",
@@ -747,12 +834,14 @@
    "date": "2025/12/19",
    "owned": false,
    "ownedSister": null,
-   "wimg": "img/sw43_icon.png"
+   "wimg": "img/sw43_icon.png",
+   "wart": "img/sw43.png"
   },
   {
    "idx": 44,
    "name": "アナ【新春】",
    "icon": "attach2/696D67_E382B7E382B9E382BFE383BC5FE382A2E3838AE38090E696B0E698A5E380915F69636F6E5F4E462E706E67.png",
+   "href": "%E3%82%B7%E3%82%B9%E3%82%BF%E3%83%BC%E3%82%A2%E3%83%8A%E3%80%90%E6%96%B0%E6%98%A5%E3%80%91",
    "attr": "炎",
    "type": "HEAL",
    "team": "味方全体の基礎ATK20%アップ/神族または炎属性の味方の基礎ATK5%アップ神族の味方のATK75%アップ/さらに炎属性の味方のATK75%アップ/神族の味方のクリティカル15%加算/さらに炎属性の味方のクリティカル15%加算ヒールタイプの味方のEX上昇を15アップ自身の初期シスターゲージ+20%",
@@ -764,12 +853,14 @@
    "date": "2026/01/01",
    "owned": false,
    "ownedSister": null,
-   "wimg": "img/sw44_icon.png"
+   "wimg": "img/sw44_icon.png",
+   "wart": "img/sw44.png"
   },
   {
    "idx": 45,
    "name": "サーシャ【新春】",
    "icon": "attach2/696D67_E382B7E382B9E382BFE383BC5FE382B5E383BCE382B7E383A3E38090E696B0E698A5E380915F69636F6E5F4E462E706E67.png",
+   "href": "%E3%82%B7%E3%82%B9%E3%82%BF%E3%83%BC%E3%82%B5%E3%83%BC%E3%82%B7%E3%83%A3%E3%80%90%E6%96%B0%E6%98%A5%E3%80%91",
    "attr": "炎",
    "type": "ATK",
    "team": "味方全体の基礎ATK20%アップ/魔族または炎属性の味方の基礎ATK5%アップ魔族の味方のATK75%アップ/さらに炎属性の味方のATK75%アップ/魔族の味方のクリティカル15%加算/さらに炎属性の味方のクリティカル15%加算魔族の味方の有利属性ダメージ倍率15%加算/さらに炎属性の味方の有利属性ダメージ倍率15%加算自身の初期シスターゲージ+20%",
@@ -781,12 +872,14 @@
    "date": "2026/01/01",
    "owned": false,
    "ownedSister": null,
-   "wimg": "img/sw45_icon.png"
+   "wimg": "img/sw45_icon.png",
+   "wart": "img/sw45.png"
   },
   {
    "idx": 46,
    "name": "いろは",
    "icon": "attach2/696D67_E382B7E382B9E382BFE383BC5FE38184E3828DE381AF5F69636F6E5F4E462E706E67.png",
+   "href": "%E3%82%B7%E3%82%B9%E3%82%BF%E3%83%BC%E3%81%84%E3%82%8D%E3%81%AF",
    "attr": "炎",
    "type": "ATK",
    "team": "味方全体の基礎ATK20%アップ/人間または炎属性の味方の基礎ATK5%アップ人間または炎属性の味方のATK100%アップ/クリティカル20%加算※2つの条件を満たした場合でも効果は重複しないアタックタイプの味方の通常攻撃・EXスキルによるラッシュ増加数が倍になる(各対象の行動終了１回まで)自身の初期シスターゲージ+20%",
@@ -798,12 +891,14 @@
    "date": "2026/01/13",
    "owned": false,
    "ownedSister": null,
-   "wimg": "img/sw46_icon.png"
+   "wimg": "img/sw46_icon.png",
+   "wart": "img/sw46.png"
   },
   {
    "idx": 47,
    "name": "花織",
    "icon": "attach2/696D67_E382B7E382B9E382BFE383BC5FE88AB1E7B9945F69636F6E5F4E462E706E67.png",
+   "href": "%E3%82%B7%E3%82%B9%E3%82%BF%E3%83%BC%E8%8A%B1%E7%B9%94",
    "attr": "水",
    "type": "HEAL",
    "team": "味方全体の基礎ATK20%アップ/人間または水属性の味方の基礎ATK5%アップ人間または水属性の味方のATK100%アップ/クリティカル20%加算※2つの条件を満たした場合でも効果は重複しないヒールタイプの味方のEX消費量20%減少(EXスキル1回発動まで)自身の初期シスターゲージ+20%",
@@ -815,12 +910,14 @@
    "date": "2026/01/13",
    "owned": false,
    "ownedSister": null,
-   "wimg": "img/sw47_icon.png"
+   "wimg": "img/sw47_icon.png",
+   "wart": "img/sw47.png"
   },
   {
    "idx": 48,
    "name": "ここあ",
    "icon": "attach2/696D67_E382B7E382B9E382BFE383BC5FE38193E38193E381825F69636F6E5F4E462E706E67.png",
+   "href": "%E3%82%B7%E3%82%B9%E3%82%BF%E3%83%BC%E3%81%93%E3%81%93%E3%81%82",
    "attr": "光",
    "type": "SUP",
    "team": "味方全体の基礎ATK20%アップ/人間または光属性の味方の基礎ATK5%アップ人間または光属性の味方のATK100%アップ/クリティカル20%加算※2つの条件を満たした場合でも効果は重複しないサポートタイプの味方の初回行動CT-1/初回行動CT最速値抽選100%自身の初期シスターゲージ+20%",
@@ -832,12 +929,14 @@
    "date": "2026/01/19",
    "owned": false,
    "ownedSister": null,
-   "wimg": "img/sw48_icon.png"
+   "wimg": "img/sw48_icon.png",
+   "wart": "img/sw48.png"
   },
   {
    "idx": 49,
    "name": "陽彩",
    "icon": "attach2/696D67_E382B7E382B9E382BFE383BC5FE999BDE5BDA95F69636F6E5F4E462E706E67.png",
+   "href": "%E3%82%B7%E3%82%B9%E3%82%BF%E3%83%BC%E9%99%BD%E5%BD%A9",
    "attr": "闇",
    "type": "SPD",
    "team": "味方全体の基礎ATK20%アップ/人間または魔族の味方の基礎ATK5%アップ人間または魔族の味方のATK100%アップ※2つの条件を満たした場合でも効果は重複しないスピードタイプの味方のチャージ時の戻り量を85%短縮(チャージコマンド1回まで)自身の初期シスターゲージ+20%",
@@ -849,12 +948,14 @@
    "date": "2026/01/19",
    "owned": true,
    "ownedSister": 1158001,
-   "wimg": null
+   "wimg": "img/sw49_icon.png",
+   "wart": "img/sw49.png"
   },
   {
    "idx": 50,
    "name": "リーリア",
    "icon": "attach2/696D67_E382B7E382B9E382BFE383BC5FE383AAE383BCE383AAE382A25F69636F6E5F4E462E706E67.png",
+   "href": "%E3%82%B7%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%AA%E3%83%BC%E3%83%AA%E3%82%A2",
    "attr": "雷",
    "type": "ATK",
    "team": "味方全体の基礎ATK20%アップ/雷属性の味方の基礎ATK5%アップ雷属性の味方のATK100%アップ雷属性の味方の有利属性ダメージ倍率50%加算自身の初期シスターゲージ+20%",
@@ -866,12 +967,14 @@
    "date": "2026/01/30",
    "owned": false,
    "ownedSister": null,
-   "wimg": "img/sw50_icon.png"
+   "wimg": "img/sw50_icon.png",
+   "wart": "img/sw50.png"
   },
   {
    "idx": 51,
    "name": "イクシリオン【チョコ】",
    "icon": "attach2/696D67_E382B7E382B9E382BFE383BC5FE382A4E382AFE382B7E383AAE382AAE383B3E38090E38381E383A7E382B3E380915F69636F6E5F4E462E706E67.png",
+   "href": "%E3%82%B7%E3%82%B9%E3%82%BF%E3%83%BC%E3%82%A4%E3%82%AF%E3%82%B7%E3%83%AA%E3%82%AA%E3%83%B3%E3%80%90%E3%83%81%E3%83%A7%E3%82%B3%E3%80%91",
    "attr": "水",
    "type": "SPD",
    "team": "味方全体の基礎ATK20%アップ/神族または水属性の味方の基礎ATK5%アップ神族または水属性の味方のATK100%アップ/クリティカル20%加算※2つの条件を満たした場合でも効果は重複しない神族の味方の有利属性ダメージ倍率15%加算/さらに水属性の味方の有利属性ダメージ倍率15%加算自身の初期シスターゲージ+20%",
@@ -883,12 +986,14 @@
    "date": "2026/02/13",
    "owned": false,
    "ownedSister": null,
-   "wimg": "img/sw51_icon.png"
+   "wimg": "img/sw51_icon.png",
+   "wart": "img/sw51.png"
   },
   {
    "idx": 52,
    "name": "ノルトハウゼン",
    "icon": "attach2/696D67_E382B7E382B9E382BFE383BC5FE3838EE383ABE38388E3838FE382A6E382BCE383B35F69636F6E5F4E462E706E67.png",
+   "href": "%E3%82%B7%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%8E%E3%83%AB%E3%83%88%E3%83%8F%E3%82%A6%E3%82%BC%E3%83%B3",
    "attr": "炎",
    "type": "ATK",
    "team": "味方全体の基礎ATK20%アップ/炎属性または攻撃タイプ魔法の味方の基礎ATK5%アップ炎属性の味方のATK75%アップ/さらに攻撃タイプ魔法の味方のATK75%アップ炎属性の味方のクリティカル15%加算/さらに攻撃タイプ魔法の味方のクリティカル15%加算炎属性の味方の有利属性ダメージ倍率15%加算/さらに攻撃タイプ魔法の味方の有利属性ダメージ倍率15%加算自身の初期シスターゲージ+20%",
@@ -900,12 +1005,14 @@
    "date": "2026/03/19",
    "owned": false,
    "ownedSister": null,
-   "wimg": "img/sw52_icon.png"
+   "wimg": "img/sw52_icon.png",
+   "wart": "img/sw52.png"
   },
   {
    "idx": 53,
    "name": "ルルゥ",
    "icon": "attach2/696D67_E382B7E382B9E382BFE383BC5FE383ABE383ABE382A55F69636F6E5F4E462E706E67.png",
+   "href": "%E3%82%B7%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%AB%E3%83%AB%E3%82%A5",
    "attr": "炎",
    "type": "HEAL",
    "team": "味方全体の基礎ATK20%アップ/味方全体の基礎ATKをチーム内の攻撃タイプ魔法の数×1%アップ味方全体のATKをチーム内の攻撃タイプ魔法の味方の数×30%アップ/クリティカルをチーム内の攻撃タイプ魔法の味方の数×6%加算魔族かつヒールタイプの味方の行動CT-1自身の初期シスターゲージ+20%",
@@ -917,12 +1024,14 @@
    "date": "2026/03/19",
    "owned": false,
    "ownedSister": null,
-   "wimg": "img/sw53_icon.png"
+   "wimg": "img/sw53_icon.png",
+   "wart": "img/sw53.png"
   },
   {
    "idx": 54,
    "name": "梨緒【水着】",
    "icon": "attach2/696D67_E382B7E382B9E382BFE383BC5FE6A2A8E7B792E38090E6B0B4E79D80E380915F69636F6E5F4E462E706E67.png",
+   "href": "%E3%82%B7%E3%82%B9%E3%82%BF%E3%83%BC%E6%A2%A8%E7%B7%92%E3%80%90%E6%B0%B4%E7%9D%80%E3%80%91",
    "attr": "雷",
    "type": "SUP",
    "team": "味方全体の基礎ATK20%アップ/雷属性または攻撃タイプ打撃の味方の基礎ATK5%アップ雷属性の味方のATK75%アップ/さらに攻撃タイプ打撃の味方のATK75%アップ/雷属性の味方のクリティカル15%加算/さらに攻撃タイプ打撃の味方のクリティカル15%加算雷属性の味方の有利属性ダメージ倍率15%加算/さらに攻撃タイプ打撃の味方の有利属性ダメージ倍率15%加算自身の初期シスターゲージ+20%",
@@ -934,12 +1043,14 @@
    "date": "2026/03/27",
    "owned": false,
    "ownedSister": null,
-   "wimg": "img/sw54_icon.png"
+   "wimg": "img/sw54_icon.png",
+   "wart": "img/sw54.png"
   },
   {
    "idx": 55,
    "name": "せつな【開花】",
    "icon": "attach2/696D67_E382B7E382B9E382BFE383BC5FE3819BE381A4E381AAE38090E9968BE88AB1E380915F69636F6E5F4E462E706E67.png",
+   "href": "%E3%82%B7%E3%82%B9%E3%82%BF%E3%83%BC%E3%81%9B%E3%81%A4%E3%81%AA%E3%80%90%E9%96%8B%E8%8A%B1%E3%80%91",
    "attr": "雷",
    "type": "SPD",
    "team": "味方全体の基礎ATK20%アップ/魔族または雷属性の味方の基礎ATK5%アップ魔族の味方のATK75%アップ/さらに雷属性の味方のATK75%アップ/魔族の味方のクリティカル15%加算/さらに雷属性の味方のクリティカル15%加算雷属性かつスピードタイプの味方のEX上昇を20アップ自身の初期シスターゲージ+20%",
@@ -951,12 +1062,14 @@
    "date": "2026/04/01",
    "owned": false,
    "ownedSister": null,
-   "wimg": "img/sw55_icon.png"
+   "wimg": "img/sw55_icon.png",
+   "wart": "img/sw55.png"
   },
   {
    "idx": 56,
    "name": "フェニエル",
    "icon": "attach2/696D67_E382B7E382B9E382BFE383BC5FE38395E382A7E3838BE382A8E383AB5F69636F6E5F4E462E706E67.png",
+   "href": "%E3%82%B7%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%95%E3%82%A7%E3%83%8B%E3%82%A8%E3%83%AB",
    "attr": "炎",
    "type": "ATK",
    "team": "味方全体の基礎ATK20%アップ/神族の味方の基礎ATK5%アップ神族の味方のATKをチーム内の異なる属性の数×25%アップ神族かつアタックタイプの味方の初回行動CT-2自身の初期シスターゲージ+20%",
@@ -968,12 +1081,14 @@
    "date": "2026/04/08",
    "owned": false,
    "ownedSister": null,
-   "wimg": "img/sw56_icon.png"
+   "wimg": "img/sw56_icon.png",
+   "wart": "img/sw56.png"
   },
   {
    "idx": 57,
    "name": "ステラ",
    "icon": "attach2/696D67_E382B7E382B9E382BFE383BC5FE382B9E38386E383A95F69636F6E5F4E462E706E67.png",
+   "href": "%E3%82%B7%E3%82%B9%E3%82%BF%E3%83%BC%E3%82%B9%E3%83%86%E3%83%A9",
    "attr": "光",
    "type": "SUP",
    "team": "味方全体の基礎ATK20%アップ/光属性または攻撃タイプ打撃の味方の基礎ATK5%アップ光属性または攻撃タイプ打撃の味方のATK100%アップ/クリティカル20%加算 ※2つの条件を満たした場合でも効果は重複しない光属性または攻撃タイプ打撃の味方を5体以上編成している時、味方全体の有利属性ダメージ倍率30%加算自身の初期シスターゲージ+20%",
@@ -985,12 +1100,14 @@
    "date": "2026/04/13",
    "owned": false,
    "ownedSister": null,
-   "wimg": "img/sw57_icon.png"
+   "wimg": "img/sw57_icon.png",
+   "wart": "img/sw57.png"
   },
   {
    "idx": 58,
    "name": "ラファエロ",
    "icon": "attach2/696D67_E382B7E382B9E382BFE383BC5FE383A9E38395E382A1E382A8E383AD5F69636F6E5F4E462E706E67.png",
+   "href": "%E3%82%B7%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%A9%E3%83%95%E3%82%A1%E3%82%A8%E3%83%AD",
    "attr": "光",
    "type": "ATK",
    "team": "味方全体の基礎ATK20%アップ/光属性または攻撃タイプ打撃の味方の基礎ATK5%アップ光属性の味方のATK75%アップ/さらに攻撃タイプ打撃の味方のATK75%アップ/光属性の味方のクリティカル15%加算/さらに攻撃タイプ打撃の味方のクリティカル15%加算光属性の味方の有利属性ダメージ倍率15%加算/さらに攻撃タイプ打撃の味方の有利属性ダメージ倍率15%加算自身の初期シスターゲージ+20%",
@@ -1002,12 +1119,14 @@
    "date": "2026/04/20",
    "owned": false,
    "ownedSister": null,
-   "wimg": "img/sw58_icon.png"
+   "wimg": "img/sw58_icon.png",
+   "wart": "img/sw58.png"
   },
   {
    "idx": 59,
    "name": "リィベル",
    "icon": "attach2/696D67_E382B7E382B9E382BFE383BC5FE383AAE382A3E38399E383AB5F69636F6E5F4E462E706E67.png",
+   "href": "%E3%82%B7%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%AA%E3%82%A3%E3%83%99%E3%83%AB",
    "attr": "闇",
    "type": "ATK",
    "team": "味方全体の基礎ATK20%アップ/闇属性または攻撃タイプ魔法の味方の基礎ATK5%アップ闇属性または攻撃タイプ魔法の味方のATK100%アップ/クリティカル20%加算 ※2つの条件を満たした場合でも効果は重複しない闇属性または攻撃タイプ魔法の味方の有利属性ダメージ倍率20%加算 ※2つの条件を満たした場合でも効果は重複しない自身の初期シスターゲージ+20%",
@@ -1019,12 +1138,14 @@
    "date": "2026/05/01",
    "owned": false,
    "ownedSister": null,
-   "wimg": "img/sw59_icon.png"
+   "wimg": "img/sw59_icon.png",
+   "wart": "img/sw59.png"
   },
   {
    "idx": 60,
    "name": "シノ",
    "icon": "attach2/696D67_E382B7E382B9E382BFE383BC5FE382B7E3838E5F69636F6E5F4E462E706E67.png",
+   "href": "%E3%82%B7%E3%82%B9%E3%82%BF%E3%83%BC%E3%82%B7%E3%83%8E",
    "attr": "水",
    "type": "SUP",
    "team": "味方全体の基礎ATK20%アップ/人間または水属性の味方の基礎ATK5%アップ人間の味方のATK75%アップ/さらに水属性の味方のATK75%アップ人間の味方のクリティカル15%加算/さらに水属性の味方のクリティカル15%加算人間または水属性の有利属性ダメージ倍率をラッシュ数×0.2%加算(最大30%)自身の初期シスターゲージ+20%",
@@ -1036,12 +1157,14 @@
    "date": "2026/05/15",
    "owned": false,
    "ownedSister": null,
-   "wimg": "img/sw60_icon.png"
+   "wimg": "img/sw60_icon.png",
+   "wart": "img/sw60.png"
   },
   {
    "idx": 61,
    "name": "ジュリエッテ",
    "icon": "attach2/696D67_E382B7E382B9E382BFE383BC5FE382B8E383A5E383AAE382A8E38383E383865F69636F6E5F4E462E706E67.png",
+   "href": "%E3%82%B7%E3%82%B9%E3%82%BF%E3%83%BC%E3%82%B8%E3%83%A5%E3%83%AA%E3%82%A8%E3%83%83%E3%83%86",
    "attr": "闇",
    "type": "HEAL",
    "team": "味方全体の基礎ATK20%アップ/闇属性の味方の基礎ATK5%アップ闇属性の味方のATK100%アップ闇属性の味方のクリティカル時ダメージ倍率25%加算自身の初期シスターゲージ+20%",
@@ -1053,12 +1176,14 @@
    "date": "2026/05/31",
    "owned": false,
    "ownedSister": null,
-   "wimg": "img/sw61_icon.png"
+   "wimg": "img/sw61_icon.png",
+   "wart": "img/sw61.png"
   },
   {
    "idx": 62,
    "name": "ラクシャ",
    "icon": "attach2/696D67_E382B7E382B9E382BFE383BC5FE383A9E382AFE382B7E383A35F69636F6E5F4E462E706E67.png",
+   "href": "%E3%82%B7%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%A9%E3%82%AF%E3%82%B7%E3%83%A3",
    "attr": "雷",
    "type": "SPD",
    "team": "味方全体の基礎ATK20%アップ/神族または雷属性の味方の基礎ATK5%アップ神族または雷属性の味方のATK100%アップ神族または雷属性の味方のクリティカル時のダメージ倍率をラッシュ数×0.3%加算(最大30%)自身の初期シスターゲージ+20%",
@@ -1070,12 +1195,14 @@
    "date": "2026/06/29",
    "owned": false,
    "ownedSister": null,
-   "wimg": "img/sw62_icon.png"
+   "wimg": "img/sw62_icon.png",
+   "wart": "img/sw62.png"
   },
   {
    "idx": 63,
    "name": "ルヴィネ",
    "icon": "attach2/696D67_E382B7E382B9E382BFE383BC5FE383ABE383B4E382A3E3838D5F69636F6E5F4E462E706E67.png",
+   "href": "%E3%82%B7%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%AB%E3%83%B4%E3%82%A3%E3%83%8D",
    "attr": "光",
    "type": "ATK",
    "team": "味方全体の基礎ATK20%アップ/味方全体の基礎ATKをチーム内の異なるメイン属性の数×1%アップ味方全体のATKをチーム内の異なるメイン属性の数×40%アップ/クリティカルをチーム内の異なるメイン属性の数×6%加算味方全体の有利属性ダメージ倍率をチーム内の異なるメイン属性の数×8%加算自身の初期シスターゲージ+20%",
@@ -1087,12 +1214,14 @@
    "date": "2026/07/07",
    "owned": false,
    "ownedSister": null,
-   "wimg": "img/sw63_icon.png"
+   "wimg": "img/sw63_icon.png",
+   "wart": "img/sw63.png"
   },
   {
    "idx": 64,
    "name": "煌嶺",
    "icon": "attach2/696D67_E382B7E382B9E382BFE383BC5FE7858CE5B6BA5F69636F6E5F4E462E706E67.png",
+   "href": "%E3%82%B7%E3%82%B9%E3%82%BF%E3%83%BC%E7%85%8C%E5%B6%BA",
    "attr": "炎",
    "type": "ATK",
    "team": "味方全体の基礎ATK20%アップ/魔族または炎属性の味方の基礎ATK5%アップ魔族または炎属性の味方のATK100%アップ/クリティカル15%加算/さらに魔族または炎属性の味方のATKを魔族または炎属性の味方の数×20%アップ/さらに魔族または炎属性の味方のクリティカルを魔族または炎属性の味方の数×3%加算 ※2つの条件を満たした場合でも効果は重複しない魔族または炎属性の味方の有利属性ダメージ倍率30%加算※2つの条件を満たした場合でも効果は重複しない自身の初期シスターゲージ+20%",
@@ -1104,12 +1233,14 @@
    "date": "2026/07/07",
    "owned": false,
    "ownedSister": null,
-   "wimg": "img/sw64_icon.png"
+   "wimg": "img/sw64_icon.png",
+   "wart": "img/sw64.png"
   },
   {
    "idx": 65,
    "name": "ネーゼマイン【悪戯】",
    "icon": "attach2/696D67_E382B7E382B9E382BFE383BC5FE3838DE383BCE382BCE3839EE382A4E383B3E38090E682AAE688AFE380915F69636F6E5F4E462E706E67.png",
+   "href": "%E3%82%B7%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%8D%E3%83%BC%E3%82%BC%E3%83%9E%E3%82%A4%E3%83%B3%E3%80%90%E6%82%AA%E6%88%AF%E3%80%91",
    "attr": "闇",
    "type": "SUP",
    "team": "味方全体の基礎ATK20%アップ/闇属性または攻撃タイプ魔法の味方の基礎ATK5%アップ人間または神族の味方のATK100%アップ/クリティカル15%加算/さらに人間または神族の味方のATKを人間または神族の味方の数×20%アップ/さらに人間または神族の味方のクリティカルを人間または神族の味方の数×3%加算 ※2つの条件を満たした場合でも効果は重複しない人間または神族の味方の有利属性ダメージ倍率*1030%加算自身の初期シスターゲージ+20%",
@@ -1121,12 +1252,14 @@
    "date": "2026/07/13",
    "owned": false,
    "ownedSister": null,
-   "wimg": "img/sw65_icon.png"
+   "wimg": "img/sw65_icon.png",
+   "wart": "img/sw65.png"
   },
   {
    "idx": 66,
    "name": "メルエル【極光】",
    "icon": "attach2/696D67_E382B7E382B9E382BFE383BC5FE383A1E383ABE382A8E383ABE38090E6A5B5E58589E380915F69636F6E5F4E462E706E67.png",
+   "href": "%E3%82%B7%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%A1%E3%83%AB%E3%82%A8%E3%83%AB%E3%80%90%E6%A5%B5%E5%85%89%E3%80%91",
    "attr": "光",
    "type": "ATK",
    "team": "味方全体の基礎ATK20%アップ/神族または魔族の味方の基礎ATK5%アップ神族または魔族の味方のATK100%アップ/クリティカル15%加算/さらに神族または魔族の味方のATKを神族または魔族の味方の数×20%アップ/さらに神族または魔族の味方のクリティカルを神族または魔族の味方の数×3%加算 ※2つの条件を満たした場合でも効果は重複しない神族または魔族の味方の有利属性ダメージ倍率*1130%加算自身の初期シスターゲージ+20%",
@@ -1138,12 +1271,14 @@
    "date": "2026/07/13",
    "owned": false,
    "ownedSister": null,
-   "wimg": "img/sw66_icon.png"
+   "wimg": "img/sw66_icon.png",
+   "wart": "img/sw66.png"
   },
   {
    "idx": 67,
    "name": "サーシャ",
    "icon": "attach2/696D67_E382B7E382B9E382BFE383BC5FE382B5E383BCE382B7E383A35F69636F6E5F4E462E706E67.png",
+   "href": "%E3%82%B7%E3%82%B9%E3%82%BF%E3%83%BC%E3%82%B5%E3%83%BC%E3%82%B7%E3%83%A3",
    "attr": "水",
    "type": "ATK",
    "team": "味方全体の基礎ATK20%アップ/魔族の味方の基礎ATK5%アップ魔族の味方のATK100%アップ魔族の味方の通常攻撃のノックバック量2増加自身の初期シスターゲージ+20%",
@@ -1155,12 +1290,14 @@
    "date": "2026/07/28",
    "owned": false,
    "ownedSister": null,
-   "wimg": "img/sw67_icon.png"
+   "wimg": "img/sw67_icon.png",
+   "wart": "img/sw67.png"
   },
   {
    "idx": 68,
    "name": "聖沙【水着】",
    "icon": "attach2/696D67_E382B7E382B9E382BFE383BC5FE88196E6B299E38090E6B0B4E79D80E380915F69636F6E5F4E462E706E67.png",
+   "href": "%E3%82%B7%E3%82%B9%E3%82%BF%E3%83%BC%E8%81%96%E6%B2%99%E3%80%90%E6%B0%B4%E7%9D%80%E3%80%91",
    "attr": "雷",
    "type": "ATK",
    "team": "味方全体の基礎ATK20%アップ/人間の味方の基礎ATKをチーム内の異なるメイン属性の数×1%アップ人間の味方のATKをチーム内の異なるメイン属性の数×40%アップ/クリティカルをチーム内の異なるメイン属性の数×6%加算人間の有利属性ダメージ倍率をチーム内の異なるメイン属性の数×8%加算自身の初期シスターゲージ+20%",
@@ -1172,12 +1309,14 @@
    "date": "2026/08/19",
    "owned": false,
    "ownedSister": null,
-   "wimg": "img/sw68_icon.png"
+   "wimg": "img/sw68_icon.png",
+   "wart": "img/sw68.png"
   },
   {
    "idx": 69,
    "name": "リア【水着】",
    "icon": "attach2/696D67_E382B7E382B9E382BFE383BC5FE383AAE382A2E38090E6B0B4E79D80E380915F69636F6E5F4E462E706E67.png",
+   "href": "%E3%82%B7%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%AA%E3%82%A2%E3%80%90%E6%B0%B4%E7%9D%80%E3%80%91",
    "attr": "光",
    "type": "SUP",
    "team": "味方全体の基礎ATK20%アップ/人間または流星学園の味方の基礎ATK5%アップ人間または流星学園の味方のATK100%アップ/クリティカル20%加算※2つの条件を満たした場合でも効果は重複しない人間または流星学園の味方の有利属性ダメージ倍率30%加算※2つの条件を満たした場合でも効果は重複しない自身の初期シスターゲージ+20%",
@@ -1189,12 +1328,14 @@
    "date": "2026/08/24",
    "owned": false,
    "ownedSister": null,
-   "wimg": "img/sw69_icon.png"
+   "wimg": "img/sw69_icon.png",
+   "wart": "img/sw69.png"
   },
   {
    "idx": 70,
    "name": "蘭美",
    "icon": "attach2/696D67_E382B7E382B9E382BFE383BC5FE898ADE7BE8E5F69636F6E5F4E462E706E67.png",
+   "href": "%E3%82%B7%E3%82%B9%E3%82%BF%E3%83%BC%E8%98%AD%E7%BE%8E",
    "attr": "光",
    "type": "SPD",
    "team": "味方全体の基礎ATK20%アップ/魔族または光属性の味方の基礎ATK5%アップ魔族または光属性の味方のATK100%アップ/クリティカル20%加算魔族または光属性の味方のクリティカル時のダメージ倍率25%加算自身の初期シスターゲージ+20%",
@@ -1206,7 +1347,8 @@
    "date": "2026/09/01",
    "owned": false,
    "ownedSister": null,
-   "wimg": "img/sw70_icon.png"
+   "wimg": "img/sw70_icon.png",
+   "wart": "img/sw70.png"
   }
  ]
 }

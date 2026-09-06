@@ -107,7 +107,7 @@ Frida / il2cpp-bridge 从游戏客户端内存 dump 的 `TSK.Network.Domain.Unit
 
 ## シスター sister_unit_list.json（12 名持有）
 
-「シスター」是随队支援系统角色，与上阵卡互相独立。`sister_unit_id` 与对应角色基础卡的 `unit_id` 一致（如 1001001=フィオナ），立绘/头像直接复用 `img/{sister_unit_id}*.png`。
+「シスター」是随队支援系统角色，与上阵卡互相独立。注意：**シスター是独立单位类型**，虽然 `sister_unit_id` 与对应角色基础卡的 `unit_id` 数字相同（如 1001001=フィオナ），但两者立绘/头像完全不同——页面**一律使用 Wiki 专属图**（Q 版 SD 风格），不复用 `img/{unit_id}*.png` 的 unit 全身立绘。
 
 | 字段 | 说明 |
 |---|---|
@@ -122,7 +122,7 @@ Frida / il2cpp-bridge 从游戏客户端内存 dump 的 `TSK.Network.Domain.Unit
 | `effect_rate` / `limit_date_text` | 读取失败占位（`<error>: access violation`） |
 | `attack_type` | 全部 0（シスター不直接攻击） |
 
-Wiki 侧数据（`fetch_sisters.mjs` → `sister_wiki.json`，71 名）：チームスキル（满级合计文本）、アクティブスキル発動条件/対象/効果（满级）、ゲージ速度、入手方法、実装日；未持有图标存 `img/sw{idx}_icon.png`。
+Wiki 侧数据（`fetch_sisters.mjs` → `sister_wiki.json`，71 名）：チームスキル（满级合计文本）、アクティブスキル発動条件/対象/効果（满级）、ゲージ速度、入手方法、実装日。图片全部为 Wiki 专属资源：图标 `img/sw{idx}_icon.png`（71 张，一覧表 lazyload `data-src`）、Q 版立绘 `img/sw{idx}.png`（71 张，逐详情页抓取，attach2 第二段 hex 解码文件名，形如 `シスター{名}.png`）。
 
 ## 页面已使用 / 未使用速查
 
