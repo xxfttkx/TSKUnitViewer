@@ -744,6 +744,68 @@
     "attr_type": 4,
     "role": 1,
     "camp": 2,
+    "notice_flg": 0,
+    "support_skill_detail_display": "<error>: Error: access violation accessing 0x10",
+    "effect_rate": 0,
+    "limit_date_text": "<error>: Error: access violation accessing 0x10",
+    "is_used": 0,
+    "is_prohibited": 0,
+    "attack_type": 0,
+    "limit_break_count": 1,
+    "support_skill_data": {
+      "class_name": "TKS.Network.Domain.SisterSupportSkillData",
+      "support_skill_id": 1047001,
+      "lv": 10,
+      "max_lv": 10,
+      "skill_name": "ディヴォーテッド・エレジー",
+      "skill_detail": "味方全体の基礎ATK20％アップ/光属性の味方の基礎ATK5％アップ\n光属性の味方のATK100％アップ\n光属性の味方の有利属性ダメージ倍率50％加算\n自身の初期シスターゲージ+20%",
+      "icon_id": 0,
+      "next_lv_list": []
+    },
+    "active_skill_data": {
+      "class_name": "TKS.Network.Domain.SisterActiveSkillData",
+      "active_skill_id": 21047001,
+      "lv": 10,
+      "max_lv": 10,
+      "skill_type": 2,
+      "skill_name": "ディヴォーテッド・ロンド",
+      "skill_detail": "いずれかの敵がスタンした時に発動\n光属性の味方のATK100％アップ（15CT）/クリティカルを50％加算（15CT）",
+      "icon_id": 0,
+      "next_lv_list": []
+    },
+    "extra_support_skill_data": {
+      "class_name": "TKS.Network.Domain.SisterExtraSupportSkillData",
+      "extra_support_skill_id": 11047001,
+      "extra_support_skill_flg": 1,
+      "is_release": 0,
+      "release_skill_data": {
+        "class_name": "TKS.Network.Domain.ReleaseSkillData",
+        "skill_name": "ディヴォーテッド・エレジー",
+        "skill_detail": "味方全体の基礎ATK20％アップ<color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color><color=#16C97B></color>\n光属性の味方のATK100％アップ\n<color=#16C97B>光属性の味方の有利属性ダメージ倍率50％加算</color>\n自身の初期シスターゲージ+20%",
+        "icon_id": 0,
+        "cost_item_list": []
+      }
+    },
+    "limit_break_data": {
+      "class_name": "TKS.Network.Domain.SisterLimitBreakData",
+      "limit_break_flg": 1,
+      "is_release": 0,
+      "next_limit_break_list": []
+    }
+  },
+  {
+    "class_name": "TKS.Network.Domain.SisterEntity",
+    "is_rental": 0,
+    "u_sister_unit_id": 312684,
+    "sister_unit_id": 1051003,
+    "character_id": 51,
+    "character_name": "クラウディア【Xmas】",
+    "character_name_kana": "クラウティア",
+    "sister_name": "シスター",
+    "unit_illust_id": 1051003,
+    "attr_type": 4,
+    "role": 1,
+    "camp": 3,
     "notice_flg": 1,
     "support_skill_detail_display": "<error>: Error: access violation accessing 0x10",
     "effect_rate": 0,
@@ -754,293 +816,34 @@
     "limit_break_count": 0,
     "support_skill_data": {
       "class_name": "TKS.Network.Domain.SisterSupportSkillData",
-      "support_skill_id": 1047001,
-      "lv": 1,
+      "support_skill_id": 1051003,
+      "lv": 10,
       "max_lv": 10,
-      "skill_name": "ディヴォーテッド・エレジー",
-      "skill_detail": "味方全体の基礎ATK2％アップ\n光属性の味方のATK50％アップ",
+      "skill_name": "デビリアル・セラフ",
+      "skill_detail": "味方全体の基礎ATK20％アップ\n魔族の味方のATK75％アップ/さらに攻撃タイプ魔法の味方のATK75％アップ/魔族の味方のクリティカル15％加算/さらに攻撃タイプ魔法の味方のクリティカル15％加算",
       "icon_id": 0,
-      "next_lv_list": [
-        {
-          "class_name": "TKS.Network.Domain.SisterSupportSkillNextLevelData",
-          "lv": 2,
-          "skill_name": "ディヴォーテッド・エレジー",
-          "skill_detail": "味方全体の基礎ATK<color=#16C97B>4</color>％アップ\n光属性の味方のATK<color=#16C97B>55</color>％アップ",
-          "icon_id": 0,
-          "is_strengthen": 1,
-          "cost_item_list": [
-            "TKS.Network.Domain.SisterCostItemData",
-            "TKS.Network.Domain.SisterCostItemData",
-            "TKS.Network.Domain.SisterCostItemData"
-          ]
-        },
-        {
-          "class_name": "TKS.Network.Domain.SisterSupportSkillNextLevelData",
-          "lv": 3,
-          "skill_name": "ディヴォーテッド・エレジー",
-          "skill_detail": "味方全体の基礎ATK<color=#16C97B>6</color>％アップ\n光属性の味方のATK<color=#16C97B>61</color>％アップ",
-          "icon_id": 0,
-          "is_strengthen": 1,
-          "cost_item_list": [
-            "TKS.Network.Domain.SisterCostItemData",
-            "TKS.Network.Domain.SisterCostItemData",
-            "TKS.Network.Domain.SisterCostItemData"
-          ]
-        },
-        {
-          "class_name": "TKS.Network.Domain.SisterSupportSkillNextLevelData",
-          "lv": 4,
-          "skill_name": "ディヴォーテッド・エレジー",
-          "skill_detail": "味方全体の基礎ATK<color=#16C97B>8</color>％アップ\n光属性の味方のATK<color=#16C97B>66</color>％アップ",
-          "icon_id": 0,
-          "is_strengthen": 1,
-          "cost_item_list": [
-            "TKS.Network.Domain.SisterCostItemData",
-            "TKS.Network.Domain.SisterCostItemData",
-            "TKS.Network.Domain.SisterCostItemData"
-          ]
-        },
-        {
-          "class_name": "TKS.Network.Domain.SisterSupportSkillNextLevelData",
-          "lv": 5,
-          "skill_name": "ディヴォーテッド・エレジー",
-          "skill_detail": "味方全体の基礎ATK<color=#16C97B>10</color>％アップ\n光属性の味方のATK<color=#16C97B>72</color>％アップ",
-          "icon_id": 0,
-          "is_strengthen": 1,
-          "cost_item_list": [
-            "TKS.Network.Domain.SisterCostItemData",
-            "TKS.Network.Domain.SisterCostItemData",
-            "TKS.Network.Domain.SisterCostItemData"
-          ]
-        },
-        {
-          "class_name": "TKS.Network.Domain.SisterSupportSkillNextLevelData",
-          "lv": 6,
-          "skill_name": "ディヴォーテッド・エレジー",
-          "skill_detail": "味方全体の基礎ATK<color=#16C97B>12</color>％アップ\n光属性の味方のATK<color=#16C97B>77</color>％アップ",
-          "icon_id": 0,
-          "is_strengthen": 1,
-          "cost_item_list": [
-            "TKS.Network.Domain.SisterCostItemData",
-            "TKS.Network.Domain.SisterCostItemData",
-            "TKS.Network.Domain.SisterCostItemData",
-            "TKS.Network.Domain.SisterCostItemData"
-          ]
-        },
-        {
-          "class_name": "TKS.Network.Domain.SisterSupportSkillNextLevelData",
-          "lv": 7,
-          "skill_name": "ディヴォーテッド・エレジー",
-          "skill_detail": "味方全体の基礎ATK<color=#16C97B>14</color>％アップ\n光属性の味方のATK<color=#16C97B>83</color>％アップ",
-          "icon_id": 0,
-          "is_strengthen": 1,
-          "cost_item_list": [
-            "TKS.Network.Domain.SisterCostItemData",
-            "TKS.Network.Domain.SisterCostItemData",
-            "TKS.Network.Domain.SisterCostItemData",
-            "TKS.Network.Domain.SisterCostItemData"
-          ]
-        },
-        {
-          "class_name": "TKS.Network.Domain.SisterSupportSkillNextLevelData",
-          "lv": 8,
-          "skill_name": "ディヴォーテッド・エレジー",
-          "skill_detail": "味方全体の基礎ATK<color=#16C97B>16</color>％アップ\n光属性の味方のATK<color=#16C97B>88</color>％アップ",
-          "icon_id": 0,
-          "is_strengthen": 1,
-          "cost_item_list": [
-            "TKS.Network.Domain.SisterCostItemData",
-            "TKS.Network.Domain.SisterCostItemData",
-            "TKS.Network.Domain.SisterCostItemData",
-            "TKS.Network.Domain.SisterCostItemData",
-            "TKS.Network.Domain.SisterCostItemData"
-          ]
-        },
-        {
-          "class_name": "TKS.Network.Domain.SisterSupportSkillNextLevelData",
-          "lv": 9,
-          "skill_name": "ディヴォーテッド・エレジー",
-          "skill_detail": "味方全体の基礎ATK<color=#16C97B>18</color>％アップ\n光属性の味方のATK<color=#16C97B>94</color>％アップ",
-          "icon_id": 0,
-          "is_strengthen": 1,
-          "cost_item_list": [
-            "TKS.Network.Domain.SisterCostItemData",
-            "TKS.Network.Domain.SisterCostItemData",
-            "TKS.Network.Domain.SisterCostItemData",
-            "TKS.Network.Domain.SisterCostItemData",
-            "TKS.Network.Domain.SisterCostItemData"
-          ]
-        },
-        {
-          "class_name": "TKS.Network.Domain.SisterSupportSkillNextLevelData",
-          "lv": 10,
-          "skill_name": "ディヴォーテッド・エレジー",
-          "skill_detail": "味方全体の基礎ATK<color=#16C97B>20</color>％アップ\n光属性の味方のATK<color=#16C97B>100</color>％アップ",
-          "icon_id": 0,
-          "is_strengthen": 1,
-          "cost_item_list": [
-            "TKS.Network.Domain.SisterCostItemData",
-            "TKS.Network.Domain.SisterCostItemData",
-            "TKS.Network.Domain.SisterCostItemData",
-            "TKS.Network.Domain.SisterCostItemData",
-            "TKS.Network.Domain.SisterCostItemData"
-          ]
-        }
-      ]
+      "next_lv_list": []
     },
     "active_skill_data": {
       "class_name": "TKS.Network.Domain.SisterActiveSkillData",
-      "active_skill_id": 21047001,
-      "lv": 1,
+      "active_skill_id": 21051003,
+      "lv": 10,
       "max_lv": 10,
       "skill_type": 2,
-      "skill_name": "ディヴォーテッド・ロンド",
-      "skill_detail": "いずれかの敵がスタンした時に発動\n光属性の味方のATK50％アップ（15CT）/クリティカルを25％加算（15CT）",
+      "skill_name": "ルーン・アポカリプス",
+      "skill_detail": "いずれかの攻撃タイプ魔法の味方がEXスキル使用時に発動\n敵全体の被ダメージを魔族の味方の数×2％増加（10CT）",
       "icon_id": 0,
-      "next_lv_list": [
-        {
-          "class_name": "TKS.Network.Domain.SisterActiveSkillNextLevelData",
-          "lv": 2,
-          "skill_type": 2,
-          "skill_name": "ディヴォーテッド・ロンド",
-          "skill_detail": "いずれかの敵がスタンした時に発動\n光属性の味方のATK<color=#16C97B>55</color>％アップ（15CT）/クリティカルを25％加算（15CT）",
-          "icon_id": 0,
-          "is_strengthen": 1,
-          "cost_item_list": [
-            "TKS.Network.Domain.SisterCostItemData",
-            "TKS.Network.Domain.SisterCostItemData"
-          ]
-        },
-        {
-          "class_name": "TKS.Network.Domain.SisterActiveSkillNextLevelData",
-          "lv": 3,
-          "skill_type": 2,
-          "skill_name": "ディヴォーテッド・ロンド",
-          "skill_detail": "いずれかの敵がスタンした時に発動\n光属性の味方のATK<color=#16C97B>61</color>％アップ（15CT）/クリティカルを25％加算（15CT）",
-          "icon_id": 0,
-          "is_strengthen": 1,
-          "cost_item_list": [
-            "TKS.Network.Domain.SisterCostItemData",
-            "TKS.Network.Domain.SisterCostItemData"
-          ]
-        },
-        {
-          "class_name": "TKS.Network.Domain.SisterActiveSkillNextLevelData",
-          "lv": 4,
-          "skill_type": 2,
-          "skill_name": "ディヴォーテッド・ロンド",
-          "skill_detail": "いずれかの敵がスタンした時に発動\n光属性の味方のATK<color=#16C97B>66</color>％アップ（15CT）/クリティカルを<color=#16C97B>33</color>％加算（15CT）",
-          "icon_id": 0,
-          "is_strengthen": 1,
-          "cost_item_list": [
-            "TKS.Network.Domain.SisterCostItemData",
-            "TKS.Network.Domain.SisterCostItemData",
-            "TKS.Network.Domain.SisterCostItemData"
-          ]
-        },
-        {
-          "class_name": "TKS.Network.Domain.SisterActiveSkillNextLevelData",
-          "lv": 5,
-          "skill_type": 2,
-          "skill_name": "ディヴォーテッド・ロンド",
-          "skill_detail": "いずれかの敵がスタンした時に発動\n光属性の味方のATK<color=#16C97B>72</color>％アップ（15CT）/クリティカルを33％加算（15CT）",
-          "icon_id": 0,
-          "is_strengthen": 1,
-          "cost_item_list": [
-            "TKS.Network.Domain.SisterCostItemData",
-            "TKS.Network.Domain.SisterCostItemData",
-            "TKS.Network.Domain.SisterCostItemData"
-          ]
-        },
-        {
-          "class_name": "TKS.Network.Domain.SisterActiveSkillNextLevelData",
-          "lv": 6,
-          "skill_type": 2,
-          "skill_name": "ディヴォーテッド・ロンド",
-          "skill_detail": "いずれかの敵がスタンした時に発動\n光属性の味方のATK<color=#16C97B>77</color>％アップ（15CT）/クリティカルを33％加算（15CT）",
-          "icon_id": 0,
-          "is_strengthen": 1,
-          "cost_item_list": [
-            "TKS.Network.Domain.SisterCostItemData",
-            "TKS.Network.Domain.SisterCostItemData",
-            "TKS.Network.Domain.SisterCostItemData",
-            "TKS.Network.Domain.SisterCostItemData"
-          ]
-        },
-        {
-          "class_name": "TKS.Network.Domain.SisterActiveSkillNextLevelData",
-          "lv": 7,
-          "skill_type": 2,
-          "skill_name": "ディヴォーテッド・ロンド",
-          "skill_detail": "いずれかの敵がスタンした時に発動\n光属性の味方のATK<color=#16C97B>83</color>％アップ（15CT）/クリティカルを<color=#16C97B>41</color>％加算（15CT）",
-          "icon_id": 0,
-          "is_strengthen": 1,
-          "cost_item_list": [
-            "TKS.Network.Domain.SisterCostItemData",
-            "TKS.Network.Domain.SisterCostItemData",
-            "TKS.Network.Domain.SisterCostItemData",
-            "TKS.Network.Domain.SisterCostItemData"
-          ]
-        },
-        {
-          "class_name": "TKS.Network.Domain.SisterActiveSkillNextLevelData",
-          "lv": 8,
-          "skill_type": 2,
-          "skill_name": "ディヴォーテッド・ロンド",
-          "skill_detail": "いずれかの敵がスタンした時に発動\n光属性の味方のATK<color=#16C97B>88</color>％アップ（15CT）/クリティカルを41％加算（15CT）",
-          "icon_id": 0,
-          "is_strengthen": 1,
-          "cost_item_list": [
-            "TKS.Network.Domain.SisterCostItemData",
-            "TKS.Network.Domain.SisterCostItemData",
-            "TKS.Network.Domain.SisterCostItemData",
-            "TKS.Network.Domain.SisterCostItemData",
-            "TKS.Network.Domain.SisterCostItemData"
-          ]
-        },
-        {
-          "class_name": "TKS.Network.Domain.SisterActiveSkillNextLevelData",
-          "lv": 9,
-          "skill_type": 2,
-          "skill_name": "ディヴォーテッド・ロンド",
-          "skill_detail": "いずれかの敵がスタンした時に発動\n光属性の味方のATK<color=#16C97B>94</color>％アップ（15CT）/クリティカルを41％加算（15CT）",
-          "icon_id": 0,
-          "is_strengthen": 1,
-          "cost_item_list": [
-            "TKS.Network.Domain.SisterCostItemData",
-            "TKS.Network.Domain.SisterCostItemData",
-            "TKS.Network.Domain.SisterCostItemData",
-            "TKS.Network.Domain.SisterCostItemData",
-            "TKS.Network.Domain.SisterCostItemData"
-          ]
-        },
-        {
-          "class_name": "TKS.Network.Domain.SisterActiveSkillNextLevelData",
-          "lv": 10,
-          "skill_type": 2,
-          "skill_name": "ディヴォーテッド・ロンド",
-          "skill_detail": "いずれかの敵がスタンした時に発動\n光属性の味方のATK<color=#16C97B>100</color>％アップ（15CT）/クリティカルを<color=#16C97B>50</color>％加算（15CT）",
-          "icon_id": 0,
-          "is_strengthen": 1,
-          "cost_item_list": [
-            "TKS.Network.Domain.SisterCostItemData",
-            "TKS.Network.Domain.SisterCostItemData",
-            "TKS.Network.Domain.SisterCostItemData",
-            "TKS.Network.Domain.SisterCostItemData",
-            "TKS.Network.Domain.SisterCostItemData"
-          ]
-        }
-      ]
+      "next_lv_list": []
     },
     "extra_support_skill_data": {
       "class_name": "TKS.Network.Domain.SisterExtraSupportSkillData",
-      "extra_support_skill_id": 11047001,
+      "extra_support_skill_id": 11051003,
       "extra_support_skill_flg": 0,
       "is_release": 1,
       "release_skill_data": {
         "class_name": "TKS.Network.Domain.ReleaseSkillData",
-        "skill_name": "ディヴォーテッド・エレジー",
-        "skill_detail": "味方全体の基礎ATK<color=#16C97B>20</color>％アップ\n光属性の味方のATK<color=#16C97B>100</color>％アップ\n<color=#16C97B>光属性の味方の有利属性ダメージ倍率50％加算</color>",
+        "skill_name": "デビリアル・セラフ",
+        "skill_detail": "味方全体の基礎ATK20％アップ\n魔族の味方のATK75％アップ/さらに攻撃タイプ魔法の味方のATK75％アップ/魔族の味方のクリティカル15％加算/さらに攻撃タイプ魔法の味方のクリティカル15％加算\n<color=#16C97B>攻撃タイプ魔法の味方のクリティカル時のダメージ倍率25％加算</color>",
         "icon_id": 0,
         "cost_item_list": [
           "TKS.Network.Domain.SisterCostItemData",

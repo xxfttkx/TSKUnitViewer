@@ -1017,8 +1017,8 @@
     "max_exp": 99999999,
     "love_lv": 15,
     "max_love_lv": 30,
-    "total_love_exp": 4409,
-    "current_love_exp": 879,
+    "total_love_exp": 4472,
+    "current_love_exp": 942,
     "max_love_exp": 1300,
     "power": 49297,
     "team_hp": 3618,
@@ -1518,8 +1518,8 @@
     "max_exp": 99999999,
     "love_lv": 16,
     "max_love_lv": 30,
-    "total_love_exp": 5853,
-    "current_love_exp": 1023,
+    "total_love_exp": 5928,
+    "current_love_exp": 1098,
     "max_love_exp": 1600,
     "power": 38017,
     "team_hp": 7494,
@@ -3071,8 +3071,8 @@
     "max_exp": 99999999,
     "love_lv": 12,
     "max_love_lv": 30,
-    "total_love_exp": 1251,
-    "current_love_exp": 121,
+    "total_love_exp": 1436,
+    "current_love_exp": 306,
     "max_love_exp": 600,
     "power": 36960,
     "team_hp": 7842,
@@ -4933,8 +4933,8 @@
     "max_exp": 99999999,
     "love_lv": 14,
     "max_love_lv": 30,
-    "total_love_exp": 2646,
-    "current_love_exp": 116,
+    "total_love_exp": 2709,
+    "current_love_exp": 179,
     "max_love_exp": 1000,
     "power": 40538,
     "team_hp": 9392,
@@ -7448,6 +7448,271 @@
     "is_used": 0,
     "is_prohibited": 0,
     "skill_category_id_list": [
+      3001,
+      3004,
+      1001,
+      9999
+    ],
+    "skill_category_id_list_by_ex_type": {
+      "class_name": "TKS.Network.Domain.SkillCategoryIdListByExType",
+      "ex1": [
+        3001,
+        3004,
+        1001,
+        9999
+      ],
+      "ex1_plus": [],
+      "ex2": [
+        3001,
+        3004,
+        9999
+      ],
+      "ex2_plus": []
+    },
+    "effect_rate": 0,
+    "u_unit_id": 14097320,
+    "unit_id": 1005004,
+    "character_id": 5,
+    "unit_illust_id": 1005004,
+    "unit_view_type": 2,
+    "character_name": "ソフィア",
+    "character_name_kana": "ソフィア",
+    "unit_name": "温かシーツおばけ",
+    "rarity": 3,
+    "max_rarity": 5,
+    "attr_type": 5,
+    "role": 4,
+    "camp": 3,
+    "camp_list": [
+      3
+    ],
+    "affiliation": 1,
+    "affiliation_list": [
+      1
+    ],
+    "lv_limit_count": 0,
+    "lv": 1,
+    "max_lv": 60,
+    "core_lv": 0,
+    "max_core_lv": 3,
+    "total_exp": 0,
+    "current_exp": 0,
+    "max_exp": 20,
+    "love_lv": 0,
+    "max_love_lv": 30,
+    "total_love_exp": 0,
+    "current_love_exp": 0,
+    "max_love_exp": 10,
+    "power": 4904,
+    "team_hp": 834,
+    "is_bond_unit": 0,
+    "is_event_unit": 0,
+    "bond_lv": 0,
+    "is_awake_unit": 0,
+    "awakened_illust_display_type": 0,
+    "awake_unit_illust_id": -1,
+    "is_have": 0,
+    "full_name": "奏<style=p13>かなで</style>ソフィア",
+    "birthday": "11月20日",
+    "constellation": 8,
+    "guardian_star": "キタルファ ",
+    "school_year": 1,
+    "committee": "流星学園星徒会・書記",
+    "club": "",
+    "hobby": "パンケーキ屋巡り",
+    "cv": "姫宮にいな",
+    "profile": "ジャクリーヌの力の影響で発現した、ソフィア用の\n『ハロウィンフォーム』。\nポンチョのように頭へ被るシーツから、\n『シーツおばけ』とも呼ばれている。\n\n武器は『ナイフ＆フォーク』。ソフィアの好物で\nある『パンケーキ』を作り出す能力を持ち、作り\n出したものにはサポート星術を込めることが可能。\nローラースケートによって素早く移動し、味方に\nパンケーキをデリバリーしていく。\n\n故郷のレゾフにケーキの類はほぼなく、\n復活祭で『クリーチ』と呼ばれる砂糖を塗ったパンを食べる程度だった。\n人間界へきて初めて多種多様なケーキに出会って\n以来、すっかりその味に魅了されている。\nその中でも特に、温かいパンケーキを好む。",
+    "status_data": {
+      "class_name": "TKS.Network.Domain.UnitStatusEntity",
+      "base_data": {
+        "class_name": "TKS.Network.Domain.StatusEntity",
+        "hp": "834",
+        "init_ex_gauge": 30,
+        "max_ex_gauge": 300,
+        "min_wt": 13,
+        "max_wt": 17,
+        "attack": 119,
+        "critical": 300,
+        "ex_gauge_rate": 102,
+        "weight": 30
+      },
+      "add_love_lv": {
+        "class_name": "TKS.Network.Domain.StatusEntity",
+        "hp": "0",
+        "init_ex_gauge": 0,
+        "max_ex_gauge": 0,
+        "min_wt": 0,
+        "max_wt": 0,
+        "attack": 0,
+        "critical": 0,
+        "ex_gauge_rate": 0,
+        "weight": 0
+      }
+    },
+    "specific_gauge_data": {
+      "class_name": "TKS.Network.Domain.SpecificGaugeDataEntity",
+      "specific_name": "<error>: Error: access violation accessing 0x10",
+      "specific_detail": "<error>: Error: access violation accessing 0x10",
+      "icon_id": 0,
+      "is_unlock": 0,
+      "is_strengthen": 0
+    },
+    "skill_data": [
+      {
+        "class_name": "TKS.Network.Domain.SkillEntity",
+        "skill_data_type": 1,
+        "skill_id": 10050041,
+        "skill_name": "スイート☆パンケーキ",
+        "skill_detail": "敵全体に30％のダメージ/自身の行動CTを闇属性の異なるタイプの数×3％短縮（1CT）/自身の右2レーンにいる味方のATKを25％+自身の基礎ATK200ごと×4％アップ（30CT）（最大150％）/ノーツを1～2前方に移動",
+        "icon_id": 300,
+        "lv": 1,
+        "max_lv": 10,
+        "cost_ex_gauge": 100,
+        "is_unlock": 1,
+        "unlock_condition": "",
+        "specific_skill_name": "<error>: Error: access violation accessing 0x10",
+        "specific_skill_detail": "<error>: Error: access violation accessing 0x10",
+        "specific_skill_cost_ex_gauge": 0,
+        "enemy_special_skill_trigger_text": "",
+        "enemy_weak_gauge_decrease_condition_text": ""
+      },
+      {
+        "class_name": "TKS.Network.Domain.SkillEntity",
+        "skill_data_type": 1,
+        "skill_id": 10050042,
+        "skill_name": "プリティー☆デコレーション",
+        "skill_detail": "闇属性の味方のATKを50％+自身の基礎ATK200ごと×9％アップ（30CT）（最大300％）/行動CT7.5％短縮（10CT）/ノーツを4～5前方に移動/敵スタンゲージ0の時、自身のEX消費量20減少（次ターン以降EXスキル1回発動まで）",
+        "icon_id": 300,
+        "lv": 1,
+        "max_lv": 10,
+        "cost_ex_gauge": 200,
+        "is_unlock": 1,
+        "unlock_condition": "",
+        "specific_skill_name": "<error>: Error: access violation accessing 0x10",
+        "specific_skill_detail": "<error>: Error: access violation accessing 0x10",
+        "specific_skill_cost_ex_gauge": 0,
+        "enemy_special_skill_trigger_text": "",
+        "enemy_weak_gauge_decrease_condition_text": ""
+      },
+      {
+        "class_name": "TKS.Network.Domain.SkillEntity",
+        "skill_data_type": 2,
+        "skill_id": 1001001,
+        "skill_name": "フィオナユニゾンスキルA",
+        "skill_detail": "ユニゾン参加者が3体以上のとき50％の確率で発動。ユニゾン参加者全員に攻撃力80％アップを付与する。",
+        "icon_id": 1,
+        "lv": 3,
+        "max_lv": 5,
+        "cost_ex_gauge": -1,
+        "is_unlock": 1,
+        "unlock_condition": "",
+        "specific_skill_name": "<error>: Error: access violation accessing 0x10",
+        "specific_skill_detail": "<error>: Error: access violation accessing 0x10",
+        "specific_skill_cost_ex_gauge": 0,
+        "enemy_special_skill_trigger_text": "",
+        "enemy_weak_gauge_decrease_condition_text": ""
+      },
+      {
+        "class_name": "TKS.Network.Domain.SkillEntity",
+        "skill_data_type": 3,
+        "skill_id": 10010011,
+        "skill_name": "フィオナシスタースキルA",
+        "skill_detail": "味方のいずれかが攻撃した際、10％の確率で発動。敵単体に120％の追加攻撃を行う。",
+        "icon_id": 1,
+        "lv": 3,
+        "max_lv": 5,
+        "cost_ex_gauge": -1,
+        "is_unlock": 1,
+        "unlock_condition": "",
+        "specific_skill_name": "<error>: Error: access violation accessing 0x10",
+        "specific_skill_detail": "<error>: Error: access violation accessing 0x10",
+        "specific_skill_cost_ex_gauge": 0,
+        "enemy_special_skill_trigger_text": "",
+        "enemy_weak_gauge_decrease_condition_text": ""
+      }
+    ],
+    "unique_skill_data": [
+      {
+        "class_name": "TKS.Network.Domain.UnitUniqueSkillData",
+        "skill_id": -1,
+        "skill_name": "",
+        "detail": "自身のEX消費量5％減少",
+        "is_unlock": 0,
+        "unlock_condition": "限界突破★4にすると解放"
+      },
+      {
+        "class_name": "TKS.Network.Domain.UnitUniqueSkillData",
+        "skill_id": 43,
+        "skill_name": "初期EX上昇☆3",
+        "detail": "自身のEX5アップ",
+        "is_unlock": 0,
+        "unlock_condition": "限界突破★4にすると解放"
+      }
+    ],
+    "equip_data": [],
+    "resist_data": {
+      "class_name": "TKS.Network.Domain.UnitResistData",
+      "poison": 3,
+      "paralysis": 3,
+      "confusion": 3,
+      "atrophy": 3,
+      "seal": 3,
+      "burn": 3,
+      "flostbite": 3
+    },
+    "sp_equip_types": [
+      2
+    ],
+    "notice_flg": 1,
+    "tab_batch_data": {
+      "class_name": "TKS.Network.Domain.TabCharaDetailBatchDataEntity",
+      "ex_skill_stren_batch": 1,
+      "lv_limit_batch": 1,
+      "limit_break_batch": 0,
+      "bond_lv_batch": 0
+    },
+    "buff_effect": "<error>: Error: access violation accessing 0x18",
+    "exclusive_exchange_shop_data": {
+      "class_name": "TKS.Network.Domain.ExclusiveEquipShopEntity",
+      "shop_id": 2010,
+      "product_id": 255
+    },
+    "strengthen_flag_list": {
+      "class_name": "TKS.Network.Domain.StrengthenFlagEntity",
+      "ex_skill_stren_flag": 1,
+      "lv_limit_flag": 1,
+      "limit_break_flag": 0,
+      "core_lv_flag": 0
+    },
+    "base_status_data": {
+      "class_name": "TKS.Network.Domain.UnitBaseStatusDataEntity",
+      "base_data": {
+        "class_name": "TKS.Network.Domain.UnitBaseStatusEntity",
+        "hp": 834,
+        "init_ex_gauge": 30,
+        "max_ex_gauge": 300,
+        "min_wt": 13,
+        "max_wt": 17,
+        "attack": 119,
+        "critical": 300,
+        "ex_gauge_rate": 102
+      },
+      "add_ability_effect": {
+        "class_name": "TKS.Network.Domain.UnitAddAbilityEffect",
+        "hp": 0,
+        "attack": 0,
+        "ex_gauge_rate": 0,
+        "init_ex_gauge": 0
+      }
+    }
+  },
+  {
+    "class_name": "TKS.Network.Domain.UnitEntity",
+    "friend_user_id": 0,
+    "is_rental": 0,
+    "is_used": 0,
+    "is_prohibited": 0,
+    "skill_category_id_list": [
       3004,
       9999,
       3001
@@ -9493,8 +9758,8 @@
     "max_exp": 99999999,
     "love_lv": 15,
     "max_love_lv": 30,
-    "total_love_exp": 4527,
-    "current_love_exp": 997,
+    "total_love_exp": 4712,
+    "current_love_exp": 1182,
     "max_love_exp": 1300,
     "power": 35827,
     "team_hp": 7173,
@@ -14430,12 +14695,12 @@
     "total_exp": 245489,
     "current_exp": 0,
     "max_exp": 11293,
-    "love_lv": 11,
+    "love_lv": 12,
     "max_love_lv": 30,
-    "total_love_exp": 1088,
-    "current_love_exp": 358,
-    "max_love_exp": 400,
-    "power": 18817,
+    "total_love_exp": 1384,
+    "current_love_exp": 254,
+    "max_love_exp": 600,
+    "power": 18822,
     "team_hp": 3200,
     "is_bond_unit": 0,
     "is_event_unit": 0,
@@ -14476,7 +14741,7 @@
         "min_wt": 0,
         "max_wt": 0,
         "attack": 31,
-        "critical": 30,
+        "critical": 40,
         "ex_gauge_rate": 0,
         "weight": 0
       }
@@ -17450,8 +17715,8 @@
     "max_exp": 15807,
     "love_lv": 12,
     "max_love_lv": 30,
-    "total_love_exp": 1626,
-    "current_love_exp": 496,
+    "total_love_exp": 1701,
+    "current_love_exp": 571,
     "max_love_exp": 600,
     "power": 34336,
     "team_hp": 3046,
@@ -21333,8 +21598,8 @@
     "max_exp": 99999999,
     "love_lv": 13,
     "max_love_lv": 30,
-    "total_love_exp": 2191,
-    "current_love_exp": 461,
+    "total_love_exp": 2266,
+    "current_love_exp": 536,
     "max_love_exp": 800,
     "power": 43845,
     "team_hp": 8201,
@@ -31185,11 +31450,11 @@
     "max_exp": 99999999,
     "love_lv": 17,
     "max_love_lv": 30,
-    "total_love_exp": 6902,
-    "current_love_exp": 472,
+    "total_love_exp": 7652,
+    "current_love_exp": 1222,
     "max_love_exp": 1900,
-    "power": 38446,
-    "team_hp": 5503,
+    "power": 40208,
+    "team_hp": 6726,
     "is_bond_unit": 0,
     "is_event_unit": 0,
     "bond_lv": 0,
@@ -31211,13 +31476,13 @@
       "class_name": "TKS.Network.Domain.UnitStatusEntity",
       "base_data": {
         "class_name": "TKS.Network.Domain.StatusEntity",
-        "hp": "4389",
-        "init_ex_gauge": 30,
+        "hp": "4846",
+        "init_ex_gauge": 53,
         "max_ex_gauge": 300,
         "min_wt": 12,
         "max_wt": 16,
-        "attack": 776,
-        "critical": 920,
+        "attack": 806,
+        "critical": 300,
         "ex_gauge_rate": 102,
         "weight": 30
       },
@@ -31252,7 +31517,7 @@
         "icon_id": 705,
         "lv": 8,
         "max_lv": 10,
-        "cost_ex_gauge": 92,
+        "cost_ex_gauge": 90,
         "is_unlock": 1,
         "unlock_condition": "",
         "specific_skill_name": "<error>: Error: access violation accessing 0x10",
@@ -31270,12 +31535,12 @@
         "icon_id": 404,
         "lv": 10,
         "max_lv": 10,
-        "cost_ex_gauge": 192,
+        "cost_ex_gauge": 190,
         "is_unlock": 1,
         "unlock_condition": "",
         "specific_skill_name": "ミスチーフ・カタストロフ",
         "specific_skill_detail": "敵全体の被ダメージを80％増加（20CT）/人間または神族の味方のATKを100％+自身の基礎ATK200ごと×18％アップ（30CT）（最大300％）/味方全体の行動CT10％（人間または神族の場合、25％）短縮（25CT）/爆裂LV5以上の時、味方全体のATKをさらに100％アップ（30CT）/このEXスキル使用後、設置されているシェアハートボンバーをタイムライン後方に4移動",
-        "specific_skill_cost_ex_gauge": 192,
+        "specific_skill_cost_ex_gauge": 190,
         "enemy_special_skill_trigger_text": "",
         "enemy_weak_gauge_decrease_condition_text": ""
       },
@@ -31327,63 +31592,6 @@
       }
     ],
     "equip_data": [
-      {
-        "class_name": "TKS.Network.Domain.EquipListEntity",
-        "u_equip_id": 25181631,
-        "equip_id": 2200008,
-        "equip_name": "魔女の帽子",
-        "equip_part": 2,
-        "equip_type": 0,
-        "exclusive_unit_id": 0,
-        "exclusive_unit_name": "",
-        "illust_id": "equip_2200008",
-        "rarity": 2,
-        "limit_break_count": 2,
-        "max_limit_break_count": 4,
-        "equip_awake_flag": 0,
-        "is_equip_awake": 0,
-        "can_equip_awake": 0,
-        "resonance_count": 0,
-        "max_resonance_count": 0,
-        "lv": 30,
-        "max_lv": 30,
-        "total_exp": 19176,
-        "current_exp": 0,
-        "max_exp": 2567,
-        "lock_flg": 0,
-        "equipped_unit": {
-          "class_name": "TKS.Network.Domain.EquippedUnitEntity",
-          "character_name": "ネーゼマイン《悪戯》",
-          "unit_name": "アビストリガー",
-          "unit_id": 1041005
-        },
-        "parameter_list": [
-          {
-            "class_name": "TKS.Network.Domain.EquipParameterListEntity",
-            "parameter_type": 0,
-            "parameter_value": 850
-          },
-          {
-            "class_name": "TKS.Network.Domain.EquipParameterListEntity",
-            "parameter_type": 2,
-            "parameter_value": 14
-          }
-        ],
-        "skill_data": {
-          "class_name": "TKS.Network.Domain.EquipSkillDataEntity",
-          "skill_id": 2200008,
-          "lv": 3,
-          "skill_detail": "火傷耐性を1段階アップ"
-        },
-        "enchant_frame_list": [],
-        "lottery_skill_enchant_list": [],
-        "sell_data": {
-          "class_name": "TKS.Network.Domain.EquipSellData",
-          "get_currency": 12000,
-          "get_coin": 300
-        },
-        "notice_flg": 1
-      },
       {
         "class_name": "TKS.Network.Domain.EquipListEntity",
         "u_equip_id": 27059292,
@@ -31544,6 +31752,63 @@
           "class_name": "TKS.Network.Domain.EquipSellData",
           "get_currency": 280000,
           "get_coin": 7000
+        },
+        "notice_flg": 0
+      },
+      {
+        "class_name": "TKS.Network.Domain.EquipListEntity",
+        "u_equip_id": 34885315,
+        "equip_id": 2300037,
+        "equip_name": "バレンタイン着物",
+        "equip_part": 2,
+        "equip_type": 0,
+        "exclusive_unit_id": 0,
+        "exclusive_unit_name": "",
+        "illust_id": "equip_2300037",
+        "rarity": 3,
+        "limit_break_count": 4,
+        "max_limit_break_count": 4,
+        "equip_awake_flag": 0,
+        "is_equip_awake": 0,
+        "can_equip_awake": 0,
+        "resonance_count": 0,
+        "max_resonance_count": 0,
+        "lv": 50,
+        "max_lv": 50,
+        "total_exp": 177710,
+        "current_exp": 0,
+        "max_exp": 10492,
+        "lock_flg": 0,
+        "equipped_unit": {
+          "class_name": "TKS.Network.Domain.EquippedUnitEntity",
+          "character_name": "ネーゼマイン《悪戯》",
+          "unit_name": "アビストリガー",
+          "unit_id": 1041005
+        },
+        "parameter_list": [
+          {
+            "class_name": "TKS.Network.Domain.EquipParameterListEntity",
+            "parameter_type": 0,
+            "parameter_value": 2073
+          },
+          {
+            "class_name": "TKS.Network.Domain.EquipParameterListEntity",
+            "parameter_type": 2,
+            "parameter_value": 30
+          }
+        ],
+        "skill_data": {
+          "class_name": "TKS.Network.Domain.EquipSkillDataEntity",
+          "skill_id": 2300037,
+          "lv": 5,
+          "skill_detail": "火傷耐性を1段階アップ/バトル開始時、自身を含む炎属性の味方を3体以上編成している時、クリティカル25％加算"
+        },
+        "enchant_frame_list": [],
+        "lottery_skill_enchant_list": [],
+        "sell_data": {
+          "class_name": "TKS.Network.Domain.EquipSellData",
+          "get_currency": 200000,
+          "get_coin": 5000
         },
         "notice_flg": 0
       }
@@ -35881,7 +36146,7 @@
     "total_love_exp": 375,
     "current_love_exp": 45,
     "max_love_exp": 150,
-    "power": 16055,
+    "power": 19155,
     "team_hp": 3838,
     "is_bond_unit": 0,
     "is_event_unit": 0,
@@ -35941,9 +36206,9 @@
         "skill_data_type": 1,
         "skill_id": 10480011,
         "skill_name": "グラビトンプレッシャー",
-        "skill_detail": "敵単体の重さ11.8％ダウン（31CT）/128％のダメージ/一番後方の味方のノーツを6前方に移動",
+        "skill_detail": "敵単体の重さ13.7％ダウン（37CT）/170％のダメージ/一番後方の味方のノーツを7前方に移動",
         "icon_id": 403,
-        "lv": 4,
+        "lv": 8,
         "max_lv": 10,
         "cost_ex_gauge": 100,
         "is_unlock": 1,
@@ -35959,9 +36224,9 @@
         "skill_data_type": 1,
         "skill_id": 10480012,
         "skill_name": "ブラックホール・ドミネーション",
-        "skill_detail": "敵全体に72％のダメージ/ノーツを6～7後方に強制移動（レーン隣接している敵は対象レーンから離れるほど移動量は-1ずつ減少）/味方全体の重さ21.4％アップ（32CT）",
+        "skill_detail": "敵全体に88％のダメージ/ノーツを7～8後方に強制移動（レーン隣接している敵は対象レーンから離れるほど移動量は-1ずつ減少）/味方全体の重さ30.2％アップ（37CT）",
         "icon_id": 201,
-        "lv": 5,
+        "lv": 8,
         "max_lv": 10,
         "cost_ex_gauge": 200,
         "is_unlock": 1,
@@ -36701,8 +36966,8 @@
     "total_love_exp": 750,
     "current_love_exp": 20,
     "max_love_exp": 400,
-    "power": 23198,
-    "team_hp": 5295,
+    "power": 25494,
+    "team_hp": 6145,
     "is_bond_unit": 0,
     "is_event_unit": 0,
     "bond_lv": 0,
@@ -36761,9 +37026,9 @@
         "skill_data_type": 1,
         "skill_id": 10480031,
         "skill_name": "デストームテイル",
-        "skill_detail": "敵単体に166％のダメージ/「超竜の呪縛」を付与（4CT）/一番右に配置されている味方のATKを41％+自身の基礎ATK200ごと×6.66％アップ（30CT）（最大150％）/一番後方の味方のノーツを9前方に移動\n※超竜の呪縛：1CT経過ごとの通常ノーツ移動の移動方向が反転する",
+        "skill_detail": "敵単体に177％のダメージ/「超竜の呪縛」を付与（4CT）/一番右に配置されている味方のATKを44％+自身の基礎ATK200ごと×7.11％アップ（30CT）（最大150％）/一番後方の味方のノーツを9前方に移動\n※超竜の呪縛：1CT経過ごとの通常ノーツ移動の移動方向が反転する",
         "icon_id": 427,
-        "lv": 7,
+        "lv": 8,
         "max_lv": 10,
         "cost_ex_gauge": 100,
         "is_unlock": 1,
@@ -36779,9 +37044,9 @@
         "skill_data_type": 1,
         "skill_id": 10480032,
         "skill_name": "ブラックホールブレイザー",
-        "skill_detail": "対象とその左右1レーンにいる敵すべてに「超竜の呪縛」を付与（3CT）/魔族の味方のATKを83％+自身の基礎ATK200ごと×20.8％アップ（30CT）（最大400％）/クリティカルを魔族の味方の数×6.83％加算（30CT）/味方全体のノーツを3～4前方に移動\n※超竜の呪縛：1CT経過ごとの通常ノーツ移動の移動方向が反転する",
+        "skill_detail": "対象とその左右1レーンにいる敵すべてに「超竜の呪縛」を付与（3CT）/魔族の味方のATKを88％+自身の基礎ATK200ごと×22.2％アップ（30CT）（最大400％）/クリティカルを魔族の味方の数×7.28％加算（30CT）/味方全体のノーツを3～4前方に移動\n※超竜の呪縛：1CT経過ごとの通常ノーツ移動の移動方向が反転する",
         "icon_id": 427,
-        "lv": 7,
+        "lv": 8,
         "max_lv": 10,
         "cost_ex_gauge": 200,
         "is_unlock": 1,
@@ -36856,6 +37121,63 @@
       }
     ],
     "equip_data": [
+      {
+        "class_name": "TKS.Network.Domain.EquipListEntity",
+        "u_equip_id": 25181631,
+        "equip_id": 2200008,
+        "equip_name": "魔女の帽子",
+        "equip_part": 2,
+        "equip_type": 0,
+        "exclusive_unit_id": 0,
+        "exclusive_unit_name": "",
+        "illust_id": "equip_2200008",
+        "rarity": 2,
+        "limit_break_count": 2,
+        "max_limit_break_count": 4,
+        "equip_awake_flag": 0,
+        "is_equip_awake": 0,
+        "can_equip_awake": 0,
+        "resonance_count": 0,
+        "max_resonance_count": 0,
+        "lv": 30,
+        "max_lv": 30,
+        "total_exp": 19176,
+        "current_exp": 0,
+        "max_exp": 2567,
+        "lock_flg": 0,
+        "equipped_unit": {
+          "class_name": "TKS.Network.Domain.EquippedUnitEntity",
+          "character_name": "マハムート《超竜》",
+          "unit_name": "畏怖たる寵妃",
+          "unit_id": 1048003
+        },
+        "parameter_list": [
+          {
+            "class_name": "TKS.Network.Domain.EquipParameterListEntity",
+            "parameter_type": 0,
+            "parameter_value": 850
+          },
+          {
+            "class_name": "TKS.Network.Domain.EquipParameterListEntity",
+            "parameter_type": 2,
+            "parameter_value": 14
+          }
+        ],
+        "skill_data": {
+          "class_name": "TKS.Network.Domain.EquipSkillDataEntity",
+          "skill_id": 2200008,
+          "lv": 3,
+          "skill_detail": "火傷耐性を1段階アップ"
+        },
+        "enchant_frame_list": [],
+        "lottery_skill_enchant_list": [],
+        "sell_data": {
+          "class_name": "TKS.Network.Domain.EquipSellData",
+          "get_currency": 12000,
+          "get_coin": 300
+        },
+        "notice_flg": 1
+      },
       {
         "class_name": "TKS.Network.Domain.EquipListEntity",
         "u_equip_id": 25914828,
@@ -38456,8 +38778,8 @@
     "max_exp": 99999999,
     "love_lv": 11,
     "max_love_lv": 30,
-    "total_love_exp": 750,
-    "current_love_exp": 20,
+    "total_love_exp": 825,
+    "current_love_exp": 95,
     "max_love_exp": 400,
     "power": 31308,
     "team_hp": 8273,
@@ -41953,8 +42275,8 @@
     "max_exp": 99999999,
     "love_lv": 15,
     "max_love_lv": 30,
-    "total_love_exp": 4183,
-    "current_love_exp": 653,
+    "total_love_exp": 4479,
+    "current_love_exp": 949,
     "max_love_exp": 1300,
     "power": 26371,
     "team_hp": 7681,
@@ -47156,8 +47478,8 @@
     "max_exp": 99999999,
     "love_lv": 15,
     "max_love_lv": 30,
-    "total_love_exp": 3963,
-    "current_love_exp": 433,
+    "total_love_exp": 4259,
+    "current_love_exp": 729,
     "max_love_exp": 1300,
     "power": 25643,
     "team_hp": 7026,
@@ -51143,12 +51465,12 @@
     "total_exp": 680999,
     "current_exp": 0,
     "max_exp": 99999999,
-    "love_lv": 13,
+    "love_lv": 14,
     "max_love_lv": 30,
-    "total_love_exp": 2456,
-    "current_love_exp": 726,
-    "max_love_exp": 800,
-    "power": 40207,
+    "total_love_exp": 2531,
+    "current_love_exp": 1,
+    "max_love_exp": 1000,
+    "power": 40283,
     "team_hp": 8707,
     "is_bond_unit": 0,
     "is_event_unit": 0,
@@ -51188,7 +51510,7 @@
         "max_ex_gauge": 0,
         "min_wt": 0,
         "max_wt": 0,
-        "attack": 56,
+        "attack": 70,
         "critical": 40,
         "ex_gauge_rate": 0,
         "weight": 0
@@ -52276,6 +52598,271 @@
         "attack": 960,
         "critical": 500,
         "ex_gauge_rate": 84
+      },
+      "add_ability_effect": {
+        "class_name": "TKS.Network.Domain.UnitAddAbilityEffect",
+        "hp": 0,
+        "attack": 0,
+        "ex_gauge_rate": 0,
+        "init_ex_gauge": 0
+      }
+    }
+  },
+  {
+    "class_name": "TKS.Network.Domain.UnitEntity",
+    "friend_user_id": 0,
+    "is_rental": 0,
+    "is_used": 0,
+    "is_prohibited": 0,
+    "skill_category_id_list": [
+      3001,
+      3004,
+      9999,
+      1002,
+      3003
+    ],
+    "skill_category_id_list_by_ex_type": {
+      "class_name": "TKS.Network.Domain.SkillCategoryIdListByExType",
+      "ex1": [
+        3001,
+        3004,
+        9999,
+        1002
+      ],
+      "ex1_plus": [],
+      "ex2": [
+        3003,
+        9999
+      ],
+      "ex2_plus": []
+    },
+    "effect_rate": 0,
+    "u_unit_id": 14145197,
+    "unit_id": 1078002,
+    "character_id": 78,
+    "unit_illust_id": 1078002,
+    "unit_view_type": 2,
+    "character_name": "トリュファイナ",
+    "character_name_kana": "トリュファイナ",
+    "unit_name": "月下魔弾の魔女兎",
+    "rarity": 2,
+    "max_rarity": 5,
+    "attr_type": 4,
+    "role": 1,
+    "camp": 3,
+    "camp_list": [
+      3
+    ],
+    "affiliation": 0,
+    "affiliation_list": [
+      0
+    ],
+    "lv_limit_count": 4,
+    "lv": 100,
+    "max_lv": 100,
+    "core_lv": 0,
+    "max_core_lv": 3,
+    "total_exp": 680999,
+    "current_exp": 0,
+    "max_exp": 99999999,
+    "love_lv": 0,
+    "max_love_lv": 30,
+    "total_love_exp": 0,
+    "current_love_exp": 0,
+    "max_love_exp": 10,
+    "power": 10336,
+    "team_hp": 4278,
+    "is_bond_unit": 0,
+    "is_event_unit": 0,
+    "bond_lv": 0,
+    "is_awake_unit": 0,
+    "awakened_illust_display_type": 0,
+    "awake_unit_illust_id": -1,
+    "is_have": 0,
+    "full_name": "トリュファイナ",
+    "birthday": "12月25日",
+    "constellation": 10,
+    "guardian_star": "なし",
+    "school_year": 0,
+    "committee": "",
+    "club": "",
+    "hobby": "ジャム作り",
+    "cv": "乃葉奈",
+    "profile": "ロストアイテム『ダッチ』の欲望によって覚醒した\nトリュファイナの『和装バニーフォーム』。\n露出が多めの格好に気恥ずかしさを覚えつつも、\n『新しい現代の文化に触れられました』と\n本人はけっこう気に入っている様子。\n\n光と再生を司るトリュファイナの能力も、\n和バニー衣装の影響を受けたためか変化し、\nガンロッドという魔弾を操る得物も手に入れた。\n魔力によって生成した弾丸を撃ちだすことで、\n敵を攻撃するも味方を癒すも自由自在。\n新たに得た力で、これまで以上にクロトを\nサポートできることが嬉しいと本人は語る。",
+    "status_data": {
+      "class_name": "TKS.Network.Domain.UnitStatusEntity",
+      "base_data": {
+        "class_name": "TKS.Network.Domain.StatusEntity",
+        "hp": "4278",
+        "init_ex_gauge": 25,
+        "max_ex_gauge": 200,
+        "min_wt": 15,
+        "max_wt": 19,
+        "attack": 829,
+        "critical": 500,
+        "ex_gauge_rate": 57,
+        "weight": 30
+      },
+      "add_love_lv": {
+        "class_name": "TKS.Network.Domain.StatusEntity",
+        "hp": "0",
+        "init_ex_gauge": 0,
+        "max_ex_gauge": 0,
+        "min_wt": 0,
+        "max_wt": 0,
+        "attack": 0,
+        "critical": 0,
+        "ex_gauge_rate": 0,
+        "weight": 0
+      }
+    },
+    "specific_gauge_data": {
+      "class_name": "TKS.Network.Domain.SpecificGaugeDataEntity",
+      "specific_name": "<error>: Error: access violation accessing 0x10",
+      "specific_detail": "<error>: Error: access violation accessing 0x10",
+      "icon_id": 0,
+      "is_unlock": 0,
+      "is_strengthen": 0
+    },
+    "skill_data": [
+      {
+        "class_name": "TKS.Network.Domain.SkillEntity",
+        "skill_data_type": 1,
+        "skill_id": 10780021,
+        "skill_name": "カンデラ・ヤクタ",
+        "skill_detail": "敵単体に50％×2回のダメージ/自身のATK50％アップ。さらに1バトル中、自身のEXスキル1の使用が2回目以降の時、自身のEXスキル1を使用する度にATKを10％ずつ増加する（20CT）（合計最大100％）/行動CT25％短縮（1CT）/1バトル中、自身のEXスキル1の使用が3回目以降の時、敵単体のATK10％ダウン（20CT）",
+        "icon_id": 101,
+        "lv": 1,
+        "max_lv": 10,
+        "cost_ex_gauge": 100,
+        "is_unlock": 1,
+        "unlock_condition": "",
+        "specific_skill_name": "<error>: Error: access violation accessing 0x10",
+        "specific_skill_detail": "<error>: Error: access violation accessing 0x10",
+        "specific_skill_cost_ex_gauge": 0,
+        "enemy_special_skill_trigger_text": "",
+        "enemy_weak_gauge_decrease_condition_text": ""
+      },
+      {
+        "class_name": "TKS.Network.Domain.SkillEntity",
+        "skill_data_type": 1,
+        "skill_id": 10780022,
+        "skill_name": "クラーラ・ヴェナティオー",
+        "skill_detail": "敵単体に800％（1バトル中、自身のEXスキル1の使用が4回目以降の時、1000％）のダメージ/自身のクリティカル時のダメージ倍率をラッシュ数×0.5％加算（1CT）（最大25％）/光属性の味方のノーツを1～2（ATKダウンを付与されている敵が1体以上の場合、4～5）前方に移動",
+        "icon_id": 100,
+        "lv": 1,
+        "max_lv": 10,
+        "cost_ex_gauge": 200,
+        "is_unlock": 0,
+        "unlock_condition": "限界突破で★3にすると解放",
+        "specific_skill_name": "<error>: Error: access violation accessing 0x10",
+        "specific_skill_detail": "<error>: Error: access violation accessing 0x10",
+        "specific_skill_cost_ex_gauge": 0,
+        "enemy_special_skill_trigger_text": "",
+        "enemy_weak_gauge_decrease_condition_text": ""
+      },
+      {
+        "class_name": "TKS.Network.Domain.SkillEntity",
+        "skill_data_type": 2,
+        "skill_id": 1001001,
+        "skill_name": "フィオナユニゾンスキルA",
+        "skill_detail": "ユニゾン参加者が3体以上のとき50％の確率で発動。ユニゾン参加者全員に攻撃力70％アップを付与する。",
+        "icon_id": 1,
+        "lv": 2,
+        "max_lv": 5,
+        "cost_ex_gauge": -1,
+        "is_unlock": 1,
+        "unlock_condition": "",
+        "specific_skill_name": "<error>: Error: access violation accessing 0x10",
+        "specific_skill_detail": "<error>: Error: access violation accessing 0x10",
+        "specific_skill_cost_ex_gauge": 0,
+        "enemy_special_skill_trigger_text": "",
+        "enemy_weak_gauge_decrease_condition_text": ""
+      },
+      {
+        "class_name": "TKS.Network.Domain.SkillEntity",
+        "skill_data_type": 3,
+        "skill_id": 10010011,
+        "skill_name": "フィオナシスタースキルA",
+        "skill_detail": "味方のいずれかが攻撃した際、10％の確率で発動。敵単体に110％の追加攻撃を行う。",
+        "icon_id": 1,
+        "lv": 2,
+        "max_lv": 5,
+        "cost_ex_gauge": -1,
+        "is_unlock": 1,
+        "unlock_condition": "",
+        "specific_skill_name": "<error>: Error: access violation accessing 0x10",
+        "specific_skill_detail": "<error>: Error: access violation accessing 0x10",
+        "specific_skill_cost_ex_gauge": 0,
+        "enemy_special_skill_trigger_text": "",
+        "enemy_weak_gauge_decrease_condition_text": ""
+      }
+    ],
+    "unique_skill_data": [
+      {
+        "class_name": "TKS.Network.Domain.UnitUniqueSkillData",
+        "skill_id": -1,
+        "skill_name": "",
+        "detail": "自身のEX消費量5％減少",
+        "is_unlock": 0,
+        "unlock_condition": "限界突破★4にすると解放"
+      },
+      {
+        "class_name": "TKS.Network.Domain.UnitUniqueSkillData",
+        "skill_id": 22,
+        "skill_name": "ATKアップ☆2",
+        "detail": "自身のATK2％アップ",
+        "is_unlock": 0,
+        "unlock_condition": "限界突破★4にすると解放"
+      }
+    ],
+    "equip_data": [],
+    "resist_data": {
+      "class_name": "TKS.Network.Domain.UnitResistData",
+      "poison": 3,
+      "paralysis": 3,
+      "confusion": 3,
+      "atrophy": 3,
+      "seal": 3,
+      "burn": 3,
+      "flostbite": 3
+    },
+    "sp_equip_types": [
+      1
+    ],
+    "notice_flg": 1,
+    "tab_batch_data": {
+      "class_name": "TKS.Network.Domain.TabCharaDetailBatchDataEntity",
+      "ex_skill_stren_batch": 1,
+      "lv_limit_batch": 0,
+      "limit_break_batch": 0,
+      "bond_lv_batch": 0
+    },
+    "buff_effect": "<error>: Error: access violation accessing 0x18",
+    "exclusive_exchange_shop_data": {
+      "class_name": "TKS.Network.Domain.ExclusiveEquipShopEntity",
+      "shop_id": 2010,
+      "product_id": 331
+    },
+    "strengthen_flag_list": {
+      "class_name": "TKS.Network.Domain.StrengthenFlagEntity",
+      "ex_skill_stren_flag": 1,
+      "lv_limit_flag": 0,
+      "limit_break_flag": 0,
+      "core_lv_flag": 0
+    },
+    "base_status_data": {
+      "class_name": "TKS.Network.Domain.UnitBaseStatusDataEntity",
+      "base_data": {
+        "class_name": "TKS.Network.Domain.UnitBaseStatusEntity",
+        "hp": 4278,
+        "init_ex_gauge": 25,
+        "max_ex_gauge": 200,
+        "min_wt": 15,
+        "max_wt": 19,
+        "attack": 829,
+        "critical": 500,
+        "ex_gauge_rate": 57
       },
       "add_ability_effect": {
         "class_name": "TKS.Network.Domain.UnitAddAbilityEffect",
@@ -54177,6 +54764,273 @@
     "is_used": 0,
     "is_prohibited": 0,
     "skill_category_id_list": [
+      3004,
+      9999,
+      1002,
+      4001,
+      4002
+    ],
+    "skill_category_id_list_by_ex_type": {
+      "class_name": "TKS.Network.Domain.SkillCategoryIdListByExType",
+      "ex1": [
+        3004,
+        9999,
+        1002
+      ],
+      "ex1_plus": [],
+      "ex2": [
+        4001,
+        4002,
+        1002,
+        9999
+      ],
+      "ex2_plus": []
+    },
+    "effect_rate": 0,
+    "u_unit_id": 14022421,
+    "unit_id": 1085002,
+    "character_id": 85,
+    "unit_illust_id": 1085002,
+    "unit_view_type": 2,
+    "character_name": "マグダレナ(ちぃ)",
+    "character_name_kana": "マクタレナ（チィ）",
+    "unit_name": "すこっぷりちぃ",
+    "rarity": 2,
+    "max_rarity": 5,
+    "attr_type": 4,
+    "role": 2,
+    "camp": 2,
+    "camp_list": [
+      2
+    ],
+    "affiliation": 3,
+    "affiliation_list": [
+      3,
+      5
+    ],
+    "lv_limit_count": 0,
+    "lv": 1,
+    "max_lv": 60,
+    "core_lv": 0,
+    "max_core_lv": 3,
+    "total_exp": 0,
+    "current_exp": 0,
+    "max_exp": 20,
+    "love_lv": 0,
+    "max_love_lv": 30,
+    "total_love_exp": 0,
+    "current_love_exp": 0,
+    "max_love_exp": 10,
+    "power": 2565,
+    "team_hp": 331,
+    "is_bond_unit": 0,
+    "is_event_unit": 0,
+    "bond_lv": 0,
+    "is_awake_unit": 0,
+    "awakened_illust_display_type": 0,
+    "awake_unit_illust_id": -1,
+    "is_have": 0,
+    "full_name": "マグダレナ(ちぃ)",
+    "birthday": "11月8日",
+    "constellation": 8,
+    "guardian_star": "なし",
+    "school_year": 0,
+    "committee": "",
+    "club": "",
+    "hobby": "テレビ鑑賞",
+    "cv": "花園ゆぁ",
+    "profile": "幼アバター状態のマグダレナが、新たに変身可能\nとなった『ちぃ水着フォーム』。\n\nフォームチェンジ技術の発展を受け、アニマが\n『守護天使の新たな可能性』を模索するために\n開発した、最新の人工戦闘服である。\n\n武器は『スコップ』。\n『領域』を司る《境界》の守護天使たるマグダレナ\nの力を具現化したもので、世界をブロック状の領域\nとして区分し、それを掘削・再配置・再構築する\nことができる。",
+    "status_data": {
+      "class_name": "TKS.Network.Domain.UnitStatusEntity",
+      "base_data": {
+        "class_name": "TKS.Network.Domain.StatusEntity",
+        "hp": "331",
+        "init_ex_gauge": 25,
+        "max_ex_gauge": 200,
+        "min_wt": 10,
+        "max_wt": 14,
+        "attack": 81,
+        "critical": 300,
+        "ex_gauge_rate": 30,
+        "weight": 30
+      },
+      "add_love_lv": {
+        "class_name": "TKS.Network.Domain.StatusEntity",
+        "hp": "0",
+        "init_ex_gauge": 0,
+        "max_ex_gauge": 0,
+        "min_wt": 0,
+        "max_wt": 0,
+        "attack": 0,
+        "critical": 0,
+        "ex_gauge_rate": 0,
+        "weight": 0
+      }
+    },
+    "specific_gauge_data": {
+      "class_name": "TKS.Network.Domain.SpecificGaugeDataEntity",
+      "specific_name": "<error>: Error: access violation accessing 0x10",
+      "specific_detail": "<error>: Error: access violation accessing 0x10",
+      "icon_id": 0,
+      "is_unlock": 0,
+      "is_strengthen": 0
+    },
+    "skill_data": [
+      {
+        "class_name": "TKS.Network.Domain.SkillEntity",
+        "skill_data_type": 1,
+        "skill_id": 10850021,
+        "skill_name": "テリトリアルスクレイプ",
+        "skill_detail": "対象とその左右1レーンにいる敵すべてに15％×2回のダメージ/自身の行動CT25％短縮（1CT）/ラッシュ30以上の時、自身のEX上昇をチーム内の神族の数×4（守護天使の味方を3体以上編成している時、6）アップ（25CT）",
+        "icon_id": 101,
+        "lv": 1,
+        "max_lv": 10,
+        "cost_ex_gauge": 100,
+        "is_unlock": 1,
+        "unlock_condition": "",
+        "specific_skill_name": "<error>: Error: access violation accessing 0x10",
+        "specific_skill_detail": "<error>: Error: access violation accessing 0x10",
+        "specific_skill_cost_ex_gauge": 0,
+        "enemy_special_skill_trigger_text": "",
+        "enemy_weak_gauge_decrease_condition_text": ""
+      },
+      {
+        "class_name": "TKS.Network.Domain.SkillEntity",
+        "skill_data_type": 1,
+        "skill_id": 10850022,
+        "skill_name": "リミナルディグブレイク",
+        "skill_detail": "敵単体に75％×5回のダメージ/自身を含む味方の守護天使の数に応じて以下の効果を適用する\n・2体以上：敵単体の被ダメージを20％増加（20CT）\n・3体以上：神族の味方のノーツを2～3前方に移動\n・5体：敵単体に破砕を付与（1CT）（優先発動）\n※破砕：攻撃タイプ打撃からの被ダメージが20％増加",
+        "icon_id": 101,
+        "lv": 1,
+        "max_lv": 10,
+        "cost_ex_gauge": 200,
+        "is_unlock": 0,
+        "unlock_condition": "限界突破で★3にすると解放",
+        "specific_skill_name": "<error>: Error: access violation accessing 0x10",
+        "specific_skill_detail": "<error>: Error: access violation accessing 0x10",
+        "specific_skill_cost_ex_gauge": 0,
+        "enemy_special_skill_trigger_text": "",
+        "enemy_weak_gauge_decrease_condition_text": ""
+      },
+      {
+        "class_name": "TKS.Network.Domain.SkillEntity",
+        "skill_data_type": 2,
+        "skill_id": 1001001,
+        "skill_name": "フィオナユニゾンスキルA",
+        "skill_detail": "ユニゾン参加者が3体以上のとき50％の確率で発動。ユニゾン参加者全員に攻撃力70％アップを付与する。",
+        "icon_id": 1,
+        "lv": 2,
+        "max_lv": 5,
+        "cost_ex_gauge": -1,
+        "is_unlock": 1,
+        "unlock_condition": "",
+        "specific_skill_name": "<error>: Error: access violation accessing 0x10",
+        "specific_skill_detail": "<error>: Error: access violation accessing 0x10",
+        "specific_skill_cost_ex_gauge": 0,
+        "enemy_special_skill_trigger_text": "",
+        "enemy_weak_gauge_decrease_condition_text": ""
+      },
+      {
+        "class_name": "TKS.Network.Domain.SkillEntity",
+        "skill_data_type": 3,
+        "skill_id": 10010011,
+        "skill_name": "フィオナシスタースキルA",
+        "skill_detail": "味方のいずれかが攻撃した際、10％の確率で発動。敵単体に110％の追加攻撃を行う。",
+        "icon_id": 1,
+        "lv": 2,
+        "max_lv": 5,
+        "cost_ex_gauge": -1,
+        "is_unlock": 1,
+        "unlock_condition": "",
+        "specific_skill_name": "<error>: Error: access violation accessing 0x10",
+        "specific_skill_detail": "<error>: Error: access violation accessing 0x10",
+        "specific_skill_cost_ex_gauge": 0,
+        "enemy_special_skill_trigger_text": "",
+        "enemy_weak_gauge_decrease_condition_text": ""
+      }
+    ],
+    "unique_skill_data": [
+      {
+        "class_name": "TKS.Network.Domain.UnitUniqueSkillData",
+        "skill_id": -1,
+        "skill_name": "",
+        "detail": "自身のEX消費量5％減少",
+        "is_unlock": 0,
+        "unlock_condition": "限界突破★4にすると解放"
+      },
+      {
+        "class_name": "TKS.Network.Domain.UnitUniqueSkillData",
+        "skill_id": 12,
+        "skill_name": "EX上昇☆2",
+        "detail": "自身のEX上昇2アップ",
+        "is_unlock": 0,
+        "unlock_condition": "限界突破★4にすると解放"
+      }
+    ],
+    "equip_data": [],
+    "resist_data": {
+      "class_name": "TKS.Network.Domain.UnitResistData",
+      "poison": 3,
+      "paralysis": 3,
+      "confusion": 3,
+      "atrophy": 3,
+      "seal": 3,
+      "burn": 3,
+      "flostbite": 3
+    },
+    "sp_equip_types": [
+      3
+    ],
+    "notice_flg": 1,
+    "tab_batch_data": {
+      "class_name": "TKS.Network.Domain.TabCharaDetailBatchDataEntity",
+      "ex_skill_stren_batch": 1,
+      "lv_limit_batch": 1,
+      "limit_break_batch": 0,
+      "bond_lv_batch": 0
+    },
+    "buff_effect": "<error>: Error: access violation accessing 0x18",
+    "exclusive_exchange_shop_data": {
+      "class_name": "TKS.Network.Domain.ExclusiveEquipShopEntity",
+      "shop_id": 2010,
+      "product_id": 286
+    },
+    "strengthen_flag_list": {
+      "class_name": "TKS.Network.Domain.StrengthenFlagEntity",
+      "ex_skill_stren_flag": 1,
+      "lv_limit_flag": 1,
+      "limit_break_flag": 0,
+      "core_lv_flag": 0
+    },
+    "base_status_data": {
+      "class_name": "TKS.Network.Domain.UnitBaseStatusDataEntity",
+      "base_data": {
+        "class_name": "TKS.Network.Domain.UnitBaseStatusEntity",
+        "hp": 331,
+        "init_ex_gauge": 25,
+        "max_ex_gauge": 200,
+        "min_wt": 10,
+        "max_wt": 14,
+        "attack": 81,
+        "critical": 300,
+        "ex_gauge_rate": 30
+      },
+      "add_ability_effect": {
+        "class_name": "TKS.Network.Domain.UnitAddAbilityEffect",
+        "hp": 0,
+        "attack": 0,
+        "ex_gauge_rate": 0,
+        "init_ex_gauge": 0
+      }
+    }
+  },
+  {
+    "class_name": "TKS.Network.Domain.UnitEntity",
+    "friend_user_id": 0,
+    "is_rental": 0,
+    "is_used": 0,
+    "is_prohibited": 0,
+    "skill_category_id_list": [
       3001,
       4001,
       1001,
@@ -54230,12 +55084,12 @@
     "total_exp": 680999,
     "current_exp": 0,
     "max_exp": 99999999,
-    "love_lv": 11,
+    "love_lv": 12,
     "max_love_lv": 30,
-    "total_love_exp": 1082,
-    "current_love_exp": 352,
-    "max_love_exp": 400,
-    "power": 30747,
+    "total_love_exp": 1378,
+    "current_love_exp": 248,
+    "max_love_exp": 600,
+    "power": 30754,
     "team_hp": 7157,
     "is_bond_unit": 0,
     "is_event_unit": 0,
@@ -54276,7 +55130,7 @@
         "min_wt": 0,
         "max_wt": 0,
         "attack": 50,
-        "critical": 30,
+        "critical": 40,
         "ex_gauge_rate": 0,
         "weight": 0
       }
@@ -54661,8 +55515,8 @@
     "max_exp": 99999999,
     "love_lv": 17,
     "max_love_lv": 30,
-    "total_love_exp": 6819,
-    "current_love_exp": 389,
+    "total_love_exp": 6882,
+    "current_love_exp": 452,
     "max_love_exp": 1900,
     "power": 35960,
     "team_hp": 17134,
@@ -59946,7 +60800,7 @@
     "character_name": "ヒマワリ",
     "character_name_kana": "ヒマワリ",
     "unit_name": "白のエージェント",
-    "rarity": 2,
+    "rarity": 5,
     "max_rarity": 5,
     "attr_type": 1,
     "role": 2,
@@ -59959,20 +60813,20 @@
       5
     ],
     "lv_limit_count": 0,
-    "lv": 1,
+    "lv": 18,
     "max_lv": 60,
-    "core_lv": 0,
+    "core_lv": 3,
     "max_core_lv": 3,
-    "total_exp": 0,
-    "current_exp": 0,
-    "max_exp": 20,
-    "love_lv": 0,
+    "total_exp": 3020,
+    "current_exp": 444,
+    "max_exp": 496,
+    "love_lv": 6,
     "max_love_lv": 30,
-    "total_love_exp": 0,
-    "current_love_exp": 0,
-    "max_love_exp": 10,
-    "power": 3239,
-    "team_hp": 194,
+    "total_love_exp": 185,
+    "current_love_exp": 30,
+    "max_love_exp": 45,
+    "power": 8985,
+    "team_hp": 518,
     "is_bond_unit": 0,
     "is_event_unit": 0,
     "bond_lv": 0,
@@ -59994,25 +60848,25 @@
       "class_name": "TKS.Network.Domain.UnitStatusEntity",
       "base_data": {
         "class_name": "TKS.Network.Domain.StatusEntity",
-        "hp": "194",
-        "init_ex_gauge": 25,
-        "max_ex_gauge": 200,
+        "hp": "507",
+        "init_ex_gauge": 40,
+        "max_ex_gauge": 300,
         "min_wt": 12,
         "max_wt": 12,
-        "attack": 139,
+        "attack": 362,
         "critical": 300,
-        "ex_gauge_rate": 30,
+        "ex_gauge_rate": 73,
         "weight": 30
       },
       "add_love_lv": {
         "class_name": "TKS.Network.Domain.StatusEntity",
-        "hp": "0",
+        "hp": "11",
         "init_ex_gauge": 0,
         "max_ex_gauge": 0,
         "min_wt": 0,
         "max_wt": 0,
-        "attack": 0,
-        "critical": 0,
+        "attack": 8,
+        "critical": 20,
         "ex_gauge_rate": 0,
         "weight": 0
       }
@@ -60035,7 +60889,7 @@
         "icon_id": 101,
         "lv": 1,
         "max_lv": 10,
-        "cost_ex_gauge": 100,
+        "cost_ex_gauge": 90,
         "is_unlock": 1,
         "unlock_condition": "",
         "specific_skill_name": "<error>: Error: access violation accessing 0x10",
@@ -60053,9 +60907,9 @@
         "icon_id": 100,
         "lv": 1,
         "max_lv": 10,
-        "cost_ex_gauge": 200,
-        "is_unlock": 0,
-        "unlock_condition": "限界突破で★3にすると解放",
+        "cost_ex_gauge": 180,
+        "is_unlock": 1,
+        "unlock_condition": "",
         "specific_skill_name": "<error>: Error: access violation accessing 0x10",
         "specific_skill_detail": "<error>: Error: access violation accessing 0x10",
         "specific_skill_cost_ex_gauge": 0,
@@ -60067,9 +60921,9 @@
         "skill_data_type": 2,
         "skill_id": 1001001,
         "skill_name": "フィオナユニゾンスキルA",
-        "skill_detail": "ユニゾン参加者が3体以上のとき50％の確率で発動。ユニゾン参加者全員に攻撃力70％アップを付与する。",
+        "skill_detail": "ユニゾン参加者が3体以上のとき50％の確率で発動。ユニゾン参加者全員に攻撃力100％アップを付与する。",
         "icon_id": 1,
-        "lv": 2,
+        "lv": 5,
         "max_lv": 5,
         "cost_ex_gauge": -1,
         "is_unlock": 1,
@@ -60085,9 +60939,9 @@
         "skill_data_type": 3,
         "skill_id": 10010011,
         "skill_name": "フィオナシスタースキルA",
-        "skill_detail": "味方のいずれかが攻撃した際、10％の確率で発動。敵単体に110％の追加攻撃を行う。",
+        "skill_detail": "味方のいずれかが攻撃した際、10％の確率で発動。敵単体に150％の追加攻撃を行う。",
         "icon_id": 1,
-        "lv": 2,
+        "lv": 5,
         "max_lv": 5,
         "cost_ex_gauge": -1,
         "is_unlock": 1,
@@ -60104,17 +60958,17 @@
         "class_name": "TKS.Network.Domain.UnitUniqueSkillData",
         "skill_id": -1,
         "skill_name": "",
-        "detail": "自身のEX消費量5％減少",
-        "is_unlock": 0,
-        "unlock_condition": "限界突破★4にすると解放"
+        "detail": "自身のEX消費量10％減少",
+        "is_unlock": 1,
+        "unlock_condition": ""
       },
       {
         "class_name": "TKS.Network.Domain.UnitUniqueSkillData",
         "skill_id": 12,
         "skill_name": "EX上昇☆2",
-        "detail": "自身のEX上昇2アップ",
-        "is_unlock": 0,
-        "unlock_condition": "限界突破★4にすると解放"
+        "detail": "自身のEX上昇25アップ",
+        "is_unlock": 1,
+        "unlock_condition": ""
       }
     ],
     "equip_data": [],
@@ -60156,20 +61010,20 @@
       "class_name": "TKS.Network.Domain.UnitBaseStatusDataEntity",
       "base_data": {
         "class_name": "TKS.Network.Domain.UnitBaseStatusEntity",
-        "hp": 194,
-        "init_ex_gauge": 25,
-        "max_ex_gauge": 200,
+        "hp": 507,
+        "init_ex_gauge": 40,
+        "max_ex_gauge": 300,
         "min_wt": 12,
         "max_wt": 12,
-        "attack": 139,
+        "attack": 362,
         "critical": 300,
-        "ex_gauge_rate": 30
+        "ex_gauge_rate": 48
       },
       "add_ability_effect": {
         "class_name": "TKS.Network.Domain.UnitAddAbilityEffect",
         "hp": 0,
         "attack": 0,
-        "ex_gauge_rate": 0,
+        "ex_gauge_rate": 25,
         "init_ex_gauge": 0
       }
     }
@@ -63743,8 +64597,8 @@
     "max_exp": 99999999,
     "love_lv": 20,
     "max_love_lv": 30,
-    "total_love_exp": 13887,
-    "current_love_exp": 157,
+    "total_love_exp": 14246,
+    "current_love_exp": 516,
     "max_love_exp": 3800,
     "power": 54543,
     "team_hp": 15392,
@@ -64259,7 +65113,7 @@
     "total_love_exp": 2262,
     "current_love_exp": 532,
     "max_love_exp": 800,
-    "power": 20775,
+    "power": 25165,
     "team_hp": 6220,
     "is_bond_unit": 0,
     "is_event_unit": 0,
@@ -64470,6 +65324,115 @@
           "get_coin": 300
         },
         "notice_flg": 1
+      },
+      {
+        "class_name": "TKS.Network.Domain.EquipListEntity",
+        "u_equip_id": 33755471,
+        "equip_id": 3300191,
+        "equip_name": "煌嶺のかんざし",
+        "equip_part": 3,
+        "equip_type": 0,
+        "exclusive_unit_id": 1115001,
+        "exclusive_unit_name": "[大欲の女帝]煌嶺",
+        "illust_id": "equip_3300191",
+        "rarity": 3,
+        "limit_break_count": 0,
+        "max_limit_break_count": 4,
+        "equip_awake_flag": 0,
+        "is_equip_awake": 0,
+        "can_equip_awake": 0,
+        "resonance_count": 0,
+        "max_resonance_count": 1,
+        "lv": 1,
+        "max_lv": 10,
+        "total_exp": 0,
+        "current_exp": 0,
+        "max_exp": 36,
+        "lock_flg": 0,
+        "equipped_unit": {
+          "class_name": "TKS.Network.Domain.EquippedUnitEntity",
+          "character_name": "煌嶺",
+          "unit_name": "大欲の女帝",
+          "unit_id": 1115001
+        },
+        "parameter_list": [
+          {
+            "class_name": "TKS.Network.Domain.EquipParameterListEntity",
+            "parameter_type": 1,
+            "parameter_value": 90
+          }
+        ],
+        "skill_data": {
+          "class_name": "TKS.Network.Domain.EquipSkillDataEntity",
+          "skill_id": 11150011,
+          "lv": 1,
+          "skill_detail": "EX1「天狐妖炎昇」のダメージ5.6％アップ/\nEX2 「灼炎大皇」のダメージ3％アップ/味方全体のATKの上昇値が魔族または炎属性の味方の数×6％アップ/\nEX2+ 「熾天灼煌大炎帝」のダメージ4.4％（1バトル中、敵の通常スタン回数が3回以上の時は5.6％、5回以上の時は6％）アップ/味方全体のATKの上昇値が魔族または炎属性の味方の数×6％アップ"
+        },
+        "enchant_frame_list": [],
+        "lottery_skill_enchant_list": [],
+        "sell_data": {
+          "class_name": "TKS.Network.Domain.EquipSellData",
+          "get_currency": 40000,
+          "get_coin": 1000
+        },
+        "notice_flg": 1
+      },
+      {
+        "class_name": "TKS.Network.Domain.EquipListEntity",
+        "u_equip_id": 34885299,
+        "equip_id": 1300046,
+        "equip_name": "トリック・アンド・ロリポップ",
+        "equip_part": 1,
+        "equip_type": 1,
+        "exclusive_unit_id": 0,
+        "exclusive_unit_name": "",
+        "illust_id": "equip_1300046",
+        "rarity": 3,
+        "limit_break_count": 4,
+        "max_limit_break_count": 4,
+        "equip_awake_flag": 0,
+        "is_equip_awake": 0,
+        "can_equip_awake": 0,
+        "resonance_count": 0,
+        "max_resonance_count": 0,
+        "lv": 50,
+        "max_lv": 50,
+        "total_exp": 177710,
+        "current_exp": 0,
+        "max_exp": 10492,
+        "lock_flg": 0,
+        "equipped_unit": {
+          "class_name": "TKS.Network.Domain.EquippedUnitEntity",
+          "character_name": "煌嶺",
+          "unit_name": "大欲の女帝",
+          "unit_id": 1115001
+        },
+        "parameter_list": [
+          {
+            "class_name": "TKS.Network.Domain.EquipParameterListEntity",
+            "parameter_type": 1,
+            "parameter_value": 648
+          },
+          {
+            "class_name": "TKS.Network.Domain.EquipParameterListEntity",
+            "parameter_type": 2,
+            "parameter_value": 30
+          }
+        ],
+        "skill_data": {
+          "class_name": "TKS.Network.Domain.EquipSkillDataEntity",
+          "skill_id": 1300046,
+          "lv": 5,
+          "skill_detail": "ATK9.6％アップ/クリティカル9.6％加算"
+        },
+        "enchant_frame_list": [],
+        "lottery_skill_enchant_list": [],
+        "sell_data": {
+          "class_name": "TKS.Network.Domain.EquipSellData",
+          "get_currency": 200000,
+          "get_coin": 5000
+        },
+        "notice_flg": 0
       }
     ],
     "resist_data": {
@@ -64578,21 +65541,21 @@
     "affiliation_list": [
       2
     ],
-    "lv_limit_count": 0,
-    "lv": 1,
-    "max_lv": 60,
+    "lv_limit_count": 4,
+    "lv": 100,
+    "max_lv": 100,
     "core_lv": 0,
     "max_core_lv": 3,
-    "total_exp": 0,
+    "total_exp": 680999,
     "current_exp": 0,
-    "max_exp": 20,
-    "love_lv": 0,
+    "max_exp": 99999999,
+    "love_lv": 12,
     "max_love_lv": 30,
-    "total_love_exp": 0,
-    "current_love_exp": 0,
-    "max_love_exp": 10,
-    "power": 5120,
-    "team_hp": 331,
+    "total_love_exp": 1500,
+    "current_love_exp": 370,
+    "max_love_exp": 600,
+    "power": 23448,
+    "team_hp": 1967,
     "is_bond_unit": 0,
     "is_event_unit": 0,
     "bond_lv": 0,
@@ -64614,25 +65577,25 @@
       "class_name": "TKS.Network.Domain.UnitStatusEntity",
       "base_data": {
         "class_name": "TKS.Network.Domain.StatusEntity",
-        "hp": "331",
+        "hp": "1891",
         "init_ex_gauge": 30,
         "max_ex_gauge": 300,
         "min_wt": 11,
         "max_wt": 13,
-        "attack": 184,
+        "attack": 1129,
         "critical": 300,
         "ex_gauge_rate": 48,
         "weight": 30
       },
       "add_love_lv": {
         "class_name": "TKS.Network.Domain.StatusEntity",
-        "hp": "0",
+        "hp": "76",
         "init_ex_gauge": 0,
         "max_ex_gauge": 0,
         "min_wt": 0,
         "max_wt": 0,
-        "attack": 0,
-        "critical": 0,
+        "attack": 46,
+        "critical": 40,
         "ex_gauge_rate": 0,
         "weight": 0
       }
@@ -64651,9 +65614,9 @@
         "skill_data_type": 1,
         "skill_id": 11180011,
         "skill_name": "ナイトホークマスカレード",
-        "skill_detail": "敵単体に47％×3回のダメージ/被ダメージを神族または光属性の味方の数×4％（ラッシュ30以上の時、5％）増加（20CT） ※2つの条件を満たした場合でも効果は重複しない/自身の行動CT10％短縮（10CT）",
+        "skill_detail": "敵単体に83％×5回のダメージ/被ダメージを神族または光属性の味方の数×7.11％（ラッシュ30以上の時、8.88％）増加（20CT） ※2つの条件を満たした場合でも効果は重複しない/自身の行動CT17％短縮（10CT）",
         "icon_id": 101,
-        "lv": 1,
+        "lv": 8,
         "max_lv": 10,
         "cost_ex_gauge": 100,
         "is_unlock": 1,
@@ -64755,7 +65718,7 @@
     "tab_batch_data": {
       "class_name": "TKS.Network.Domain.TabCharaDetailBatchDataEntity",
       "ex_skill_stren_batch": 1,
-      "lv_limit_batch": 1,
+      "lv_limit_batch": 0,
       "limit_break_batch": 0,
       "bond_lv_batch": 0
     },
@@ -64768,7 +65731,7 @@
     "strengthen_flag_list": {
       "class_name": "TKS.Network.Domain.StrengthenFlagEntity",
       "ex_skill_stren_flag": 1,
-      "lv_limit_flag": 1,
+      "lv_limit_flag": 0,
       "limit_break_flag": 0,
       "core_lv_flag": 0
     },
@@ -64776,12 +65739,12 @@
       "class_name": "TKS.Network.Domain.UnitBaseStatusDataEntity",
       "base_data": {
         "class_name": "TKS.Network.Domain.UnitBaseStatusEntity",
-        "hp": 331,
+        "hp": 1891,
         "init_ex_gauge": 30,
         "max_ex_gauge": 300,
         "min_wt": 11,
         "max_wt": 13,
-        "attack": 184,
+        "attack": 1129,
         "critical": 300,
         "ex_gauge_rate": 48
       },
@@ -67167,8 +68130,8 @@
     "total_love_exp": 750,
     "current_love_exp": 20,
     "max_love_exp": 400,
-    "power": 4643,
-    "team_hp": 2041,
+    "power": 12984,
+    "team_hp": 3373,
     "is_bond_unit": 0,
     "is_event_unit": 0,
     "bond_lv": 0,
@@ -67227,9 +68190,9 @@
         "skill_data_type": 1,
         "skill_id": 11310011,
         "skill_name": "招力神仙丹",
-        "skill_detail": "味方のHPを20％+魔族または雷属性の味方の数×4％回復 ※2つの条件を満たした場合でも効果は重複しない/魔族または雷属性の味方に付与されているデバフ・状態異常効果をすべて解除/自身と自身の右1レーンの味方にステルス状態を付与（40CT）/味方のHPがオーバーヒール状態（100％超）の時、魔族または雷属性の味方のノーツを2～3前方に移動 ※2つの条件を満たした場合でもノーツ移動効果は重複しない\n※ステルス状態：攻撃対象から除外されるようになる（範囲ダメージ含む）。味方が1人だけの状態では発動しない。",
+        "skill_detail": "味方のHPを35.5％+魔族または雷属性の味方の数×7.1％回復 ※2つの条件を満たした場合でも効果は重複しない/魔族または雷属性の味方に付与されているデバフ・状態異常効果をすべて解除/自身と自身の右1レーンの味方にステルス状態を付与（40CT）/味方のHPがオーバーヒール状態（100％超）の時、魔族または雷属性の味方のノーツを4～5前方に移動 ※2つの条件を満たした場合でもノーツ移動効果は重複しない\n※ステルス状態：攻撃対象から除外されるようになる（範囲ダメージ含む）。味方が1人だけの状態では発動しない。",
         "icon_id": 700,
-        "lv": 1,
+        "lv": 8,
         "max_lv": 10,
         "cost_ex_gauge": 100,
         "is_unlock": 1,
@@ -67245,9 +68208,9 @@
         "skill_data_type": 1,
         "skill_id": 11310012,
         "skill_name": "散花",
-        "skill_detail": "味方のHPを25％+魔族または雷属性の味方の数×5％回復/魔族または雷属性の味方のATKを50％+自身のHP2000ごと×8％アップ（20CT）（最大300％） ※2つの条件を満たした場合でも効果は重複しない/味方のHPがオーバーヒール状態（100％超）の時、味方全体の行動CT7.5％短縮（10CT）/味方のHPがフルオーバーヒール状態（300％）の時、味方全体のノーツを3～4前方に移動/自身がステルス状態の時、ステルス状態を解除して自身のEX消費量10減少（次ターン以降EXスキル1回発動まで）",
+        "skill_detail": "味方のHPを44.4％+魔族または雷属性の味方の数×8.8％回復/魔族または雷属性の味方のATKを88％+自身のHP2000ごと×14.2％アップ（20CT）（最大300％） ※2つの条件を満たした場合でも効果は重複しない/味方のHPがオーバーヒール状態（100％超）の時、味方全体の行動CT13.3％短縮（10CT）/味方のHPがフルオーバーヒール状態（300％）の時、味方全体のノーツを5～6前方に移動/自身がステルス状態の時、ステルス状態を解除して自身のEX消費量17減少（次ターン以降EXスキル1回発動まで）",
         "icon_id": 601,
-        "lv": 1,
+        "lv": 8,
         "max_lv": 10,
         "cost_ex_gauge": 200,
         "is_unlock": 1,
@@ -67313,7 +68276,127 @@
         "unlock_condition": "限界突破★4にすると解放"
       }
     ],
-    "equip_data": [],
+    "equip_data": [
+      {
+        "class_name": "TKS.Network.Domain.EquipListEntity",
+        "u_equip_id": 21485906,
+        "equip_id": 1300029,
+        "equip_name": "光杖ガンバンテイン",
+        "equip_part": 1,
+        "equip_type": 1,
+        "exclusive_unit_id": 0,
+        "exclusive_unit_name": "",
+        "illust_id": "equip_1300029",
+        "rarity": 3,
+        "limit_break_count": 0,
+        "max_limit_break_count": 4,
+        "equip_awake_flag": 0,
+        "is_equip_awake": 0,
+        "can_equip_awake": 0,
+        "resonance_count": 0,
+        "max_resonance_count": 0,
+        "lv": 1,
+        "max_lv": 10,
+        "total_exp": 0,
+        "current_exp": 0,
+        "max_exp": 36,
+        "lock_flg": 0,
+        "equipped_unit": {
+          "class_name": "TKS.Network.Domain.EquippedUnitEntity",
+          "character_name": "シズル",
+          "unit_name": "元気溌剌狐古忍者",
+          "unit_id": 1131001
+        },
+        "parameter_list": [
+          {
+            "class_name": "TKS.Network.Domain.EquipParameterListEntity",
+            "parameter_type": 1,
+            "parameter_value": 81
+          },
+          {
+            "class_name": "TKS.Network.Domain.EquipParameterListEntity",
+            "parameter_type": 2,
+            "parameter_value": 6
+          }
+        ],
+        "skill_data": {
+          "class_name": "TKS.Network.Domain.EquipSkillDataEntity",
+          "skill_id": 1300029,
+          "lv": 1,
+          "skill_detail": "光属性のチャージ時の戻り量を16％短縮"
+        },
+        "enchant_frame_list": [],
+        "lottery_skill_enchant_list": [],
+        "sell_data": {
+          "class_name": "TKS.Network.Domain.EquipSellData",
+          "get_currency": 40000,
+          "get_coin": 1000
+        },
+        "notice_flg": 1
+      },
+      {
+        "class_name": "TKS.Network.Domain.EquipListEntity",
+        "u_equip_id": 22156632,
+        "equip_id": 2300046,
+        "equip_name": "流麗なドレス",
+        "equip_part": 2,
+        "equip_type": 0,
+        "exclusive_unit_id": 0,
+        "exclusive_unit_name": "",
+        "illust_id": "equip_2300046",
+        "rarity": 3,
+        "limit_break_count": 2,
+        "max_limit_break_count": 4,
+        "equip_awake_flag": 0,
+        "is_equip_awake": 0,
+        "can_equip_awake": 0,
+        "resonance_count": 0,
+        "max_resonance_count": 0,
+        "lv": 30,
+        "max_lv": 30,
+        "total_exp": 28764,
+        "current_exp": 0,
+        "max_exp": 3851,
+        "lock_flg": 0,
+        "equipped_unit": {
+          "class_name": "TKS.Network.Domain.EquippedUnitEntity",
+          "character_name": "シズル",
+          "unit_name": "元気溌剌狐古忍者",
+          "unit_id": 1131001
+        },
+        "parameter_list": [
+          {
+            "class_name": "TKS.Network.Domain.EquipParameterListEntity",
+            "parameter_type": 0,
+            "parameter_value": 1332
+          },
+          {
+            "class_name": "TKS.Network.Domain.EquipParameterListEntity",
+            "parameter_type": 2,
+            "parameter_value": 13
+          },
+          {
+            "class_name": "TKS.Network.Domain.EquipParameterListEntity",
+            "parameter_type": 3,
+            "parameter_value": 475
+          }
+        ],
+        "skill_data": {
+          "class_name": "TKS.Network.Domain.EquipSkillDataEntity",
+          "skill_id": 2300046,
+          "lv": 3,
+          "skill_detail": "クリティカル12％加算"
+        },
+        "enchant_frame_list": [],
+        "lottery_skill_enchant_list": [],
+        "sell_data": {
+          "class_name": "TKS.Network.Domain.EquipSellData",
+          "get_currency": 120000,
+          "get_coin": 3000
+        },
+        "notice_flg": 1
+      }
+    ],
     "resist_data": {
       "class_name": "TKS.Network.Domain.UnitResistData",
       "poison": 3,
@@ -68627,13 +69710,13 @@
     "total_exp": 680999,
     "current_exp": 0,
     "max_exp": 99999999,
-    "love_lv": 11,
+    "love_lv": 18,
     "max_love_lv": 30,
-    "total_love_exp": 785,
-    "current_love_exp": 55,
-    "max_love_exp": 400,
-    "power": 64129,
-    "team_hp": 2787,
+    "total_love_exp": 8660,
+    "current_love_exp": 330,
+    "max_love_exp": 2400,
+    "power": 68846,
+    "team_hp": 4649,
     "is_bond_unit": 0,
     "is_event_unit": 0,
     "bond_lv": 0,
@@ -68667,13 +69750,13 @@
       },
       "add_love_lv": {
         "class_name": "TKS.Network.Domain.StatusEntity",
-        "hp": "98",
+        "hp": "146",
         "init_ex_gauge": 0,
         "max_ex_gauge": 0,
         "min_wt": 0,
         "max_wt": 0,
-        "attack": 73,
-        "critical": 30,
+        "attack": 109,
+        "critical": 60,
         "ex_gauge_rate": 0,
         "weight": 0
       }
@@ -68779,63 +69862,6 @@
       }
     ],
     "equip_data": [
-      {
-        "class_name": "TKS.Network.Domain.EquipListEntity",
-        "u_equip_id": 26591070,
-        "equip_id": 2300005,
-        "equip_name": "ムーンライトエナン",
-        "equip_part": 2,
-        "equip_type": 0,
-        "exclusive_unit_id": 0,
-        "exclusive_unit_name": "",
-        "illust_id": "equip_2300005",
-        "rarity": 3,
-        "limit_break_count": 0,
-        "max_limit_break_count": 4,
-        "equip_awake_flag": 0,
-        "is_equip_awake": 0,
-        "can_equip_awake": 0,
-        "resonance_count": 0,
-        "max_resonance_count": 0,
-        "lv": 1,
-        "max_lv": 10,
-        "total_exp": 0,
-        "current_exp": 0,
-        "max_exp": 36,
-        "lock_flg": 0,
-        "equipped_unit": {
-          "class_name": "TKS.Network.Domain.EquippedUnitEntity",
-          "character_name": "ウルスラ",
-          "unit_name": "愛の伝道者",
-          "unit_id": 1136001
-        },
-        "parameter_list": [
-          {
-            "class_name": "TKS.Network.Domain.EquipParameterListEntity",
-            "parameter_type": 0,
-            "parameter_value": 259
-          },
-          {
-            "class_name": "TKS.Network.Domain.EquipParameterListEntity",
-            "parameter_type": 2,
-            "parameter_value": 6
-          }
-        ],
-        "skill_data": {
-          "class_name": "TKS.Network.Domain.EquipSkillDataEntity",
-          "skill_id": 2300005,
-          "lv": 1,
-          "skill_detail": "凍傷耐性を1段階アップ/雷属性の被ダメージを3.2％軽減/重さ12.8％アップ"
-        },
-        "enchant_frame_list": [],
-        "lottery_skill_enchant_list": [],
-        "sell_data": {
-          "class_name": "TKS.Network.Domain.EquipSellData",
-          "get_currency": 40000,
-          "get_coin": 1000
-        },
-        "notice_flg": 1
-      },
       {
         "class_name": "TKS.Network.Domain.EquipListEntity",
         "u_equip_id": 28312167,
@@ -68989,6 +70015,68 @@
           "skill_id": 1300064,
           "lv": 5,
           "skill_detail": "神族のクリティカル16％加算"
+        },
+        "enchant_frame_list": [],
+        "lottery_skill_enchant_list": [],
+        "sell_data": {
+          "class_name": "TKS.Network.Domain.EquipSellData",
+          "get_currency": 200000,
+          "get_coin": 5000
+        },
+        "notice_flg": 0
+      },
+      {
+        "class_name": "TKS.Network.Domain.EquipListEntity",
+        "u_equip_id": 33554794,
+        "equip_id": 2300060,
+        "equip_name": "極星学園の制服",
+        "equip_part": 2,
+        "equip_type": 0,
+        "exclusive_unit_id": 0,
+        "exclusive_unit_name": "",
+        "illust_id": "equip_2300060",
+        "rarity": 3,
+        "limit_break_count": 4,
+        "max_limit_break_count": 4,
+        "equip_awake_flag": 0,
+        "is_equip_awake": 0,
+        "can_equip_awake": 0,
+        "resonance_count": 0,
+        "max_resonance_count": 0,
+        "lv": 50,
+        "max_lv": 50,
+        "total_exp": 177710,
+        "current_exp": 0,
+        "max_exp": 10492,
+        "lock_flg": 0,
+        "equipped_unit": {
+          "class_name": "TKS.Network.Domain.EquippedUnitEntity",
+          "character_name": "ウルスラ",
+          "unit_name": "愛の伝道者",
+          "unit_id": 1136001
+        },
+        "parameter_list": [
+          {
+            "class_name": "TKS.Network.Domain.EquipParameterListEntity",
+            "parameter_type": 0,
+            "parameter_value": 2073
+          },
+          {
+            "class_name": "TKS.Network.Domain.EquipParameterListEntity",
+            "parameter_type": 3,
+            "parameter_value": 960
+          },
+          {
+            "class_name": "TKS.Network.Domain.EquipParameterListEntity",
+            "parameter_type": 4,
+            "parameter_value": 30
+          }
+        ],
+        "skill_data": {
+          "class_name": "TKS.Network.Domain.EquipSkillDataEntity",
+          "skill_id": 2300060,
+          "lv": 5,
+          "skill_detail": "バトル開始時、チーム内に異なるメイン属性の味方が3体以上いる時、クリティカル時のダメージ倍率を10％加算"
         },
         "enchant_frame_list": [],
         "lottery_skill_enchant_list": [],
@@ -69387,20 +70475,20 @@
       0
     ],
     "lv_limit_count": 4,
-    "lv": 80,
+    "lv": 100,
     "max_lv": 100,
     "core_lv": 0,
     "max_core_lv": 3,
-    "total_exp": 369886,
-    "current_exp": 770,
-    "max_exp": 13693,
+    "total_exp": 680999,
+    "current_exp": 0,
+    "max_exp": 99999999,
     "love_lv": 11,
     "max_love_lv": 30,
     "total_love_exp": 798,
     "current_love_exp": 68,
     "max_love_exp": 400,
-    "power": 11463,
-    "team_hp": 4209,
+    "power": 23115,
+    "team_hp": 6662,
     "is_bond_unit": 0,
     "is_event_unit": 0,
     "bond_lv": 0,
@@ -69422,24 +70510,24 @@
       "class_name": "TKS.Network.Domain.UnitStatusEntity",
       "base_data": {
         "class_name": "TKS.Network.Domain.StatusEntity",
-        "hp": "4047",
+        "hp": "5360",
         "init_ex_gauge": 30,
         "max_ex_gauge": 300,
         "min_wt": 16,
         "max_wt": 20,
-        "attack": 978,
+        "attack": 1297,
         "critical": 500,
         "ex_gauge_rate": 84,
         "weight": 30
       },
       "add_love_lv": {
         "class_name": "TKS.Network.Domain.StatusEntity",
-        "hp": "162",
+        "hp": "215",
         "init_ex_gauge": 0,
         "max_ex_gauge": 0,
         "min_wt": 0,
         "max_wt": 0,
-        "attack": 40,
+        "attack": 52,
         "critical": 30,
         "ex_gauge_rate": 0,
         "weight": 0
@@ -69459,9 +70547,9 @@
         "skill_data_type": 1,
         "skill_id": 11400011,
         "skill_name": "バーンショック",
-        "skill_detail": "敵全体に30％のダメージ/炎属性の味方のATKを炎属性の味方の数×20％アップ（30CT）/攻撃タイプ魔法の味方を3体以上編成している時、炎属性の味方のノーツを2～3前方に移動/自身を含む味方3体以上ユニゾン時、ユニゾン参加者の行動CT5％短縮（5CT）",
+        "skill_detail": "敵全体に53％のダメージ/炎属性の味方のATKを炎属性の味方の数×35％アップ（30CT）/攻撃タイプ魔法の味方を3体以上編成している時、炎属性の味方のノーツを4～5前方に移動/自身を含む味方3体以上ユニゾン時、ユニゾン参加者の行動CT8.8％短縮（5CT）",
         "icon_id": 100,
-        "lv": 1,
+        "lv": 8,
         "max_lv": 10,
         "cost_ex_gauge": 100,
         "is_unlock": 1,
@@ -69477,15 +70565,15 @@
         "skill_data_type": 1,
         "skill_id": 11400012,
         "skill_name": "クリザンテーメ・フランメ",
-        "skill_detail": "敵全体に125％のダメージ/炎属性の味方のATKを炎属性の味方の数×37.5％アップ（30CT）/ノーツを4～5前方に移動/さらに攻撃タイプ魔法の味方のATKを攻撃タイプ魔法の味方の数×37.5％アップ（30CT）/攻撃タイプ魔法の味方を3体以上編成している時、炎属性の味方のクリティカル時のダメージ倍率を25％加算（25CT）",
+        "skill_detail": "敵全体に222％のダメージ/炎属性の味方のATKを炎属性の味方の数×66％アップ（30CT）/ノーツを6～7前方に移動/さらに攻撃タイプ魔法の味方のATKを攻撃タイプ魔法の味方の数×66％アップ（30CT）/攻撃タイプ魔法の味方を3体以上編成している時、炎属性の味方のクリティカル時のダメージ倍率を44％加算（25CT）",
         "icon_id": 100,
-        "lv": 1,
+        "lv": 8,
         "max_lv": 10,
         "cost_ex_gauge": 200,
         "is_unlock": 1,
         "unlock_condition": "",
         "specific_skill_name": "イマチュア・メテオ・シャワー",
-        "specific_skill_detail": "敵全体に200％のダメージ。さらに1バトル中、花火状態への移行が2回目以降の時、花火状態に移行する度にダメージ倍率を25％ずつ増加する（合計最大250％）/炎属性の味方のATKを炎属性の味方の数×37.5％アップ（30CT）/ノーツを4～5前方に移動/さらに攻撃タイプ魔法の味方のATKを攻撃タイプ魔法の味方の数×37.5％アップ（30CT）/攻撃タイプ魔法の味方を3体以上編成している時、炎属性の味方のクリティカル時のダメージ倍率を25％加算（25CT）/自身を含む味方2体以上ユニゾン時、自身のクリティカルを味方のユニゾン体数×5％加算（1CT）",
+        "specific_skill_detail": "敵全体に355％のダメージ。さらに1バトル中、花火状態への移行が2回目以降の時、花火状態に移行する度にダメージ倍率を44％ずつ増加する（合計最大444％）/炎属性の味方のATKを炎属性の味方の数×66％アップ（30CT）/ノーツを6～7前方に移動/さらに攻撃タイプ魔法の味方のATKを攻撃タイプ魔法の味方の数×66％アップ（30CT）/攻撃タイプ魔法の味方を3体以上編成している時、炎属性の味方のクリティカル時のダメージ倍率を44％加算（25CT）/自身を含む味方2体以上ユニゾン時、自身のクリティカルを味方のユニゾン体数×8.8％加算（1CT）",
         "specific_skill_cost_ex_gauge": 200,
         "enemy_special_skill_trigger_text": "",
         "enemy_weak_gauge_decrease_condition_text": ""
@@ -69553,7 +70641,122 @@
         "unlock_condition": "限界突破★4にすると解放"
       }
     ],
-    "equip_data": [],
+    "equip_data": [
+      {
+        "class_name": "TKS.Network.Domain.EquipListEntity",
+        "u_equip_id": 13152864,
+        "equip_id": 1200001,
+        "equip_name": "アイアンソード",
+        "equip_part": 1,
+        "equip_type": 2,
+        "exclusive_unit_id": 0,
+        "exclusive_unit_name": "",
+        "illust_id": "equip_1200001",
+        "rarity": 2,
+        "limit_break_count": 3,
+        "max_limit_break_count": 4,
+        "equip_awake_flag": 0,
+        "is_equip_awake": 0,
+        "can_equip_awake": 0,
+        "resonance_count": 0,
+        "max_resonance_count": 0,
+        "lv": 40,
+        "max_lv": 40,
+        "total_exp": 56925,
+        "current_exp": 0,
+        "max_exp": 5273,
+        "lock_flg": 0,
+        "equipped_unit": {
+          "class_name": "TKS.Network.Domain.EquippedUnitEntity",
+          "character_name": "ノルトハウゼン",
+          "unit_name": "星降らしの魔法使い",
+          "unit_id": 1140001
+        },
+        "parameter_list": [
+          {
+            "class_name": "TKS.Network.Domain.EquipParameterListEntity",
+            "parameter_type": 1,
+            "parameter_value": 149
+          },
+          {
+            "class_name": "TKS.Network.Domain.EquipParameterListEntity",
+            "parameter_type": 4,
+            "parameter_value": 50
+          }
+        ],
+        "skill_data": {
+          "class_name": "TKS.Network.Domain.EquipSkillDataEntity",
+          "skill_id": 1200001,
+          "lv": 4,
+          "skill_detail": "ATK5.2％アップ"
+        },
+        "enchant_frame_list": [],
+        "lottery_skill_enchant_list": [],
+        "sell_data": {
+          "class_name": "TKS.Network.Domain.EquipSellData",
+          "get_currency": 16000,
+          "get_coin": 400
+        },
+        "notice_flg": 1
+      },
+      {
+        "class_name": "TKS.Network.Domain.EquipListEntity",
+        "u_equip_id": 13202288,
+        "equip_id": 2200012,
+        "equip_name": "バトルブーツ",
+        "equip_part": 2,
+        "equip_type": 0,
+        "exclusive_unit_id": 0,
+        "exclusive_unit_name": "",
+        "illust_id": "equip_2200012",
+        "rarity": 2,
+        "limit_break_count": 3,
+        "max_limit_break_count": 4,
+        "equip_awake_flag": 0,
+        "is_equip_awake": 0,
+        "can_equip_awake": 0,
+        "resonance_count": 0,
+        "max_resonance_count": 0,
+        "lv": 40,
+        "max_lv": 40,
+        "total_exp": 56925,
+        "current_exp": 0,
+        "max_exp": 5273,
+        "lock_flg": 0,
+        "equipped_unit": {
+          "class_name": "TKS.Network.Domain.EquippedUnitEntity",
+          "character_name": "ノルトハウゼン",
+          "unit_name": "星降らしの魔法使い",
+          "unit_id": 1140001
+        },
+        "parameter_list": [
+          {
+            "class_name": "TKS.Network.Domain.EquipParameterListEntity",
+            "parameter_type": 0,
+            "parameter_value": 1087
+          },
+          {
+            "class_name": "TKS.Network.Domain.EquipParameterListEntity",
+            "parameter_type": 4,
+            "parameter_value": 37
+          }
+        ],
+        "skill_data": {
+          "class_name": "TKS.Network.Domain.EquipSkillDataEntity",
+          "skill_id": 2200012,
+          "lv": 4,
+          "skill_detail": "混乱耐性を1段階アップ"
+        },
+        "enchant_frame_list": [],
+        "lottery_skill_enchant_list": [],
+        "sell_data": {
+          "class_name": "TKS.Network.Domain.EquipSellData",
+          "get_currency": 16000,
+          "get_coin": 400
+        },
+        "notice_flg": 1
+      }
+    ],
     "resist_data": {
       "class_name": "TKS.Network.Domain.UnitResistData",
       "poison": 3,
@@ -69592,12 +70795,12 @@
       "class_name": "TKS.Network.Domain.UnitBaseStatusDataEntity",
       "base_data": {
         "class_name": "TKS.Network.Domain.UnitBaseStatusEntity",
-        "hp": 4047,
+        "hp": 5360,
         "init_ex_gauge": 30,
         "max_ex_gauge": 300,
         "min_wt": 16,
         "max_wt": 20,
-        "attack": 978,
+        "attack": 1297,
         "critical": 500,
         "ex_gauge_rate": 84
       },
@@ -69669,8 +70872,8 @@
     "max_exp": 99999999,
     "love_lv": 12,
     "max_love_lv": 30,
-    "total_love_exp": 1298,
-    "current_love_exp": 168,
+    "total_love_exp": 1483,
+    "current_love_exp": 353,
     "max_love_exp": 600,
     "power": 50982,
     "team_hp": 25911,
@@ -70435,8 +71638,8 @@
     "max_exp": 99999999,
     "love_lv": 11,
     "max_love_lv": 30,
-    "total_love_exp": 813,
-    "current_love_exp": 83,
+    "total_love_exp": 998,
+    "current_love_exp": 268,
     "max_love_exp": 400,
     "power": 36327,
     "team_hp": 7648,
@@ -71433,8 +72636,8 @@
     "max_exp": 99999999,
     "love_lv": 11,
     "max_love_lv": 30,
-    "total_love_exp": 750,
-    "current_love_exp": 20,
+    "total_love_exp": 813,
+    "current_love_exp": 83,
     "max_love_exp": 400,
     "power": 34575,
     "team_hp": 5415,
