@@ -1,5 +1,5 @@
 {
- "fetchedAt": "2026-09-06",
+ "fetchedAt": "2026-10-04",
  "rows": [
   {
    "idx": 0,
@@ -832,8 +832,8 @@
    "gauge": "12～13",
    "obtain": "2.5周年前夜祭記念シスターパック【Xmasクラウディア】(有償/先行入手)交換所(2026/09/01)",
    "date": "2025/12/19",
-   "owned": false,
-   "ownedSister": null,
+   "owned": true,
+   "ownedSister": 1051003,
    "wimg": "img/sw43_icon.png",
    "wart": "img/sw43.png"
   },
@@ -849,7 +849,7 @@
    "target": "味方全体",
    "effect": "ATKを100%+ヒールタイプの数×50%アップ(15CT)/ノーツを4～4前方に移動",
    "gauge": "15～16",
-   "obtain": "2.5周年記念シスターパック【新春アナ】(有償/先行入手)",
+   "obtain": "2.5周年記念シスターパック【新春アナ】(有償/先行入手)交換所(2026/10/01)",
    "date": "2026/01/01",
    "owned": false,
    "ownedSister": null,
@@ -1342,13 +1342,32 @@
    "cond": "いずれかの味方がEXスキル2、または、EXスキル2+使用時に発動",
    "target": "味方全体前から1番目の敵1体",
    "effect": "味方全体のATKを魔族または光属性の味方の数×40%アップ(15CT)※2つの条件を満たした場合でも効果は重複しない/前から1番目の敵1体を15ノックバック/重さダウン20%(3CT)",
-   "gauge": "",
+   "gauge": "12～13",
    "obtain": "シーズンパス(有償/先行入手)",
    "date": "2026/09/01",
    "owned": false,
    "ownedSister": null,
    "wimg": "img/sw70_icon.png",
    "wart": "img/sw70.png"
+  },
+  {
+   "idx": 71,
+   "name": "ルリエル",
+   "icon": "attach2/696D67_E382B7E382B9E382BFE383BC5FE383ABE383AAE382A8E383AB5F69636F6E5F4E462E706E67.png",
+   "href": "%E3%82%B7%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%AB%E3%83%AA%E3%82%A8%E3%83%AB",
+   "attr": "光",
+   "type": "SUP",
+   "team": "味方全体の基礎ATK20%アップ/神族の味方の基礎ATK5%アップ神族の味方のATK100%アップ神族の味方のクリティカル時のダメージ倍率25%加算自身の初期シスターゲージ+20%",
+   "cond": "いずれかの味方がユニゾン状態でACTバー到達時(ユニゾンコマンドは除く)に発動",
+   "target": "神族の味方ユニゾン参加者",
+   "effect": "神族の味方のATK100%アップ(15CT)/ユニゾン参加者の行動CT15%短縮(1CT)",
+   "gauge": "12～13",
+   "obtain": "交換所",
+   "date": "2026/09/30",
+   "owned": false,
+   "ownedSister": null,
+   "wimg": "img/sw71_icon.png",
+   "wart": "img/sw71.png"
   }
  ]
 }
