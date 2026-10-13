@@ -24,7 +24,7 @@
       ],
       "ex2_plus": []
     },
-    "effect_rate": 0,
+    "effect_rate": 100,
     "u_unit_id": 6149794,
     "unit_id": 1001001,
     "character_id": 1,
@@ -283,7 +283,7 @@
       ],
       "ex2_plus": []
     },
-    "effect_rate": 0,
+    "effect_rate": 100,
     "u_unit_id": 8832479,
     "unit_id": 1001002,
     "character_id": 1,
@@ -552,7 +552,7 @@
         1001
       ]
     },
-    "effect_rate": 0,
+    "effect_rate": 100,
     "u_unit_id": 6149759,
     "unit_id": 1001003,
     "character_id": 1,
@@ -986,7 +986,7 @@
         9999
       ]
     },
-    "effect_rate": 0,
+    "effect_rate": 100,
     "u_unit_id": 8798736,
     "unit_id": 1001004,
     "character_id": 1,
@@ -1017,8 +1017,8 @@
     "max_exp": 99999999,
     "love_lv": 15,
     "max_love_lv": 30,
-    "total_love_exp": 4472,
-    "current_love_exp": 942,
+    "total_love_exp": 4561,
+    "current_love_exp": 1031,
     "max_love_exp": 1300,
     "power": 49297,
     "team_hp": 3618,
@@ -1486,7 +1486,7 @@
         9999
       ]
     },
-    "effect_rate": 0,
+    "effect_rate": 100,
     "u_unit_id": 8856291,
     "unit_id": 1001005,
     "character_id": 1,
@@ -3531,7 +3531,7 @@
       ],
       "ex2_plus": []
     },
-    "effect_rate": 0,
+    "effect_rate": 100,
     "u_unit_id": 8710361,
     "unit_id": 1003001,
     "character_id": 3,
@@ -3905,7 +3905,7 @@
       ],
       "ex2_plus": []
     },
-    "effect_rate": 0,
+    "effect_rate": 100,
     "u_unit_id": 6020079,
     "unit_id": 1003003,
     "character_id": 3,
@@ -4400,7 +4400,7 @@
         9999
       ]
     },
-    "effect_rate": 0,
+    "effect_rate": 100,
     "u_unit_id": 6109177,
     "unit_id": 1003004,
     "character_id": 3,
@@ -4901,7 +4901,7 @@
         9999
       ]
     },
-    "effect_rate": 0,
+    "effect_rate": 100,
     "u_unit_id": 8856435,
     "unit_id": 1003005,
     "character_id": 3,
@@ -4933,8 +4933,8 @@
     "max_exp": 99999999,
     "love_lv": 14,
     "max_love_lv": 30,
-    "total_love_exp": 2709,
-    "current_love_exp": 179,
+    "total_love_exp": 2798,
+    "current_love_exp": 268,
     "max_love_exp": 1000,
     "power": 40538,
     "team_hp": 9392,
@@ -5390,7 +5390,7 @@
         1001
       ]
     },
-    "effect_rate": 0,
+    "effect_rate": 100,
     "u_unit_id": 6020065,
     "unit_id": 1004003,
     "character_id": 4,
@@ -5716,7 +5716,7 @@
         9999
       ]
     },
-    "effect_rate": 0,
+    "effect_rate": 100,
     "u_unit_id": 13418997,
     "unit_id": 1004004,
     "character_id": 4,
@@ -5981,7 +5981,7 @@
       ],
       "ex2_plus": []
     },
-    "effect_rate": 0,
+    "effect_rate": 100,
     "u_unit_id": 12183549,
     "unit_id": 1004005,
     "character_id": 4,
@@ -6256,7 +6256,7 @@
         1001
       ]
     },
-    "effect_rate": 0,
+    "effect_rate": 100,
     "u_unit_id": 13341291,
     "unit_id": 1004006,
     "character_id": 4,
@@ -7733,7 +7733,7 @@
         9999
       ]
     },
-    "effect_rate": 0,
+    "effect_rate": 100,
     "u_unit_id": 5194563,
     "unit_id": 1006001,
     "character_id": 6,
@@ -10705,7 +10705,7 @@
       ],
       "ex2_plus": []
     },
-    "effect_rate": 0,
+    "effect_rate": 100,
     "u_unit_id": 5194901,
     "unit_id": 1009001,
     "character_id": 9,
@@ -11079,7 +11079,7 @@
       ],
       "ex2_plus": []
     },
-    "effect_rate": 0,
+    "effect_rate": 100,
     "u_unit_id": 10106148,
     "unit_id": 1009003,
     "character_id": 9,
@@ -11336,7 +11336,7 @@
       ],
       "ex2_plus": []
     },
-    "effect_rate": 0,
+    "effect_rate": 100,
     "u_unit_id": 5194903,
     "unit_id": 1011001,
     "character_id": 11,
@@ -11593,7 +11593,7 @@
       ],
       "ex2_plus": []
     },
-    "effect_rate": 0,
+    "effect_rate": 100,
     "u_unit_id": 10106165,
     "unit_id": 1011002,
     "character_id": 11,
@@ -11850,7 +11850,7 @@
       ],
       "ex2_plus": []
     },
-    "effect_rate": 0,
+    "effect_rate": 100,
     "u_unit_id": 6020001,
     "unit_id": 1011003,
     "character_id": 11,
@@ -12229,7 +12229,7 @@
       ],
       "ex2_plus": []
     },
-    "effect_rate": 0,
+    "effect_rate": 100,
     "u_unit_id": 9548305,
     "unit_id": 1011004,
     "character_id": 11,
@@ -12489,7 +12489,7 @@
       ],
       "ex2_plus": []
     },
-    "effect_rate": 0,
+    "effect_rate": 100,
     "u_unit_id": 9706064,
     "unit_id": 1012001,
     "character_id": 12,
@@ -12749,7 +12749,7 @@
       ],
       "ex2_plus": []
     },
-    "effect_rate": 0,
+    "effect_rate": 100,
     "u_unit_id": 10106157,
     "unit_id": 1012002,
     "character_id": 12,
@@ -13268,7 +13268,7 @@
       ],
       "ex2_plus": []
     },
-    "effect_rate": 0,
+    "effect_rate": 100,
     "u_unit_id": 6012147,
     "unit_id": 1014001,
     "character_id": 14,
@@ -13648,7 +13648,7 @@
       ],
       "ex2_plus": []
     },
-    "effect_rate": 0,
+    "effect_rate": 100,
     "u_unit_id": 6523908,
     "unit_id": 1014002,
     "character_id": 14,
@@ -14076,7 +14076,7 @@
       ],
       "ex2_plus": []
     },
-    "effect_rate": 0,
+    "effect_rate": 100,
     "u_unit_id": 8507344,
     "unit_id": 1014003,
     "character_id": 14,
@@ -14400,7 +14400,7 @@
       ],
       "ex2_plus": []
     },
-    "effect_rate": 0,
+    "effect_rate": 100,
     "u_unit_id": 13654060,
     "unit_id": 1014004,
     "character_id": 14,
@@ -15099,7 +15099,7 @@
       ],
       "ex2_plus": []
     },
-    "effect_rate": 0,
+    "effect_rate": 100,
     "u_unit_id": 6012240,
     "unit_id": 1016001,
     "character_id": 16,
@@ -15364,7 +15364,7 @@
       ],
       "ex2_plus": []
     },
-    "effect_rate": 0,
+    "effect_rate": 100,
     "u_unit_id": 6523851,
     "unit_id": 1016002,
     "character_id": 16,
@@ -18542,7 +18542,7 @@
       ],
       "ex2_plus": []
     },
-    "effect_rate": 0,
+    "effect_rate": 100,
     "u_unit_id": 6012289,
     "unit_id": 1022001,
     "character_id": 22,
@@ -19863,7 +19863,7 @@
       ],
       "ex2_plus": []
     },
-    "effect_rate": 0,
+    "effect_rate": 100,
     "u_unit_id": 6012159,
     "unit_id": 1025001,
     "character_id": 25,
@@ -20177,7 +20177,7 @@
       ],
       "ex2_plus": []
     },
-    "effect_rate": 0,
+    "effect_rate": 100,
     "u_unit_id": 10106146,
     "unit_id": 1025002,
     "character_id": 25,
@@ -20440,7 +20440,7 @@
       ],
       "ex2_plus": []
     },
-    "effect_rate": 0,
+    "effect_rate": 100,
     "u_unit_id": 13326760,
     "unit_id": 1025003,
     "character_id": 25,
@@ -22329,7 +22329,7 @@
       ],
       "ex2_plus": []
     },
-    "effect_rate": 0,
+    "effect_rate": 100,
     "u_unit_id": 6012160,
     "unit_id": 1027001,
     "character_id": 27,
@@ -26018,7 +26018,7 @@
       ],
       "ex2_plus": []
     },
-    "effect_rate": 0,
+    "effect_rate": 100,
     "u_unit_id": 6012060,
     "unit_id": 1033001,
     "character_id": 33,
@@ -26283,7 +26283,7 @@
       ],
       "ex2_plus": []
     },
-    "effect_rate": 0,
+    "effect_rate": 100,
     "u_unit_id": 8908988,
     "unit_id": 1033002,
     "character_id": 33,
@@ -26547,7 +26547,7 @@
       ],
       "ex2_plus": []
     },
-    "effect_rate": 0,
+    "effect_rate": 100,
     "u_unit_id": 10467040,
     "unit_id": 1033003,
     "character_id": 33,
@@ -27329,7 +27329,7 @@
       ],
       "ex2_plus": []
     },
-    "effect_rate": 0,
+    "effect_rate": 100,
     "u_unit_id": 6012158,
     "unit_id": 1035001,
     "character_id": 35,
@@ -27592,7 +27592,7 @@
       ],
       "ex2_plus": []
     },
-    "effect_rate": 0,
+    "effect_rate": 100,
     "u_unit_id": 11001692,
     "unit_id": 1035002,
     "character_id": 35,
@@ -27852,7 +27852,7 @@
       ],
       "ex2_plus": []
     },
-    "effect_rate": 0,
+    "effect_rate": 100,
     "u_unit_id": 10106147,
     "unit_id": 1035003,
     "character_id": 35,
@@ -28752,7 +28752,7 @@
       ],
       "ex2_plus": []
     },
-    "effect_rate": 0,
+    "effect_rate": 100,
     "u_unit_id": 6019804,
     "unit_id": 1037001,
     "character_id": 37,
@@ -29014,7 +29014,7 @@
       ],
       "ex2_plus": []
     },
-    "effect_rate": 0,
+    "effect_rate": 100,
     "u_unit_id": 6395991,
     "unit_id": 1037002,
     "character_id": 37,
@@ -29281,7 +29281,7 @@
       ],
       "ex2_plus": []
     },
-    "effect_rate": 0,
+    "effect_rate": 100,
     "u_unit_id": 10758642,
     "unit_id": 1037003,
     "character_id": 37,
@@ -31418,7 +31418,7 @@
         4001
       ]
     },
-    "effect_rate": 0,
+    "effect_rate": 100,
     "u_unit_id": 13341673,
     "unit_id": 1041005,
     "character_id": 41,
@@ -34560,7 +34560,7 @@
       ],
       "ex2_plus": []
     },
-    "effect_rate": 0,
+    "effect_rate": 100,
     "u_unit_id": 6395980,
     "unit_id": 1046001,
     "character_id": 46,
@@ -40288,7 +40288,7 @@
       ],
       "ex2_plus": []
     },
-    "effect_rate": 0,
+    "effect_rate": 100,
     "u_unit_id": 11622687,
     "unit_id": 1055001,
     "character_id": 55,
@@ -40551,7 +40551,7 @@
       ],
       "ex2_plus": []
     },
-    "effect_rate": 0,
+    "effect_rate": 100,
     "u_unit_id": 13881035,
     "unit_id": 1055002,
     "character_id": 55,
@@ -40808,7 +40808,7 @@
       ],
       "ex2_plus": []
     },
-    "effect_rate": 0,
+    "effect_rate": 100,
     "u_unit_id": 6542343,
     "unit_id": 1056001,
     "character_id": 56,
@@ -41072,7 +41072,7 @@
       ],
       "ex2_plus": []
     },
-    "effect_rate": 0,
+    "effect_rate": 100,
     "u_unit_id": 10434573,
     "unit_id": 1056002,
     "character_id": 56,
@@ -42244,7 +42244,7 @@
       ],
       "ex2_plus": []
     },
-    "effect_rate": 0,
+    "effect_rate": 100,
     "u_unit_id": 6052277,
     "unit_id": 1058001,
     "character_id": 58,
@@ -42942,7 +42942,7 @@
       ],
       "ex2_plus": []
     },
-    "effect_rate": 0,
+    "effect_rate": 100,
     "u_unit_id": 9179726,
     "unit_id": 1060001,
     "character_id": 60,
@@ -43206,7 +43206,7 @@
       ],
       "ex2_plus": []
     },
-    "effect_rate": 0,
+    "effect_rate": 100,
     "u_unit_id": 6333148,
     "unit_id": 1060002,
     "character_id": 60,
@@ -43951,7 +43951,7 @@
       ],
       "ex2_plus": []
     },
-    "effect_rate": 0,
+    "effect_rate": 100,
     "u_unit_id": 6012061,
     "unit_id": 1062001,
     "character_id": 62,
@@ -44651,7 +44651,7 @@
       ],
       "ex2_plus": []
     },
-    "effect_rate": 0,
+    "effect_rate": 100,
     "u_unit_id": 5194900,
     "unit_id": 1064001,
     "character_id": 64,
@@ -44910,7 +44910,7 @@
       ],
       "ex2_plus": []
     },
-    "effect_rate": 0,
+    "effect_rate": 100,
     "u_unit_id": 6021695,
     "unit_id": 1065001,
     "character_id": 65,
@@ -45231,7 +45231,7 @@
       ],
       "ex2_plus": []
     },
-    "effect_rate": 0,
+    "effect_rate": 100,
     "u_unit_id": 6149771,
     "unit_id": 1065002,
     "character_id": 65,
@@ -45600,7 +45600,7 @@
       ],
       "ex2_plus": []
     },
-    "effect_rate": 0,
+    "effect_rate": 100,
     "u_unit_id": 6012239,
     "unit_id": 1066001,
     "character_id": 66,
@@ -45923,7 +45923,7 @@
       ],
       "ex2_plus": []
     },
-    "effect_rate": 0,
+    "effect_rate": 100,
     "u_unit_id": 9233521,
     "unit_id": 1066002,
     "character_id": 66,
@@ -46184,7 +46184,7 @@
       ],
       "ex2_plus": []
     },
-    "effect_rate": 0,
+    "effect_rate": 100,
     "u_unit_id": 8727867,
     "unit_id": 1067001,
     "character_id": 67,
@@ -46571,7 +46571,7 @@
         1001
       ]
     },
-    "effect_rate": 0,
+    "effect_rate": 100,
     "u_unit_id": 13863508,
     "unit_id": 1067002,
     "character_id": 67,
@@ -47066,7 +47066,7 @@
       ],
       "ex2_plus": []
     },
-    "effect_rate": 0,
+    "effect_rate": 100,
     "u_unit_id": 10356693,
     "unit_id": 1068001,
     "character_id": 68,
@@ -50222,7 +50222,7 @@
       ],
       "ex2_plus": []
     },
-    "effect_rate": 0,
+    "effect_rate": 100,
     "u_unit_id": 6096987,
     "unit_id": 1074001,
     "character_id": 74,
@@ -50857,7 +50857,7 @@
       ],
       "ex2_plus": []
     },
-    "effect_rate": 0,
+    "effect_rate": 100,
     "u_unit_id": 10106160,
     "unit_id": 1076001,
     "character_id": 76,
@@ -52665,13 +52665,13 @@
     "total_exp": 680999,
     "current_exp": 0,
     "max_exp": 99999999,
-    "love_lv": 0,
+    "love_lv": 4,
     "max_love_lv": 30,
-    "total_love_exp": 0,
-    "current_love_exp": 0,
-    "max_love_exp": 10,
-    "power": 10336,
-    "team_hp": 4278,
+    "total_love_exp": 89,
+    "current_love_exp": 9,
+    "max_love_exp": 35,
+    "power": 10477,
+    "team_hp": 4364,
     "is_bond_unit": 0,
     "is_event_unit": 0,
     "bond_lv": 0,
@@ -52705,13 +52705,13 @@
       },
       "add_love_lv": {
         "class_name": "TKS.Network.Domain.StatusEntity",
-        "hp": "0",
+        "hp": "86",
         "init_ex_gauge": 0,
         "max_ex_gauge": 0,
         "min_wt": 0,
         "max_wt": 0,
-        "attack": 0,
-        "critical": 0,
+        "attack": 9,
+        "critical": 10,
         "ex_gauge_rate": 0,
         "weight": 0
       }
@@ -52835,7 +52835,7 @@
       "class_name": "TKS.Network.Domain.TabCharaDetailBatchDataEntity",
       "ex_skill_stren_batch": 1,
       "lv_limit_batch": 0,
-      "limit_break_batch": 0,
+      "limit_break_batch": 1,
       "bond_lv_batch": 0
     },
     "buff_effect": "<error>: Error: access violation accessing 0x18",
@@ -52848,7 +52848,7 @@
       "class_name": "TKS.Network.Domain.StrengthenFlagEntity",
       "ex_skill_stren_flag": 1,
       "lv_limit_flag": 0,
-      "limit_break_flag": 0,
+      "limit_break_flag": 1,
       "core_lv_flag": 0
     },
     "base_status_data": {
@@ -53861,7 +53861,7 @@
       ],
       "ex2_plus": []
     },
-    "effect_rate": 0,
+    "effect_rate": 100,
     "u_unit_id": 6258606,
     "unit_id": 1082001,
     "character_id": 82,
@@ -55484,7 +55484,7 @@
       ],
       "ex2_plus": []
     },
-    "effect_rate": 0,
+    "effect_rate": 100,
     "u_unit_id": 6034506,
     "unit_id": 1087001,
     "character_id": 87,
@@ -55515,8 +55515,8 @@
     "max_exp": 99999999,
     "love_lv": 17,
     "max_love_lv": 30,
-    "total_love_exp": 6882,
-    "current_love_exp": 452,
+    "total_love_exp": 6971,
+    "current_love_exp": 541,
     "max_love_exp": 1900,
     "power": 35960,
     "team_hp": 17134,
@@ -55974,7 +55974,7 @@
       ],
       "ex2_plus": []
     },
-    "effect_rate": 0,
+    "effect_rate": 100,
     "u_unit_id": 13326761,
     "unit_id": 1088001,
     "character_id": 88,
@@ -56239,7 +56239,7 @@
       ],
       "ex2_plus": []
     },
-    "effect_rate": 0,
+    "effect_rate": 100,
     "u_unit_id": 13863192,
     "unit_id": 1088002,
     "character_id": 88,
@@ -57465,7 +57465,7 @@
         1002
       ]
     },
-    "effect_rate": 0,
+    "effect_rate": 100,
     "u_unit_id": 6027810,
     "unit_id": 1091001,
     "character_id": 91,
@@ -57964,7 +57964,7 @@
         9999
       ]
     },
-    "effect_rate": 0,
+    "effect_rate": 100,
     "u_unit_id": 13807062,
     "unit_id": 1091002,
     "character_id": 91,
@@ -58924,7 +58924,7 @@
       ],
       "ex2_plus": []
     },
-    "effect_rate": 0,
+    "effect_rate": 100,
     "u_unit_id": 6261617,
     "unit_id": 1095001,
     "character_id": 95,
@@ -59189,7 +59189,7 @@
       ],
       "ex2_plus": []
     },
-    "effect_rate": 0,
+    "effect_rate": 100,
     "u_unit_id": 10906384,
     "unit_id": 1095002,
     "character_id": 95,
@@ -60416,7 +60416,7 @@
       ],
       "ex2_plus": []
     },
-    "effect_rate": 0,
+    "effect_rate": 100,
     "u_unit_id": 8832470,
     "unit_id": 1098001,
     "character_id": 98,
@@ -60791,7 +60791,7 @@
       ],
       "ex2_plus": []
     },
-    "effect_rate": 0,
+    "effect_rate": 100,
     "u_unit_id": 13958350,
     "unit_id": 1098002,
     "character_id": 98,
@@ -61053,7 +61053,7 @@
       ],
       "ex2_plus": []
     },
-    "effect_rate": 0,
+    "effect_rate": 100,
     "u_unit_id": 6475176,
     "unit_id": 1099001,
     "character_id": 99,
@@ -62535,6 +62535,267 @@
     "is_used": 0,
     "is_prohibited": 0,
     "skill_category_id_list": [
+      9999,
+      3004,
+      3001
+    ],
+    "skill_category_id_list_by_ex_type": {
+      "class_name": "TKS.Network.Domain.SkillCategoryIdListByExType",
+      "ex1": [
+        9999
+      ],
+      "ex1_plus": [],
+      "ex2": [
+        3004,
+        3001,
+        9999
+      ],
+      "ex2_plus": []
+    },
+    "effect_rate": 0,
+    "u_unit_id": 14184151,
+    "unit_id": 1103001,
+    "character_id": 103,
+    "unit_illust_id": 1103001,
+    "unit_view_type": 2,
+    "character_name": "ロクサーナ",
+    "character_name_kana": "ロクサーナ",
+    "unit_name": "傲岸なる演出家",
+    "rarity": 3,
+    "max_rarity": 5,
+    "attr_type": 2,
+    "role": 5,
+    "camp": 3,
+    "camp_list": [
+      3
+    ],
+    "affiliation": 2,
+    "affiliation_list": [
+      2
+    ],
+    "lv_limit_count": 0,
+    "lv": 1,
+    "max_lv": 60,
+    "core_lv": 0,
+    "max_core_lv": 3,
+    "total_exp": 0,
+    "current_exp": 0,
+    "max_exp": 20,
+    "love_lv": 0,
+    "max_love_lv": 30,
+    "total_love_exp": 0,
+    "current_love_exp": 0,
+    "max_love_exp": 10,
+    "power": 4546,
+    "team_hp": 1962,
+    "is_bond_unit": 0,
+    "is_event_unit": 0,
+    "bond_lv": 0,
+    "is_awake_unit": 0,
+    "awakened_illust_display_type": 0,
+    "awake_unit_illust_id": -1,
+    "is_have": 0,
+    "full_name": "ロクサーナ・ハイドランジア",
+    "birthday": "6月25日",
+    "constellation": 4,
+    "guardian_star": "カフ",
+    "school_year": 3,
+    "committee": "",
+    "club": "演劇部・部長",
+    "hobby": "脚本の執筆",
+    "cv": "唐乃ひよこ",
+    "profile": "新星学園の演劇部の部長で、演出と脚本を担当し\nている。下級生と間違われるほど背は小さいが、\n態度は反比例するように大きく、誰が相手であろ\nうと不遜な態度を崩さない。\n一応プリマステラではあるが、できれば戦いには\n関わらず脚本を書いていたいと思っている。",
+    "status_data": {
+      "class_name": "TKS.Network.Domain.UnitStatusEntity",
+      "base_data": {
+        "class_name": "TKS.Network.Domain.StatusEntity",
+        "hp": "1962",
+        "init_ex_gauge": 30,
+        "max_ex_gauge": 300,
+        "min_wt": 17,
+        "max_wt": 21,
+        "attack": 99,
+        "critical": 300,
+        "ex_gauge_rate": 99,
+        "weight": 30
+      },
+      "add_love_lv": {
+        "class_name": "TKS.Network.Domain.StatusEntity",
+        "hp": "0",
+        "init_ex_gauge": 0,
+        "max_ex_gauge": 0,
+        "min_wt": 0,
+        "max_wt": 0,
+        "attack": 0,
+        "critical": 0,
+        "ex_gauge_rate": 0,
+        "weight": 0
+      }
+    },
+    "specific_gauge_data": {
+      "class_name": "TKS.Network.Domain.SpecificGaugeDataEntity",
+      "specific_name": "<error>: Error: access violation accessing 0x10",
+      "specific_detail": "<error>: Error: access violation accessing 0x10",
+      "icon_id": 0,
+      "is_unlock": 0,
+      "is_strengthen": 0
+    },
+    "skill_data": [
+      {
+        "class_name": "TKS.Network.Domain.SkillEntity",
+        "skill_data_type": 1,
+        "skill_id": 11030011,
+        "skill_name": "ナラティブカーム",
+        "skill_detail": "味方のHPを20％+水属性の味方の数×4％回復/前から2番目にいる味方のノーツを3前方に移動/水属性の味方を3体以上編成している時、一番後方の味方のノーツを7前方に移動",
+        "icon_id": 601,
+        "lv": 1,
+        "max_lv": 10,
+        "cost_ex_gauge": 100,
+        "is_unlock": 1,
+        "unlock_condition": "",
+        "specific_skill_name": "<error>: Error: access violation accessing 0x10",
+        "specific_skill_detail": "<error>: Error: access violation accessing 0x10",
+        "specific_skill_cost_ex_gauge": 0,
+        "enemy_special_skill_trigger_text": "",
+        "enemy_weak_gauge_decrease_condition_text": ""
+      },
+      {
+        "class_name": "TKS.Network.Domain.SkillEntity",
+        "skill_data_type": 1,
+        "skill_id": 11030012,
+        "skill_name": "アコレードオベーション",
+        "skill_detail": "味方のHPを25％+水属性の味方の数×5％回復/自身の右1レーンにいる味方のATK150％アップ（20CT）/味方のHPがオーバーヒール状態（100％超）の時、味方全体の行動CT7.5％短縮（10CT）/味方のHPがフルオーバーヒール状態（300％）の時、味方全体のノーツを前方に3～4移動",
+        "icon_id": 601,
+        "lv": 1,
+        "max_lv": 10,
+        "cost_ex_gauge": 200,
+        "is_unlock": 1,
+        "unlock_condition": "",
+        "specific_skill_name": "<error>: Error: access violation accessing 0x10",
+        "specific_skill_detail": "<error>: Error: access violation accessing 0x10",
+        "specific_skill_cost_ex_gauge": 0,
+        "enemy_special_skill_trigger_text": "",
+        "enemy_weak_gauge_decrease_condition_text": ""
+      },
+      {
+        "class_name": "TKS.Network.Domain.SkillEntity",
+        "skill_data_type": 2,
+        "skill_id": 1001001,
+        "skill_name": "フィオナユニゾンスキルA",
+        "skill_detail": "ユニゾン参加者が3体以上のとき50％の確率で発動。ユニゾン参加者全員に攻撃力80％アップを付与する。",
+        "icon_id": 1,
+        "lv": 3,
+        "max_lv": 5,
+        "cost_ex_gauge": -1,
+        "is_unlock": 1,
+        "unlock_condition": "",
+        "specific_skill_name": "<error>: Error: access violation accessing 0x10",
+        "specific_skill_detail": "<error>: Error: access violation accessing 0x10",
+        "specific_skill_cost_ex_gauge": 0,
+        "enemy_special_skill_trigger_text": "",
+        "enemy_weak_gauge_decrease_condition_text": ""
+      },
+      {
+        "class_name": "TKS.Network.Domain.SkillEntity",
+        "skill_data_type": 3,
+        "skill_id": 10010011,
+        "skill_name": "フィオナシスタースキルA",
+        "skill_detail": "味方のいずれかが攻撃した際、10％の確率で発動。敵単体に120％の追加攻撃を行う。",
+        "icon_id": 1,
+        "lv": 3,
+        "max_lv": 5,
+        "cost_ex_gauge": -1,
+        "is_unlock": 1,
+        "unlock_condition": "",
+        "specific_skill_name": "<error>: Error: access violation accessing 0x10",
+        "specific_skill_detail": "<error>: Error: access violation accessing 0x10",
+        "specific_skill_cost_ex_gauge": 0,
+        "enemy_special_skill_trigger_text": "",
+        "enemy_weak_gauge_decrease_condition_text": ""
+      }
+    ],
+    "unique_skill_data": [
+      {
+        "class_name": "TKS.Network.Domain.UnitUniqueSkillData",
+        "skill_id": -1,
+        "skill_name": "",
+        "detail": "自身のEX消費量5％減少",
+        "is_unlock": 0,
+        "unlock_condition": "限界突破★4にすると解放"
+      },
+      {
+        "class_name": "TKS.Network.Domain.UnitUniqueSkillData",
+        "skill_id": 53,
+        "skill_name": "HP上昇☆3",
+        "detail": "自身のHP5％アップ",
+        "is_unlock": 0,
+        "unlock_condition": "限界突破★4にすると解放"
+      }
+    ],
+    "equip_data": [],
+    "resist_data": {
+      "class_name": "TKS.Network.Domain.UnitResistData",
+      "poison": 3,
+      "paralysis": 3,
+      "confusion": 3,
+      "atrophy": 3,
+      "seal": 3,
+      "burn": 3,
+      "flostbite": 3
+    },
+    "sp_equip_types": [
+      1
+    ],
+    "notice_flg": 1,
+    "tab_batch_data": {
+      "class_name": "TKS.Network.Domain.TabCharaDetailBatchDataEntity",
+      "ex_skill_stren_batch": 1,
+      "lv_limit_batch": 1,
+      "limit_break_batch": 0,
+      "bond_lv_batch": 0
+    },
+    "buff_effect": "<error>: Error: access violation accessing 0x18",
+    "exclusive_exchange_shop_data": {
+      "class_name": "TKS.Network.Domain.ExclusiveEquipShopEntity",
+      "shop_id": 2010,
+      "product_id": 187
+    },
+    "strengthen_flag_list": {
+      "class_name": "TKS.Network.Domain.StrengthenFlagEntity",
+      "ex_skill_stren_flag": 1,
+      "lv_limit_flag": 1,
+      "limit_break_flag": 0,
+      "core_lv_flag": 0
+    },
+    "base_status_data": {
+      "class_name": "TKS.Network.Domain.UnitBaseStatusDataEntity",
+      "base_data": {
+        "class_name": "TKS.Network.Domain.UnitBaseStatusEntity",
+        "hp": 1962,
+        "init_ex_gauge": 30,
+        "max_ex_gauge": 300,
+        "min_wt": 17,
+        "max_wt": 21,
+        "attack": 99,
+        "critical": 300,
+        "ex_gauge_rate": 99
+      },
+      "add_ability_effect": {
+        "class_name": "TKS.Network.Domain.UnitAddAbilityEffect",
+        "hp": 0,
+        "attack": 0,
+        "ex_gauge_rate": 0,
+        "init_ex_gauge": 0
+      }
+    }
+  },
+  {
+    "class_name": "TKS.Network.Domain.UnitEntity",
+    "friend_user_id": 0,
+    "is_rental": 0,
+    "is_used": 0,
+    "is_prohibited": 0,
+    "skill_category_id_list": [
       3001,
       3004,
       5001,
@@ -62993,7 +63254,7 @@
         4004
       ]
     },
-    "effect_rate": 0,
+    "effect_rate": 100,
     "u_unit_id": 10356558,
     "unit_id": 1106001,
     "character_id": 106,
@@ -64597,8 +64858,8 @@
     "max_exp": 99999999,
     "love_lv": 20,
     "max_love_lv": 30,
-    "total_love_exp": 14246,
-    "current_love_exp": 516,
+    "total_love_exp": 14335,
+    "current_love_exp": 605,
     "max_love_exp": 3800,
     "power": 54543,
     "team_hp": 15392,
@@ -66063,7 +66324,7 @@
         9999
       ]
     },
-    "effect_rate": 0,
+    "effect_rate": 100,
     "u_unit_id": 11123650,
     "unit_id": 1121001,
     "character_id": 121,
@@ -66872,7 +67133,7 @@
         1002
       ]
     },
-    "effect_rate": 0,
+    "effect_rate": 100,
     "u_unit_id": 8710888,
     "unit_id": 1125001,
     "character_id": 125,
@@ -67570,7 +67831,7 @@
       ],
       "ex2_plus": []
     },
-    "effect_rate": 0,
+    "effect_rate": 100,
     "u_unit_id": 11075723,
     "unit_id": 1129001,
     "character_id": 129,
@@ -67835,7 +68096,7 @@
       ],
       "ex2_plus": []
     },
-    "effect_rate": 0,
+    "effect_rate": 100,
     "u_unit_id": 11669494,
     "unit_id": 1130001,
     "character_id": 130,
@@ -69705,18 +69966,18 @@
     "lv_limit_count": 4,
     "lv": 100,
     "max_lv": 100,
-    "core_lv": 2,
+    "core_lv": 3,
     "max_core_lv": 3,
     "total_exp": 680999,
     "current_exp": 0,
     "max_exp": 99999999,
-    "love_lv": 18,
+    "love_lv": 30,
     "max_love_lv": 30,
-    "total_love_exp": 8660,
-    "current_love_exp": 330,
-    "max_love_exp": 2400,
-    "power": 68846,
-    "team_hp": 4649,
+    "total_love_exp": 67930,
+    "current_love_exp": 0,
+    "max_love_exp": 99999999,
+    "power": 75091,
+    "team_hp": 4746,
     "is_bond_unit": 0,
     "is_event_unit": 0,
     "bond_lv": 0,
@@ -69745,18 +70006,18 @@
         "max_wt": 12,
         "attack": 2047,
         "critical": 300,
-        "ex_gauge_rate": 51,
+        "ex_gauge_rate": 61,
         "weight": 30
       },
       "add_love_lv": {
         "class_name": "TKS.Network.Domain.StatusEntity",
-        "hp": "146",
+        "hp": "243",
         "init_ex_gauge": 0,
         "max_ex_gauge": 0,
         "min_wt": 0,
         "max_wt": 0,
-        "attack": 109,
-        "critical": 60,
+        "attack": 181,
+        "critical": 100,
         "ex_gauge_rate": 0,
         "weight": 0
       }
@@ -69793,9 +70054,9 @@
         "skill_data_type": 1,
         "skill_id": 11360012,
         "skill_name": "トゥルーラブジャッジメント",
-        "skill_detail": "敵単体に800％（ラッシュ100以上の時、1000％）のダメージ/自身に相手スタン時のダメージ倍率を25％加算（1CT）/自身の行動CT20％遅延（20CT）",
+        "skill_detail": "敵単体に1600％（ラッシュ100以上の時、2000％）のダメージ/自身に相手スタン時のダメージ倍率を50％加算（1CT）/自身の行動CT20％遅延（20CT）",
         "icon_id": 100,
-        "lv": 1,
+        "lv": 10,
         "max_lv": 10,
         "cost_ex_gauge": 180,
         "is_unlock": 1,
@@ -69856,7 +70117,7 @@
         "class_name": "TKS.Network.Domain.UnitUniqueSkillData",
         "skill_id": 12,
         "skill_name": "EX上昇☆2",
-        "detail": "自身のEX上昇15アップ",
+        "detail": "自身のEX上昇25アップ",
         "is_unlock": 1,
         "unlock_condition": ""
       }
@@ -70101,10 +70362,10 @@
     "sp_equip_types": [
       3
     ],
-    "notice_flg": 1,
+    "notice_flg": 0,
     "tab_batch_data": {
       "class_name": "TKS.Network.Domain.TabCharaDetailBatchDataEntity",
-      "ex_skill_stren_batch": 1,
+      "ex_skill_stren_batch": 0,
       "lv_limit_batch": 0,
       "limit_break_batch": 0,
       "bond_lv_batch": 0
@@ -70117,7 +70378,7 @@
     },
     "strengthen_flag_list": {
       "class_name": "TKS.Network.Domain.StrengthenFlagEntity",
-      "ex_skill_stren_flag": 1,
+      "ex_skill_stren_flag": 0,
       "lv_limit_flag": 0,
       "limit_break_flag": 0,
       "core_lv_flag": 0
@@ -70139,7 +70400,7 @@
         "class_name": "TKS.Network.Domain.UnitAddAbilityEffect",
         "hp": 0,
         "attack": 0,
-        "ex_gauge_rate": 15,
+        "ex_gauge_rate": 25,
         "init_ex_gauge": 0
       }
     }
@@ -70453,7 +70714,7 @@
         9999
       ]
     },
-    "effect_rate": 0,
+    "effect_rate": 100,
     "u_unit_id": 12183651,
     "unit_id": 1140001,
     "character_id": 140,
@@ -71335,7 +71596,7 @@
       ],
       "ex2_plus": []
     },
-    "effect_rate": 0,
+    "effect_rate": 100,
     "u_unit_id": 13864281,
     "unit_id": 1154001,
     "character_id": 154,
@@ -71607,7 +71868,7 @@
         9999
       ]
     },
-    "effect_rate": 0,
+    "effect_rate": 100,
     "u_unit_id": 11320080,
     "unit_id": 1155001,
     "character_id": 155,
@@ -72105,7 +72366,7 @@
         9999
       ]
     },
-    "effect_rate": 0,
+    "effect_rate": 100,
     "u_unit_id": 11318948,
     "unit_id": 1156001,
     "character_id": 156,
@@ -72605,7 +72866,7 @@
         4004
       ]
     },
-    "effect_rate": 0,
+    "effect_rate": 100,
     "u_unit_id": 11508615,
     "unit_id": 1157001,
     "character_id": 157,
@@ -73102,7 +73363,7 @@
         9999
       ]
     },
-    "effect_rate": 0,
+    "effect_rate": 100,
     "u_unit_id": 11319778,
     "unit_id": 1158001,
     "character_id": 158,
