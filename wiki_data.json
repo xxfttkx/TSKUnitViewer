@@ -2072,7 +2072,8 @@
    "crit": 5,
    "releaseDate": "2024/08/14",
    "obtain": "ガチャ(恒常)",
-   "owned": false
+   "ownedUnit": 1038002,
+   "owned": true
   },
   {
    "no": "032002",
@@ -2431,7 +2432,8 @@
    "crit": 5,
    "releaseDate": "2024/11/12",
    "obtain": "ガチャ(恒常)",
-   "owned": false
+   "ownedUnit": 1104001,
+   "owned": true
   },
   {
    "no": "105001",
@@ -3093,7 +3095,8 @@
    "crit": 3,
    "releaseDate": "2025/04/18",
    "obtain": "ガチャ(恒常)",
-   "owned": false
+   "ownedUnit": 1120001,
+   "owned": true
   },
   {
    "no": "121001",
@@ -4635,7 +4638,8 @@
    "crit": 3,
    "releaseDate": "2026/04/06",
    "obtain": "ガチャ(恒常)",
-   "owned": false
+   "ownedUnit": 1134001,
+   "owned": true
   },
   {
    "no": "142001",
@@ -4844,7 +4848,8 @@
    "crit": 3,
    "releaseDate": "2026/05/31",
    "obtain": "ガチャ(恒常)",
-   "owned": false
+   "ownedUnit": 1043003,
+   "owned": true
   },
   {
    "no": "095003",

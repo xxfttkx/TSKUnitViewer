@@ -1588,7 +1588,7 @@
    "exUp": 20,
    "crit": null,
    "ability": "ATK8%(16%)アップ",
-   "obtain": "",
+   "obtain": "種族交流会(2.5周年)報酬メモリーメダル",
    "part": 1,
    "name": "種族交流会",
    "icon": "attach2/696D67_65717569705FE7A59EE58D88E381AEE99680E69DBEE69D965F4E462E706E67.png",
@@ -1711,7 +1711,7 @@
    "exUp": 30,
    "crit": null,
    "ability": "クリティカル8%(16%)加算",
-   "obtain": "",
+   "obtain": "イベント報酬",
    "part": 1,
    "name": "イベント136_黒ベア子再び、赤ちゃんクマロボのパパを捜せ！",
    "icon": "attach2/696D67_65717569705FE3818FE381BEE38195E38293E383ADE38383E383895F4E462E706E67.png",
@@ -1851,6 +1851,22 @@
    "name": "種族交流会",
    "icon": "attach2/696D67_65717569705FE6989FE98DB5E383AAE38399E383ACE383BCE382B7E383A7E383B35F4E462E706E67.png",
    "href": "%E7%A8%AE%E6%97%8F%E4%BA%A4%E6%B5%81%E4%BC%9A",
+   "owned": false
+  },
+  {
+   "rarity": 3,
+   "atkType": "魔法",
+   "attr": "",
+   "atk": 576,
+   "ex": null,
+   "exUp": null,
+   "crit": null,
+   "ability": "クリティカル8%(16%)加算",
+   "obtain": "イベント報酬",
+   "part": 1,
+   "name": "イベント168_推しからの贈り物",
+   "icon": "attach2/696D67_65717569705FE3839FE382B9E38386E382A3E38383E382AFE383BBE382B9E382BFE383BCE383A9E383BC5F4E462E706E67.png",
+   "href": "%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88168_%E6%8E%A8%E3%81%97%E3%81%8B%E3%82%89%E3%81%AE%E8%B4%88%E3%82%8A%E7%89%A9",
    "owned": false
   },
   {
@@ -3163,7 +3179,7 @@
       ]
      ],
      "skill": "",
-     "skill_lv": -1
+     "skill_lv": null
     }
    ]
   },
@@ -3234,7 +3250,7 @@
       ]
      ],
      "skill": "",
-     "skill_lv": -1
+     "skill_lv": null
     },
     {
      "unit_id": 1106001,
@@ -3254,7 +3270,7 @@
       ]
      ],
      "skill": "",
-     "skill_lv": -1
+     "skill_lv": null
     }
    ]
   },
@@ -3293,7 +3309,7 @@
       ]
      ],
      "skill": "",
-     "skill_lv": -1
+     "skill_lv": null
     }
    ]
   },
@@ -4547,6 +4563,22 @@
    "name": "イベント167_選挙管理委員会のゴーストハロウィンパーティー",
    "icon": "attach2/696D67_65717569705FE3838FE383ADE382A6E382A3E383B3E8B5A4E3819AE3818DE382935F4E462E706E67.png",
    "href": "%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88167_%E9%81%B8%E6%8C%99%E7%AE%A1%E7%90%86%E5%A7%94%E5%93%A1%E4%BC%9A%E3%81%AE%E3%82%B4%E3%83%BC%E3%82%B9%E3%83%88%E3%83%8F%E3%83%AD%E3%82%A6%E3%82%A3%E3%83%B3%E3%83%91%E3%83%BC%E3%83%86%E3%82%A3%E3%83%BC",
+   "owned": false
+  },
+  {
+   "rarity": 3,
+   "atkType": "",
+   "attr": "",
+   "hp": 2764,
+   "ex": null,
+   "exUp": null,
+   "crit": 9.6,
+   "ability": "クリティカル時のダメージ倍率を5%(10%)加算",
+   "obtain": "イベント報酬",
+   "part": 2,
+   "name": "イベント168_推しからの贈り物",
+   "icon": "attach2/696D67_65717569705FE3839EE382B8E382ABE383ABE382B1E38383E38388E3838FE38383E383885F4E462E706E67.png",
+   "href": "%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88168_%E6%8E%A8%E3%81%97%E3%81%8B%E3%82%89%E3%81%AE%E8%B4%88%E3%82%8A%E7%89%A9",
    "owned": false
   },
   {
