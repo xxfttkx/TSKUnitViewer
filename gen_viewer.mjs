@@ -108,6 +108,13 @@ const units = raw.map((u) => ({
     skill: e.skill_data ? e.skill_data.skill_detail : '', skill_lv: e.skill_data ? e.skill_data.lv : null,
     enchTotal: (e.enchant_frame_list || []).length,
     enchOpen: (e.enchant_frame_list || []).filter((x) => x.is_enchant_release).length,
+    enchants: (e.enchant_frame_list || []).map((fr) => {
+      const ed = fr.enchant_data || {};
+      const det = ed.detail || {};
+      let text = det.detail || '';
+      if (text && ed.effect_value != null) text = text.replace('0', String(ed.effect_value));
+      return { frame: fr.frame_no, rare: fr.is_rare, open: fr.is_enchant_release, name: det.skill_name || ed.skill_name || '', tier: ed.tier || 0, rarity: ed.effect_rarity || 0, text };
+    }),
     icon: eqImgSet.has(`${e.equip_id}.png`) ? `img/equip/${e.equip_id}.png` : null,
   })),
   loveB: (u.status_data && u.status_data.add_love_lv) ? { hp: +u.status_data.add_love_lv.hp, atk: u.status_data.add_love_lv.attack, crit: u.status_data.add_love_lv.critical } : null,
@@ -376,6 +383,10 @@ const html = `<!DOCTYPE html>
   .eq .eqp span { font-size: 11.5px; padding: 2px 7px; border-radius: 6px; background: rgba(255,255,255,.06); border: 1px solid var(--line); }
   .eq .eqs { font-size: 12px; color: var(--dim); margin-top: 4px; line-height: 1.55; }
   .eq .eqs b { color: var(--fg); font-size: 11px; border-radius: 4px; padding: 0 4px; margin-right: 4px; background: rgba(255,255,255,.08); }
+  .eq .eqench { font-size: 11.5px; color: var(--dim); margin-top: 3px; line-height: 1.5; padding-left: 2px; }
+  .eq .eqench b { color: var(--fg); font-weight: 600; }
+  .eq .eqench .estarr { color: #ffd94a; letter-spacing: -1px; margin-right: 3px; }
+  .eq .eqench .erare { display: inline-block; font-size: 10px; color: #ff9d4a; border: 1px solid #ff9d4a; border-radius: 4px; padding: 0 4px; margin-right: 4px; vertical-align: 1px; }
   .figpanel img { max-width: 92%; max-height: 92%; object-fit: contain; filter: drop-shadow(0 8px 18px rgba(0,0,0,.55)); }
   .figpanel .ficon { width: 100%; height: 100%; object-fit: cover; }
   .modal .close { position: absolute; top: 12px; right: 16px; font-size: 22px; color: var(--dim); cursor: pointer; background: none; border: none; z-index: 2; }
@@ -785,6 +796,7 @@ function showModal(id) {
         <div class="eqp">\${(e.params || []).map((p) => \`<span>\${paramStr(p)}</span>\`).join('')}</div>
         \${e.skill ? \`<div class="eqs"><b>アビリティ</b> \${esc(e.skill)}\${e.skill_lv ? \` <span class="k">Lv\${e.skill_lv}</span>\` : ''}</div>\` : ''}
         \${e.wAbility && e.wAbility !== e.skill ? \`<div class="eqs"><b>初期(最大)</b> \${esc(e.wAbility)}</div>\` : ''}
+        \${e.enchants && e.enchants.some(en => en.open) ? \`<div class="eqs"><b>附魔</b></div>\` + e.enchants.filter(en => en.open).map(en => \`<div class="eqench">\${en.rare ? '<span class="erare">稀有</span>' : ''}<span class="estarr">\${'★'.repeat(en.rarity || 1)}</span> <b>\${esc(en.name)}</b>\${en.tier ? \` <span class="k">Lv\${en.tier}</span>\` : ''} — \${esc(en.text)}</div>\`).join('') : ''}
       </div>
     </div>\`).join('')}
   </div></div>\` : '';

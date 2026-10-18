@@ -87,7 +87,8 @@ Frida / il2cpp-bridge 从游戏客户端内存 dump 的 `TSK.Network.Domain.Unit
 | `limit_break_count` / `max_limit_break_count` | 装备突破 |
 | `parameter_list[].parameter_type` | 0=HP 1=ATK 2=EX上昇 3=クリ(值÷100=%) 4=EX蓄积 5=行動CT —— dump 为**当前练度值**，Wiki 一覧为满强化值 |
 | `skill_data` | アビリティ：`skill_id` / `skill_detail`（当前效果文本）/ `lv`（技能等级） |
-| `enchant_frame_list[]` | 附魔槽：`frame_no` / `is_rare` / `release_resonance_count` / `is_enchant_release`（解锁状态）/ **`enchant_data`（已解析，含 skill_id/tier/effect_rarity/effect_type/effect_value/detail）** |
+| `enchant_frame_list[]` | 附魔槽：`frame_no`（槽位号 1~4）/ `is_rare`（是否稀有槽）/ `release_resonance_count`（解锁所需共鸣次数）/ `is_enchant_release`（是否解锁）/ **`enchant_data`**（已解析） |
+| `enchant_data`（附魔详情，`is_enchant_release`=1 时存在） | `skill_id` / `tier`（附魔等级 1~10）/ `effect_rarity`（稀有度 1~5）/ `effect_type`（效果类型 ID，16 种）/ `effect_value`（**效果数值，用于替换 `detail.detail` 文本中的 `0` 占位符**）/ `detail`（技能定义：`skill_name`/`detail`(效果文本模板，含 `0` 占位)/`effect_type_1`/`effect_value_1_1`/`icon_id` 等） |
 | `lottery_skill_enchant_list[]` | 抽卡附魔技能列表 |
 | `equip_awake_flag` / `is_equip_awake` / `can_equip_awake` | 装备觉醒标记 / 是否已觉醒 / 能否觉醒 |
 | `resonance_count` / `max_resonance_count` | 共鸣次数 / 上限 |
@@ -156,5 +157,5 @@ Wiki 侧数据（`fetch_sisters.mjs` → `sister_wiki.json`，71 名）：チー
 
 ## 页面已使用 / 未使用速查
 
-- **已使用**：标识名称、稀有度属性类型陣営所属、`sp_equip_types`(攻撃タイプ)、养成数值、status_data 白值+好感加成、equip_data、skill_data(含 EX2+)、unique_skill_data、resist_data（待接入）、档案；シスター三技能/解放状态 + Wiki 合并字段
-- **未使用**：经验类、core_lv、`skill_category_id_list`、`tab_batch_data`、`exclusive_exchange_shop_data`、`strengthen_flag_list`、`specific_gauge_data`、status_data 各项 `add_*` 加成明细、装备 `enchant_data`/`sell_data`/共鸣/觉醒、シスター `limit_break_data`/`cost_item_list`
+- **已使用**：标识名称、稀有度属性类型陣営所属、`sp_equip_types`(攻撃タイプ)、养成数值、status_data 白值+好感加成、equip_data（含 `enchant_data` 附魔效果）、skill_data(含 EX2+)、unique_skill_data、resist_data（待接入）、档案；シスター三技能/解放状态 + Wiki 合并字段
+- **未使用**：经验类、core_lv、`skill_category_id_list`、`tab_batch_data`、`exclusive_exchange_shop_data`、`strengthen_flag_list`、`specific_gauge_data`、status_data 各项 `add_*` 加成明细、装备 `sell_data`/共鸣/觉醒/`lottery_skill_enchant_list`、シスター `limit_break_data`/`cost_item_list`
