@@ -7,7 +7,20 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const raw = JSON.parse(readFileSync(join(__dirname, 'unit_list.json'), 'utf8'));
+// 游戏数据统一放在 userdata/ (Frida dump 产物)
+const USERDATA = join(__dirname, 'userdata');
+const raw = JSON.parse(readFileSync(join(USERDATA, 'unit_list.json'), 'utf8'));
+
+// 仓库数据 (userdata/warehouse.json): chara_piece_list = 角色碎片持有数, item_id 即卡牌 unit_id
+let warehouse = { chara_piece_list: [] };
+try { warehouse = JSON.parse(readFileSync(join(USERDATA, 'warehouse.json'), 'utf8')); } catch { /* warehouse.json 不存在 */ }
+const pieceByUnit = new Map((warehouse.chara_piece_list || []).map((p) => [String(p.item_id), p]));
+
+// 升星所需碎片数 (来源: 官方帮助页 help/detail/6/limitBreaking, 与 dump 数据无关)
+// 限界突破: 目标★ → 需求 (★1→2 50 / ★2→3 100 / ★3→4 200 / ★4→5 300)
+const LB_COST = { 2: 50, 3: 100, 4: 200, 5: 300 };
+// コアLV强化 (★5 后): 目标コアLV → 需求 (0→1 50 / 1→2 120 / 2→3 180)
+const CORE_COST = { 1: 50, 2: 120, 3: 180 };
 
 // Wiki 全图鉴数据: owned=已持有；wiki 中文属性/类型 → json 数字 ID 映射
 let wikiRows = [];
@@ -34,6 +47,15 @@ const pickArt = (id) => {
 const pickIcon = (id) => (imgSet.has(`${id}_icon.png`) ? `img/${id}_icon.png` : null);
 // 未持有卡头像: img/w{no}_icon.png (fetch_images.mjs 下载)
 for (const r of wikiRows) r.wimg = imgSet.has(`w${r.no}_icon.png`) ? `img/w${r.no}_icon.png` : null;
+// 未持有角色的碎片: 仅处理「不属于任何已持有卡」的碎片 (已持有卡在 units 映射里取 dump 值),
+// 按碎片名 (去掉「のピース」) 匹配 Wiki 行 —— 编号规则不可靠 (如 1020004 聖夜のキャロル 会被错配到 020004 ルルカ)
+const ownedUnitIds = new Set(raw.map((u) => String(u.unit_id)));
+for (const p of (warehouse.chara_piece_list || [])) {
+  if (ownedUnitIds.has(String(p.item_id))) continue;
+  const base = String(p.item_name || '').replace(/のピース$/, '');
+  const hit = base && wikiRows.find((r) => r.title.includes(base));
+  if (hit) hit.piece = p.have_count || 0;
+}
 
 // ---- 字段映射（已通过攻略 Wiki 交叉验证）----
 const ATTR = { 1: '炎', 2: '水', 3: '雷', 4: '光', 5: '闇' };
@@ -76,6 +98,11 @@ const units = raw.map((u) => ({
   team_hp: u.team_hp,
   limit: u.lv_limit_count,
   core: u.core_lv, maxCore: u.max_core_lv, // コア (核心) 等级, 与练度相关
+  // 升星: 碎片持有数 (chara_piece_list, item_id = unit_id) / 下一星所需碎片 (null = 已满★5)
+  piece: (pieceByUnit.get(String(u.unit_id)) || {}).have_count || 0,
+  pieceName: (pieceByUnit.get(String(u.unit_id)) || {}).item_name || null,
+  lbNeed: u.rarity < 5 ? (LB_COST[u.rarity + 1] || null) : null,
+  coreNeed: (u.rarity >= 5 && u.max_core_lv > 0 && u.core_lv < u.max_core_lv) ? (CORE_COST[u.core_lv + 1] || null) : null,
   bond: u.is_bond_unit,
   event: u.is_event_unit,
   awake: u.is_awake_unit,
@@ -173,6 +200,9 @@ const stats = {
   chars: new Set(units.map((u) => u.char_id)).size,
   collected: wikiRows.filter((r) => r.owned).length,
   dexTotal: wikiRows.length,
+  // 升星: 碎片已够、可立即限界突破 / コアLV強化 的卡牌数
+  lbReady: units.filter((u) => u.lbNeed != null && u.piece >= u.lbNeed).length,
+  coreReady: units.filter((u) => u.coreNeed != null && u.piece >= u.coreNeed).length,
 };
 
 // Wiki 行类型/攻撃タイプ统一归一为数字 ID (前端筛选/显示共用, 与持有卡的 u.role/u.spType 同一套枚举)
@@ -183,7 +213,7 @@ for (const r of wikiRows) {
 
 // ---- シスター (sister_unit_list.json dump + sister_wiki.json 全图鉴) ----
 let sisterRaw = [];
-try { sisterRaw = JSON.parse(readFileSync(join(__dirname, 'sister_unit_list.json'), 'utf8')); } catch { /* 未 dump */ }
+try { sisterRaw = JSON.parse(readFileSync(join(USERDATA, 'sister_unit_list.json'), 'utf8')); } catch { /* 未 dump */ }
 let sisterWiki = [];
 try { sisterWiki = JSON.parse(readFileSync(join(__dirname, 'sister_wiki.json'), 'utf8')).rows; } catch { /* 未抓取 */ }
 // next_lv_list[0] = 下一级预览 (含 <color=#16C97B> 差分高亮 rich text, 前端 colorize 还原)
@@ -323,6 +353,15 @@ const html = `<!DOCTYPE html>
   .card.notown:hover { filter: grayscale(.1); }
   .tag.max { background: linear-gradient(90deg, #c9962c, #ffd76a); color: #201500; font-weight: 800; border: none; }
   .tag.lovemax { background: linear-gradient(90deg, #d4508f, #ff7eb6); color: #2a0012; font-weight: 800; border: none; }
+  .tag.lbok { background: linear-gradient(90deg, #1f8f5a, #3fd97f); color: #04240f; font-weight: 800; border: none; }
+  /* 升星进度: 碎片持有 / 所需 */
+  .lbrow { display: flex; align-items: center; gap: 8px; font-size: 13px; margin-top: 3px; }
+  .lbrow .k { color: var(--dim); }
+  .lbrow b { font-size: 13px; }
+  .lbrow .ok { color: #3fd97f; font-weight: 700; }
+  .lbrow .ng { color: #ff9ec4; font-weight: 700; }
+  .lbrow .piece { height: 6px; flex: 1; min-width: 60px; border-radius: 3px; background: rgba(255,255,255,.1); overflow: hidden; }
+  .lbrow .piece i { display: block; height: 100%; background: linear-gradient(90deg, #1f8f5a, #3fd97f); }
   .cardbody { padding: 10px 12px 12px; }
   .uname { font-size: 15px; font-weight: 700; line-height: 1.3; }
   .cname { font-size: 12.5px; color: var(--dim); margin-top: 2px; }
@@ -436,7 +475,9 @@ const html = `<!DOCTYPE html>
   <div class="chips" id="rarChips"></div>
   <div class="chips" id="campChips"></div>
   <div class="chips" id="spChips"></div>
+  <div class="chips" id="lbChips"></div>
   <div class="chips" id="ownChips" style="display:none"></div>
+  <div class="chips" id="pcChips" style="display:none"></div>
   <select id="viewSel">
     <option value="card">视图：卡牌</option>
     <option value="table">视图：表格</option>
@@ -454,6 +495,7 @@ const html = `<!DOCTYPE html>
     <option value="lv">排序：等级</option>
     <option value="love">排序：好感度</option>
     <option value="rarity">排序：稀有度</option>
+    <option value="lb">排序：升星差距（差得少在前）</option>
     <option value="uid">排序：编号</option>
     <option value="date">排序：实装日期</option>
   </select>
@@ -468,7 +510,7 @@ const DATA = ${payload};
 const WIKI_BASE = 'https://twinklestarknights.wikiru.jp/?';
 const { units, stats, wikiRows, sisters, sisterRows, ATTR, ATTR_COLOR, ROLE, CAMP, AFFIL, WIKI_ATTR_ID, WIKI_CAMP_ID, EQ_PART, EQ_PARAM, SP_TYPE } = DATA;
 const sisterById = new Map(sisters.map((s) => [s.sid, s]));
-const state = { q: '', attr: 0, role: 0, rar: 0, camp: 0, sp: 0, own: 0, sort: 'power', desc: false, view: 'card' };
+const state = { q: '', attr: 0, role: 0, rar: 0, camp: 0, sp: 0, own: 0, lb: 0, pc: 0, sort: 'power', desc: false, view: 'card' };
 
 const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 // dump rich text 还原: 先转义, 再把 color 标签 (esc 后为 &lt;color=...&gt;) 还原为彩色 span, 换行转 br
@@ -494,6 +536,7 @@ for (const u of units) if (u.rowIdx != null) unitByRow.set(u.rowIdx, u);
 document.getElementById('stats').innerHTML = [
   ['持有卡牌', stats.total], ['登场角色', stats.chars], ['总战力', stats.totalPower.toLocaleString()],
   ['图鉴收集', stats.collected + ' / ' + stats.dexTotal], ['★5', stats.r5], ['满级', stats.maxLv], ['好感满', stats.maxLove],
+  ['可升星', stats.lbReady], ['可强化コア', stats.coreReady],
 ].map(([k, v]) => \`<div class="stat"><div class="v">\${v}</div><div class="k">\${k}</div></div>\`).join('');
 
 function chipRow(el, items, key) {
@@ -516,7 +559,9 @@ function renderToolbar() {
   chipRow('rarChips', [[0, '稀有度'], [5, '★5'], [4, '★4'], [3, '★3'], [2, '★2']], 'rar');
   chipRow('campChips', [[0, '种族'], ...Object.entries(CAMP).map(([k, v]) => [+k, v])], 'camp');
   chipRow('spChips', [[0, '攻撃'], ...Object.entries(SP_TYPE).map(([k, v]) => [+k, v])], 'sp');
+  chipRow('lbChips', [[0, '升星'], [1, '可升星'], [2, '素材不足']], 'lb');
   chipRow('ownChips', [[0, '持有'], [1, '已持有'], [2, '未持有']], 'own');
+  chipRow('pcChips', [[0, '碎片'], [1, '有碎片']], 'pc');
 }
 
 function filtered() {
@@ -527,6 +572,7 @@ function filtered() {
     (!state.role || u.role === state.role) &&
     (!state.sp || u.spType === state.sp) &&
     (!state.rar || u.rarity === state.rar) &&
+    (!state.lb || (state.lb === 1 ? (lbOk(u) || coreOk(u)) : ((u.lbNeed != null || u.coreNeed != null) && !lbOk(u) && !coreOk(u)))) &&
     (!state.camp || u.camps.includes(state.camp)));
   const cmp = {
     power: (a, b) => b.power - a.power,
@@ -536,12 +582,30 @@ function filtered() {
     lv: (a, b) => b.lv - a.lv || b.power - a.power,
     love: (a, b) => b.love - a.love || b.power - a.power,
     rarity: (a, b) => b.rarity - a.rarity || b.power - a.power,
+    lb: (a, b) => Math.max(lbGap(a), 0) - Math.max(lbGap(b), 0) || b.power - a.power, // 升星差距: 已够(差<=0 归零)在前, 其次差得少的在前
     uid: (a, b) => a.unit_id - b.unit_id,
     date: (a, b) => (b.wdate || '').localeCompare(a.wdate || '') || b.power - a.power,
   }[state.sort];
   arr.sort(cmp);
   return state.desc ? arr.reverse() : arr;
 }
+
+// 升星状态: 限界突破 (rarity<5) / コアLV强化 (★5 后); lbNeed/coreNeed 为 null = 该阶段已满
+// piece = 持有碎片数 (chara_piece_list)
+const lbOk = (u) => u.lbNeed != null && u.piece >= u.lbNeed;
+const coreOk = (u) => u.coreNeed != null && u.piece >= u.coreNeed;
+// 距下一阶段还差多少碎片 (<=0 = 已够可升; 无升星需求=满星满コア的卡排最后)
+const lbGap = (u) => u.lbNeed != null ? u.lbNeed - u.piece : (u.coreNeed != null ? u.coreNeed - u.piece : 99999);
+// 卡片徽标: 可升星 / 还差多少碎片
+const lbBadge = (u) => {
+  if (u.lbNeed != null) return lbOk(u)
+    ? \`<span class="tag lbok">可升星 ★\${u.rarity + 1}</span>\`
+    : \`<span class="tag">升★\${u.rarity + 1} \${u.piece}/\${u.lbNeed}</span>\`;
+  if (u.coreNeed != null) return coreOk(u)
+    ? \`<span class="tag lbok">可强化コア \${u.core + 1}</span>\`
+    : \`<span class="tag">コア\${u.core + 1} \${u.piece}/\${u.coreNeed}</span>\`;
+  return '';
+};
 
 function cardHTML(u) {
   const c = ATTR_COLOR[u.attr];
@@ -558,6 +622,7 @@ function cardHTML(u) {
         \${u.core > 0 ? \`<span class="tag">コア\${u.core}</span>\` : ''}
         \${loveMax ? '<span class="tag lovemax">♥MAX</span>' : ''}
         \${u.bond ? '<span class="tag">绊</span>' : ''}
+        \${lbBadge(u)}
       </div>
     </div>
     <div class="cardbody">
@@ -576,6 +641,10 @@ function render() {
   document.getElementById('rarChips').style.display = isSis ? 'none' : '';
   document.getElementById('campChips').style.display = isSis ? 'none' : '';
   document.getElementById('spChips').style.display = isSis ? 'none' : '';
+  // 升星为持有卡专属维度: 仅卡牌/表格/按角色视图可用
+  document.getElementById('lbChips').style.display = (state.view === 'dex' || isSis) ? 'none' : '';
+  // 碎片为全图鉴专属维度 (未持有角色也可能持有碎片)
+  document.getElementById('pcChips').style.display = state.view === 'dex' ? '' : 'none';
   if (isSis) { renderSister(); return; }
   if (state.view === 'dex') { renderDex(); return; }
   const arr = filtered();
@@ -596,9 +665,10 @@ function render() {
       <td style="color:var(--pink)">\${u.love}</td>
       <td><b>\${u.power.toLocaleString()}</b></td>
       <td>\${u.limit || '-'}</td><td>\${esc(u.birthday)}</td><td>\${esc(u.cv)}</td>
+      <td>\${u.lbNeed != null ? (lbOk(u) ? '<span style="color:#3fd97f;font-weight:700">可升星</span>' : '差 ' + (u.lbNeed - u.piece)) : (u.coreNeed != null ? (coreOk(u) ? '<span style="color:#3fd97f;font-weight:700">可强化</span>' : '差 ' + (u.coreNeed - u.piece)) : '-')}</td>
     </tr>\`).join('');
     main.innerHTML = \`<div class="tdwrap"><table><thead><tr>
-      <th></th><th>★</th><th>属性</th><th>角色</th><th>卡名</th><th>类型</th><th>攻撃</th><th>种族</th><th>所属</th><th>Lv</th><th>♥</th><th>战力</th><th>解放</th><th>生日</th><th>CV</th>
+      <th></th><th>★</th><th>属性</th><th>角色</th><th>卡名</th><th>类型</th><th>攻撃</th><th>种族</th><th>所属</th><th>Lv</th><th>♥</th><th>战力</th><th>解放</th><th>生日</th><th>CV</th><th>升星</th>
     </tr></thead><tbody>\${rows}</tbody></table></div>\`;
   } else if (state.view === 'char') {
     const byChar = new Map();
@@ -631,13 +701,16 @@ function render() {
 function renderDex() {
   const main = document.getElementById('main');
   const q = state.q.toLowerCase();
-  const arr = wikiRows.map((r, idx) => ({ r, idx })).filter(({ r }) =>
+  // 碎片持有数: 已持有卡取 dump 值, 未持有卡取 Wiki 行匹配到的仓库碎片数
+  const pcOf = (idx, r) => (unitByRow.get(idx) ? (unitByRow.get(idx).piece || 0) : (r.piece || 0));
+  const arr = wikiRows.map((r, idx) => ({ r, idx })).filter(({ r, idx }) =>
     (!q || (r.title + r.yomi + r.no).toLowerCase().includes(q)) &&
     (!state.attr || WIKI_ATTR_ID[r.attr] === state.attr) &&
     (!state.role || r.typeId === state.role) &&
     (!state.sp || r.spId === state.sp) &&
     (!state.camp || WIKI_CAMP_ID[r.camp] === state.camp) &&
     (!state.rar || r.rarity === state.rar) &&
+    (!state.pc || pcOf(idx, r) > 0) &&
     (!state.own || (state.own === 1 ? r.owned : !r.owned)));
   const ownedFirst = (a, b) => (b.r.owned - a.r.owned) || (b.r.rarity || 0) - (a.r.rarity || 0) || a.r.no.localeCompare(b.r.no);
   const cmp = {
@@ -655,6 +728,7 @@ function renderDex() {
   if (!arr.length) { main.innerHTML = '<div class="empty">没有符合筛选条件的角色</div>'; return; }
   main.innerHTML = '<div class="grid">' + arr.map(({ r, idx }) => {
     const u = unitByRow.get(idx);
+    const pc = pcOf(idx, r);
     const c = ATTR_COLOR[WIKI_ATTR_ID[r.attr] || 0];
     const imgSrc = u ? (u.icon || u.art || r.wimg) : r.wimg;
     const rst = u ? rareStr(u) : stars(r.rarity || 0);
@@ -666,6 +740,7 @@ function renderDex() {
         \${!imgSrc ? esc((r.title || '?')[0]) : ''}
         <div class="badges">
           \${r.owned ? '<span class="tag">已持有</span>' : '<span class="tag" style="background:#555">未持有</span>'}
+          \${pc > 0 ? \`<span class="tag lbok" title="仓库持有碎片 \${pc} 个">碎片 \${pc}</span>\` : ''}
         </div>
         \${r.href ? \`<a class="wikilink" href="\${WIKI_BASE}\${r.href.replace(/&/g, '&amp;')}" target="_blank" rel="noopener" onclick="event.stopPropagation()" title="在 Wiki 中查看">↗ Wiki</a>\` : ''}
       </div>
@@ -812,6 +887,18 @@ function showModal(id) {
   const skillsHtml = (u.skills || []).length ? \`<div class="section"><h3>技能</h3>\` +
     u.skills.map((s) => { if (s.type === 1) s._exn = ++exN; return skillBlock(s, skillTag(s)); }).join('') +
     (u.uniques || []).map((s) => skillBlock(s, '<span class="stag st-p">被动</span>')).join('') + \`</div>\` : '';
+  // 升星区: 碎片持有量 + 限界突破 (★1~★4) / コアLV强化 (★5 后) 的进度条
+  const lbLine = (label, from, to, need, okText) => {
+    const has = u.piece, ok = has >= need, w = Math.min(100, Math.round((has / need) * 100));
+    return \`<div class="lbrow"><span class="k">\${label}</span><b>\${from} → \${to}</b><span class="k">\${has}/\${need}</span><span class="piece"><i style="width:\${w}%"></i></span><span class="\${ok ? 'ok' : 'ng'}">\${ok ? okText : '差 ' + (need - has)}</span></div>\`;
+  };
+  const starRows = [];
+  if (u.pieceName) starRows.push(\`<div class="lbrow"><span class="k">碎片</span><b>\${esc(u.pieceName)}</b></div>\`);
+  if (u.lbNeed != null) starRows.push(lbLine('限界突破', stars(u.rarity), stars(u.rarity + 1), u.lbNeed, '可升星'));
+  else starRows.push(\`<div class="lbrow"><span class="k">限界突破</span><b>\${stars(u.rarity)} 已满</b></div>\`);
+  if (u.coreNeed != null) starRows.push(lbLine('コアLV強化', 'コア' + u.core, 'コア' + (u.core + 1), u.coreNeed, '可强化'));
+  else if (u.maxCore && u.core >= u.maxCore) starRows.push(\`<div class="lbrow"><span class="k">コア</span><b>\${u.core} / \${u.maxCore} 已满</b></div>\`);
+  const starHtml = starRows.length ? \`<div class="section"><h3>升星</h3>\${starRows.join('')}</div>\` : '';
   // 弹窗结构: 同图模糊底 + 左侧信息(滚动) + 右侧立绘展示面板(等比完整显示)
   document.getElementById('modal').innerHTML = \`
     <div class="martbg">\${u.art ? \`<img src="\${u.art}" onerror="this.parentElement.remove()">\` : ''}</div>
@@ -830,6 +917,7 @@ function showModal(id) {
       \${row('所属', esc(affilStr(u)))}
       \${row('卡牌编号', u.unit_id + ' (illust ' + u.illust + ')')}
     </div>
+    \${starHtml}
     \${eqHtml}
     \${skillsHtml}
       \${u.profile ? \`<div class="section"><h3>简介</h3><div class="profile">\${esc(u.profile)}</div></div>\` : ''}
@@ -905,3 +993,11 @@ writeFileSync(out, html, 'utf8');
 console.log(`OK -> ${out} (${(html.length / 1024).toFixed(1)} KB)`);
 console.log(`卡牌 ${stats.total} 张 / 角色 ${stats.chars} 名 / 总战力 ${stats.totalPower.toLocaleString()} / ★5 ${stats.r5} / 满级 ${stats.maxLv} / 好感满 ${stats.maxLove}`);
 console.log(`图鉴收集 ${stats.collected}/${stats.dexTotal} (Wiki 全角色, 含覚醒強化別枠)`);
+{
+  const matched = units.filter((u) => u.pieceName).length;
+  const canLb = units.filter((u) => u.lbNeed != null && u.piece >= u.lbNeed).length;
+  const canCore = units.filter((u) => u.coreNeed != null && u.piece >= u.coreNeed).length;
+  console.log(`仓库碎片 ${pieceByUnit.size} 种 / 匹配到卡牌 ${matched} 张 / 可升星 ${canLb} 张 / 可强化コア ${canCore} 张`);
+  const unownedPc = wikiRows.filter((r) => !r.owned && r.piece > 0).length;
+  console.log(`未持有角色持有碎片 ${unownedPc} 名 (全图鉴视图角标显示)`);
+}

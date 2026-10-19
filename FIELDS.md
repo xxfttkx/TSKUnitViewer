@@ -2,6 +2,8 @@
 
 Frida / il2cpp-bridge 从游戏客户端内存 dump 的 `TSK.Network.Domain.UnitEntity` 列表（每元素 = 一张持有卡牌）。本文按功能分组说明各字段含义与枚举映射，验证方式为「与[攻略 Wiki](https://twinklestarknights.wikiru.jp/?%E3%82%AD%E3%83%A3%E3%83%A9%E3%82%AF%E3%82%BF%E3%83%BC%E4%B8%80%E8%A6%A7) 角色详情页交叉对照」。
 
+> dump 产物统一放在 `userdata/`：`unit_list.json`（本文）、`sister_unit_list.json`、`warehouse.json`（仓库，见文末）。
+
 > 新版 dump 已剥离 `class_name` 元字段与读取失败占位（`<error>: access violation`），部分实体（附魔、技能类别、特殊槽）改为真实解析值；删除了租借相关（`is_rental`/`is_used`/`is_prohibited`/`friend_user_id`）、`is_have`、`effect_rate`、`buff_effect` 等无用字段。
 
 ## 标识 / 名称
@@ -130,7 +132,7 @@ Frida / il2cpp-bridge 从游戏客户端内存 dump 的 `TSK.Network.Domain.Unit
 | 字段 | 说明 |
 |---|---|
 | `sister_unit_id` / `u_sister_unit_id` | シスター ID / dump 实例 ID |
-| `character_name` / `character_name_kana` | 名称（含【魔王】【新春】等变体；与 Wiki「シスター」页名称**精确对应**，71 名全量匹配成功） |
+| `character_name` / `character_name_kana` | 名称（含【魔王】【新春】等变体；与 Wiki「シスター」页名称**精确对应**，73 名全量匹配成功） |
 | `sister_name` | シスター称号（如 `シスター`） |
 | `attr_type` / `role` / `camp` | 属性/类型/种族，与 unit 同一套枚举 |
 | `notice_flg` | 通知旗标 |
@@ -153,9 +155,43 @@ Frida / il2cpp-bridge 从游戏客户端内存 dump 的 `TSK.Network.Domain.Unit
 | `rarity` | 素材稀有度 |
 | `illust_id` | 素材图标 ID（如 `item_0030001`） |
 
-Wiki 侧数据（`fetch_sisters.mjs` → `sister_wiki.json`，71 名）：チームスキル（满级合计文本）、アクティブスキル発動条件/対象/効果（满级）、ゲージ速度、入手方法、実装日。图片全部为 Wiki 专属资源：图标 `img/sw{idx}_icon.png`（71 张，一覧表 lazyload `data-src`）、Q 版立绘 `img/sw{idx}.png`（71 张，逐详情页抓取，attach2 第二段 hex 解码文件名，形如 `シスター{名}.png`）。
+Wiki 侧数据（`fetch_sisters.mjs` → `sister_wiki.json`，73 名）：チームスキル（满级合计文本）、アクティブスキル発動条件/対象/効果（满级）、ゲージ速度、入手方法、実装日。图片全部为 Wiki 专属资源：图标 `img/sw{idx}_icon.png`（73 张，一覧表 lazyload `data-src`）、Q 版立绘 `img/sw{idx}.png`（73 张，逐详情页抓取，attach2 第二段 hex 解码文件名，形如 `シスター{名}.png`）。
+
+## 仓库 warehouse.json（userdata/）
+
+Frida dump 的账号仓库数据，顶层 5 个数组：
+
+| 数组 | 内容 | 说明 |
+|---|---|---|
+| `item_list` | 普通道具（80 项） | 含结晶体/团子等活动消耗品；元素字段 item_id / item_type(90 居多，语义未考证) / have_count / item_name / rarity / detail / illust_id / group_item_cost_count / distribution_type / order_no / end_date / limit_date_text / gacha_id |
+| `stren_list` | 强化素材（66 项） | 如 EXPポーション(小)；字段同上但无 `end_date`/`limit_date_text`/`gacha_id` |
+| `chara_piece_list` | **角色碎片（139 种）** | 升星用，见下 |
+| `event_item_list` | 活动道具（147 项） | 交换券、討伐の証等；字段同 item_list |
+| `important_item_list` | 重要道具（当前 0 项） | — |
+
+### chara_piece_list（角色碎片）
+
+- **`item_id` 即卡牌 `unit_id`**（如 `1001001` = フィオナ「流星の姫君」），`item_name` 形如 `<卡名>のピース`，`illust_id` 形如 `item_pi_{unit_id}`；`item_type` 恒为 16、`rarity` 恒为 3
+- `have_count` = 持有数。dump **只列出持有数 > 0 的碎片**（无 0 值条目），未列出的卡视为 0 个
+- 极少数碎片由同角色多张卡**共用**：如 `1006001` 是 `[未完の魔王]クロト、[最後の魔王]クロト《厄災》のピース`，此时 `detail` 首行会写出全部适用卡；其余碎片 `detail` 首行为通用文本「対象星騎士のピース」
+- 图鉴页按 `item_id` 归属碎片（221 张持有卡中 133 张命中）
+- **未持有角色也可能持有碎片**：这类碎片不归属任何已持有卡，图鉴页按 `item_name`（去掉「のピース」）匹配 Wiki 卡名归入全图鉴对应行（当前 6 名）。注意不能用「`item_id` 去首位 == Wiki 编号」的规则——编号存在错位（如 `1020004 聖夜のキャロル` 会撞到 `020004 ［手作り妹チョコ］ルルカ`）
+
+### 升星所需碎片数（**不在 dump 内**，来自官方帮助页）
+
+| 阶段 | 所需碎片 | 类型 |
+|---|---|---|
+| ★1→★2 | 50 | 限界突破 |
+| ★2→★3 | 100 | 限界突破 |
+| ★3→★4 | 200 | 限界突破 |
+| ★4→★5 | 300 | 限界突破 |
+| コアLV 0→1 | 50 | コアLV强化（★5 后） |
+| コアLV 1→2 | 120 | コアLV强化 |
+| コアLV 2→3 | 180 | コアLV强化 |
+
+来源：官方帮助页「限界突破/コアLV強化」（`https://prod-dmmpcr.twinkle-star-knights.com/proxy/bottom/help/detail/6/limitBreaking`）。dump 中无升星消耗字段，图鉴用上表 + `chara_piece_list` 算出每张卡的「可升星 / 差多少碎片」。
 
 ## 页面已使用 / 未使用速查
 
-- **已使用**：标识名称、稀有度属性类型陣営所属、`sp_equip_types`(攻撃タイプ)、养成数值、status_data 白值+好感加成、equip_data（含 `enchant_data` 附魔效果）、skill_data(含 EX2+)、unique_skill_data、resist_data（待接入）、档案；シスター三技能/解放状态 + Wiki 合并字段
-- **未使用**：经验类、core_lv、`skill_category_id_list`、`tab_batch_data`、`exclusive_exchange_shop_data`、`strengthen_flag_list`、`specific_gauge_data`、status_data 各项 `add_*` 加成明细、装备 `sell_data`/共鸣/觉醒/`lottery_skill_enchant_list`、シスター `limit_break_data`/`cost_item_list`
+- **已使用**：标识名称、稀有度属性类型陣営所属、`sp_equip_types`(攻撃タイプ)、养成数值、status_data 白值+好感加成、equip_data（含 `enchant_data` 附魔效果）、skill_data(含 EX2+)、unique_skill_data、resist_data（待接入）、档案；仓库 `chara_piece_list` 碎片（算升星进度 + 全图鉴未持有角色碎片角标）；シスター三技能/解放状态 + Wiki 合并字段
+- **未使用**：经验类、`skill_category_id_list`、`tab_batch_data`、`exclusive_exchange_shop_data`、`strengthen_flag_list`、`specific_gauge_data`、status_data 各项 `add_*` 加成明细、装备 `sell_data`/共鸣/觉醒/`lottery_skill_enchant_list`、シスター `limit_break_data`/`cost_item_list`、仓库 `item_list`/`stren_list`/`event_item_list`
