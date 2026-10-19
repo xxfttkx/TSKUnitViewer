@@ -1,5 +1,5 @@
 {
- "fetchedAt": "2026-10-18",
+ "fetchedAt": "2026-10-19",
  "rows": [
   {
    "idx": 0,
@@ -15,8 +15,8 @@
    "gauge": "ATKバフ200%(4CT)行動CT短縮20%(4CT)",
    "obtain": "09～10",
    "date": "シスター実装記念プレゼント",
-   "owned": true,
-   "ownedSister": 1001001,
+   "owned": false,
+   "ownedSister": null,
    "wimg": "img/sw0_icon.png",
    "wart": "img/sw0.png"
   },
@@ -34,8 +34,8 @@
    "gauge": "ATKバフ100%(1CT)0位置に強制移動させ、ランブルに参加させる※純粋なランブル発生時(双方ACTバー(0位置)同時到達)は発動しない。",
    "obtain": "15～16",
    "date": "交換所",
-   "owned": true,
-   "ownedSister": 1030001,
+   "owned": false,
+   "ownedSister": null,
    "wimg": "img/sw1_icon.png",
    "wart": "img/sw1.png"
   },
@@ -129,8 +129,8 @@
    "gauge": "人間の味方のATK100%アップ(15CT)敵全体の被ダメージを3%増加(15CT)",
    "obtain": "12～13",
    "date": "交換所",
-   "owned": true,
-   "ownedSister": 1012001,
+   "owned": false,
+   "ownedSister": null,
    "wimg": "img/sw6_icon.png",
    "wart": "img/sw6.png"
   },
@@ -148,8 +148,8 @@
    "gauge": "味方全体のATK100%アップ(15CT)",
    "obtain": "09～10",
    "date": "交換所",
-   "owned": true,
-   "ownedSister": 1091001,
+   "owned": false,
+   "ownedSister": null,
    "wimg": "img/sw7_icon.png",
    "wart": "img/sw7.png"
   },
@@ -167,8 +167,8 @@
    "gauge": "敵のEXゲージを25%減少味方全体のATKを減少させたEXゲージ量×3%アップ(10CT)*3",
    "obtain": "12～13",
    "date": "シーズンパス(有償/先行入手)交換所(2025/01/01)",
-   "owned": true,
-   "ownedSister": 1004003,
+   "owned": false,
+   "ownedSister": null,
    "wimg": "img/sw8_icon.png",
    "wart": "img/sw8.png"
   },
@@ -224,8 +224,8 @@
    "gauge": "味方全体のATK250%アップ(15CT)",
    "obtain": "09～10",
    "date": "シーズンパス(有償/先行入手)交換所(2025/02/14)",
-   "owned": true,
-   "ownedSister": 1043001,
+   "owned": false,
+   "ownedSister": null,
    "wimg": "img/sw11_icon.png",
    "wart": "img/sw11.png"
   },
@@ -243,8 +243,8 @@
    "gauge": "光属性の味方のATK100%アップ(15CT)クリティカルを50%加算(15CT)",
    "obtain": "09～10",
    "date": "交換所",
-   "owned": true,
-   "ownedSister": 1047001,
+   "owned": false,
+   "ownedSister": null,
    "wimg": "img/sw12_icon.png",
    "wart": "img/sw12.png"
   },
@@ -376,8 +376,8 @@
    "gauge": "敵のEXゲージを100減少させ、人間の味方のATKを減少させたEXゲージ量×2%アップ(10CT)人間の味方のクリティカル30%加算(10CT)",
    "obtain": "12～13",
    "date": "シーズンパス(有償/先行入手)交換所(2025/07/07)",
-   "owned": true,
-   "ownedSister": 1003003,
+   "owned": false,
+   "ownedSister": null,
    "wimg": "img/sw19_icon.png",
    "wart": "img/sw19.png"
   },
@@ -490,8 +490,8 @@
    "gauge": "味方全体のATKを火傷付与中の敵の数×50%アップ(20CT)",
    "obtain": "09～10",
    "date": "交換所",
-   "owned": true,
-   "ownedSister": 1008001,
+   "owned": false,
+   "ownedSister": null,
    "wimg": "img/sw25_icon.png",
    "wart": "img/sw25.png"
   },
@@ -680,8 +680,8 @@
    "gauge": "ユニゾン参加者のATK200％アップ(15CT)/ユニゾンアタックのダメージ倍率を100％アップ(1CT)/行動CT10％短縮(1CT)",
    "obtain": "12〜13",
    "date": "シーズンパス(有償/先行入手)交換所(2026/01/01)",
-   "owned": true,
-   "ownedSister": 1001005,
+   "owned": false,
+   "ownedSister": null,
    "wimg": "img/sw35_icon.png",
    "wart": "img/sw35.png"
   },
@@ -813,8 +813,8 @@
    "gauge": "ユニゾンした人数によって以下の効果を適用する・2体以上：クリティカル20%加算(10CT)・3体以上：ATK100%アップ(10CT)・4体以上：さらにATK150%アップ(10CT)",
    "obtain": "12〜13",
    "date": "シーズンパス(有償/先行入手)交換所(2026/05/15)",
-   "owned": true,
-   "ownedSister": 1077002,
+   "owned": false,
+   "ownedSister": null,
    "wimg": "img/sw42_icon.png",
    "wart": "img/sw42.png"
   },
@@ -832,8 +832,8 @@
    "gauge": "敵全体の被ダメージを魔族の味方の数×2%増加(10CT)",
    "obtain": "12～13",
    "date": "2.5周年前夜祭記念シスターパック【Xmasクラウディア】(有償/先行入手)交換所(2026/09/01)",
-   "owned": true,
-   "ownedSister": 1051003,
+   "owned": false,
+   "ownedSister": null,
    "wimg": "img/sw43_icon.png",
    "wart": "img/sw43.png"
   },
@@ -851,8 +851,8 @@
    "gauge": "ATKを100%+ヒールタイプの数×50%アップ(15CT)/ノーツを4～4前方に移動",
    "obtain": "15～16",
    "date": "2.5周年記念シスターパック【新春アナ】(有償/先行入手)交換所(2026/10/01)",
-   "owned": true,
-   "ownedSister": 1008004,
+   "owned": false,
+   "ownedSister": null,
    "wimg": "img/sw44_icon.png",
    "wart": "img/sw44.png"
   },
@@ -946,8 +946,8 @@
    "gauge": "味方全体のノーツを最も移動した敵と同じ距離前方に移動(最大3)/異なるタイプの味方を4体以上編成している時、人間または魔族のATK100%アップ(10CT)",
    "obtain": "15～16",
    "date": "イベント交換所",
-   "owned": true,
-   "ownedSister": 1158001,
+   "owned": false,
+   "ownedSister": null,
    "wimg": "img/sw49_icon.png",
    "wart": "img/sw49.png"
   },
