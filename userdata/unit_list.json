@@ -10710,9 +10710,9 @@
     "affiliation_list": [
       1
     ],
-    "lv_limit_count": 0,
+    "lv_limit_count": 4,
     "lv": 1,
-    "max_lv": 60,
+    "max_lv": 100,
     "total_exp": 0,
     "current_exp": 0,
     "max_exp": 20,
@@ -10721,7 +10721,7 @@
     "total_love_exp": 0,
     "current_love_exp": 0,
     "max_love_exp": 10,
-    "power": 4778,
+    "power": 11078,
     "team_hp": 1390,
     "full_name": "ルリエル",
     "birthday": "1月24日",
@@ -10795,9 +10795,9 @@
         "skill_data_type": 1,
         "skill_id": 10070041,
         "skill_name": "セラフィックビート",
-        "skill_detail": "敵単体に47％×3回のダメージ/自身のATKを神族または水属性の味方の数×15％アップ（30CT） ※2つの条件を満たした場合でも効果は重複しない/神族の味方のノーツを前方に1～2移動/さらに水属性の味方のノーツを1～2前方に移動/ラッシュ30以上の時、自身のクリティカルを10％加算（30CT）",
+        "skill_detail": "敵単体に83％×5回のダメージ/自身のATKを神族または水属性の味方の数×26％アップ（30CT） ※2つの条件を満たした場合でも効果は重複しない/神族の味方のノーツを前方に2～3移動/さらに水属性の味方のノーツを2～3前方に移動/ラッシュ30以上の時、自身のクリティカルを17％加算（30CT）",
         "icon_id": 101,
-        "lv": 1,
+        "lv": 8,
         "max_lv": 10,
         "cost_ex_gauge": 100,
         "is_unlock": 1,
@@ -10809,9 +10809,9 @@
         "skill_data_type": 1,
         "skill_id": 10070042,
         "skill_name": "フォーリングティアーズ",
-        "skill_detail": "敵単体に100％×3回のダメージ/神族の味方のATK150％アップ（20CT）/さらに水属性の味方のATK150％アップ（20CT）/神族または水属性の味方のノーツを4～5前方に移動 ※2つの条件を満たした場合でもノーツ移動効果は重複しない/ラッシュ数によって以下の効果を適用する\n・30以上：味方全体のクリティカル時のダメージ倍率を神族または水属性の味方の数×3％加算（25CT） ※2つの条件を満たした場合でも効果は重複しない\n・50以上：さらに味方全体のクリティカル時のダメージ倍率を神族または水属性の味方の数×3％加算（25CT） ※2つの条件を満たした場合でも効果は重複しない",
+        "skill_detail": "敵単体に177％×5回のダメージ/神族の味方のATK266％アップ（27CT）/さらに水属性の味方のATK266％アップ（27CT）/神族または水属性の味方のノーツを6～7前方に移動 ※2つの条件を満たした場合でもノーツ移動効果は重複しない/ラッシュ数によって以下の効果を適用する\n・30以上：味方全体のクリティカル時のダメージ倍率を神族または水属性の味方の数×5.3％加算（25CT） ※2つの条件を満たした場合でも効果は重複しない\n・50以上：さらに味方全体のクリティカル時のダメージ倍率を神族または水属性の味方の数×5.3％加算（25CT） ※2つの条件を満たした場合でも効果は重複しない",
         "icon_id": 101,
-        "lv": 1,
+        "lv": 8,
         "max_lv": 10,
         "cost_ex_gauge": 200,
         "is_unlock": 1,
@@ -10819,7 +10819,7 @@
         "enemy_special_skill_trigger_text": "",
         "enemy_weak_gauge_decrease_condition_text": "",
         "specific_skill_name": "スマイリングサニー",
-        "specific_skill_detail": "敵単体に100％×5回のダメージ/神族の味方のATK150％アップ（20CT）/さらに水属性の味方のATK150％アップ（20CT）/神族または水属性の味方のノーツを4～5前方に移動 ※2つの条件を満たした場合でもノーツ移動効果は重複しない/ラッシュ数によって以下の効果を適用する\n・30以上：味方全体のクリティカル時のダメージ倍率を神族または水属性の味方の数×3％加算（25CT） ※2つの条件を満たした場合でも効果は重複しない\n・50以上：さらに味方全体のクリティカル時のダメージ倍率を神族または水属性の味方の数×3％加算（25CT） ※2つの条件を満たした場合でも効果は重複しない\n・100以上：敵単体へのダメージを125％に強化",
+        "specific_skill_detail": "敵単体に177％×7回のダメージ/神族の味方のATK266％アップ（27CT）/さらに水属性の味方のATK266％アップ（27CT）/神族または水属性の味方のノーツを6～7前方に移動 ※2つの条件を満たした場合でもノーツ移動効果は重複しない/ラッシュ数によって以下の効果を適用する\n・30以上：味方全体のクリティカル時のダメージ倍率を神族または水属性の味方の数×5.3％加算（25CT） ※2つの条件を満たした場合でも効果は重複しない\n・50以上：さらに味方全体のクリティカル時のダメージ倍率を神族または水属性の味方の数×5.3％加算（25CT） ※2つの条件を満たした場合でも効果は重複しない\n・100以上：敵単体へのダメージを222％に強化",
         "specific_skill_cost_ex_gauge": 200
       },
       {
@@ -10883,7 +10883,7 @@
     "notice_flg": 1,
     "tab_batch_data": {
       "ex_skill_stren_batch": 1,
-      "lv_limit_batch": 1,
+      "lv_limit_batch": 0,
       "limit_break_batch": 0,
       "bond_lv_batch": 0
     },
@@ -10893,7 +10893,7 @@
     },
     "strengthen_flag_list": {
       "ex_skill_stren_flag": 1,
-      "lv_limit_flag": 1,
+      "lv_limit_flag": 0,
       "limit_break_flag": 0,
       "core_lv_flag": 0
     },
@@ -27507,6 +27507,286 @@
       "ex2": [
         9999,
         3004
+      ],
+      "ex1_plus": [],
+      "ex2_plus": []
+    }
+  },
+  {
+    "u_unit_id": 14286058,
+    "character_id": 30,
+    "unit_id": 1030003,
+    "unit_illust_id": 1030003,
+    "unit_view_type": 2,
+    "character_name": "ナミエル",
+    "character_name_kana": "ナミエル",
+    "unit_name": "ハニーフロスティ",
+    "rarity": 3,
+    "max_rarity": 5,
+    "attr_type": 4,
+    "role": 1,
+    "camp": 2,
+    "camp_list": [
+      2
+    ],
+    "core_lv": 0,
+    "max_core_lv": 3,
+    "affiliation": 5,
+    "affiliation_list": [
+      5
+    ],
+    "lv_limit_count": 0,
+    "lv": 1,
+    "max_lv": 60,
+    "total_exp": 0,
+    "current_exp": 0,
+    "max_exp": 20,
+    "love_lv": 0,
+    "max_love_lv": 30,
+    "total_love_exp": 0,
+    "current_love_exp": 0,
+    "max_love_exp": 10,
+    "power": 4106,
+    "team_hp": 1047,
+    "full_name": "ナミエル・クレシェンテ",
+    "birthday": "2月5日",
+    "constellation": 11,
+    "guardian_star": "アルケス",
+    "school_year": 1,
+    "committee": "美化委員会",
+    "club": null,
+    "hobby": "ぬいぐるみ集め",
+    "cv": "夏野ぱいん",
+    "profile": "雪だるまの精霊『スノーマン』の、不思議な\nシルクハットを拾った影響で変身してしまった、\nナミエルの『クリスマスフォーム』。\n\n『雪かきができる』という概念能力を持ち、形の\nないものであっても、それを『雪』という概念と\nして定義し、『除雪』を行うことができる。\n武器はその能力を具現化した『スコップ』。\n\nまた、『雪だるまのぬいぐるみ』を使い魔として\n召喚することができ、戦いを一緒にサポートしてくれる。",
+    "status_data": {
+      "base_data": {
+        "hp": 1047,
+        "init_ex_gauge": 30,
+        "max_ex_gauge": 300,
+        "min_wt": 16,
+        "max_wt": 20,
+        "attack": 221,
+        "critical": 500,
+        "ex_gauge_rate": 78,
+        "weight": 30
+      },
+      "add_love_lv": {
+        "hp": 0,
+        "attack": 0,
+        "critical": 0
+      },
+      "add_theme_event_effect": {
+        "attack": 0,
+        "hp": 0
+      },
+      "add_ability_effect": {
+        "hp": 0,
+        "attack": 0,
+        "init_ex_gauge": 0,
+        "ex_gauge_rate": 0
+      },
+      "add_sister_effect": {
+        "hp": 0,
+        "init_ex_gauge": 0,
+        "max_ex_gauge": 0,
+        "min_wt": 0,
+        "max_wt": 0,
+        "attack": 0,
+        "critical": 0,
+        "ex_gauge_rate": 0,
+        "weight": 0
+      },
+      "add_unit_effect": {
+        "attack": 0,
+        "hp": 0
+      },
+      "add_enchant_effect": {
+        "hp": 0,
+        "attack": 0,
+        "init_ex_gauge": 0,
+        "cost_ex_gauge": 0,
+        "critical": 0
+      }
+    },
+    "specific_gauge_data": [],
+    "skill_data": [
+      {
+        "skill_data_type": 1,
+        "skill_id": 10300031,
+        "skill_name": "ホーリーダスター",
+        "skill_detail": "自身のATK50％アップ。さらに1バトル中、自身のEXスキル1の使用が2回目以降の時、自身のEXスキル1を使用する度にATKを20％ずつ増加する（20CT）（合計最大150％）/行動CT70％短縮（1CT）/1バトル中、自身のEXスキル1の使用が4回目以降の時、自身のクリティカルを10％加算（20CT）",
+        "icon_id": 300,
+        "lv": 1,
+        "max_lv": 10,
+        "cost_ex_gauge": 100,
+        "is_unlock": 1,
+        "unlock_condition": "",
+        "enemy_special_skill_trigger_text": "",
+        "enemy_weak_gauge_decrease_condition_text": ""
+      },
+      {
+        "skill_data_type": 1,
+        "skill_id": 10300032,
+        "skill_name": "サイレントスウィープ",
+        "skill_detail": "敵単体に1250％（HPが50％以下の相手の場合、1350％）のダメージ/自身のクリティカル時のダメージ倍率を光属性の味方の数×5％加算（1CT）/攻撃タイプ打撃の味方を3体以上編成している時、敵単体に破砕を付与（1CT）（優先発動）/自身の行動CT20％遅延（20CT）\n※破砕：攻撃タイプ打撃からの被ダメージが20％増加",
+        "icon_id": 100,
+        "lv": 1,
+        "max_lv": 10,
+        "cost_ex_gauge": 200,
+        "is_unlock": 1,
+        "unlock_condition": "",
+        "enemy_special_skill_trigger_text": "",
+        "enemy_weak_gauge_decrease_condition_text": ""
+      },
+      {
+        "skill_data_type": 2,
+        "skill_id": 1001001,
+        "skill_name": "フィオナユニゾンスキルA",
+        "skill_detail": "ユニゾン参加者が3体以上のとき50％の確率で発動。ユニゾン参加者全員に攻撃力80％アップを付与する。",
+        "icon_id": 1,
+        "lv": 3,
+        "max_lv": 5,
+        "cost_ex_gauge": -1,
+        "is_unlock": 1,
+        "unlock_condition": "",
+        "enemy_special_skill_trigger_text": "",
+        "enemy_weak_gauge_decrease_condition_text": ""
+      },
+      {
+        "skill_data_type": 3,
+        "skill_id": 10010011,
+        "skill_name": "フィオナシスタースキルA",
+        "skill_detail": "味方のいずれかが攻撃した際、10％の確率で発動。敵単体に120％の追加攻撃を行う。",
+        "icon_id": 1,
+        "lv": 3,
+        "max_lv": 5,
+        "cost_ex_gauge": -1,
+        "is_unlock": 1,
+        "unlock_condition": "",
+        "enemy_special_skill_trigger_text": "",
+        "enemy_weak_gauge_decrease_condition_text": ""
+      }
+    ],
+    "unique_skill_data": [
+      {
+        "skill_id": -1,
+        "skill_name": "",
+        "detail": "自身のEX消費量5％減少",
+        "is_unlock": 0,
+        "unlock_condition": "限界突破★4にすると解放"
+      },
+      {
+        "skill_id": 23,
+        "skill_name": "ATKアップ☆3",
+        "detail": "自身のATK2％アップ",
+        "is_unlock": 0,
+        "unlock_condition": "限界突破★4にすると解放"
+      }
+    ],
+    "equip_data": [],
+    "resist_data": {
+      "poison": 3,
+      "paralysis": 3,
+      "confusion": 3,
+      "atrophy": 3,
+      "seal": 3,
+      "burn": 3,
+      "flostbite": 3
+    },
+    "sp_equip_types": [
+      3
+    ],
+    "notice_flg": 1,
+    "tab_batch_data": {
+      "ex_skill_stren_batch": 1,
+      "lv_limit_batch": 1,
+      "limit_break_batch": 0,
+      "bond_lv_batch": 0
+    },
+    "exclusive_exchange_shop_data": {
+      "shop_id": 2010,
+      "product_id": 269
+    },
+    "strengthen_flag_list": {
+      "ex_skill_stren_flag": 1,
+      "lv_limit_flag": 1,
+      "limit_break_flag": 0,
+      "core_lv_flag": 0
+    },
+    "base_status_data": {
+      "base_data": {
+        "hp": 1047,
+        "init_ex_gauge": 30,
+        "max_ex_gauge": 300,
+        "min_wt": 16,
+        "max_wt": 20,
+        "attack": 221,
+        "critical": 500,
+        "ex_gauge_rate": 78,
+        "weight": 30
+      },
+      "add_love_lv": {
+        "hp": 0,
+        "attack": 0,
+        "critical": 0
+      },
+      "add_theme_event_effect": {
+        "attack": 0,
+        "hp": 0
+      },
+      "add_ability_effect": {
+        "hp": 0,
+        "attack": 0,
+        "init_ex_gauge": 0,
+        "ex_gauge_rate": 0
+      },
+      "add_sister_effect": {
+        "hp": 0,
+        "init_ex_gauge": 0,
+        "max_ex_gauge": 0,
+        "min_wt": 0,
+        "max_wt": 0,
+        "attack": 0,
+        "critical": 0,
+        "ex_gauge_rate": 0,
+        "weight": 0
+      },
+      "add_unit_effect": {
+        "attack": 0,
+        "hp": 0
+      },
+      "add_enchant_effect": {
+        "hp": 0,
+        "attack": 0,
+        "init_ex_gauge": 0,
+        "cost_ex_gauge": 0,
+        "critical": 0
+      }
+    },
+    "is_bond_unit": 0,
+    "is_event_unit": 0,
+    "bond_lv": 0,
+    "is_awake_unit": 0,
+    "awakened_illust_display_type": 0,
+    "awake_unit_illust_id": -1,
+    "skill_category_id_list": [
+      3001,
+      3002,
+      3004,
+      4002,
+      3003,
+      9999
+    ],
+    "skill_category_id_list_by_ex_type": {
+      "ex1": [
+        3001,
+        3002,
+        3004
+      ],
+      "ex2": [
+        4002,
+        3003,
+        9999
       ],
       "ex1_plus": [],
       "ex2_plus": []
@@ -47539,19 +47819,19 @@
     "affiliation_list": [
       2
     ],
-    "lv_limit_count": 0,
-    "lv": 1,
-    "max_lv": 60,
-    "total_exp": 0,
+    "lv_limit_count": 4,
+    "lv": 100,
+    "max_lv": 100,
+    "total_exp": 680999,
     "current_exp": 0,
-    "max_exp": 20,
+    "max_exp": 99999999,
     "love_lv": 11,
     "max_love_lv": 30,
     "total_love_exp": 750,
     "current_love_exp": 20,
     "max_love_exp": 400,
-    "power": 4608,
-    "team_hp": 1992,
+    "power": 23110,
+    "team_hp": 12040,
     "full_name": "愛戸<style=p23>あいど</style>レミカ",
     "birthday": "7月10日",
     "constellation": 4,
@@ -47564,19 +47844,19 @@
     "profile": "クールな立ち振る舞いで『自立したカッコいい女子\nの理想』として君臨し、国内にとどまらず、海外\nまで知れ渡る現役のトップアイドル。\n\n自身が星力を持っていることから、歌で世界を\n救えるような、最強で最高の、完全無欠のアイドル\nを目指している。\n\n最近、少し自分の方向性に悩んでいる。\nデビュー曲『ブリッツアイドライザー』は、\nレミカの代表曲として定着していたが、\nその雰囲気が非常にアーティスティックで、\nあまりアイドルっぽくはない。\n\n今あるイメージを打破し、子供の頃に夢見た『アイ\nドルらしいアイドル』を目指したいレミカは、\n「きっと今の自分だけでは現状を変えることはでき\nない」という答えに行き着く。\n現在は、自分とユニットを組んでくれる仲間を探し\nている。",
     "status_data": {
       "base_data": {
-        "hp": 1915,
+        "hp": 11576,
         "init_ex_gauge": 30,
         "max_ex_gauge": 300,
         "min_wt": 19,
         "max_wt": 23,
-        "attack": 119,
+        "attack": 718,
         "critical": 300,
         "ex_gauge_rate": 120,
         "weight": 30
       },
       "add_love_lv": {
-        "hp": 77,
-        "attack": 5,
+        "hp": 464,
+        "attack": 29,
         "critical": 30
       },
       "add_theme_event_effect": {
@@ -47618,9 +47898,9 @@
         "skill_data_type": 1,
         "skill_id": 10600011,
         "skill_name": "ヒーリングソング",
-        "skill_detail": "味方のHPを雷属性の味方の数×6.7％回復/自身の行動CT25％短縮（1CT）",
+        "skill_detail": "味方のHPを雷属性の味方の数×11％回復/自身の行動CT44％短縮（1CT）",
         "icon_id": 601,
-        "lv": 1,
+        "lv": 8,
         "max_lv": 10,
         "cost_ex_gauge": 100,
         "is_unlock": 1,
@@ -47632,9 +47912,9 @@
         "skill_data_type": 1,
         "skill_id": 10600012,
         "skill_name": "インスパイアボイス",
-        "skill_detail": "味方のHPを25％+雷属性の味方の数×5％回復/雷属性の味方のATKを雷属性の味方の数×20％アップ（30CT）/味方のHPがオーバーヒール状態（100％超）の時、味方全体のクリティカルを雷属性の味方の数×5％加算（30CT）/味方のHPがフルオーバーヒール状態（300％）の時、敵単体のEXゲージを雷属性の味方の数×20吸収し、その内の50％味方のEXゲージを回復",
+        "skill_detail": "味方のHPを44.4％+雷属性の味方の数×8.8％回復/雷属性の味方のATKを雷属性の味方の数×35％アップ（30CT）/味方のHPがオーバーヒール状態（100％超）の時、味方全体のクリティカルを雷属性の味方の数×8.88％加算（30CT）/味方のHPがフルオーバーヒール状態（300％）の時、敵単体のEXゲージを雷属性の味方の数×35吸収し、その内の50％味方のEXゲージを回復",
         "icon_id": 601,
-        "lv": 1,
+        "lv": 8,
         "max_lv": 10,
         "cost_ex_gauge": 200,
         "is_unlock": 1,
@@ -47703,7 +47983,7 @@
     "notice_flg": 1,
     "tab_batch_data": {
       "ex_skill_stren_batch": 1,
-      "lv_limit_batch": 1,
+      "lv_limit_batch": 0,
       "limit_break_batch": 0,
       "bond_lv_batch": 0
     },
@@ -47713,25 +47993,25 @@
     },
     "strengthen_flag_list": {
       "ex_skill_stren_flag": 1,
-      "lv_limit_flag": 1,
+      "lv_limit_flag": 0,
       "limit_break_flag": 0,
       "core_lv_flag": 0
     },
     "base_status_data": {
       "base_data": {
-        "hp": 1915,
+        "hp": 11576,
         "init_ex_gauge": 30,
         "max_ex_gauge": 300,
         "min_wt": 19,
         "max_wt": 23,
-        "attack": 119,
+        "attack": 718,
         "critical": 300,
         "ex_gauge_rate": 120,
         "weight": 30
       },
       "add_love_lv": {
-        "hp": 77,
-        "attack": 5,
+        "hp": 464,
+        "attack": 29,
         "critical": 30
       },
       "add_theme_event_effect": {

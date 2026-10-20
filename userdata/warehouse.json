@@ -168,7 +168,7 @@
     {
       "item_id": 9104010,
       "item_type": 90,
-      "have_count": 65,
+      "have_count": 80,
       "item_name": "光の星騎士の大結晶",
       "rarity": 3,
       "detail": "100個集めることで★2以上の星騎士【光属性】のいずれかを\n獲得することが出来る結晶\n★3星騎士を60%の確率で獲得することが出来る",
@@ -183,7 +183,7 @@
     {
       "item_id": 9105010,
       "item_type": 90,
-      "have_count": 65,
+      "have_count": 80,
       "item_name": "闇の星騎士の大結晶",
       "rarity": 3,
       "detail": "100個集めることで★2以上の星騎士【闇属性】のいずれかを\n獲得することが出来る結晶\n★3星騎士を60%の確率で獲得することが出来る",
@@ -243,7 +243,7 @@
     {
       "item_id": 9200100,
       "item_type": 90,
-      "have_count": 2,
+      "have_count": 4,
       "item_name": "★2以上ランダム装備箱",
       "rarity": 3,
       "detail": "★2以上の装備のいずれかを獲得することが出来るBOX\n★3装備を60%の確率で獲得することが出来る",
@@ -258,7 +258,7 @@
     {
       "item_id": 9200200,
       "item_type": 90,
-      "have_count": 1,
+      "have_count": 2,
       "item_name": "★3確定ランダム装備箱",
       "rarity": 3,
       "detail": "★3装備のいずれかを獲得することができる貴重なBOX",
@@ -528,7 +528,7 @@
     {
       "item_id": 3001,
       "item_type": 3,
-      "have_count": 33400,
+      "have_count": 33800,
       "item_name": "フレンドポイント",
       "rarity": 1,
       "detail": "友情の証となるバッジ\n気に入った相手に送ることができる",
@@ -543,7 +543,7 @@
     {
       "item_id": 4001,
       "item_type": 4,
-      "have_count": 133,
+      "have_count": 134,
       "item_name": "スタミナドリンク",
       "rarity": 2,
       "detail": "効果抜群のエナジードリンク\nスタミナを回復できる",
@@ -558,7 +558,7 @@
     {
       "item_id": 5001,
       "item_type": 5,
-      "have_count": 15,
+      "have_count": 19,
       "item_name": "ガチャチケット",
       "rarity": 2,
       "detail": "学園で発行される貴重なチケット\nチケットガチャを1回引くことができる",
@@ -678,7 +678,7 @@
     {
       "item_id": 15001,
       "item_type": 15,
-      "have_count": 3231,
+      "have_count": 3232,
       "item_name": "スターピース",
       "rarity": 3,
       "detail": "星の力が凝縮された結晶\nたくさん集めるとピースと交換できる",
@@ -693,7 +693,7 @@
     {
       "item_id": 15003,
       "item_type": 15,
-      "have_count": 698670,
+      "have_count": 699630,
       "item_name": "合同演習コイン",
       "rarity": 2,
       "detail": "訓練の成果としてもらえる努力の証となるコイン\n合同演習で獲得できる交換用アイテム",
@@ -708,7 +708,7 @@
     {
       "item_id": 15006,
       "item_type": 15,
-      "have_count": 127100,
+      "have_count": 128450,
       "item_name": "装備コイン",
       "rarity": 2,
       "detail": "ギア型のコイン\n装備を売却することで学園から支給される",
@@ -723,7 +723,7 @@
     {
       "item_id": 15007,
       "item_type": 15,
-      "have_count": 511250,
+      "have_count": 518450,
       "item_name": "討伐の証",
       "rarity": 2,
       "detail": "ボス討伐を果たした証となるコイン\n種族交流会のボスを討伐することで支給される",
@@ -738,7 +738,7 @@
     {
       "item_id": 15014,
       "item_type": 15,
-      "have_count": 3050,
+      "have_count": 3075,
       "item_name": "メモリーメダル",
       "rarity": 3,
       "detail": "星の記憶が凝縮されたメダル\nたくさん集めると過去のイベント星騎士や装備などと交換できる",
@@ -788,6 +788,21 @@
       "rarity": 3,
       "detail": "着せ替え交換所でさまざまなものと交換することができる",
       "illust_id": "item_0015022",
+      "group_item_cost_count": -1,
+      "distribution_type": -1,
+      "order_no": null,
+      "end_date": null,
+      "limit_date_text": "",
+      "gacha_id": -1
+    },
+    {
+      "item_id": 21345,
+      "item_type": 21,
+      "have_count": 10,
+      "item_name": "ガチャPT【桃】",
+      "rarity": 1,
+      "detail": "ガチャを引いた際に獲得できる\n期間内に一定数集めると交換所でゲーム内アイテムと交換可能",
+      "illust_id": "item_0021004",
       "group_item_cost_count": -1,
       "distribution_type": -1,
       "order_no": null,
@@ -1205,7 +1220,7 @@
     {
       "item_id": 8001,
       "item_type": 8,
-      "have_count": 96088,
+      "have_count": 96260,
       "item_name": "EXPポーション(小)",
       "rarity": 1,
       "detail": "小さな瓶に入ったドリンク型のポーション\n星騎士の経験値を少し上げられる",
@@ -1217,7 +1232,7 @@
     {
       "item_id": 8002,
       "item_type": 8,
-      "have_count": 30109,
+      "have_count": 30186,
       "item_name": "EXPポーション(中)",
       "rarity": 2,
       "detail": "中くらいの瓶に入ったドリンク型のポーション\n星騎士の経験値をそこそこ上げられる",
@@ -1229,7 +1244,7 @@
     {
       "item_id": 8003,
       "item_type": 8,
-      "have_count": 25433,
+      "have_count": 25501,
       "item_name": "EXPポーション(大)",
       "rarity": 3,
       "detail": "大きな瓶に入ったドリンク型のポーション\n星騎士の経験値を大きく上げられる",
@@ -1241,7 +1256,7 @@
     {
       "item_id": 9001,
       "item_type": 9,
-      "have_count": 13254,
+      "have_count": 13204,
       "item_name": "星石(小)",
       "rarity": 1,
       "detail": "星の力を宿す小さな結晶\n星騎士のLV上限を解放するために必要",
@@ -1253,7 +1268,7 @@
     {
       "item_id": 9002,
       "item_type": 9,
-      "have_count": 14503,
+      "have_count": 14425,
       "item_name": "星石(中)",
       "rarity": 2,
       "detail": "星の力を宿す少し大きな結晶\n星騎士のLV上限を解放するために必要",
@@ -1265,7 +1280,7 @@
     {
       "item_id": 9003,
       "item_type": 9,
-      "have_count": 3248,
+      "have_count": 3232,
       "item_name": "星石(大)",
       "rarity": 3,
       "detail": "星の力を宿す大きな結晶\n星騎士のLV上限を解放するために必要",
@@ -1313,7 +1328,7 @@
     {
       "item_id": 9007,
       "item_type": 9,
-      "have_count": 2291,
+      "have_count": 2221,
       "item_name": "水の魔石",
       "rarity": 1,
       "detail": "水の力を秘めた小さな宝石\n星騎士のLV上限を解放するために必要",
@@ -1325,7 +1340,7 @@
     {
       "item_id": 9008,
       "item_type": 9,
-      "have_count": 1755,
+      "have_count": 1694,
       "item_name": "水冷の魔石",
       "rarity": 2,
       "detail": "水の力を秘めた少し大きな宝石\n星騎士のLV上限を解放するために必要",
@@ -1337,7 +1352,7 @@
     {
       "item_id": 9009,
       "item_type": 9,
-      "have_count": 473,
+      "have_count": 452,
       "item_name": "零下の魔石",
       "rarity": 3,
       "detail": "水の力を秘めた大きな宝石\n星騎士のLV上限を解放するために必要",
@@ -1385,7 +1400,7 @@
     {
       "item_id": 9013,
       "item_type": 9,
-      "have_count": 3693,
+      "have_count": 3701,
       "item_name": "闇の魔石",
       "rarity": 1,
       "detail": "闇の力を秘めた小さな宝石\n星騎士のLV上限を解放するために必要",
@@ -1397,7 +1412,7 @@
     {
       "item_id": 9014,
       "item_type": 9,
-      "have_count": 2111,
+      "have_count": 2118,
       "item_name": "暗闇の魔石",
       "rarity": 2,
       "detail": "闇の力を秘めた少し大きな宝石\n星騎士のLV上限を解放するために必要",
@@ -1409,7 +1424,7 @@
     {
       "item_id": 9015,
       "item_type": 9,
-      "have_count": 654,
+      "have_count": 657,
       "item_name": "幽暗の魔石",
       "rarity": 3,
       "detail": "闇の力を秘めた大きな宝石\n星騎士のLV上限を解放するために必要",
@@ -1421,7 +1436,7 @@
     {
       "item_id": 9016,
       "item_type": 9,
-      "have_count": 5968,
+      "have_count": 5972,
       "item_name": "光の魔石",
       "rarity": 1,
       "detail": "光の力を秘めた小さな宝石\n星騎士のLV上限を解放するために必要",
@@ -1433,7 +1448,7 @@
     {
       "item_id": 9017,
       "item_type": 9,
-      "have_count": 4343,
+      "have_count": 4348,
       "item_name": "明光の魔石",
       "rarity": 2,
       "detail": "光の力を秘めた少し大きな宝石\n星騎士のLV上限を解放するために必要",
@@ -1445,7 +1460,7 @@
     {
       "item_id": 9018,
       "item_type": 9,
-      "have_count": 1266,
+      "have_count": 1269,
       "item_name": "神光の魔石",
       "rarity": 3,
       "detail": "光の力を秘めた大きな宝石\n星騎士のLV上限を解放するために必要",
@@ -1457,7 +1472,7 @@
     {
       "item_id": 10001,
       "item_type": 10,
-      "have_count": 18262,
+      "have_count": 18041,
       "item_name": "スキルレポートE",
       "rarity": 1,
       "detail": "スキル技術について書かれたレポート\nEXスキル強化を行うために必要",
@@ -1469,7 +1484,7 @@
     {
       "item_id": 10002,
       "item_type": 10,
-      "have_count": 7694,
+      "have_count": 7443,
       "item_name": "スキルレポートD",
       "rarity": 2,
       "detail": "スキル技術について書かれたレポート\nEXスキル強化を行うために必要",
@@ -1481,7 +1496,7 @@
     {
       "item_id": 10003,
       "item_type": 10,
-      "have_count": 5694,
+      "have_count": 5466,
       "item_name": "スキルレポートC",
       "rarity": 2,
       "detail": "スキル技術について書かれたレポート\nEXスキル強化を行うために必要",
@@ -1493,7 +1508,7 @@
     {
       "item_id": 10004,
       "item_type": 10,
-      "have_count": 2011,
+      "have_count": 1960,
       "item_name": "スキルレポートB",
       "rarity": 3,
       "detail": "スキル技術について書かれたレポート\nEXスキル強化を行うために必要",
@@ -1517,7 +1532,7 @@
     {
       "item_id": 10007,
       "item_type": 10,
-      "have_count": 5112,
+      "have_count": 5115,
       "item_name": "騎士の書",
       "rarity": 2,
       "detail": "騎士のスキル技術について書かれた書物\n人間のEXスキル強化を行うために必要",
@@ -1529,7 +1544,7 @@
     {
       "item_id": 10008,
       "item_type": 10,
-      "have_count": 4281,
+      "have_count": 4285,
       "item_name": "悪魔の書",
       "rarity": 2,
       "detail": "悪魔のスキル技術について書かれた書物\n魔族のEXスキル強化を行うために必要",
@@ -1541,7 +1556,7 @@
     {
       "item_id": 10009,
       "item_type": 10,
-      "have_count": 4361,
+      "have_count": 4265,
       "item_name": "天使の書",
       "rarity": 2,
       "detail": "天使のスキル技術について書かれた書物\n神族のEXスキル強化を行うために必要",
@@ -1553,7 +1568,7 @@
     {
       "item_id": 10010,
       "item_type": 10,
-      "have_count": 5332,
+      "have_count": 5339,
       "item_name": "英雄の書",
       "rarity": 2,
       "detail": "英雄のスキル技術について書かれた書物\n人間のEXスキル強化を行うために必要",
@@ -1565,7 +1580,7 @@
     {
       "item_id": 10011,
       "item_type": 10,
-      "have_count": 4661,
+      "have_count": 4669,
       "item_name": "魔王の書",
       "rarity": 2,
       "detail": "魔王のスキル技術について書かれた書物\n魔族のEXスキル強化を行うために必要",
@@ -1577,7 +1592,7 @@
     {
       "item_id": 10012,
       "item_type": 10,
-      "have_count": 4654,
+      "have_count": 4571,
       "item_name": "大天使の書",
       "rarity": 2,
       "detail": "大天使のスキル技術について書かれた書物\n神族のEXスキル強化を行うために必要",
@@ -1589,7 +1604,7 @@
     {
       "item_id": 10013,
       "item_type": 10,
-      "have_count": 1301,
+      "have_count": 1306,
       "item_name": "王者の書",
       "rarity": 3,
       "detail": "王者のスキル技術について書かれた書物\n人間のEXスキル強化を行うために必要",
@@ -1601,7 +1616,7 @@
     {
       "item_id": 10014,
       "item_type": 10,
-      "have_count": 852,
+      "have_count": 858,
       "item_name": "大魔王の書",
       "rarity": 3,
       "detail": "大魔王のスキル技術について書かれた書物\n魔族のEXスキル強化を行うために必要",
@@ -1613,7 +1628,7 @@
     {
       "item_id": 10015,
       "item_type": 10,
-      "have_count": 734,
+      "have_count": 707,
       "item_name": "主天使の書",
       "rarity": 3,
       "detail": "主天使のスキル技術について書かれた書物\n神族のEXスキル強化を行うために必要",
@@ -1625,7 +1640,7 @@
     {
       "item_id": 10017,
       "item_type": 10,
-      "have_count": 696,
+      "have_count": 697,
       "item_name": "創世の古文書",
       "rarity": 3,
       "detail": "人間界に古より伝わるスキル技術について書かれた貴重な書物\n人間のEXスキル強化を行うために必要",
@@ -1637,7 +1652,7 @@
     {
       "item_id": 10018,
       "item_type": 10,
-      "have_count": 447,
+      "have_count": 448,
       "item_name": "魔神の経典",
       "rarity": 3,
       "detail": "魔界に古より伝わるスキル技術について書かれた貴重な書物\n魔族のEXスキル強化を行うために必要",
@@ -1649,7 +1664,7 @@
     {
       "item_id": 10019,
       "item_type": 10,
-      "have_count": 415,
+      "have_count": 404,
       "item_name": "神々の福音書",
       "rarity": 3,
       "detail": "天界に古より伝わるスキル技術について書かれた貴重な書物\n神族のEXスキル強化を行うために必要",
@@ -1661,7 +1676,7 @@
     {
       "item_id": 11001,
       "item_type": 11,
-      "have_count": 72801,
+      "have_count": 72922,
       "item_name": "キャンディ",
       "rarity": 1,
       "detail": "大きくて甘い星型のキャンディ\n種族共通で親愛度を少し上げられる",
@@ -1673,7 +1688,7 @@
     {
       "item_id": 11002,
       "item_type": 11,
-      "have_count": 13312,
+      "have_count": 13344,
       "item_name": "極旨クッキー",
       "rarity": 2,
       "detail": "サクサクでおいしいクッキーの袋詰め\n種族共通で親愛度をそこそこ上げられる",
@@ -1721,7 +1736,7 @@
     {
       "item_id": 12001,
       "item_type": 12,
-      "have_count": 16786,
+      "have_count": 16804,
       "item_name": "銅の魔法槌",
       "rarity": 1,
       "detail": "魔法の力を秘めた赤銅の槌\n装備の経験値を少し上げられる",
@@ -1733,7 +1748,7 @@
     {
       "item_id": 12002,
       "item_type": 12,
-      "have_count": 5775,
+      "have_count": 5784,
       "item_name": "銀の魔法槌",
       "rarity": 2,
       "detail": "魔法の力を秘めた白銀の槌\n装備の経験値をそこそこ上げられる",
@@ -1745,7 +1760,7 @@
     {
       "item_id": 12003,
       "item_type": 12,
-      "have_count": 271,
+      "have_count": 302,
       "item_name": "金の魔法槌",
       "rarity": 3,
       "detail": "魔法の力を秘めた黄金の槌\n装備の経験値を大きく上げられる",
@@ -1769,7 +1784,7 @@
     {
       "item_id": 13003,
       "item_type": 13,
-      "have_count": 80,
+      "have_count": 83,
       "item_name": "金のエネルギーオーブ",
       "rarity": 3,
       "detail": "星のエネルギーが注入された黄金のオーブ\n★3装備のLV上限を解放するために必要",
@@ -1781,7 +1796,7 @@
     {
       "item_id": 30001,
       "item_type": 30,
-      "have_count": 2905635,
+      "have_count": 2913135,
       "item_name": "シスターコイン",
       "rarity": 1,
       "detail": "可愛らしい「ヴィーナスちゃん」が刻印されたコイン\nシスターの強化を行うために必要",
@@ -1961,7 +1976,7 @@
     {
       "item_id": 40001,
       "item_type": 40,
-      "have_count": 10300,
+      "have_count": 10308,
       "item_name": "星符",
       "rarity": 1,
       "detail": "星力が込められた護符\nエンチャントの効果を全て変更したり、効果値のみを全て変更することができる",
@@ -2179,7 +2194,7 @@
     {
       "item_id": 1011001,
       "item_type": 16,
-      "have_count": 1525,
+      "have_count": 1530,
       "item_name": "コモンシールダーのピース",
       "rarity": 3,
       "detail": "対象星騎士のピース\n集めることで星騎士のレアリティやコアLVをアップすることができる",
@@ -2275,7 +2290,7 @@
     {
       "item_id": 1016001,
       "item_type": 16,
-      "have_count": 1090,
+      "have_count": 1110,
       "item_name": "ゴーストネイバーのピース",
       "rarity": 3,
       "detail": "対象星騎士のピース\n集めることで星騎士のレアリティやコアLVをアップすることができる",
@@ -2299,7 +2314,7 @@
     {
       "item_id": 1017001,
       "item_type": 16,
-      "have_count": 1870,
+      "have_count": 1875,
       "item_name": "烈火の料理人のピース",
       "rarity": 3,
       "detail": "対象星騎士のピース\n集めることで星騎士のレアリティやコアLVをアップすることができる",
@@ -2323,7 +2338,7 @@
     {
       "item_id": 1019001,
       "item_type": 16,
-      "have_count": 1870,
+      "have_count": 1875,
       "item_name": "紫電のくノ一のピース",
       "rarity": 3,
       "detail": "対象星騎士のピース\n集めることで星騎士のレアリティやコアLVをアップすることができる",
@@ -2431,7 +2446,7 @@
     {
       "item_id": 1025001,
       "item_type": 16,
-      "have_count": 1925,
+      "have_count": 1930,
       "item_name": "銀盤に舞う女王のピース",
       "rarity": 3,
       "detail": "対象星騎士のピース\n集めることで星騎士のレアリティやコアLVをアップすることができる",
@@ -2551,7 +2566,7 @@
     {
       "item_id": 1033001,
       "item_type": 16,
-      "have_count": 1130,
+      "have_count": 1140,
       "item_name": "仮面の暗黒騎士のピース",
       "rarity": 3,
       "detail": "対象星騎士のピース\n集めることで星騎士のレアリティやコアLVをアップすることができる",
@@ -3031,7 +3046,7 @@
     {
       "item_id": 1062001,
       "item_type": 16,
-      "have_count": 2000,
+      "have_count": 2010,
       "item_name": "星選の名探偵のピース",
       "rarity": 3,
       "detail": "対象星騎士のピース\n集めることで星騎士のレアリティやコアLVをアップすることができる",
@@ -4704,7 +4719,7 @@
     {
       "item_id": 304401,
       "item_type": 15,
-      "have_count": 170492,
+      "have_count": 34736,
       "item_name": "討伐メダル",
       "rarity": 1,
       "detail": "イベントボスを討伐した記念として配布されるメダル\nイベント交換所でアイテムと交換可能\n入手可能イベント「選挙管理委員会のゴーストハロウィンパーティー」",
@@ -5139,7 +5154,7 @@
     {
       "item_id": 150000301,
       "item_type": 15,
-      "have_count": 27800,
+      "have_count": 36200,
       "item_name": "ハロウィンクッキー",
       "rarity": 1,
       "detail": "イベント期間中にステージをクリアすることで配布される\nイベント交換所でアイテムと交換可能\n入手可能イベント「推しからの贈り物 どの娘にイタズラされたい？」",
@@ -5754,7 +5769,7 @@
     {
       "item_id": 304402,
       "item_type": 20,
-      "have_count": 73,
+      "have_count": 7,
       "item_name": "討伐ボスチケット",
       "rarity": 1,
       "detail": "イベント「選挙管理委員会のゴーストハロウィンパーティー」\n期間中にスタミナを消費する任務やイベントをクリアすると\n配布されるチケット\n一定枚数集めることでイベントボスに挑むことができる",

@@ -155,7 +155,7 @@ Frida / il2cpp-bridge 从游戏客户端内存 dump 的 `TSK.Network.Domain.Unit
 | `rarity` | 素材稀有度 |
 | `illust_id` | 素材图标 ID（如 `item_0030001`） |
 
-Wiki 侧数据（`fetch_sisters.mjs` → `sister_wiki.json`，73 名）：チームスキル（满级合计文本）、アクティブスキル発動条件/対象/効果（满级）、ゲージ速度、入手方法、実装日。图片全部为 Wiki 专属资源：图标 `img/sw{idx}_icon.png`（73 张，一覧表 lazyload `data-src`）、Q 版立绘 `img/sw{idx}.png`（73 张，逐详情页抓取，attach2 第二段 hex 解码文件名，形如 `シスター{名}.png`）。
+Wiki 侧数据（`fetch_wiki_images.py` → `viewer/sister_wiki.json`，73 名）：チームスキル（满级合计文本）、アクティブスキル発動条件/対象/効果（满级）、ゲージ速度、入手方法、実装日。图片全部为 Wiki 专属资源：图标 `viewer/img/sw{idx}_icon.png`（73 张，一覧表 lazyload `data-src`）、Q 版立绘 `viewer/img/sw{idx}.png`（73 张，逐详情页抓取，attach2 第二段 hex 解码文件名，形如 `シスター{名}.png`）。
 
 ## 仓库 warehouse.json（userdata/）
 
